@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "ielts-001",
+    "english": "Acquisition",
+    "turkish": "Edinim, kazanç(genelde satın alarak)",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Acquisition",
+    "originalTurkish": "Edinim, kazanç(genelde satın alarak)"
+  },
+  {
+    "id": "ielts-002",
+    "english": "Approach",
+    "turkish": "Yaklaşım",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Approach",
+    "originalTurkish": "Yaklaşım"
+  },
+  {
+    "id": "ielts-003",
+    "english": "Amendment",
+    "turkish": "Değişiklik, düzenleme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Amendment",
+    "originalTurkish": "Değişiklik, düzenleme"
+  },
+  {
+    "id": "ielts-004",
+    "english": "Allocation",
+    "turkish": "Tahsisat, ayırma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Allocation",
+    "originalTurkish": "Tahsisat, ayırma"
+  },
+  {
+    "id": "ielts-005",
+    "english": "Assign",
+    "turkish": "Atamak, tayin etmek, görevlendirmek(appoint)",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Assign",
+    "originalTurkish": "Atamak, tayin etmek, görevlendirmek(appoint)"
+  },
+  {
+    "id": "ielts-006",
+    "english": "All-out",
+    "turkish": "Tüm gücüyle",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "All-out",
+    "originalTurkish": "Tüm gücüyle"
+  },
+  {
+    "id": "ielts-007",
+    "english": "Attribute",
+    "turkish": "Bağlamak, yormak, atfetmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Attribute",
+    "originalTurkish": "Bağlamak, yormak, atfetmek"
+  },
+  {
+    "id": "ielts-008",
+    "english": "Acknowledge",
+    "turkish": "Kabul etmek, alındı yazısı göndermek, tanıdığını belli etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Acknowledge",
+    "originalTurkish": "Kabul etmek, alındı yazısı göndermek, tanıdığını belli etmek"
+  },
+  {
+    "id": "ielts-009",
+    "english": "Alter",
+    "turkish": "Değiştirmek, değişmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Alter",
+    "originalTurkish": "Değiştirmek, değişmek"
+  },
+  {
+    "id": "ielts-010",
+    "english": "Administration",
+    "turkish": "Yönetim, idare",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Adminstration",
+    "originalTurkish": "Yönetim, idare"
+  },
+  {
+    "id": "ielts-011",
+    "english": "Abstract",
+    "turkish": "Soyut, özetlemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Abstract",
+    "originalTurkish": "Soyut, özetlemek"
+  },
+  {
+    "id": "ielts-012",
+    "english": "Advent of",
+    "turkish": "Gelme, ortaya çıkarma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Advent of",
+    "originalTurkish": "Gelme, ortaya çıkarma"
+  },
+  {
+    "id": "ielts-013",
+    "english": "Adjacent",
+    "turkish": "Yanyana, bitişik",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Adjacent",
+    "originalTurkish": "Yanyana, bitişik"
+  },
+  {
+    "id": "ielts-014",
+    "english": "Albeit",
+    "turkish": "Rağmen, olsa da, gerçi",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Albeit",
+    "originalTurkish": "Rağmen, olsa da, gerçi"
+  },
+  {
+    "id": "ielts-015",
+    "english": "Adequate",
+    "turkish": "Yeterli, kafi",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Adequate",
+    "originalTurkish": "Yeterli, kafi"
+  },
+  {
+    "id": "ielts-016",
+    "english": "Apparent",
+    "turkish": "Belli, ortada olan, bariz",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Apperent",
+    "originalTurkish": "Belli, ortada olan, bariz"
+  },
+  {
+    "id": "ielts-017",
+    "english": "Advocate",
+    "turkish": "Savunmak, desteklemek, avukat",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Advocate",
+    "originalTurkish": "Savunmak, desteklemek, avukat"
+  },
+  {
+    "id": "ielts-018",
+    "english": "Accurate",
+    "turkish": "Kesin, doğru",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Accurate",
+    "originalTurkish": "Kesin, doğru"
+  },
+  {
+    "id": "ielts-019",
+    "english": "Aggregate",
+    "turkish": "Bir araya getirmek, toplamak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Aggregate",
+    "originalTurkish": "Bir araya getirmek, toplamak"
+  },
+  {
+    "id": "ielts-020",
+    "english": "Access",
+    "turkish": "Erişmek, ulaşmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Access",
+    "originalTurkish": "Erişmek, ulaşmak"
+  },
+  {
+    "id": "ielts-021",
+    "english": "Accommodation",
+    "turkish": "Konaklama yeri, ikametgah",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Accommodation",
+    "originalTurkish": "Konaklama yeri, ikametgah"
+  },
+  {
+    "id": "ielts-022",
+    "english": "Anticipate",
+    "turkish": "Beklemek, ummak, tahmin etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Anticipate",
+    "originalTurkish": "Beklemek, ummak, tahmin etmek"
+  },
+  {
+    "id": "ielts-023",
+    "english": "Assurance",
+    "turkish": "Güvence, teminat, vaat",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Assurance",
+    "originalTurkish": "Güvence, teminat, vaat"
+  },
+  {
+    "id": "ielts-024",
+    "english": "Attain",
+    "turkish": "Elde etmek, ulaşmak, kazanmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Attain",
+    "originalTurkish": "Elde etmek, ulaşmak, kazanmak"
+  },
+  {
+    "id": "ielts-025",
+    "english": "Abandon",
+    "turkish": "Terk etmek, vazgeçmek, bırakmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Abondon",
+    "originalTurkish": "Terk etmek, vazgeçmek, bırakmak"
+  },
+  {
+    "id": "ielts-026",
+    "english": "Accompany",
+    "turkish": "Eşlik etmek, arkadaşlık etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Accompant",
+    "originalTurkish": "Eşlik etmek, arkadaşlık etmek"
+  },
+  {
+    "id": "ielts-027",
+    "english": "Ambiguous",
+    "turkish": "Belirsiz, muğlak, zor anlaşılan, karmaşık",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Ambigious",
+    "originalTurkish": "Belirsiz, muğlak, zor anlaşılan, karmaşık"
+  },
+  {
+    "id": "ielts-028",
+    "english": "Appendix",
+    "turkish": "Ek, ilave, apandis",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Appendix",
+    "originalTurkish": "Ek, ilave, apandis"
+  },
+  {
+    "id": "ielts-029",
+    "english": "Arbitrary",
+    "turkish": "Keyfi, rastgele",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Arbitrary",
+    "originalTurkish": "Keyfi, rastgele"
+  },
+  {
+    "id": "ielts-030",
+    "english": "Assess",
+    "turkish": "Değerlendirmek, değerini bilmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Assess",
+    "originalTurkish": "Değerlendirmek, değerini bilmek"
+  },
+  {
+    "id": "ielts-031",
+    "english": "Aid",
+    "turkish": "Yardım etmek, yardım",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Aid",
+    "originalTurkish": "Yardım etmek, yardım"
+  },
+  {
+    "id": "ielts-032",
+    "english": "Assessment",
+    "turkish": "Değerlendirme, düşünce, fikir",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Assessment",
+    "originalTurkish": "Değerlendirme, düşünce, fikir"
+  },
+  {
+    "id": "ielts-033",
+    "english": "Bond",
+    "turkish": "Bağ, ilişki, bono, yapışmak, bağlamak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Bond",
+    "originalTurkish": "Bağ, ilişki, bono, yapışmak, bağlamak"
+  },
+  {
+    "id": "ielts-034",
+    "english": "Behalf",
+    "turkish": "Adına, temsilen",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Behalf",
+    "originalTurkish": "Adına, temsilen"
+  },
+  {
+    "id": "ielts-035",
+    "english": "Bury",
+    "turkish": "Gömmek, gizlemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Bury",
+    "originalTurkish": "Gömmeki gizlemek"
+  },
+  {
+    "id": "ielts-036",
+    "english": "Bias",
+    "turkish": "Önyargı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Bias",
+    "originalTurkish": "Önyargı"
+  },
+  {
+    "id": "ielts-037",
+    "english": "Compound",
+    "turkish": "Bileşim, karışım, binalar topluluğu",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Compound",
+    "originalTurkish": "Bileşim, karışım, binalar topluluğu"
+  },
+  {
+    "id": "ielts-038",
+    "english": "Clause",
+    "turkish": "Madde, bent, kloz",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Clause",
+    "originalTurkish": "Madde, bent, kloz"
+  },
+  {
+    "id": "ielts-039",
+    "english": "Constitutional",
+    "turkish": "Esas, temel, anayasal",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Constitutional",
+    "originalTurkish": "Esas, temel, anayasal"
+  },
+  {
+    "id": "ielts-040",
+    "english": "Cite",
+    "turkish": "Alıntı yapmak, bahsetmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Cite",
+    "originalTurkish": "Alıntı yapmak, bahsetmek"
+  },
+  {
+    "id": "ielts-041",
+    "english": "Collapse",
+    "turkish": "Çökmek, yığılmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Collapse",
+    "originalTurkish": "Çökmek, yığılmak"
+  },
+  {
+    "id": "ielts-042",
+    "english": "Compile",
+    "turkish": "Derlemek, bir araya getirmek(bilgi, delil v.b.)",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Compile",
+    "originalTurkish": "Derlemek, bir araya getirmek(bilgi, delil v.b.)"
+  },
+  {
+    "id": "ielts-043",
+    "english": "Conceived",
+    "turkish": "Tasarlanmış, düşünülmüş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Conceived",
+    "originalTurkish": "İkna edilmiş, emin"
+  },
+  {
+    "id": "ielts-044",
+    "english": "Conformity",
+    "turkish": "Benzerlik, uygunluk, ayak uydurma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Conformity",
+    "originalTurkish": "Benzerlik, uygunluk, ayak uydurma"
+  },
+  {
+    "id": "ielts-045",
+    "english": "Commodity",
+    "turkish": "Ticari mal, eşya",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Commodity",
+    "originalTurkish": "Ticari mal, eşya"
+  },
+  {
+    "id": "ielts-046",
+    "english": "Cease",
+    "turkish": "sona erdirmek, durdurmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Cease",
+    "originalTurkish": "sona erdirmek, durdurmak"
+  },
+  {
+    "id": "ielts-047",
+    "english": "Coincide",
+    "turkish": "Rastlamak, denk gelmek, uymak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Coincide",
+    "originalTurkish": "Rastlamak, denk gelmek, uymak"
+  },
+  {
+    "id": "ielts-048",
+    "english": "Commence",
+    "turkish": "Başlamak, başlatmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Commence",
+    "originalTurkish": "Başlamak, başlatmak"
+  },
+  {
+    "id": "ielts-049",
+    "english": "Concurrent",
+    "turkish": "Eş zamanlı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Concurrent",
+    "originalTurkish": "Eş zamanlı"
+  },
+  {
+    "id": "ielts-050",
+    "english": "Confined",
+    "turkish": "Sınırlı, kısıtlı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Confined",
+    "originalTurkish": "Sınırlı, kısıtlı"
+  },
+  {
+    "id": "ielts-051",
+    "english": "Complement",
+    "turkish": "Tamamlamak, bütünlemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Complement",
+    "originalTurkish": "Tamamlamak, bütünlemek"
+  },
+  {
+    "id": "ielts-052",
+    "english": "Contemporary",
+    "turkish": "Çağdaş, modern, akran",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Contemporary",
+    "originalTurkish": "Çağdaş, modern, akran"
+  },
+  {
+    "id": "ielts-053",
+    "english": "Contradiction",
+    "turkish": "Çelişki, itiraz, inkar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Contradiction",
+    "originalTurkish": "Çelişki, itiraz, inkar"
+  },
+  {
+    "id": "ielts-054",
+    "english": "Context",
+    "turkish": "Bağlam, kaynak, içerik",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Context",
+    "originalTurkish": "Bağlam, kaynak, içerik"
+  },
+  {
+    "id": "ielts-055",
+    "english": "Cooperative",
+    "turkish": "İş birliği yapan",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Cooperative",
+    "originalTurkish": "İş birliği yapan"
+  },
+  {
+    "id": "ielts-056",
+    "english": "Comprehensive",
+    "turkish": "Kapsamlı, detaylı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Comprehensive",
+    "originalTurkish": "Kapsamlı, detaylı"
+  },
+  {
+    "id": "ielts-057",
+    "english": "Comprise",
+    "turkish": "İçermek, kapsamak, oluşmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Comprise",
+    "originalTurkish": "İçermek, kapsamak, oluşmak"
+  },
+  {
+    "id": "ielts-058",
+    "english": "Confirmed",
+    "turkish": "Doğrulanmış, kesinleşmiş; kökleşmiş (alışkanlık)",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Confirmed",
+    "originalTurkish": "Bağımlı, tiryaki, tanrı tanımaz"
+  },
+  {
+    "id": "ielts-059",
+    "english": "Contrary",
+    "turkish": "Karşıt, zıt, aksine",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Contrary",
+    "originalTurkish": "Karşıt, zıt, aksine"
+  },
+  {
+    "id": "ielts-060",
+    "english": "Convert",
+    "turkish": "Dönüştürmek, değiştirmek, din değiştiren kimse",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Convert",
+    "originalTurkish": "Dönüştürmek, değiştirmek, din değiştiren kimse"
+  },
+  {
+    "id": "ielts-061",
+    "english": "Contract",
+    "turkish": "Küçülmek, kısaltmak, sözleşme yapmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Contract",
+    "originalTurkish": "Küçülmek, kısaltmak, sözleşme yapmak"
+  },
+  {
+    "id": "ielts-062",
+    "english": "Corresponding",
+    "turkish": "Denk gelen, benzer veya ilişkili",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Corresponding",
+    "originalTurkish": "Denk gelen, benzer veya ilişkili"
+  },
+  {
+    "id": "ielts-063",
+    "english": "Commission",
+    "turkish": "Kurul, komisyon, görevlendirmek, yetki",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Commission",
+    "originalTurkish": "Kurul, komisyon, görevlendirmek, yetki"
+  },
+  {
+    "id": "ielts-064",
+    "english": "Constraint",
+    "turkish": "Sınırlama, zorlama",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Constraint",
+    "originalTurkish": "Sınırlama, zorlama"
+  },
+  {
+    "id": "ielts-065",
+    "english": "Compelling",
+    "turkish": "İlgi uyandıran, zorlayıcı, saygı uyandıran",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Compelling",
+    "originalTurkish": "İlgi uyandıran, zorlayıcı, saygı uyandıran"
+  },
+  {
+    "id": "ielts-066",
+    "english": "Commitment",
+    "turkish": "Bağlılık, sorumluluk, iş, görev",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Commitment",
+    "originalTurkish": "Bağlılık, sorumluluk, iş, görev"
+  },
+  {
+    "id": "ielts-067",
+    "english": "Convention",
+    "turkish": "Kongre, gelenek, resmi anlaşma, toplantı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Convention",
+    "originalTurkish": "Kongre, gelenek, resmi anlaşma, toplantı"
+  },
+  {
+    "id": "ielts-068",
+    "english": "Cautionary",
+    "turkish": "Uyarıcı, ikaz edici",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Cautionary",
+    "originalTurkish": "Uyarıcı, ikaz edici"
+  },
+  {
+    "id": "ielts-069",
+    "english": "Condense",
+    "turkish": "Yoğunlaştırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Condense",
+    "originalTurkish": "Yoğunlaştırmak"
+  },
+  {
+    "id": "ielts-070",
+    "english": "Compensation",
+    "turkish": "Tazminat, karşılık, bedel",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Compensation",
+    "originalTurkish": "Tazminat, karşılık, bedel"
+  },
+  {
+    "id": "ielts-071",
+    "english": "Component",
+    "turkish": "Bileşen, parça",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Component",
+    "originalTurkish": "Bileşen, parça"
+  },
+  {
+    "id": "ielts-072",
+    "english": "Consent",
+    "turkish": "İzin, onay; izin vermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Consent",
+    "originalTurkish": "İzin, rica, oy birliği ile"
+  },
+  {
+    "id": "ielts-073",
+    "english": "Consequence",
+    "turkish": "Sonuç, netice",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Consequence",
+    "originalTurkish": "Sonuç, netice, önemsiz"
+  },
+  {
+    "id": "ielts-074",
+    "english": "Culminate",
+    "turkish": "Neticelenmek, bitmek, sona ermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Culminate",
+    "originalTurkish": "Neticelenmek, bitmek, sona ermek"
+  },
+  {
+    "id": "ielts-075",
+    "english": "Consultation",
+    "turkish": "Danışma, görüşme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Consultation",
+    "originalTurkish": "Danışma, görüşme"
+  },
+  {
+    "id": "ielts-076",
+    "english": "Controversy",
+    "turkish": "Anlaşmazlık, fikir ayrılığı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Controversy",
+    "originalTurkish": "Anlaşmazlık, fikir ayrılığı"
+  },
+  {
+    "id": "ielts-077",
+    "english": "Conversely",
+    "turkish": "Aksine, tersine",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Conversely",
+    "originalTurkish": "Aksine, tersine"
+  },
+  {
+    "id": "ielts-078",
+    "english": "Domestic",
+    "turkish": "Ülke içi, aile içi, evcil",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Domestic",
+    "originalTurkish": "Ülke içi, aile içi, evcil"
+  },
+  {
+    "id": "ielts-079",
+    "english": "Dimension",
+    "turkish": "Boyut, ebat, yön, taraf",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Dimension",
+    "originalTurkish": "Boyut, ebat, yön, taraf"
+  },
+  {
+    "id": "ielts-080",
+    "english": "Differentiate",
+    "turkish": "Ayırt etmek, farklılaştırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Differentiate",
+    "originalTurkish": "Ayırt etmek, farklılaştırmak"
+  },
+  {
+    "id": "ielts-081",
+    "english": "Denote",
+    "turkish": "İşareti olmak, manasına gelmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Denote",
+    "originalTurkish": "İşareti olmak, manasına gelmek"
+  },
+  {
+    "id": "ielts-082",
+    "english": "Devoted",
+    "turkish": "Kendini adamış",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Devoted",
+    "originalTurkish": "Kendini adamış"
+  },
+  {
+    "id": "ielts-083",
+    "english": "Diminish",
+    "turkish": "Azalmak, eksilmek, küçültmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Diminish",
+    "originalTurkish": "Azalmak, eksilmek, küçültmek"
+  },
+  {
+    "id": "ielts-084",
+    "english": "Distort",
+    "turkish": "Bozmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Distort",
+    "originalTurkish": "Bozmak"
+  },
+  {
+    "id": "ielts-085",
+    "english": "Duration",
+    "turkish": "Devam süresi, mühlet",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Duration",
+    "originalTurkish": "Devam süresi, mühlet"
+  },
+  {
+    "id": "ielts-086",
+    "english": "Detect",
+    "turkish": "Bulmak, ortaya çıkarmak, keşfetmek, sezmek, hissetmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Detect",
+    "originalTurkish": "Bulmak, ortaya çıkarmak, keşfetmek, sezmek, hissetmek"
+  },
+  {
+    "id": "ielts-087",
+    "english": "Deviation",
+    "turkish": "Sapma, ayrılma, farklılık",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Deviation",
+    "originalTurkish": "Sapma, ayrılma, farklılık"
+  },
+  {
+    "id": "ielts-088",
+    "english": "Displacement",
+    "turkish": "Çıkarma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Diplacement",
+    "originalTurkish": "Çıkarma"
+  },
+  {
+    "id": "ielts-089",
+    "english": "Displace",
+    "turkish": "Yerine geçmek, çıkarmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Diplace",
+    "originalTurkish": "Yerine geçmek, çıkarmak"
+  },
+  {
+    "id": "ielts-090",
+    "english": "Disposal",
+    "turkish": "İmha etme, ortadan kaldırma, elden çıkarma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Disposal",
+    "originalTurkish": "İmha etme, ortadan kaldırma, elden çıkarma"
+  },
+  {
+    "id": "ielts-091",
+    "english": "Derive",
+    "turkish": "Türetmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Derive",
+    "originalTurkish": "Türetmek"
+  },
+  {
+    "id": "ielts-092",
+    "english": "Distribution",
+    "turkish": "Dağılım, dağıtma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Distribution",
+    "originalTurkish": "Dağılım, dağıtma"
+  },
+  {
+    "id": "ielts-093",
+    "english": "Dissuade",
+    "turkish": "Vazgeçirmek, caydırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Dissuade",
+    "originalTurkish": "Vazgeçirmek, caydırmak"
+  },
+  {
+    "id": "ielts-094",
+    "english": "Distinction",
+    "turkish": "Ayrım, fark, üstünlük",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Distinction",
+    "originalTurkish": "Ayrım, fark, üstünlük"
+  },
+  {
+    "id": "ielts-095",
+    "english": "Demanding",
+    "turkish": "Zor zahmetli iş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Demanding",
+    "originalTurkish": "Zor zahmetli iş"
+  },
+  {
+    "id": "ielts-096",
+    "english": "Domain",
+    "turkish": "Alan, bölge, uzmanlık alanı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Domain",
+    "originalTurkish": "Alan, bölge, uzmanlık alanı"
+  },
+  {
+    "id": "ielts-097",
+    "english": "Decline",
+    "turkish": "Reddetmek, azalmak, düşüş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Decline",
+    "originalTurkish": "Reddetmek, azalmak, düşüş"
+  },
+  {
+    "id": "ielts-098",
+    "english": "Dense",
+    "turkish": "Yoğun, sıkı, kalabalık",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Dense",
+    "originalTurkish": "Yoğun, sıkı, kalabalık"
+  },
+  {
+    "id": "ielts-099",
+    "english": "Display",
+    "turkish": "Sergilemek, göstermek, sergi",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Display",
+    "originalTurkish": "Sergilemek, göstermek, sergi"
+  },
+  {
+    "id": "ielts-100",
+    "english": "Discretion",
+    "turkish": "Akıl, sağduyu, ölçülü davranma, takdir yetisi",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Discretion",
+    "originalTurkish": "Akıl, sağduyu, ölçülü davranma, takdir yetisi"
+  },
+  {
+    "id": "ielts-101",
+    "english": "Deduction",
+    "turkish": "Kesinti, indirim, sonuç çıkarma, tümdengelim",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Deduction",
+    "originalTurkish": "Kesinti, indirim, sonuç çıkarma, tümdengelim"
+  },
+  {
+    "id": "ielts-102",
+    "english": "Discrimination",
+    "turkish": "Ayrımcılık",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Discrimination",
+    "originalTurkish": "Ayrımcılık"
+  },
+  {
+    "id": "ielts-103",
+    "english": "Debate",
+    "turkish": "Tartışma, müzakere, karar vermeye çalışma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Debate",
+    "originalTurkish": "Tartışma, müzakere, karar vermeye çalışma"
+  },
+  {
+    "id": "ielts-104",
+    "english": "Emerge",
+    "turkish": "Ortaya çıkmak, belirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Emerge",
+    "originalTurkish": "Ortaya çıkarmak, görünmek, belirmek"
+  },
+  {
+    "id": "ielts-105",
+    "english": "Equation",
+    "turkish": "Eşitlik, denklik",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Equation",
+    "originalTurkish": "Eşitlik, denklik"
+  },
+  {
+    "id": "ielts-106",
+    "english": "Evaluate",
+    "turkish": "Değerlendirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Evaluate",
+    "originalTurkish": "Değerlendirmek"
+  },
+  {
+    "id": "ielts-107",
+    "english": "Explicit",
+    "turkish": "Açık, belirgin, aşikar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Expicit",
+    "originalTurkish": "Açık, belirgin, aşikar"
+  },
+  {
+    "id": "ielts-108",
+    "english": "Exceed",
+    "turkish": "Aşmak, geçmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Exceed",
+    "originalTurkish": "Aşmak, geçmek"
+  },
+  {
+    "id": "ielts-109",
+    "english": "Estate",
+    "turkish": "Arazi, mülk, miras",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Estate",
+    "originalTurkish": "Arazi, mülk, miras"
+  },
+  {
+    "id": "ielts-110",
+    "english": "Enhance",
+    "turkish": "Artırmak, geliştirmek, katkıda bulunmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Enhance",
+    "originalTurkish": "Artırmak, geliştirmek, katkıda bulunmak"
+  },
+  {
+    "id": "ielts-111",
+    "english": "Exhibit",
+    "turkish": "Sergilemek, göstermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Exhibit",
+    "originalTurkish": "Sergilemek, göstermek"
+  },
+  {
+    "id": "ielts-112",
+    "english": "Exploitation",
+    "turkish": "İstismar, sömürme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Exploitatin",
+    "originalTurkish": "İstismar, sömürme"
+  },
+  {
+    "id": "ielts-113",
+    "english": "Edition",
+    "turkish": "Basım, baskı, bölüm",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Edition",
+    "originalTurkish": "Basım, baskı, bölüm"
+  },
+  {
+    "id": "ielts-114",
+    "english": "Established",
+    "turkish": "Kurulu, kurulmuş, sabit, yerleşik",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Establihed",
+    "originalTurkish": "Kurulu, kurulmuş, sabit, yerleşik"
+  },
+  {
+    "id": "ielts-115",
+    "english": "Empirical",
+    "turkish": "Deney ve gözleme dayalı, deneysel",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Emprical",
+    "originalTurkish": "Deneysel, soyut"
+  },
+  {
+    "id": "ielts-116",
+    "english": "Enormous",
+    "turkish": "Kocaman, muazzam",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Enormous",
+    "originalTurkish": "Kocaman, muazzam"
+  },
+  {
+    "id": "ielts-117",
+    "english": "Extract",
+    "turkish": "Özünü çıkarmak, öz, çekmek, bölüm, parça",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Extract",
+    "originalTurkish": "Özünü çıkarmak, öz, çekmek, bölüm, parça"
+  },
+  {
+    "id": "ielts-118",
+    "english": "Exclude",
+    "turkish": "Hariç tutmak, dahil etmemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Exclude",
+    "originalTurkish": "Hariç tutmak, dahil etmemek"
+  },
+  {
+    "id": "ielts-119",
+    "english": "Erratic",
+    "turkish": "Düzensiz, değişken, kararsız",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Erratic",
+    "originalTurkish": "Düzensiz, değişken, kararsız"
+  },
+  {
+    "id": "ielts-120",
+    "english": "Exposure",
+    "turkish": "Maruz kalma, ifşaat, soğuktan donma, poz",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Exposure",
+    "originalTurkish": "Maruz kalma, ifşaat, soğuktan donma, poz"
+  },
+  {
+    "id": "ielts-121",
+    "english": "Ensure",
+    "turkish": "Garantiye almak, temin etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Ensure",
+    "originalTurkish": "Garantiye almak, temin etmek"
+  },
+  {
+    "id": "ielts-122",
+    "english": "Emphasis",
+    "turkish": "Önem, ehemmiyet, vurgu, vurgulama",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Emphasis",
+    "originalTurkish": "Önem, ehemmiyet, vurgu, vurgulama"
+  },
+  {
+    "id": "ielts-123",
+    "english": "Extinction",
+    "turkish": "Nesli tükenme, yok olma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Extinction",
+    "originalTurkish": "Nesli tükenme, yok olma"
+  },
+  {
+    "id": "ielts-124",
+    "english": "Extent",
+    "turkish": "Boyut, derece",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Extent",
+    "originalTurkish": "Boyut, derece"
+  },
+  {
+    "id": "ielts-125",
+    "english": "Emission",
+    "turkish": "Yayılma, salınım",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Emission",
+    "originalTurkish": "Yayılma, salınım"
+  },
+  {
+    "id": "ielts-126",
+    "english": "Equivalent",
+    "turkish": "Eşit, denk, eşdeğer",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Equivalent",
+    "originalTurkish": "Eşit, denk, eşdeğer"
+  },
+  {
+    "id": "ielts-127",
+    "english": "Entity",
+    "turkish": "Varlık, birim",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Entity",
+    "originalTurkish": "Varlık, birim"
+  },
+  {
+    "id": "ielts-128",
+    "english": "Enforcement",
+    "turkish": "Uygulama, zorlama, yürürlüğe koyma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Enforcement",
+    "originalTurkish": "Uygulama, zorlama, yürürlüğe koyma"
+  },
+  {
+    "id": "ielts-129",
+    "english": "Enable",
+    "turkish": "Olanak sağlamak, imkan vermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Enable",
+    "originalTurkish": "Olanak sağlamak, imkan vermek"
+  },
+  {
+    "id": "ielts-130",
+    "english": "Fluctuate",
+    "turkish": "Dalgalanmak, değişmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Fluctuate",
+    "originalTurkish": "Dalgalanmak, değişmek"
+  },
+  {
+    "id": "ielts-131",
+    "english": "Fluctuation",
+    "turkish": "Dalgalanma, değişim",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Fluctuation",
+    "originalTurkish": "Dalgalanma, değişim"
+  },
+  {
+    "id": "ielts-132",
+    "english": "Forthcoming",
+    "turkish": "Yaklaşan, gelmekte olan",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Forthcoming",
+    "originalTurkish": "Yakınlaşmakta olan, gelmekte olan(bayram tatili gibi)"
+  },
+  {
+    "id": "ielts-133",
+    "english": "Frustrate",
+    "turkish": "Hayal kırıklığına uğratmak, engellenmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Frustrate",
+    "originalTurkish": "Hayal kırıklığına uğratmak, engellenmek"
+  },
+  {
+    "id": "ielts-134",
+    "english": "Found",
+    "turkish": "Kurmak, tesis etmek, dayanmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Found",
+    "originalTurkish": "Kurmak, tesis etmek, dayanmak"
+  },
+  {
+    "id": "ielts-135",
+    "english": "Formidable",
+    "turkish": "Ürkütücü, heybetli, yenmesi zor",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Formidable",
+    "originalTurkish": "Ürkütücü, heybetli, yenmesi zor"
+  },
+  {
+    "id": "ielts-136",
+    "english": "Finite",
+    "turkish": "Sınırlı, limitli",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Finite",
+    "originalTurkish": "Sınırlı, limitli"
+  },
+  {
+    "id": "ielts-137",
+    "english": "Foundation",
+    "turkish": "Temel, esas, kuruluş, vakıf, dernek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Foundation",
+    "originalTurkish": "Temel, esas, kuruluş, vakıf, dernek"
+  },
+  {
+    "id": "ielts-138",
+    "english": "Fuel",
+    "turkish": "Desteklemek, güçlendirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Fuel",
+    "originalTurkish": "Desteklemek, güçlendirmek"
+  },
+  {
+    "id": "ielts-139",
+    "english": "Flourish",
+    "turkish": "Gelişmek, büyümek, çalım, fiyaka",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Flourish",
+    "originalTurkish": "Gelişmek, büyümek, çalım, fiyaka"
+  },
+  {
+    "id": "ielts-140",
+    "english": "Furthermore",
+    "turkish": "Ayrıca, dahası",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Furthermore",
+    "originalTurkish": "Ayrıca, dahası"
+  },
+  {
+    "id": "ielts-141",
+    "english": "Framework",
+    "turkish": "Yapı, iskelet",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Framework",
+    "originalTurkish": "Yapı, iskelet"
+  },
+  {
+    "id": "ielts-142",
+    "english": "Fundamental",
+    "turkish": "Temel, ana, esas",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Fundemental",
+    "originalTurkish": "Temel, ana, esas"
+  },
+  {
+    "id": "ielts-143",
+    "english": "Facilitate",
+    "turkish": "Kolaylaştırmak, rahatlatmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Facilitate",
+    "originalTurkish": "Kolaylaştırmak, rahatlatmak"
+  },
+  {
+    "id": "ielts-144",
+    "english": "Grind",
+    "turkish": "Öğütmek, sıkıcı ve zor iş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Grind",
+    "originalTurkish": "Öğütmek, sıkıcı ve zor iş"
+  },
+  {
+    "id": "ielts-145",
+    "english": "Generate",
+    "turkish": "Enerji üretmek, ortaya çıkarmak, oluşturmak, yaratmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Generate",
+    "originalTurkish": "Enerji üretmek, ortaya çıkarmak, oluşturmak, yaratmak"
+  },
+  {
+    "id": "ielts-146",
+    "english": "Grant",
+    "turkish": "Vermek, bağışlamak, kabul etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Grant",
+    "originalTurkish": "Vermek, bağışlamak, kabul etmek"
+  },
+  {
+    "id": "ielts-147",
+    "english": "Guidelines",
+    "turkish": "Kurallar, öneriler, talimatlar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Guidelines",
+    "originalTurkish": "Kurallar, öneriler, talimatlar"
+  },
+  {
+    "id": "ielts-148",
+    "english": "Hence",
+    "turkish": "Bu nedenle, bundan dolayı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Hence",
+    "originalTurkish": "Bu nedenle, bundan dolayı"
+  },
+  {
+    "id": "ielts-149",
+    "english": "Institute",
+    "turkish": "Kurmak, enstitü, tesis etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Institude",
+    "originalTurkish": "Kurmak, enstitü, tesis etmek"
+  },
+  {
+    "id": "ielts-150",
+    "english": "Implication",
+    "turkish": "Muhtemel etki sonuç, ima, çıkarım, suça karışma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Implication",
+    "originalTurkish": "Muhtemel etki sonuç, ima, çıkarım, suça karışma"
+  },
+  {
+    "id": "ielts-151",
+    "english": "Involve",
+    "turkish": "İçermek, dahil etmek, gerektirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Involve",
+    "originalTurkish": "Karmaşık, ilişkili, bulaşmak, romantik ilişkisi olmak"
+  },
+  {
+    "id": "ielts-152",
+    "english": "Indicate",
+    "turkish": "Göstermek, işaret etmek, sinyal vermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Indicate",
+    "originalTurkish": "Göstermek, işaret etmek, sinyal vermek"
+  },
+  {
+    "id": "ielts-153",
+    "english": "Identical",
+    "turkish": "Aynı, özdeş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Identical",
+    "originalTurkish": "Benzer, aynı"
+  },
+  {
+    "id": "ielts-154",
+    "english": "Implicit",
+    "turkish": "İma edilen",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Implicit",
+    "originalTurkish": "İma edilen"
+  },
+  {
+    "id": "ielts-155",
+    "english": "Induce",
+    "turkish": "İkna etmek, sebep olmak, inandırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Induce",
+    "originalTurkish": "İkna etmek, sebep olmak, inandırmak"
+  },
+  {
+    "id": "ielts-156",
+    "english": "Inevitable",
+    "turkish": "Kaçınılmaz, beklenen",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Inevitable",
+    "originalTurkish": "Kaçınılmaz, beklenen"
+  },
+  {
+    "id": "ielts-157",
+    "english": "Infrastructure",
+    "turkish": "Altyapı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Infrastructure",
+    "originalTurkish": "Altyapı"
+  },
+  {
+    "id": "ielts-158",
+    "english": "Inherent",
+    "turkish": "Doğasında olan",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Inherent",
+    "originalTurkish": "Doğasında olan"
+  },
+  {
+    "id": "ielts-159",
+    "english": "Insight",
+    "turkish": "İç yüzünü anlama, kavrama",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Insight",
+    "originalTurkish": "İç yüzünü anlama, kavrama"
+  },
+  {
+    "id": "ielts-160",
+    "english": "Integral",
+    "turkish": "Tamamlayıcı, bütünleyici",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Integral",
+    "originalTurkish": "Tamamlayıcı, bütünleyici"
+  },
+  {
+    "id": "ielts-161",
+    "english": "Inclination",
+    "turkish": "Eğilim, meyil",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Inclination",
+    "originalTurkish": "Eğilim, meyil"
+  },
+  {
+    "id": "ielts-162",
+    "english": "Integrity",
+    "turkish": "Bütünlük, dürüstlük",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Integrity",
+    "originalTurkish": "Bütünlük, dürüstlük"
+  },
+  {
+    "id": "ielts-163",
+    "english": "Intrinsic",
+    "turkish": "Özünde olan, içsel",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Intrinsic",
+    "originalTurkish": "Asıl, esas, hakiki, önemli"
+  },
+  {
+    "id": "ielts-164",
+    "english": "Invoke",
+    "turkish": "-den/dan alıntı yapmak, destek almak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Invoke",
+    "originalTurkish": "-den/dan alıntı yapmak, destek almak"
+  },
+  {
+    "id": "ielts-165",
+    "english": "Inspection",
+    "turkish": "Muayene, inceleme, denetleme, teftiş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Inspection",
+    "originalTurkish": "Muayene, inceleme, denetleme, teftiş"
+  },
+  {
+    "id": "ielts-166",
+    "english": "Incompatible",
+    "turkish": "Uyumsuz, bağdaşmayan",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Incompatible",
+    "originalTurkish": "Uyumsuz, bağdaşmayan"
+  },
+  {
+    "id": "ielts-167",
+    "english": "Intensity",
+    "turkish": "Şiddet, yoğunluk",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Intensity",
+    "originalTurkish": "Şiddet, yoğunluk"
+  },
+  {
+    "id": "ielts-168",
+    "english": "Infer",
+    "turkish": "Anlam çıkarmak, sonuç çıkarmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Infer",
+    "originalTurkish": "Anlam çıkarmak, sonuç çıkarmak"
+  },
+  {
+    "id": "ielts-169",
+    "english": "Insert",
+    "turkish": "Sokmak, yerleştirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Insert",
+    "originalTurkish": "Sokmak, yerleştirmek"
+  },
+  {
+    "id": "ielts-170",
+    "english": "Intervention",
+    "turkish": "Müdahale, engelleme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Intervention",
+    "originalTurkish": "Müdahale, engelleme"
+  },
+  {
+    "id": "ielts-171",
+    "english": "Intentional",
+    "turkish": "Kasıtlı, maksatlı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Intentional",
+    "originalTurkish": "Kasıtlı, maksatlı"
+  },
+  {
+    "id": "ielts-172",
+    "english": "Integration",
+    "turkish": "Bütünleşme, katılım",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Integration",
+    "originalTurkish": "Bütünleşme, katılım"
+  },
+  {
+    "id": "ielts-173",
+    "english": "Interaction",
+    "turkish": "İletişim, etkileşim, işbirliği, birliktelik",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Interaction",
+    "originalTurkish": "İletişim, etkileşim, işbirliği, birliktelik"
+  },
+  {
+    "id": "ielts-174",
+    "english": "Implementation",
+    "turkish": "Uygulama, hayata geçirme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Impementation",
+    "originalTurkish": "Uygulama, hayata geçirme"
+  },
+  {
+    "id": "ielts-175",
+    "english": "Indeed",
+    "turkish": "Gerçekten, aslında",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Indeed",
+    "originalTurkish": "Gerçekten, aslında"
+  },
+  {
+    "id": "ielts-176",
+    "english": "Interval",
+    "turkish": "Ara, mola",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Interval",
+    "originalTurkish": "Ara, mola"
+  },
+  {
+    "id": "ielts-177",
+    "english": "Initiative",
+    "turkish": "Girişim, teşebbüs, insiyatif",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Initiative",
+    "originalTurkish": "Girişim, teşebbüs, insiyatif"
+  },
+  {
+    "id": "ielts-178",
+    "english": "Inhibition",
+    "turkish": "Çekingenlik, engelleme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Inhibition",
+    "originalTurkish": "Çekingenlik, engelleme"
+  },
+  {
+    "id": "ielts-179",
+    "english": "Initial",
+    "turkish": "İlk, başlangıç",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Initial",
+    "originalTurkish": "İlk, başlangıç"
+  },
+  {
+    "id": "ielts-180",
+    "english": "Incorporated",
+    "turkish": "Birleşmiş, anonim",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Incorporated",
+    "originalTurkish": "Birleşmiş, anonim"
+  },
+  {
+    "id": "ielts-181",
+    "english": "Incidence",
+    "turkish": "Oran, meydana gelme sıklığı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Incidence",
+    "originalTurkish": "Oran, meydana gelme sıklığı"
+  },
+  {
+    "id": "ielts-182",
+    "english": "Internal",
+    "turkish": "İç, dahili",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Internal",
+    "originalTurkish": "İç, dahili"
+  },
+  {
+    "id": "ielts-183",
+    "english": "Investigation",
+    "turkish": "Soruşturma, araştırma",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Investigation",
+    "originalTurkish": "Soruşturma, araştırma"
+  },
+  {
+    "id": "ielts-184",
+    "english": "Incentive",
+    "turkish": "Teşvik, özendirme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Incentive",
+    "originalTurkish": "Teşvik, özendirme"
+  },
+  {
+    "id": "ielts-185",
+    "english": "Imply",
+    "turkish": "İma etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Imply",
+    "originalTurkish": "İma etmek"
+  },
+  {
+    "id": "ielts-186",
+    "english": "Justification",
+    "turkish": "Gerekçe, mazeret, sebep",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Justification",
+    "originalTurkish": "Gerekçe, mazeret, sebep"
+  },
+  {
+    "id": "ielts-187",
+    "english": "Labour",
+    "turkish": "Çalışma, iş, emek, doğum",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Labour",
+    "originalTurkish": "Çalışma, iş, emek, doğum"
+  },
+  {
+    "id": "ielts-188",
+    "english": "Label",
+    "turkish": "Etiket, etiketlemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Label",
+    "originalTurkish": "Etiket, etiketlemek"
+  },
+  {
+    "id": "ielts-189",
+    "english": "Levy",
+    "turkish": "El koymak, haczetmek, vergilendirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Levy",
+    "originalTurkish": "El koymak, haczetmek, vergilendirmek"
+  },
+  {
+    "id": "ielts-190",
+    "english": "Likewise",
+    "turkish": "Aynı biçimde, benzer şekilde",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Likewise",
+    "originalTurkish": "Aynı biçimde, benzer şekilde"
+  },
+  {
+    "id": "ielts-191",
+    "english": "Monitor",
+    "turkish": "Denetlemek, izlemek, gözlemek, ölçüm cihazı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Monitor",
+    "originalTurkish": "Denetlemek, izlemek, gözlemek, ölçüm cihazı"
+  },
+  {
+    "id": "ielts-192",
+    "english": "Maintenance",
+    "turkish": "Bakım, onarım",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Maintanance",
+    "originalTurkish": "Bakım, onarım"
+  },
+  {
+    "id": "ielts-193",
+    "english": "Mediate",
+    "turkish": "Aracı olmak, araya girmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Mediate",
+    "originalTurkish": "Aracı olmak, araya girmek"
+  },
+  {
+    "id": "ielts-194",
+    "english": "Mutual",
+    "turkish": "Karşılıklı, ortak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Mutual",
+    "originalTurkish": "Karşılıklı, ortak"
+  },
+  {
+    "id": "ielts-195",
+    "english": "Ministry",
+    "turkish": "Bakanlık, vekillik",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Minisrty",
+    "originalTurkish": "Bakanlık, vekillik"
+  },
+  {
+    "id": "ielts-196",
+    "english": "Maintain",
+    "turkish": "Sürdürmek, korumak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Maintain",
+    "originalTurkish": "Sürdürmek, korumak"
+  },
+  {
+    "id": "ielts-197",
+    "english": "Narrow",
+    "turkish": "Dar, daraltmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Narrow",
+    "originalTurkish": "Dar, daraltmak"
+  },
+  {
+    "id": "ielts-198",
+    "english": "No longer",
+    "turkish": "Artık değil, artık … yapmamak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "No longer",
+    "originalTurkish": "Artık / bundan böyle"
+  },
+  {
+    "id": "ielts-199",
+    "english": "Neutral",
+    "turkish": "Tarafsız, soluk, vites boşta",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Neatural",
+    "originalTurkish": "Tarafsız, soluk, vites boşta"
+  },
+  {
+    "id": "ielts-200",
+    "english": "Nevertheless",
+    "turkish": "Yine de, buna rağmen",
+    "alternatives": ["Nonetheless"],
+    "source": "IELTS PDF",
+    "originalEnglish": "Nevertheless/Nonetheless",
+    "originalTurkish": "Yine de, buna rağmen"
+  },
+  {
+    "id": "ielts-201",
+    "english": "Notwithstanding",
+    "turkish": "-e rağmen,, bununla birlikte",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Northwithsanding",
+    "originalTurkish": "-e rağmen,, bununla birlikte"
+  },
+  {
+    "id": "ielts-202",
+    "english": "Occupational",
+    "turkish": "Mesleki, iş veya meslekle ilgili",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Occupational",
+    "originalTurkish": "Mesleki, iş veya meslekle ilgili"
+  },
+  {
+    "id": "ielts-203",
+    "english": "Obtain",
+    "turkish": "Elde etmek, kazanmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Obtain",
+    "originalTurkish": "Elde etmek, kazanmak"
+  },
+  {
+    "id": "ielts-204",
+    "english": "Odd",
+    "turkish": "Tuhaf, alışılmamış, tek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Odd",
+    "originalTurkish": "Tuhaf, alışılmamış, tek"
+  },
+  {
+    "id": "ielts-205",
+    "english": "Occur",
+    "turkish": "Meydana gelmek, olmak, bulunmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Occur",
+    "originalTurkish": "Meydana gelmek, olmak, bulunmak"
+  },
+  {
+    "id": "ielts-206",
+    "english": "Overlap",
+    "turkish": "Örtüşmek, benzeşmek, üst üste gelmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Overlap",
+    "originalTurkish": "Örtüşmek, benzeşmek, üst üste gelmek"
+  },
+  {
+    "id": "ielts-207",
+    "english": "Offset",
+    "turkish": "Dengelemek, telafi etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Offset",
+    "originalTurkish": "Dengelemek, telafi etmek"
+  },
+  {
+    "id": "ielts-208",
+    "english": "Pursue",
+    "turkish": "Takip etmek, kovalamak, araştırmak, incelemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Persue",
+    "originalTurkish": "Takip etmek, kovalamak, araştırmak, incelemek"
+  },
+  {
+    "id": "ielts-209",
+    "english": "Precise",
+    "turkish": "Tam, kesin",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Precise",
+    "originalTurkish": "Tam, kesin"
+  },
+  {
+    "id": "ielts-210",
+    "english": "Proportion",
+    "turkish": "Oran, orantı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Proportion",
+    "originalTurkish": "Oran, orantı"
+  },
+  {
+    "id": "ielts-211",
+    "english": "Phase",
+    "turkish": "Aşama, evre",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Phase",
+    "originalTurkish": "Aşama, evre"
+  },
+  {
+    "id": "ielts-212",
+    "english": "Primary",
+    "turkish": "Temel, ana",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Primary",
+    "originalTurkish": "Temel, ana"
+  },
+  {
+    "id": "ielts-213",
+    "english": "Preliminary",
+    "turkish": "İlk, ön, başlangıç",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Preliminary",
+    "originalTurkish": "İlk, ön, başlangıç"
+  },
+  {
+    "id": "ielts-214",
+    "english": "Pose",
+    "turkish": "Ortaya çıkarmak, poz vermek, tehdit yaratmak, neden olmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Pose",
+    "originalTurkish": "Ortaya çıkarmak, poz vermek, tehdit yaratmak, neden olmak"
+  },
+  {
+    "id": "ielts-215",
+    "english": "Practitioner",
+    "turkish": "Uygulayıcı, pratisyen, avukat",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Practitioner",
+    "originalTurkish": "Uygulayıcı, pratisyen, avukat"
+  },
+  {
+    "id": "ielts-216",
+    "english": "Predominantly",
+    "turkish": "Çoğunlukla",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Predominantly",
+    "originalTurkish": "Çoğunlukla"
+  },
+  {
+    "id": "ielts-217",
+    "english": "Persuade",
+    "turkish": "İkna etmek, inandırmak, kandırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Persuade",
+    "originalTurkish": "İkna etmek, inandırmak, kandırmak"
+  },
+  {
+    "id": "ielts-218",
+    "english": "Pulse",
+    "turkish": "Nabız, vuruş, sinyal",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Pulse",
+    "originalTurkish": "Nabız, vuruş, sinyal"
+  },
+  {
+    "id": "ielts-219",
+    "english": "Particles",
+    "turkish": "Parçacıklar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Particles",
+    "originalTurkish": "Parçacıklar"
+  },
+  {
+    "id": "ielts-220",
+    "english": "Purchase",
+    "turkish": "Satın alma(k)",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Purchase",
+    "originalTurkish": "Satın alma(k)"
+  },
+  {
+    "id": "ielts-221",
+    "english": "Precipitate",
+    "turkish": "Hızlandırmak, zemin hazırlamak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Precipitate",
+    "originalTurkish": "Hızlandırmak, zemin hazırlamak"
+  },
+  {
+    "id": "ielts-222",
+    "english": "Paradigm",
+    "turkish": "Örnek, numune",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Paradigm",
+    "originalTurkish": "Örnek, numune"
+  },
+  {
+    "id": "ielts-223",
+    "english": "Prohibit",
+    "turkish": "Yasaklamak, önlemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Prohibit",
+    "originalTurkish": "Yasaklamak, önlemek"
+  },
+  {
+    "id": "ielts-224",
+    "english": "Publication",
+    "turkish": "Yayın, yayınlama",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Publication",
+    "originalTurkish": "Yayın, yayınlama"
+  },
+  {
+    "id": "ielts-225",
+    "english": "Perceive",
+    "turkish": "Algılamak, sezmek, farkına varmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Perceive",
+    "originalTurkish": "Algılamak, sezmek, farkına varmak"
+  },
+  {
+    "id": "ielts-226",
+    "english": "Precede",
+    "turkish": "– den önce gelmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Precere",
+    "originalTurkish": "– den önce gelmek"
+  },
+  {
+    "id": "ielts-227",
+    "english": "Presumption",
+    "turkish": "Varsayım, tahmin, saygısız kaba davranmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Presumption",
+    "originalTurkish": "Varsayım, tahmin, saygısız kaba davranmak"
+  },
+  {
+    "id": "ielts-228",
+    "english": "Qualitative",
+    "turkish": "Niteliksel, nitel",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Qualitative",
+    "originalTurkish": "Niteliksel, nitel"
+  },
+  {
+    "id": "ielts-229",
+    "english": "Revenue",
+    "turkish": "vergi, toplanan vergi gelirleri",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Revenue",
+    "originalTurkish": "vergi, toplanan vergi gelirleri"
+  },
+  {
+    "id": "ielts-230",
+    "english": "Restricted",
+    "turkish": "Sınırlı, kısıtlı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Restricted",
+    "originalTurkish": "Sınırlı, kısıtlı"
+  },
+  {
+    "id": "ielts-231",
+    "english": "Reinforce",
+    "turkish": "Güçlendirmek, sağlamlaştırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Reinforce",
+    "originalTurkish": "Güçlendirmek, sağlamlaştırmak"
+  },
+  {
+    "id": "ielts-232",
+    "english": "Revolution",
+    "turkish": "Devrim, büyük değişim",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Revolution",
+    "originalTurkish": "Devrim, büyük değişim"
+  },
+  {
+    "id": "ielts-233",
+    "english": "Rigid",
+    "turkish": "Katı, sert",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Rigid",
+    "originalTurkish": "Katı, sert"
+  },
+  {
+    "id": "ielts-234",
+    "english": "Refine",
+    "turkish": "Arıtmak, saflaştırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Refine",
+    "originalTurkish": "Arıtmak, saflaştırmak"
+  },
+  {
+    "id": "ielts-235",
+    "english": "Restraint",
+    "turkish": "Sınırlama, kısıtlama",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Restraint",
+    "originalTurkish": "Sınırlama, kısıtlama"
+  },
+  {
+    "id": "ielts-236",
+    "english": "Reluctant",
+    "turkish": "İsteksiz, gönülsüz",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Reluctant",
+    "originalTurkish": "İsteksiz, gönülsüz"
+  },
+  {
+    "id": "ielts-237",
+    "english": "Resident",
+    "turkish": "Yerli, sakin, ikamet eden kişi",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Resident",
+    "originalTurkish": "Yerli, sakin, ikamet eden kişi"
+  },
+  {
+    "id": "ielts-238",
+    "english": "Release",
+    "turkish": "Serbest bırakmak, salmak, yayınlamak, piyasaya sunmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Release",
+    "originalTurkish": "Serbest bırakmak, salmak, yayınlamak, piyasaya sunmak"
+  },
+  {
+    "id": "ielts-239",
+    "english": "Reverse",
+    "turkish": "Geri geri gitmek, değiştirmek, tersine çevirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Reverse",
+    "originalTurkish": "Geri geri gitmek, değiştirmek, tersine çevirmek"
+  },
+  {
+    "id": "ielts-240",
+    "english": "Reveal",
+    "turkish": "açığa çıkarmak, ifşa etmek, göstermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Reveal",
+    "originalTurkish": "açığa çıkarmak, ifşa etmek, göstermek"
+  },
+  {
+    "id": "ielts-241",
+    "english": "Resolution",
+    "turkish": "Teklif, öneri, karar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Resolution",
+    "originalTurkish": "Teklif, öneri, karar"
+  },
+  {
+    "id": "ielts-242",
+    "english": "Require",
+    "turkish": "Gerekmek, ihtiyacı olmak, talep etmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Require",
+    "originalTurkish": "Gerekmek, ihtiyacı olmak, talep etmek"
+  },
+  {
+    "id": "ielts-243",
+    "english": "Repetition",
+    "turkish": "Tekrar, yineleme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Repetition",
+    "originalTurkish": "Tekrar, yineleme"
+  },
+  {
+    "id": "ielts-244",
+    "english": "Relevance",
+    "turkish": "İlişki, alaka",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Relevance",
+    "originalTurkish": "İlişki, alaka"
+  },
+  {
+    "id": "ielts-245",
+    "english": "Range",
+    "turkish": "Çeşit, tür, sıra, dizi, atış sahası",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Range",
+    "originalTurkish": "Çeşit, tür, sıra, dizi, atış sahası"
+  },
+  {
+    "id": "ielts-246",
+    "english": "Reliance",
+    "turkish": "Güven, bağlılık",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Reliance",
+    "originalTurkish": "Güven, bağlılık"
+  },
+  {
+    "id": "ielts-247",
+    "english": "Retain",
+    "turkish": "Tutmak, korumak, elinden kaçırmamak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Retain",
+    "originalTurkish": "Tutmak, korumak, elinden kaçırmamak"
+  },
+  {
+    "id": "ielts-248",
+    "english": "Survey",
+    "turkish": "Araştırma, anket, ölçüm, inceleme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Survey",
+    "originalTurkish": "Araçtırma, anket, ölçüm, ekspertiz, keşif muayene"
+  },
+  {
+    "id": "ielts-249",
+    "english": "Shrink",
+    "turkish": "Daralmak, küçülmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Shrink",
+    "originalTurkish": "Daralmak, küçülmek, ruh hekimi"
+  },
+  {
+    "id": "ielts-250",
+    "english": "Steer",
+    "turkish": "Yönlendirmek, yol göstermek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Steer",
+    "originalTurkish": "Yönlendirmek, yol göstermek"
+  },
+  {
+    "id": "ielts-251",
+    "english": "Stream",
+    "turkish": "Akış",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Stream",
+    "originalTurkish": "Akış"
+  },
+  {
+    "id": "ielts-252",
+    "english": "Scheme",
+    "turkish": "Plan, proje, entrika çevirme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Scheme",
+    "originalTurkish": "Plan, proje, entrika çevirme"
+  },
+  {
+    "id": "ielts-253",
+    "english": "So-called",
+    "turkish": "Sözde",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "So-called",
+    "originalTurkish": "Sözde"
+  },
+  {
+    "id": "ielts-254",
+    "english": "Settle",
+    "turkish": "Yerleştirmek, halletmek, çözmek, karara bağlamak, karar vermek, düzenlemek, hesabı kapatmak, oturmak, dibe çökmek(kısacası her anlamda kullanılıyor  )",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Settle",
+    "originalTurkish": "Yerleştirmek, halletmek, çözmek, karara bağlamak, karar vermek, düzenlemek, hesabı kapatmak, oturmak, dibe çökmek(kısacası her anlamda kullanılıyor  )"
+  },
+  {
+    "id": "ielts-255",
+    "english": "Subtle",
+    "turkish": "Güç algılanan, kurnaz",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Subtle",
+    "originalTurkish": "Güç algılanan, kurnaz"
+  },
+  {
+    "id": "ielts-256",
+    "english": "Sedentary",
+    "turkish": "Yerleşik, oturan",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Sedentary",
+    "originalTurkish": "Yerleşik, oturan"
+  },
+  {
+    "id": "ielts-257",
+    "english": "Suspended",
+    "turkish": "Ertelenmiş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Suspended",
+    "originalTurkish": "Ertelenmiş"
+  },
+  {
+    "id": "ielts-258",
+    "english": "Sphere",
+    "turkish": "Küre, alan, saha",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Sphere",
+    "originalTurkish": "Küre, alan, saha"
+  },
+  {
+    "id": "ielts-259",
+    "english": "Subordinate",
+    "turkish": "İkincil, daha az önemli, ast",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Subordinate",
+    "originalTurkish": "İkincil, daha az önemli, ast"
+  },
+  {
+    "id": "ielts-260",
+    "english": "Supplementary",
+    "turkish": "Tamamlayıcı, ek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Supllementary",
+    "originalTurkish": "Tamamlayıcı, ek"
+  },
+  {
+    "id": "ielts-261",
+    "english": "Suspend",
+    "turkish": "Ertelemek, askıya almak, durdurmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Suspend",
+    "originalTurkish": "Ertelemek, askıya almak, durdurmak"
+  },
+  {
+    "id": "ielts-262",
+    "english": "Somewhat",
+    "turkish": "Biraz, bir miktar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Somewhat",
+    "originalTurkish": "Biraz, bir miktar"
+  },
+  {
+    "id": "ielts-263",
+    "english": "Submit",
+    "turkish": "Sunmak, göndermek, boyun eğmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Submit",
+    "originalTurkish": "Sunmak, göndermek, boyun eğmek"
+  },
+  {
+    "id": "ielts-264",
+    "english": "Successive",
+    "turkish": "Art arda gelen, ardışık",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Successive",
+    "originalTurkish": "Art arda gelen, ardışık"
+  },
+  {
+    "id": "ielts-265",
+    "english": "Specify",
+    "turkish": "Açıkça belirtmek, kesinlikle açıklamak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Specify",
+    "originalTurkish": "Açıkça belirtmek, kesinlikle açıklamak"
+  },
+  {
+    "id": "ielts-266",
+    "english": "Shift",
+    "turkish": "Değiştirmek, vardiya, vites değiştirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Shift",
+    "originalTurkish": "Değiştirmek, vardiya, vites değiştirmek"
+  },
+  {
+    "id": "ielts-267",
+    "english": "Sequence",
+    "turkish": "Sıra, dizi, silsile",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Sequence",
+    "originalTurkish": "Sıra, dizi, silsile"
+  },
+  {
+    "id": "ielts-268",
+    "english": "Scope",
+    "turkish": "Kapsam, faaliyet alanı, fırsat",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Scope",
+    "originalTurkish": "Kapsam, faaliyet alanı, fırsat"
+  },
+  {
+    "id": "ielts-269",
+    "english": "Subsidiary",
+    "turkish": "Alt şirket, yan kuruluş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Subsidiary",
+    "originalTurkish": "Alt şirket, yan kuruluş"
+  },
+  {
+    "id": "ielts-270",
+    "english": "Subsequent",
+    "turkish": "Sonraki, izleyen, sonra gelen",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Subsequent",
+    "originalTurkish": "Sonraki, izleyen, sonra gelen"
+  },
+  {
+    "id": "ielts-271",
+    "english": "Substitution",
+    "turkish": "Yerine geçmek, yedek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Substitution",
+    "originalTurkish": "Yerine geçmek, yedek"
+  },
+  {
+    "id": "ielts-272",
+    "english": "Stimulate",
+    "turkish": "Uyarmak, harekete geçirmek, canlandırmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Stimulate",
+    "originalTurkish": "Uyarmak, harekete geçirmek, canlandırmak"
+  },
+  {
+    "id": "ielts-273",
+    "english": "Tremendous",
+    "turkish": "Muazzam, çok büyük",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Tremendous",
+    "originalTurkish": "Muazzam, çok büyük"
+  },
+  {
+    "id": "ielts-274",
+    "english": "Terrestrial",
+    "turkish": "Karasal, yeryüzüne ait",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Terrestrial",
+    "originalTurkish": "Karasal, yeryüzüne ait"
+  },
+  {
+    "id": "ielts-275",
+    "english": "Terminate",
+    "turkish": "Son vermek, bitirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Terminate",
+    "originalTurkish": "Son vermek, bitirmek"
+  },
+  {
+    "id": "ielts-276",
+    "english": "Termination",
+    "turkish": "Sona erme, bitiş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Termination",
+    "originalTurkish": "Sona erme, bitiş"
+  },
+  {
+    "id": "ielts-277",
+    "english": "Thereby",
+    "turkish": "Böylece, bu nedenle",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Thereby",
+    "originalTurkish": "Böylece, bu nedenle"
+  },
+  {
+    "id": "ielts-278",
+    "english": "Trace",
+    "turkish": "İzini sürmek, ortaya çıkarmak, iz, az miktar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Trace",
+    "originalTurkish": "İzini sürmek, ortaya çıkarmak, iz, az miktar"
+  },
+  {
+    "id": "ielts-279",
+    "english": "Trigger",
+    "turkish": "Tetiklemek, harekete geçirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Trigger",
+    "originalTurkish": "Tetiklemek, harekete geçirmek"
+  },
+  {
+    "id": "ielts-280",
+    "english": "Transmission",
+    "turkish": "Vites, yayınlama, yayma, iletme",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Transmission",
+    "originalTurkish": "Vites, yayınlama, yayma, iletme"
+  },
+  {
+    "id": "ielts-281",
+    "english": "Undertaken",
+    "turkish": "Üstlenilmiş, yapmayı kabul etmiş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Undertaken",
+    "originalTurkish": "Üstlenmek, yapmayı kabul etmek"
+  },
+  {
+    "id": "ielts-282",
+    "english": "Underlying",
+    "turkish": "Altta yatan",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Underlying",
+    "originalTurkish": "Altta yatan"
+  },
+  {
+    "id": "ielts-283",
+    "english": "Undergo",
+    "turkish": "Maruz kalmak, geçirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Undergo",
+    "originalTurkish": "Maruz kalmak, geçirmek"
+  },
+  {
+    "id": "ielts-284",
+    "english": "Ultimately",
+    "turkish": "Sonunda, temelde, esasında",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Ultimately",
+    "originalTurkish": "Sonunda, temelde, esasında"
+  },
+  {
+    "id": "ielts-285",
+    "english": "Unify",
+    "turkish": "Birleştirmek, bütünleştirmek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Unify",
+    "originalTurkish": "Birleştirmek, bütünleştirmek"
+  },
+  {
+    "id": "ielts-286",
+    "english": "Utility",
+    "turkish": "Yarar, fayda, kamu hizmeti",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Utility",
+    "originalTurkish": "Yarar, fayda, kamu hizmeti"
+  },
+  {
+    "id": "ielts-287",
+    "english": "Vapour",
+    "turkish": "Buhar",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Vapour",
+    "originalTurkish": "Buhar"
+  },
+  {
+    "id": "ielts-288",
+    "english": "Vast",
+    "turkish": "Çok büyük, geniş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Vast",
+    "originalTurkish": "Çok büyük, geniş"
+  },
+  {
+    "id": "ielts-289",
+    "english": "Valid",
+    "turkish": "Geçerli, mantıklı",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Valid",
+    "originalTurkish": "Geçerli, mantıklı"
+  },
+  {
+    "id": "ielts-290",
+    "english": "Vanish",
+    "turkish": "Gözden kaybolmak",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Vanish",
+    "originalTurkish": "Gözden kaybolmak"
+  },
+  {
+    "id": "ielts-291",
+    "english": "Virtually",
+    "turkish": "Neredeyse, hemen hemen, adeta",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Virtually",
+    "originalTurkish": "Neredeyse, hemen hemen, adeta"
+  },
+  {
+    "id": "ielts-292",
+    "english": "Violate",
+    "turkish": "İhlal etmek, çiğnemek",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Violate",
+    "originalTurkish": "İhlal etmek, çiğnemek"
+  },
+  {
+    "id": "ielts-293",
+    "english": "Variable",
+    "turkish": "Değişken, kararsız",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Variable",
+    "originalTurkish": "Değişken, kararsız"
+  },
+  {
+    "id": "ielts-294",
+    "english": "Welfare",
+    "turkish": "Refah, zenginlik, sosyal yardım parası",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Welfare",
+    "originalTurkish": "Refah, zenginlik, sosyal yardım parası"
+  },
+  {
+    "id": "ielts-295",
+    "english": "Whereas",
+    "turkish": "Halbuki, -e rağmen, oysa",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Whereas",
+    "originalTurkish": "Halbuki, -e rağmen, oysa"
+  },
+  {
+    "id": "ielts-296",
+    "english": "Willingness",
+    "turkish": "İsteklilik, gönüllülük",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Willingness",
+    "originalTurkish": "İsteklilik, gönüllülük"
+  },
+  {
+    "id": "ielts-297",
+    "english": "Whereby",
+    "turkish": "Vasıtasıyla, sayesinde",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Whereby",
+    "originalTurkish": "Vasıtasıyla, sayesinde"
+  },
+  {
+    "id": "ielts-298",
+    "english": "Within",
+    "turkish": "İçinde, dahilinde",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Within",
+    "originalTurkish": "İçinde, dahilinde"
+  },
+  {
+    "id": "ielts-299",
+    "english": "Widespread",
+    "turkish": "Yaygın, geniş çapta",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Widespread",
+    "originalTurkish": "Yaygın, geniş çapta"
+  },
+  {
+    "id": "ielts-300",
+    "english": "Wage",
+    "turkish": "Ücret, maaş",
+    "alternatives": [],
+    "source": "IELTS PDF",
+    "originalEnglish": "Wage",
+    "originalTurkish": "Ücret, maaş"
+  }
+]
