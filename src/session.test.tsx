@@ -112,11 +112,13 @@ describe("study flows", () => {
         onExit={() => {}}
       />,
     );
+    expect(screen.queryByRole("button", { name: /telaffuzu dinle/ })).toBeNull();
     fireEvent.change(screen.getByRole("textbox"), {
       target: { value: "  APPLE  " },
     });
     fireEvent.click(screen.getByRole("button", { name: "Kontrol et" }));
     await screen.findByText("Doğru, hatırladın.");
+    expect(screen.getByRole("button", { name: /apple: İngilizce telaffuzu dinle/ })).toBeTruthy();
     expect(save.mock.calls[0][0].status).toBe("known");
     fireEvent.click(screen.getByRole("button", { name: "Devam" }));
     expect(screen.getByText("Güzel bir tekrar.")).toBeTruthy();

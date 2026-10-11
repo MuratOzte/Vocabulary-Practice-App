@@ -1786,10 +1786,22 @@ svg {
 .session-instruction{font-size:12px;text-align:center;margin:0 0 20px}
 .card-session{padding:12px 24px calc(16px + env(safe-area-inset-bottom))}
 .card-session .session-progress{margin:8px 0 16px}
-.card-session .flashcard{height:clamp(96px,calc(100dvh - 230px - env(safe-area-inset-bottom)),280px)}
+.card-session .flashcard{height:clamp(96px,calc(100dvh - 274px - env(safe-area-inset-bottom)),280px)}
 .card-session .flash-face{padding:20px;gap:16px}
 .card-session .flash-face strong{font-size:30px}
 .card-session .flash-back strong{font-size:21px}
 .card-session .rating-buttons{margin-top:12px}
 @media(max-width:600px){.card-session{padding:10px 22px calc(14px + env(safe-area-inset-bottom))}.card-session .flash-face strong{font-size:28px}.card-session .flash-back strong{font-size:20px}}
 @media(max-height:450px){.card-session .flash-face{justify-content:flex-start;gap:7px;padding:12px}.card-session .flash-face strong{font-size:22px}.card-session .flash-back strong{font-size:16px}.card-session .flip-hint{display:none}}
+
+.pronunciation-control{display:inline-flex;position:relative;vertical-align:middle;flex-shrink:0}
+.pronunciation-button{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;color:#657b51;background:#e7ebdf}
+.pronunciation-button:hover{background:#dbe3d0}
+.pronunciation-error{position:absolute;top:100%;right:0;width:220px;padding:10px;background:#fff;border:1px solid #dfe4d6;border-radius:8px;font-size:12px;line-height:1.5;z-index:5;color:#995f44;letter-spacing:normal}
+.card-pronunciation{display:flex;justify-content:center}
+.word-row-container{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)}
+.word-row-container .word-row{border-bottom:0;flex:1}
+.match-word{display:flex;align-items:stretch;gap:4px;min-width:0}
+.match-word .match-item{flex:1;min-width:0}
+.match-word .pronunciation-control{align-self:center}
+@media(max-width:600px){.match-word .pronunciation-button{width:36px}.word-row-container{gap:4px}}

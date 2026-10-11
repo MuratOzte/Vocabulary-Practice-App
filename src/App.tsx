@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { PronunciationButton } from "./PronunciationButton";
 import {
   ArrowRight,
   ArrowLeft,
@@ -173,6 +174,7 @@ export default function App() {
                 <div className="simple-card">
                   <span className="small muted">İngilizce</span>
                   <strong>{selectedWords[0]?.english ?? "Kelime yok"}</strong>
+                  {selectedWords[0] && <PronunciationButton text={selectedWords[0].english} />}
                 </div>
               ) : (
                 <div className="simple-mode-intro">
@@ -416,7 +418,8 @@ function WordList({
       </div>
       <div className="word-list">
         {filtered.map((w) => (
-          <button key={w.id} className="word-row" onClick={() => onEdit(w)}>
+          <div key={w.id} className="word-row-container">
+          <button className="word-row" onClick={() => onEdit(w)}>
             <div>
               <strong>{w.english}</strong>
               <p>{w.turkish}</p>
@@ -435,6 +438,8 @@ function WordList({
             </div>
             <ChevronRight size={17} className="row-chevron" />
           </button>
+          <PronunciationButton text={w.english} />
+          </div>
         ))}
       </div>
       {!filtered.length && (
@@ -947,6 +952,7 @@ export function StudySession({
                   </div>
                 </div>
               </button>
+              <div className="card-pronunciation"><PronunciationButton text={current.english} /></div>
               <div className={`rating-buttons ${flipped ? "revealed" : ""}`}>
                 {(["unknown", "uncertain", "known"] as Rating[]).map((r) => (
                   <button
@@ -971,7 +977,7 @@ export function StudySession({
           )}
           {initial.mode === "quiz" && current && (
             <div className="quiz-workspace" key={current.id + "-" + count}>
-              <div className="question-word">{current.english}</div>
+              <div className="question-word">{current.english} <PronunciationButton text={current.english} /></div>
               <div className="answer-options">
                 {options.map((w, i) => (
                   <button
@@ -1057,8 +1063,8 @@ export function StudySession({
               <div className="matching-columns">
                 <div>
                   {batch.map((w) => (
+                    <div key={w.id} className="match-word">
                     <button
-                      key={w.id}
                       className={`match-item ${selected === w.id ? "selected" : ""} ${matched.includes(w.id) ? "matched" : ""} ${wrongPair.includes(w.id) ? "incorrect" : ""}`}
                       disabled={busy || !!pending || matched.includes(w.id)}
                       onClick={() => {
@@ -1069,6 +1075,8 @@ export function StudySession({
                       {w.english}
                       {matched.includes(w.id) && <Check size={16} />}
                     </button>
+                    <PronunciationButton text={w.english} />
+                    </div>
                   ))}
                 </div>
                 <div>
@@ -1120,6 +1128,7 @@ export function StudySession({
                     : ""}{" "}
                   — {feedback.word.turkish}
                 </p>
+                {initial.mode === "write" && <PronunciationButton text={feedback.word.english} />}
               </div>
               <button
                 className="primary"
