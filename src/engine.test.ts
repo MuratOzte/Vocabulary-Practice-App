@@ -3,6 +3,7 @@ import {
   grade,
   DAY,
   dueWords,
+  reviewedWords,
   weight,
   isAnswer,
   choices,
@@ -20,6 +21,17 @@ const word = (id: string, turkish = id): RecordWord => ({
   alternatives: [],
 });
 describe("review scheduling", () => {
+  it("reviews marked words in every status without waiting for their due date", () => {
+    const marked = (["known", "uncertain", "unknown"] as const).map(status => ({
+      ...word(status), progress: grade(status, undefined, status, Date.now()),
+    }));
+    const words = [word("new"), ...marked];
+    expect(dueWords(words)).toEqual([]);
+    expect(reviewedWords(words)).toEqual(marked);
+    for (const status of ["known", "uncertain", "unknown"] as const)
+      expect(reviewedWords(words, status).map(w => w.id)).toEqual([status]);
+    expect(reviewedWords([word("new")])).toEqual([]);
+  });
   it("increases successful intervals and caps at 30 days", () => {
     let p;
     const now = 100000;
@@ -74,6 +86,18 @@ describe("question generation and input", () => {
 });
 describe("bounded sessions", () => {
   const pool = Array.from({ length: 12 }, (_, i) => word(String(i)));
+  it("reviews every selected word once even when all answers are unknown", () => {
+    let session = createSession("cards", "review", pool, "all");
+    while (session.history.length < session.limit) {
+      const current = nextWord(session)!;
+      expect(current).toBeDefined();
+      session = recordAnswer(session, current, grade(current.id, current.progress, "unknown", 0));
+    }
+    expect(new Set(session.history).size).toBe(pool.length);
+    expect(session.scheduled).toEqual([]);
+    expect(nextWord(session)).toBeUndefined();
+    expect(createSession("cards", "review", pool, 10).limit).toBe(10);
+  });
   it("spaces failed retries after at least three other answers", () => {
     let s = createSession("cards", "new", pool, 10);
     let w = nextWord(s)!;

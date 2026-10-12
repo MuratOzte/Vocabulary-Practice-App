@@ -8,9 +8,9 @@ import {
   waitFor,
 } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { StudySession } from "./App";
-import { createSession, type RecordWord } from "./engine";
-import { saveProgress } from "./db";
+import App, { StudySession } from "./App";
+import { createSession, grade, type RecordWord } from "./engine";
+import { loadWords, saveProgress } from "./db";
 vi.mock("./db", () => ({
   saveProgress: vi.fn(),
   loadWords: vi.fn(),
@@ -29,6 +29,40 @@ beforeEach(() => {
   save.mockResolvedValue(undefined);
 });
 afterEach(cleanup);
+describe("marked word review", () => {
+  it("filters each status, excludes new words, and saves a new rating", async () => {
+    const marked = (["known", "uncertain", "unknown"] as const).map((status, index) => ({
+      id: status, english: `review${index}`, turkish: `anlam${index}`, alternatives: [],
+      progress: grade(status, undefined, status),
+    }));
+    vi.mocked(loadWords).mockResolvedValue([...pool, ...marked]);
+    render(<App />);
+    await screen.findByRole("button", { name: "Başla" });
+    fireEvent.change(screen.getByLabelText("Mod seç"), { target: { value: "review" } });
+    expect(screen.getByText("3 kelime")).toBeTruthy();
+    for (const [index, status] of ["known", "uncertain", "unknown"].entries()) {
+      fireEvent.change(screen.getByLabelText("Tekrar edilecek kelime durumu"), { target: { value: status } });
+      expect(screen.getByText("1 kelime")).toBeTruthy();
+      expect(screen.getByText(`review${index}`)).toBeTruthy();
+    }
+    fireEvent.click(screen.getByRole("button", { name: "Başla" }));
+    fireEvent.click(screen.getByRole("button", { name: "Türkçe anlamı göster" }));
+    fireEvent.click(screen.getByRole("button", { name: "Biliyorum" }));
+    await screen.findByText("Güzel bir tekrar.");
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.calls[0][0]).toMatchObject({ wordId: "unknown", status: "known", reviews: 2 });
+  });
+  it("disables review when no marked words exist", async () => {
+    vi.mocked(loadWords).mockResolvedValue(pool);
+    render(<App />);
+    await screen.findByRole("button", { name: "Başla" });
+    fireEvent.change(screen.getByLabelText("Mod seç"), { target: { value: "review" } });
+    expect((screen.getByRole("button", { name: "Başla" }) as HTMLButtonElement).disabled).toBe(true);
+    expect(screen.getByText(/Henüz işaretlediğin kelime yok/)).toBeTruthy();
+    fireEvent.change(screen.getByLabelText("Tekrar edilecek kelime durumu"), { target: { value: "known" } });
+    expect(screen.getByText(/Bu durumda işaretlediğin kelime yok/)).toBeTruthy();
+  });
+});
 describe("study flows", () => {
   it("reveals the English example only on the meaning side of a card", () => {
     const word = { ...pool[0], example: "I ate an apple after lunch." };

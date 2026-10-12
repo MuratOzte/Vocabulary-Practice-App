@@ -118,6 +118,8 @@ export const dueWords = (words: RecordWord[], now = Date.now()) =>
   words
     .filter((w) => w.progress && w.progress.nextReview <= now)
     .sort((a, b) => a.progress!.nextReview - b.progress!.nextReview);
+export const reviewedWords = (words: RecordWord[], status: Rating | "all" = "all") =>
+  words.filter((word) => word.progress && (status === "all" || word.progress.status === status));
 export const weight = (word: RecordWord) =>
   word.progress?.status === "known"
     ? 1
@@ -126,7 +128,7 @@ export const weight = (word: RecordWord) =>
       : 5;
 export interface Session {
   mode: Mode;
-  kind: "new" | "due" | "free";
+  kind: "new" | "due" | "free" | "review";
   pool: RecordWord[];
   limit: number;
   history: string[];
@@ -143,7 +145,7 @@ export function createSession(
   return {
     mode,
     kind,
-    pool: [...pool],
+    pool: kind === "review" ? shuffle(pool) : [...pool],
     limit: size === "all" ? pool.length : Math.min(size, pool.length),
     history: [],
     scheduled: [],
@@ -189,7 +191,7 @@ export function recordAnswer(
 ): Session {
   const history = [...session.history, word.id];
   const scheduled = session.scheduled.filter((s) => s.id !== word.id);
-  if (progress.status === "unknown")
+  if (progress.status === "unknown" && session.kind !== "review")
     scheduled.push({ id: word.id, at: history.length + 3 });
   return {
     ...session,

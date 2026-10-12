@@ -21,6 +21,7 @@ npm run build
 - Kartı çevirip Bilmiyorum / Unutabilirim / Biliyorum seç.
 - Anlam testi, yazma ve eşleştirme modlarında yanıtlar tekrar sıklığını otomatik günceller.
 - Günlük tekrar zamanı gelen kelimeleri, serbest pratik tüm koleksiyonu kullanır.
+- Gördüğüm kelimeler modunda işaretlediğin tüm kelimeleri veya yalnızca Biliyorum / Unutabilirim / Bilmiyorum grubunu tekrar tarihini beklemeden çalış. Tümü oturumunda seçilen her kelime bir kez gösterilir; yeni işaretlerin kaydedilir.
 - Kelimeler ekranından ekle/düzenle. Ayarlar ekranından JSON yedeği indir veya mevcut koleksiyonun yerine yedek yükle.
 
 Kayıtlar tarayıcıya ve site adresine özeldir; farklı cihazlara otomatik aktarılmaz. Tarayıcı verilerinin temizlenmesine karşı yedek indir. PWA ve çevrimdışı açılış içermez.

@@ -18,6 +18,7 @@ import {
 import {
   createSession,
   dueWords,
+  reviewedWords,
   grade,
   labels,
   choices,
@@ -87,6 +88,7 @@ export default function App() {
   });
   const [mode, setMode] = useState<Mode>("cards");
   const [kind, setKind] = useState<Session["kind"]>("new");
+  const [reviewStatus, setReviewStatus] = useState<Rating | "all">("all");
   const [session, setSession] = useState<Session | null>(null);
   const [editor, setEditor] = useState<Word | "new" | null>(null);
   const [notice, setNotice] = useState("");
@@ -128,7 +130,7 @@ export default function App() {
     ]),
   ) as Record<Status, number>;
   function pool(kind: Session["kind"]) {
-    return kind === "due" ? due : kind === "new" ? fresh : words;
+    return kind === "review" ? reviewedWords(words, reviewStatus) : kind === "due" ? due : kind === "new" ? fresh : words;
   }
   const effectiveKind = mode === "cards" && kind === "new" && !fresh.length ? "free" : kind;
   const selectedWords = pool(effectiveKind);
@@ -139,8 +141,8 @@ export default function App() {
     if (value === "words" || value === "settings") setPage(value);
     else {
       setPage("study");
-      setMode(value as Mode);
-      setKind(value === "cards" && fresh.length ? "new" : "free");
+      setMode(value === "review" ? "cards" : value as Mode);
+      setKind(value === "review" ? "review" : value === "cards" && fresh.length ? "new" : "free");
     }
   }
   function updateWord(word: RecordWord) {
@@ -149,9 +151,10 @@ export default function App() {
   return (
     <div className="app-shell">
       <div className="mode-picker">
-        <select aria-label="Mod seç" value={page === "study" ? (session?.mode ?? mode) : page} onChange={e => selectView(e.target.value)} disabled={!!session}>
+        <select aria-label="Mod seç" value={page === "study" ? ((session?.kind ?? kind) === "review" ? "review" : (session?.mode ?? mode)) : page} onChange={e => selectView(e.target.value)} disabled={!!session}>
           <optgroup label="Çalışma modları">
             {Object.entries(modeNames).map(([id, name]) => <option key={id} value={id}>{name}</option>)}
+            <option value="review">Gördüğüm kelimeler</option>
           </optgroup>
           <optgroup label="Koleksiyon">
             <option value="words">Kelimeler</option>
@@ -185,6 +188,12 @@ export default function App() {
         <main className="main">
           {page === "study" && (
             <section className="simple-study">
+              {effectiveKind === "review" && (
+                <div className="simple-mode-intro">
+                  <h1>Gördüğüm kelimeler</h1>
+                  <p className="muted">İşaretlediğin kelimeleri tekrar tarihini beklemeden hatırla.</p>
+                </div>
+              )}
               {mode === "cards" ? (
                 <div className="simple-card">
                   <span className="small muted">İngilizce</span>
@@ -198,13 +207,20 @@ export default function App() {
                 </div>
               )}
               <div className="study-options">
-                <label>Kelimeler
+                {effectiveKind === "review" ? (
+                  <label>Kelime durumu
+                    <select aria-label="Tekrar edilecek kelime durumu" value={reviewStatus} onChange={e => setReviewStatus(e.target.value as Rating | "all")}>
+                      <option value="all">Gördüğüm tüm kelimeler ({reviewedWords(words).length})</option>
+                      {(["known", "uncertain", "unknown"] as const).map(status => <option key={status} value={status}>{labels[status]} ({counts[status]})</option>)}
+                    </select>
+                  </label>
+                ) : <label>Kelimeler
                   <select aria-label="Çalışılacak kelimeler" value={effectiveKind} onChange={e => setKind(e.target.value as Session["kind"])}>
                     {mode === "cards" && <option value="new" disabled={!fresh.length}>Yeni kelimeler</option>}
                     <option value="due">Günlük tekrar</option>
                     <option value="free">Serbest pratik</option>
                   </select>
-                </label>
+                </label>}
                 <label>Oturum
                   <select aria-label="Oturum uzunluğu" value={size} onChange={e => setSize(e.target.value === "all" ? "all" : Number(e.target.value))}>
                     <option value="10">10 soru</option><option value="20">20 soru</option><option value="all">Tümü</option>
@@ -212,7 +228,7 @@ export default function App() {
                 </label>
               </div>
               <button className="primary wide" onClick={start} disabled={!selectedWords.length}>Başla <ArrowRight size={18}/></button>
-              <p className="study-count muted">{selectedWords.length ? `${selectedWords.length} kelime` : effectiveKind === "due" ? "Şu an tekrar zamanı gelen kelime yok." : "Henüz kelime yok. Mod seçicisinden kelime ekleyebilirsin."}</p>
+              <p className="study-count muted">{selectedWords.length ? `${selectedWords.length} kelime` : effectiveKind === "review" ? reviewStatus === "all" ? "Henüz işaretlediğin kelime yok. Ezberle modunda kelimeleri işaretleyerek başlayabilirsin." : "Bu durumda işaretlediğin kelime yok. Başka bir durum seçebilirsin." : effectiveKind === "due" ? "Şu an tekrar zamanı gelen kelime yok." : "Henüz kelime yok. Mod seçicisinden kelime ekleyebilirsin."}</p>
             </section>
           )}
           {page === "words" && (
@@ -909,7 +925,7 @@ export function StudySession({
         >
           <ArrowLeft size={18} /> Çalışmaya dön
         </button>
-        <span className="small muted">{modeNames[initial.mode]}</span>
+        <span className="small muted">{initial.kind === "review" ? "Gördüğüm kelimeler" : modeNames[initial.mode]}</span>
         <span className="session-counter">
           {count} / {initial.limit}
         </span>
