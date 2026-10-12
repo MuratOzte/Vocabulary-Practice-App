@@ -52,7 +52,17 @@ const modeNames = {
 };
 function ExampleSentence({ word }: { word: Word }) {
   const example = exampleFor(word);
-  return example ? <p className="example-sentence" lang="en">{example}</p> : null;
+  if (!example) return null;
+  const vocabulary = word.english.trim();
+  const escaped = vocabulary.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const parts = vocabulary
+    ? example.split(new RegExp(`(?<![\\p{L}\\p{N}_])(${escaped})(?![\\p{L}\\p{N}_])`, "giu"))
+    : [example];
+  return (
+    <p className="example-sentence" lang="en">
+      {parts.map((part, index) => index % 2 === 1 ? <strong key={index}>{part}</strong> : part)}
+    </p>
+  );
 }
 const dateText = (value: number) =>
   new Intl.DateTimeFormat("tr", {

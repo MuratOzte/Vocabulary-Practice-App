@@ -42,7 +42,11 @@ describe("study flows", () => {
     );
     expect(screen.queryByText(word.example)).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: "Türkçe anlamı göster" }));
-    expect(screen.getByText(word.example).getAttribute("lang")).toBe("en");
+    const sentence = screen.getByText((_, element) =>
+      element?.tagName === "P" && element.textContent === word.example,
+    );
+    expect(sentence.getAttribute("lang")).toBe("en");
+    expect(sentence.querySelector("strong")?.textContent).toBe(word.english);
     fireEvent.click(screen.getByRole("button", { name: "İngilizce kelimeyi göster" }));
     expect(screen.queryByText(word.example)).toBeNull();
   });
