@@ -1800,6 +1800,25 @@ svg {
 .pronunciation-error{position:absolute;top:100%;right:0;width:220px;padding:10px;background:#fff;border:1px solid #dfe4d6;border-radius:8px;font-size:12px;line-height:1.5;z-index:5;color:#995f44;letter-spacing:normal}
 .card-pronunciation{display:flex;justify-content:center}
 .word-row-container{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)}
+.example-sentence,
+.word-row .example-sentence {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.flash-back .example-sentence {
+  max-width: 440px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.card-session .flash-back {
+  justify-content: flex-start;
+  gap: 10px;
+}
 .word-row-container .word-row{border-bottom:0;flex:1}
 .match-word{display:flex;align-items:stretch;gap:4px;min-width:0}
 .match-word .match-item{flex:1;min-width:0}

@@ -1,6 +1,7 @@
 import { openDB, type DBSchema } from "idb";
 import initialWords from "./data/words.json";
 import type { Word, Progress, RecordWord } from "./engine";
+import { exampleFor } from "./examples";
 interface Database extends DBSchema {
   words: { key: string; value: Word };
   progress: { key: string; value: Progress };
@@ -56,7 +57,7 @@ export function makeBackup(words: RecordWord[]): Backup {
   return {
     version: 1,
     exportedAt: new Date().toISOString(),
-    words: words.map(({ progress: _, ...word }) => word),
+    words: words.map(({ progress: _, ...word }) => ({ ...word, example: exampleFor(word) })),
     progress: words.flatMap((w) => (w.progress ? [w.progress] : [])),
   };
 }
@@ -90,6 +91,8 @@ export function validateBackup(value: unknown): Backup {
     for (const k of ["source", "originalEnglish", "originalTurkish"] as const)
       if (w[k] !== undefined && typeof w[k] !== "string")
         throw new Error("Geçersiz kaynak bilgisi.");
+    if (w.example !== undefined && !string(w.example, 1000))
+      throw new Error("Geçersiz örnek cümle.");
     ids.add(w.id);
   }
   const progressIds = new Set<string>();

@@ -6,6 +6,7 @@ export interface Word {
   english: string;
   turkish: string;
   alternatives: string[];
+  example?: string;
   source?: string;
   originalEnglish?: string;
   originalTurkish?: string;

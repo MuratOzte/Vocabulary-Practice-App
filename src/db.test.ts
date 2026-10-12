@@ -17,6 +17,16 @@ beforeEach(async () => {
   });
 });
 describe("local storage and backups", () => {
+  it("preserves custom examples through saving and backup restoration", async () => {
+    const [word] = await loadWords();
+    await saveWord({ ...word, example: "The acquisition was completed yesterday." });
+    const backup = makeBackup(await loadWords());
+    await restoreBackup(validateBackup(JSON.parse(JSON.stringify(backup))));
+    expect((await loadWords()).find((w) => w.id === word.id)?.example)
+      .toBe("The acquisition was completed yesterday.");
+    expect(() => validateBackup({ ...backup, words: [{ ...word, example: 123 }] }))
+      .toThrow("Geçersiz örnek cümle.");
+  });
   it("seeds exactly once and preserves edits and progress across reloads", async () => {
     const words = await loadWords();
     expect(words).toHaveLength(300);

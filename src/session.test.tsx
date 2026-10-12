@@ -30,6 +30,22 @@ beforeEach(() => {
 });
 afterEach(cleanup);
 describe("study flows", () => {
+  it("reveals the English example only on the meaning side of a card", () => {
+    const word = { ...pool[0], example: "I ate an apple after lunch." };
+    render(
+      <StudySession
+        initial={createSession("cards", "new", [word], 10)}
+        allWords={[word]}
+        onUpdate={() => {}}
+        onExit={() => {}}
+      />,
+    );
+    expect(screen.queryByText(word.example)).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Türkçe anlamı göster" }));
+    expect(screen.getByText(word.example).getAttribute("lang")).toBe("en");
+    fireEvent.click(screen.getByRole("button", { name: "İngilizce kelimeyi göster" }));
+    expect(screen.queryByText(word.example)).toBeNull();
+  });
   it("cards require a flip, lock double clicks, and advance only after storage succeeds", async () => {
     let complete!: () => void;
     save.mockImplementation(

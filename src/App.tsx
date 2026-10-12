@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { PronunciationButton } from "./PronunciationButton";
+import { exampleFor } from "./examples";
 import {
   ArrowRight,
   ArrowLeft,
@@ -49,6 +50,10 @@ const modeNames = {
   write: "Yazarak hatırla",
   match: "Eşleştir",
 };
+function ExampleSentence({ word }: { word: Word }) {
+  const example = exampleFor(word);
+  return example ? <p className="example-sentence" lang="en">{example}</p> : null;
+}
 const dateText = (value: number) =>
   new Intl.DateTimeFormat("tr", {
     day: "numeric",
@@ -423,6 +428,7 @@ function WordList({
             <div>
               <strong>{w.english}</strong>
               <p>{w.turkish}</p>
+              <ExampleSentence word={w} />
             </div>
             <div className="word-state">
               <span className={`status-label ${w.progress?.status ?? "new"}`}>
@@ -471,6 +477,7 @@ function WordEditor({
 }) {
   const [english, setEnglish] = useState(word === "new" ? "" : word.english),
     [turkish, setTurkish] = useState(word === "new" ? "" : word.turkish),
+    [example, setExample] = useState(word === "new" ? "" : exampleFor(word) ?? ""),
     [alternatives, setAlternatives] = useState(
       word === "new" ? "" : word.alternatives.join(", "),
     );
@@ -510,6 +517,7 @@ function WordEditor({
           : word),
         english: english.trim(),
         turkish: turkish.trim(),
+        example: example.trim() || undefined,
         alternatives: alternatives
           .split(",")
           .map((s) => s.trim())
@@ -551,6 +559,17 @@ function WordEditor({
             onChange={(e) => setTurkish(e.target.value)}
             placeholder="Örn. gelişmek, büyümek"
             rows={3}
+          />
+        </label>
+        <label className="field">
+          İngilizce örnek cümle <span className="muted small">İsteğe bağlı</span>
+          <textarea
+            maxLength={1000}
+            value={example}
+            onChange={(e) => setExample(e.target.value)}
+            placeholder="Örn. Plants flourish when they receive enough light and water."
+            rows={3}
+            lang="en"
           />
         </label>
         <label className="field">
@@ -949,6 +968,7 @@ export function StudySession({
                     <span className="card-caption">TÜRKÇE</span>
                     <strong id="flash-meaning">{current.turkish}</strong>
                     <span className="small muted">{current.english}</span>
+                    {flipped && <ExampleSentence word={current} />}
                   </div>
                 </div>
               </button>
@@ -1129,6 +1149,7 @@ export function StudySession({
                   — {feedback.word.turkish}
                 </p>
                 {initial.mode === "write" && <PronunciationButton text={feedback.word.english} />}
+                <ExampleSentence word={feedback.word} />
               </div>
               <button
                 className="primary"
