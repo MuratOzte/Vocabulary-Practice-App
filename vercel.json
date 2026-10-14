@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/japonca", "destination": "/index.html" },
+    { "source": "/japonca/", "destination": "/index.html" }
+  ]
+}

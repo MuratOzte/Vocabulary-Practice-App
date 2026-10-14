@@ -10,6 +10,13 @@ export interface Word {
   source?: string;
   originalEnglish?: string;
   originalTurkish?: string;
+  language?: "en" | "ja";
+  japanese?: string;
+  kana?: string;
+  romaji?: string;
+  section?: "hiragana" | "katakana" | "vocabulary";
+  exampleRomaji?: string;
+  exampleTurkish?: string;
 }
 export interface Progress {
   wordId: string;
@@ -53,10 +60,13 @@ export function grade(
 }
 export const normalize = (text: string) =>
   text.normalize("NFKC").toLowerCase().trim().replace(/\s+/g, " ");
-export const isAnswer = (word: Word, answer: string) =>
-  [word.english, ...word.alternatives].some(
-    (x) => normalize(x) === normalize(answer),
-  );
+export function isAnswer(word: Word, answer: string) {
+  const alphabet = word.section === "hiragana" || word.section === "katakana";
+  const accepted = alphabet
+    ? [word.japanese ?? word.english]
+    : [word.japanese ?? word.english, word.kana, word.romaji, ...word.alternatives];
+  return accepted.some(text => text && normalize(text) === normalize(answer));
+}
 export function meanings(word: Word) {
   return word.turkish
     .toLocaleLowerCase("tr")

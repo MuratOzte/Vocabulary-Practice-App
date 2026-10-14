@@ -26,7 +26,17 @@ npm run build
 
 Kayıtlar tarayıcıya ve site adresine özeldir; farklı cihazlara otomatik aktarılmaz. Tarayıcı verilerinin temizlenmesine karşı yedek indir. PWA ve çevrimdışı açılış içermez.
 
-## Kelime verisi
+## Japonca sürümü
+
+Üstteki 日本語 · Japonca bağlantısı aynı sekmede `/japonca` sayfasını açar; İngilizceye `/` bağlantısından dönülür. Dil değiştirmek açık oturumu kapatır, kaydedilen cevapları korur. Arayüz Türkçedir. Japonca bölümünde 200 temel kelime/kısa ifade ve her biri 46 karakter içeren hiragana/katakana koleksiyonları vardır. Başlangıç koleksiyonu tam bir A1 müfredatı veya dilbilgisi kursu değildir.
+
+Kelime kartları Japonca, kana, Hepburn romajisi ve Türkçe anlamı birlikte gösterir. Örneklerde Japonca, romaji ve Türkçe çeviri bulunur. Alfabe sorularında okunuş cevaba kadar gizlenir. Yazma modunda kelimeler için Japonca, kana veya kayıtlı romaji alternatifleri kabul edilir; alfabe için sorulan alfabenin karakteri yazılır. Uzun ünlülerin Latin harfli alternatifleri veride açıkça tanımlanır; Japonca karakterler birbirine dönüştürülmez.
+
+Japonca telaffuz tarayıcının `ja-JP` sesini kullanır; cihazdaki Japonca ses desteğine bağlıdır. İlerleme `kelime-japanese-local` IndexedDB veritabanında, oturum uzunluğu `kelime-ja-session-size` anahtarında saklanır. İngilizcenin mevcut veritabanı korunur. Yedekler dile özeldir; eski dil etiketi olmayan İngilizce yedekleri desteklenir.
+
+Vite geliştirme/önizleme sunucusu `/japonca` doğrudan açılışını destekler. Netlify/Cloudflare Pages için `public/_redirects`, Vercel için `vercel.json` yönlendirmeleri hazırdır. Başka bir statik sunucuda `/japonca` ve `/japonca/` yollarını `/index.html` dosyasına **200 yanıtıyla yeniden yazın**; 301/302 yönlendirmesi adresi değiştirir. Sunucu yapılandırması bu projede bulunmadığından diğer barındırmalar için bu kural ayrıca uygulanmalıdır.
+
+### İngilizce kaynak verisi
 
 300 İngilizce–Türkçe girdi kullanıcı tarafından sağlanan IELTS PDF'sinden çıkarıldı. Başlangıç verisi `src/data/words.json` içinde; özgün kelime ve çeviri her kayıtta korunur. `scripts/extract_words.py` listeyi yeniden üretir (Python ve pypdf gerektirir). Türkçe çevirisi olmayan eş anlamlılar bölümü dahil edilmedi.
 

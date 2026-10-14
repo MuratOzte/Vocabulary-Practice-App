@@ -27,6 +27,20 @@ afterEach(() => {
 });
 
 describe("pronunciation", () => {
+  it("selects a Japanese voice for Japanese text and never chooses an English voice", () => {
+    const japaneseVoice = { lang: "ja-JP", name: "Japanese" };
+    getVoices.mockReturnValue([englishVoice, japaneseVoice]);
+    const view = render(<PronunciationButton text="猫" language="ja" />);
+    fireEvent.click(screen.getByRole("button", { name: /Japonca telaffuzu/ }));
+    expect(speak.mock.calls[0][0].voice).toBe(japaneseVoice);
+    expect(speak.mock.calls[0][0].lang).toBe("ja-JP");
+    view.unmount();
+    getVoices.mockReturnValue([englishVoice]);
+    render(<PronunciationButton text="犬" language="ja" />);
+    fireEvent.click(screen.getByRole("button"));
+    expect(speak.mock.calls[1][0].voice).toBeNull();
+    expect(speak.mock.calls[1][0].lang).toBe("ja-JP");
+  });
   it("speaks only on click with an English voice and lets the user stop", () => {
     render(<PronunciationButton text="apple" />);
     expect(speak).not.toHaveBeenCalled();

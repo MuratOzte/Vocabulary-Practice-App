@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { PronunciationButton } from "./PronunciationButton";
 import { exampleFor } from "./examples";
+import { useLanguage, primaryText, WordReading, isAlphabet, AlphabetGuide, sectionNames, type JapaneseSection } from "./language";
 import {
   ArrowRight,
   ArrowLeft,
@@ -54,6 +55,11 @@ const modeNames = {
 function ExampleSentence({ word }: { word: Word }) {
   const example = exampleFor(word);
   if (!example) return null;
+  if (word.language === "ja") return <div className="japanese-example">
+    <p className="example-sentence" lang="ja">{example}</p>
+    {word.exampleRomaji && <p lang="ja-Latn">{word.exampleRomaji}</p>}
+    {word.exampleTurkish && <p lang="tr">{word.exampleTurkish}</p>}
+  </div>;
   const vocabulary = word.english.trim();
   const escaped = vocabulary.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const parts = vocabulary
@@ -74,13 +80,18 @@ const dateText = (value: number) =>
   }).format(value);
 
 export default function App() {
+  const language = useLanguage();
+  const japanese = language === "ja";
+  const languageName = japanese ? "Japonca" : "İngilizce";
+  const sizeKey = japanese ? "kelime-ja-session-size" : "kelime-session-size";
+  const [section, setSection] = useState<JapaneseSection>("vocabulary");
   const [words, setWords] = useState<RecordWord[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [page, setPage] = useState<"study" | "words" | "settings">("study");
   const [size, setSize] = useState<number | "all">(() => {
     try {
-      const saved = localStorage.getItem("kelime-session-size");
+      const saved = localStorage.getItem(sizeKey);
       return saved === "20" ? 20 : saved === "all" ? "all" : 10;
     } catch {
       return 10;
@@ -97,7 +108,7 @@ export default function App() {
     setLoading(true);
     setLoadError(false);
     try {
-      setWords(await loadWords());
+      setWords(await loadWords(language));
     } catch {
       setLoadError(true);
     } finally {
@@ -111,7 +122,7 @@ export default function App() {
   }, []);
   useEffect(() => {
     try {
-      localStorage.setItem("kelime-session-size", String(size));
+      localStorage.setItem(sizeKey, String(size));
     } catch {
       /* Core study records remain in IndexedDB. */
     }
@@ -121,16 +132,17 @@ export default function App() {
     const timer = setTimeout(() => setNotice(""), 4500);
     return () => clearTimeout(timer);
   }, [notice]);
-  const due = dueWords(words, clock);
-  const fresh = words.filter((w) => !w.progress);
+  const studyWords = japanese ? words.filter(w => w.section === section) : words;
+  const due = dueWords(studyWords, clock);
+  const fresh = studyWords.filter((w) => !w.progress);
   const counts = Object.fromEntries(
     (["new", "unknown", "uncertain", "known"] as Status[]).map((s) => [
       s,
-      words.filter((w) => (w.progress?.status ?? "new") === s).length,
+      studyWords.filter((w) => (w.progress?.status ?? "new") === s).length,
     ]),
   ) as Record<Status, number>;
   function pool(kind: Session["kind"]) {
-    return kind === "review" ? reviewedWords(words, reviewStatus) : kind === "due" ? due : kind === "new" ? fresh : words;
+    return kind === "review" ? reviewedWords(studyWords, reviewStatus) : kind === "due" ? due : kind === "new" ? fresh : studyWords;
   }
   const effectiveKind = mode === "cards" && kind === "new" && !fresh.length ? "free" : kind;
   const selectedWords = pool(effectiveKind);
@@ -150,6 +162,12 @@ export default function App() {
   }
   return (
     <div className="app-shell">
+      <nav className="language-nav" aria-label="Çalışma dili">
+        <a href="/" className={!japanese ? "current-language" : ""} aria-current={!japanese ? "page" : undefined}>İngilizce</a>
+        <a href="/japonca" className={japanese ? "current-language" : ""} aria-current={japanese ? "page" : undefined}>
+          <span className="japan-logo" aria-hidden="true"><span /></span><span><span lang="ja">日本語</span> · Japonca</span>
+        </a>
+      </nav>
       <div className="mode-picker">
         <select aria-label="Mod seç" value={page === "study" ? ((session?.kind ?? kind) === "review" ? "review" : (session?.mode ?? mode)) : page} onChange={e => selectView(e.target.value)} disabled={!!session}>
           <optgroup label="Çalışma modları">
@@ -180,7 +198,7 @@ export default function App() {
         <StudySession
           key={`${session.mode}-${session.kind}`}
           initial={session}
-          allWords={words}
+          allWords={studyWords}
           onUpdate={updateWord}
           onExit={() => setSession(null)}
         />
@@ -188,6 +206,15 @@ export default function App() {
         <main className="main">
           {page === "study" && (
             <section className="simple-study">
+              {japanese && <>
+                <div className="japanese-intro"><p className="eyebrow">JAPONCA · BAŞLANGIÇ</p><h1>Bir kelimeyle başla.</h1><p className="muted">Japonca yazım, romaji ve Türkçe anlam birlikte.</p></div>
+                <label className="section-picker">Çalışma bölümü
+                  <select aria-label="Çalışma bölümü" value={section} onChange={e => setSection(e.target.value as JapaneseSection)}>
+                    {Object.entries(sectionNames).map(([id, name]) => <option key={id} value={id}>{name} ({words.filter(w => w.section === id).length})</option>)}
+                  </select>
+                </label>
+                <AlphabetGuide />
+              </>}
               {effectiveKind === "review" && (
                 <div className="simple-mode-intro">
                   <h1>Gördüğüm kelimeler</h1>
@@ -196,21 +223,21 @@ export default function App() {
               )}
               {mode === "cards" ? (
                 <div className="simple-card">
-                  <span className="small muted">İngilizce</span>
-                  <strong>{selectedWords[0]?.english ?? "Kelime yok"}</strong>
-                  {selectedWords[0] && <PronunciationButton text={selectedWords[0].english} />}
+                  <span className="small muted">{languageName}</span>
+                  <strong lang={language}>{selectedWords[0] ? primaryText(selectedWords[0]) : "Kelime yok"}</strong>
+                  {selectedWords[0] && <><WordReading word={selectedWords[0]} reveal={!isAlphabet(selectedWords[0])} /><PronunciationButton text={primaryText(selectedWords[0])} /></>}
                 </div>
               ) : (
                 <div className="simple-mode-intro">
                   <h1>{modeNames[mode]}</h1>
-                  <p className="muted">{mode === "quiz" ? "Doğru anlamı seç." : mode === "write" ? "İngilizce karşılığını yaz." : "Kelimeleri anlamlarıyla eşleştir."}</p>
+                  <p className="muted">{mode === "quiz" ? "Doğru anlamı veya okunuşu seç." : mode === "write" ? japanese ? "Kelimeyi Japonca ya da romajiyle yaz; alfabede kana karakterini yaz." : "İngilizce karşılığını yaz." : "Kelimeleri anlamlarıyla, karakterleri okunuşlarıyla eşleştir."}</p>
                 </div>
               )}
               <div className="study-options">
                 {effectiveKind === "review" ? (
                   <label>Kelime durumu
                     <select aria-label="Tekrar edilecek kelime durumu" value={reviewStatus} onChange={e => setReviewStatus(e.target.value as Rating | "all")}>
-                      <option value="all">Gördüğüm tüm kelimeler ({reviewedWords(words).length})</option>
+                      <option value="all">Gördüğüm tüm kelimeler ({reviewedWords(studyWords).length})</option>
                       {(["known", "uncertain", "unknown"] as const).map(status => <option key={status} value={status}>{labels[status]} ({counts[status]})</option>)}
                     </select>
                   </label>
@@ -234,7 +261,7 @@ export default function App() {
           {page === "words" && (
             <WordList
               words={words}
-              counts={counts}
+              counts={Object.fromEntries((["new", "unknown", "uncertain", "known"] as Status[]).map(s => [s, words.filter(w => (w.progress?.status ?? "new") === s).length])) as Record<Status, number>}
               onEdit={setEditor}
               now={clock}
             />
@@ -388,17 +415,21 @@ function WordList({
   onEdit: (word: Word | "new") => void;
   now: number;
 }) {
+  const language = useLanguage();
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState<Status | "all">("all");
+  const [section, setSection] = useState<JapaneseSection | "all">("all");
+  const sectionWords = words.filter(w => section === "all" || w.section === section);
   const filtered = words
     .filter(
       (w) =>
+        (section === "all" || w.section === section) &&
         (filter === "all" || (w.progress?.status ?? "new") === filter) &&
-        `${w.english} ${w.turkish} ${w.alternatives.join(" ")}`
+        `${primaryText(w)} ${w.kana ?? ""} ${w.romaji ?? ""} ${w.turkish} ${w.alternatives.join(" ")}`
           .toLocaleLowerCase("tr")
           .includes(search.toLocaleLowerCase("tr")),
     )
-    .sort((a, b) => a.english.localeCompare(b.english, "en"));
+    .sort((a, b) => primaryText(a).localeCompare(primaryText(b), language));
   return (
     <>
       <div className="page-heading">
@@ -413,6 +444,12 @@ function WordList({
           <Plus size={18} /> Kelime ekle
         </button>
       </div>
+      {language === "ja" && <label className="section-picker">Koleksiyon bölümü
+        <select aria-label="Koleksiyon bölümü" value={section} onChange={e => setSection(e.target.value as JapaneseSection | "all")}>
+          <option value="all">Tüm bölümler</option>
+          {Object.entries(sectionNames).map(([id, name]) => <option key={id} value={id}>{name}</option>)}
+        </select>
+      </label>}
       <div className="search-box">
         <Search size={19} />
         <input
@@ -439,7 +476,7 @@ function WordList({
             onClick={() => setFilter(s)}
           >
             {s === "all" ? "Tümü" : labels[s]}{" "}
-            <span>{s === "all" ? words.length : counts[s]}</span>
+            <span>{s === "all" ? sectionWords.length : language === "ja" ? sectionWords.filter(w => (w.progress?.status ?? "new") === s).length : counts[s]}</span>
           </button>
         ))}
       </div>
@@ -452,7 +489,8 @@ function WordList({
           <div key={w.id} className="word-row-container">
           <button className="word-row" onClick={() => onEdit(w)}>
             <div>
-              <strong>{w.english}</strong>
+              <strong lang={language}>{primaryText(w)}</strong>
+              <WordReading word={w} />
               <p>{w.turkish}</p>
               <ExampleSentence word={w} />
             </div>
@@ -470,7 +508,7 @@ function WordList({
             </div>
             <ChevronRight size={17} className="row-chevron" />
           </button>
-          <PronunciationButton text={w.english} />
+          <PronunciationButton text={primaryText(w)} />
           </div>
         ))}
       </div>
@@ -501,6 +539,13 @@ function WordEditor({
   onClose: () => void;
   onSaved: (word: Word) => void;
 }) {
+  const language = useLanguage();
+  const japanese = language === "ja";
+  const [kana, setKana] = useState(word === "new" ? "" : word.kana ?? "");
+  const [romaji, setRomaji] = useState(word === "new" ? "" : word.romaji ?? "");
+  const [section, setSection] = useState<JapaneseSection>(word === "new" ? "vocabulary" : word.section ?? "vocabulary");
+  const [exampleRomaji, setExampleRomaji] = useState(word === "new" ? "" : word.exampleRomaji ?? "");
+  const [exampleTurkish, setExampleTurkish] = useState(word === "new" ? "" : word.exampleTurkish ?? "");
   const [english, setEnglish] = useState(word === "new" ? "" : word.english),
     [turkish, setTurkish] = useState(word === "new" ? "" : word.turkish),
     [example, setExample] = useState(word === "new" ? "" : exampleFor(word) ?? ""),
@@ -514,8 +559,9 @@ function WordEditor({
     e.preventDefault();
     if (lock.current) return;
     setError("");
-    if (!english.trim() || !turkish.trim()) {
-      setError("Kelime ve anlam alanlarını doldur.");
+    if (!english.trim() || ((!japanese || section === "vocabulary") && !turkish.trim()) ||
+        (japanese && (!kana.trim() || !romaji.trim()))) {
+      setError(japanese ? "Japonca yazım, kana, romaji ve kelimeler için Türkçe anlam alanlarını doldur." : "Kelime ve anlam alanlarını doldur.");
       return;
     }
     if (alternatives.split(",").some((a) => a.trim().length > 200)) {
@@ -542,7 +588,8 @@ function WordEditor({
           ? { id: crypto.randomUUID(), source: "Kişisel" }
           : word),
         english: english.trim(),
-        turkish: turkish.trim(),
+        turkish: japanese && section !== "vocabulary" ? romaji.trim() : turkish.trim(),
+        ...(japanese ? { language: "ja" as const, japanese: english.trim(), kana: kana.trim(), romaji: romaji.trim(), section, exampleRomaji: exampleRomaji.trim() || undefined, exampleTurkish: exampleTurkish.trim() || undefined } : {}),
         example: example.trim() || undefined,
         alternatives: alternatives
           .split(",")
@@ -550,10 +597,11 @@ function WordEditor({
           .filter(Boolean),
       };
       const { progress: _, ...clean } = value as RecordWord;
-      await saveWord(clean);
+      validateBackup({ version: 1, language, exportedAt: new Date().toISOString(), words: [clean], progress: [] }, language);
+      await saveWord(clean, language);
       onSaved(clean);
-    } catch {
-      setError("Kelime kaydedilemedi. Yeniden dene.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Kelime kaydedilemedi. Yeniden dene.");
     } finally {
       lock.current = false;
       setBusy(false);
@@ -566,48 +614,59 @@ function WordEditor({
     >
       <form onSubmit={submit}>
         <label className="field">
-          İngilizce kelime
+          {japanese ? "Japonca yazım" : "İngilizce kelime"}
           <input
             required
             maxLength={200}
             value={english}
             onChange={(e) => setEnglish(e.target.value)}
-            placeholder="Örn. flourish"
+            placeholder={japanese ? "Örn. 猫" : "Örn. flourish"}
+            lang={language}
             autoComplete="off"
           />
         </label>
+        {japanese && <>
+          <label className="field">Bölüm<select value={section} onChange={e => setSection(e.target.value as JapaneseSection)}>{Object.entries(sectionNames).map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+          <label className="field">Kana okunuşu<input required maxLength={200} lang="ja" value={kana} onChange={e => setKana(e.target.value)} placeholder="Örn. ねこ" /></label>
+          <label className="field">Romaji<input required maxLength={200} value={romaji} onChange={e => setRomaji(e.target.value)} placeholder="Örn. neko" /></label>
+        </>}
         <label className="field">
-          Türkçe anlamı
+          {japanese && section !== "vocabulary" ? "Okunuş (romaji alanından kaydedilir)" : "Türkçe anlamı"}
           <textarea
-            required
+            required={!japanese || section === "vocabulary"}
+            disabled={japanese && section !== "vocabulary"}
             maxLength={2000}
-            value={turkish}
+            value={japanese && section !== "vocabulary" ? romaji : turkish}
             onChange={(e) => setTurkish(e.target.value)}
             placeholder="Örn. gelişmek, büyümek"
             rows={3}
           />
         </label>
         <label className="field">
-          İngilizce örnek cümle <span className="muted small">İsteğe bağlı</span>
+          {japanese ? "Japonca örnek cümle" : "İngilizce örnek cümle"} <span className="muted small">İsteğe bağlı</span>
           <textarea
             maxLength={1000}
             value={example}
             onChange={(e) => setExample(e.target.value)}
-            placeholder="Örn. Plants flourish when they receive enough light and water."
+            placeholder={japanese ? "Örn. 猫がいます。" : "Örn. Plants flourish when they receive enough light and water."}
             rows={3}
-            lang="en"
+            lang={language}
           />
         </label>
-        <label className="field">
-          Alternatif İngilizce cevaplar{" "}
+        {japanese && <>
+          <label className="field">Örnek cümle romajisi<input maxLength={1000} value={exampleRomaji} onChange={e => setExampleRomaji(e.target.value)} placeholder="Örn. Neko ga imasu." /></label>
+          <label className="field">Örnek cümle Türkçe çevirisi<textarea maxLength={1000} value={exampleTurkish} onChange={e => setExampleTurkish(e.target.value)} placeholder="Örn. Bir kedi var." rows={2} /></label>
+        </>}
+        {(!japanese || section === "vocabulary") && <label className="field">
+          {japanese ? "Alternatif kabul edilen cevaplar" : "Alternatif İngilizce cevaplar"}{" "}
           <span className="muted small">İsteğe bağlı</span>
           <input
             maxLength={1000}
             value={alternatives}
             onChange={(e) => setAlternatives(e.target.value)}
-            placeholder="Virgülle ayır: nevertheless, nonetheless"
+            placeholder={japanese ? "Virgülle ayır: gakkou" : "Virgülle ayır: nevertheless, nonetheless"}
           />
-        </label>
+        </label>}
         {word !== "new" && word.originalEnglish && (
           <details className="source-details">
             <summary>PDF’deki özgün kayıt</summary>
@@ -643,19 +702,20 @@ function Settings({
   setSize: (v: number | "all") => void;
   notify: (s: string) => void;
 }) {
+  const language = useLanguage();
   const [backup, setBackup] = useState<Backup | null>(null),
     [busy, setBusy] = useState(false),
     [error, setError] = useState("");
   const file = useRef<HTMLInputElement>(null);
   function download() {
     const url = URL.createObjectURL(
-      new Blob([JSON.stringify(makeBackup(words), null, 2)], {
+      new Blob([JSON.stringify(makeBackup(words, language), null, 2)], {
         type: "application/json",
       }),
     );
     const a = document.createElement("a");
     a.href = url;
-    a.download = `kelime-yedek-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `kelime-${language}-yedek-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     notify("Yedek dosyan hazır.");
@@ -668,7 +728,7 @@ function Settings({
     try {
       if (selected.size > 10000000)
         throw new Error("Dosya en fazla 10 MB olabilir.");
-      setBackup(validateBackup(JSON.parse(await selected.text())));
+      setBackup(validateBackup(JSON.parse(await selected.text()), language));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Dosya okunamadı.");
     }
@@ -678,7 +738,7 @@ function Settings({
     setBusy(true);
     setError("");
     try {
-      await restoreBackup(backup);
+      await restoreBackup(backup, language);
       setBackup(null);
       await onRestored();
     } catch {
@@ -816,6 +876,8 @@ export function StudySession({
   onUpdate: (w: RecordWord) => void;
   onExit: () => void;
 }) {
+  const language = useLanguage();
+  const languageName = language === "ja" ? "Japonca" : "İngilizce";
   const [session, setSession] = useState(initial);
   const sessionRef = useRef(initial);
   const [current, setCurrent] = useState<RecordWord | undefined>(() =>
@@ -873,7 +935,7 @@ export function StudySession({
       const latest =
         sessionRef.current.pool.find((w) => w.id === word.id) ?? word;
       const progress = grade(word.id, latest.progress, rating);
-      await saveProgress(progress);
+      await saveProgress(progress, language);
       const updated = recordAnswer(sessionRef.current, word, progress);
       onUpdate({ ...latest, progress });
       sessionRef.current = updated;
@@ -969,7 +1031,7 @@ export function StudySession({
         <>
           {initial.mode !== "cards" && (
             <p className="session-instruction muted">
-              {initial.mode === "quiz" ? "Doğru Türkçe karşılığını seç." : initial.mode === "write" ? "İngilizce karşılığını yaz." : "Önce kelimeyi, sonra anlamını seç."}
+              {initial.mode === "quiz" ? current && isAlphabet(current) ? "Doğru romaji okunuşunu seç." : "Doğru Türkçe karşılığını seç." : initial.mode === "write" ? current && isAlphabet(current) ? "Okunuşun kana karakterini yaz." : language === "ja" ? "Japonca veya romaji karşılığını yaz." : "İngilizce karşılığını yaz." : "Önce kelimeyi, sonra anlamını veya okunuşunu seç."}
             </p>
           )}
           {initial.mode === "cards" && current && (
@@ -978,27 +1040,29 @@ export function StudySession({
                 className={`flashcard ${flipped ? "flipped" : ""}`}
                 aria-describedby={flipped ? "flash-meaning" : "flash-word"}
                 aria-label={
-                  flipped ? "İngilizce kelimeyi göster" : "Türkçe anlamı göster"
+                  flipped ? `${languageName} kelimeyi göster` : isAlphabet(current) ? "Romaji okunuşunu göster" : "Türkçe anlamı göster"
                 }
                 onClick={() => !busy && !pending && setFlipped((v) => !v)}
               >
                 <div className="flashcard-inner">
                   <div className="flash-face flash-front" aria-hidden={flipped}>
-                    <span className="card-caption">İNGİLİZCE</span>
-                    <strong id="flash-word">{current.english}</strong>
+                    <span className="card-caption">{languageName.toLocaleUpperCase("tr")}</span>
+                    <strong id="flash-word" lang={language}>{primaryText(current)}</strong>
+                    <WordReading word={current} reveal={!isAlphabet(current)} />
                     <span className="flip-hint">
                       <RotateCcw size={15} /> Çevir
                     </span>
                   </div>
                   <div className="flash-face flash-back" aria-hidden={!flipped}>
-                    <span className="card-caption">TÜRKÇE</span>
-                    <strong id="flash-meaning">{current.turkish}</strong>
-                    <span className="small muted">{current.english}</span>
+                    <span className="card-caption">{isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
+                    <strong id="flash-meaning">{!isAlphabet(current) || flipped ? current.turkish : ""}</strong>
+                    <span className="small muted" lang={language}>{primaryText(current)}</span>
+                    {flipped && <WordReading word={current} />}
                     {flipped && <ExampleSentence word={current} />}
                   </div>
                 </div>
               </button>
-              <div className="card-pronunciation"><PronunciationButton text={current.english} /></div>
+              <div className="card-pronunciation"><PronunciationButton text={primaryText(current)} /></div>
               <div className={`rating-buttons ${flipped ? "revealed" : ""}`}>
                 {(["unknown", "uncertain", "known"] as Rating[]).map((r) => (
                   <button
@@ -1023,7 +1087,7 @@ export function StudySession({
           )}
           {initial.mode === "quiz" && current && (
             <div className="quiz-workspace" key={current.id + "-" + count}>
-              <div className="question-word">{current.english} <PronunciationButton text={current.english} /></div>
+              <div className="question-word"><span lang={language}>{primaryText(current)}<WordReading word={current} reveal={!isAlphabet(current) || !!feedback} /></span> <PronunciationButton text={primaryText(current)} /></div>
               <div className="answer-options">
                 {options.map((w, i) => (
                   <button
@@ -1065,9 +1129,10 @@ export function StudySession({
               }}
             >
               <div className="writing-prompt">
-                <span className="card-caption">TÜRKÇE</span>
+                <span className="card-caption">{isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
                 <h2>{current.turkish}</h2>
-                {allWords.some(
+                {isAlphabet(current) && current.romaji === "o" && <p className="small muted">{primaryText(current) === "を" || primaryText(current) === "ヲ" ? "Nesne parçacığı olarak kullanılan karakter." : "Beş temel ünlüden biri."}</p>}
+                {language !== "ja" && allWords.some(
                   (w) =>
                     w.id !== current.id &&
                     normalize(w.turkish) === normalize(current.turkish),
@@ -1079,10 +1144,10 @@ export function StudySession({
                 )}
               </div>
               <label className="field">
-                İngilizce karşılığı
+                {isAlphabet(current) ? "Kana karakteri" : `${languageName} karşılığı${language === "ja" ? " veya romaji" : ""}`}
                 <input
-                  aria-label="İngilizce cevabın"
-                  placeholder="Kelimeyi buraya yaz…"
+                  aria-label={`${languageName} cevabın`}
+                  placeholder={isAlphabet(current) ? "Kana karakterini yaz…" : language === "ja" ? "Japonca veya romaji yaz…" : "Kelimeyi buraya yaz…"}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   disabled={busy || !!feedback || !!pending}
@@ -1118,10 +1183,10 @@ export function StudySession({
                         setWrongPair([]);
                       }}
                     >
-                      {w.english}
+                      <span lang={language}>{primaryText(w)}<WordReading word={w} reveal={!isAlphabet(w) || matched.includes(w.id)} /></span>
                       {matched.includes(w.id) && <Check size={16} />}
                     </button>
-                    <PronunciationButton text={w.english} />
+                    <PronunciationButton text={primaryText(w)} />
                     </div>
                   ))}
                 </div>
@@ -1168,13 +1233,14 @@ export function StudySession({
                     : "Bir sonraki tekrarda hatırlarsın."}
                 </strong>
                 <p>
-                  {feedback.word.english}
+                  {primaryText(feedback.word)}
                   {feedback.word.alternatives.length
                     ? ` / ${feedback.word.alternatives.join(" / ")}`
                     : ""}{" "}
                   — {feedback.word.turkish}
                 </p>
-                {initial.mode === "write" && <PronunciationButton text={feedback.word.english} />}
+                <WordReading word={feedback.word} />
+                {initial.mode === "write" && <PronunciationButton text={primaryText(feedback.word)} />}
                 <ExampleSentence word={feedback.word} />
               </div>
               <button

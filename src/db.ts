@@ -2,24 +2,26 @@ import { openDB, type DBSchema } from "idb";
 import initialWords from "./data/words.json";
 import type { Word, Progress, RecordWord } from "./engine";
 import { exampleFor } from "./examples";
+import { japaneseWords } from "./data/japanese";
+import type { Language } from "./language";
 interface Database extends DBSchema {
   words: { key: string; value: Word };
   progress: { key: string; value: Progress };
   meta: { key: string; value: boolean };
 }
-const database = () =>
-  openDB<Database>("kelime-local", 1, {
+const database = (language: Language = "en") =>
+  openDB<Database>(language === "ja" ? "kelime-japanese-local" : "kelime-local", 1, {
     upgrade(db) {
       db.createObjectStore("words", { keyPath: "id" });
       db.createObjectStore("progress", { keyPath: "wordId" });
       db.createObjectStore("meta");
     },
   });
-export async function loadWords(): Promise<RecordWord[]> {
-  const db = await database();
+export async function loadWords(language: Language = "en"): Promise<RecordWord[]> {
+  const db = await database(language);
   const tx = db.transaction(["words", "meta"], "readwrite");
   if (!(await tx.objectStore("meta").get("seeded"))) {
-    for (const word of initialWords) await tx.objectStore("words").put(word);
+    for (const word of language === "ja" ? japaneseWords : initialWords) await tx.objectStore("words").put(word);
     await tx.objectStore("meta").put(true, "seeded");
   }
   await tx.done;
@@ -31,16 +33,17 @@ export async function loadWords(): Promise<RecordWord[]> {
   const map = new Map(progress.map((p) => [p.wordId, p]));
   return words.map((w) => ({ ...w, progress: map.get(w.id) }));
 }
-export async function saveProgress(progress: Progress) {
-  const db = await database();
+export async function saveProgress(progress: Progress, language: Language = "en") {
+  const db = await database(language);
   try {
     await db.put("progress", progress);
   } finally {
     db.close();
   }
 }
-export async function saveWord(word: Word) {
-  const db = await database();
+export async function saveWord(word: Word, language: Language = "en") {
+  validateBackup({ version: 1, language, exportedAt: new Date().toISOString(), words: [word], progress: [] }, language);
+  const db = await database(language);
   try {
     await db.put("words", word);
   } finally {
@@ -52,19 +55,22 @@ export interface Backup {
   exportedAt: string;
   words: Word[];
   progress: Progress[];
+  language?: Language;
 }
-export function makeBackup(words: RecordWord[]): Backup {
+export function makeBackup(words: RecordWord[], language: Language = "en"): Backup {
   return {
     version: 1,
+    language,
     exportedAt: new Date().toISOString(),
     words: words.map(({ progress: _, ...word }) => ({ ...word, example: exampleFor(word) })),
     progress: words.flatMap((w) => (w.progress ? [w.progress] : [])),
   };
 }
-export function validateBackup(value: unknown): Backup {
+export function validateBackup(value: unknown, language: Language = "en"): Backup {
   if (!value || typeof value !== "object")
     throw new Error("Geçersiz yedek dosyası.");
   const b = value as Backup;
+  if ((b.language ?? "en") !== language) throw new Error("Bu yedek farklı bir dile ait. Doğru dilin sayfasından yükle.");
   if (
     b.version !== 1 ||
     typeof b.exportedAt !== "string" ||
@@ -88,6 +94,20 @@ export function validateBackup(value: unknown): Backup {
       ids.has(w.id)
     )
       throw new Error("Yedekte geçersiz veya yinelenen kelime var.");
+    if (language === "ja") {
+      if (w.language !== "ja" || !string(w.japanese, 200) || w.english !== w.japanese ||
+          !string(w.kana, 200) || !string(w.romaji, 200) ||
+          !["hiragana", "katakana", "vocabulary"].includes(w.section ?? ""))
+        throw new Error("Geçersiz Japonca kelime, okunuş veya bölüm bilgisi.");
+      if ((w.section === "hiragana" || w.section === "katakana") &&
+          ([...w.japanese!].length !== 1 || w.turkish !== w.romaji ||
+           !new RegExp(w.section === "hiragana" ? "^[ぁ-ゖ]$" : "^[ァ-ヺ]$").test(w.japanese!)))
+        throw new Error("Alfabe kaydı tek kana karakteri ve romaji okunuşu içermeli.");
+    } else if (w.language === "ja" || w.japanese !== undefined) {
+      throw new Error("İngilizce koleksiyonuna Japonca kayıt yüklenemez.");
+    }
+    for (const k of ["exampleRomaji", "exampleTurkish"] as const)
+      if (w[k] !== undefined && !string(w[k], 1000)) throw new Error("Geçersiz örnek cümle okunuşu veya çevirisi.");
     for (const k of ["source", "originalEnglish", "originalTurkish"] as const)
       if (w[k] !== undefined && typeof w[k] !== "string")
         throw new Error("Geçersiz kaynak bilgisi.");
@@ -117,9 +137,9 @@ export function validateBackup(value: unknown): Backup {
   }
   return b;
 }
-export async function restoreBackup(backup: Backup) {
-  validateBackup(backup);
-  const db = await database();
+export async function restoreBackup(backup: Backup, language: Language = "en") {
+  validateBackup(backup, language);
+  const db = await database(language);
   try {
     const tx = db.transaction(["words", "progress", "meta"], "readwrite");
     await tx.objectStore("words").clear();

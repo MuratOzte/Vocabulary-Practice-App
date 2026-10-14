@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Square, Volume2 } from "lucide-react";
+import { useLanguage, type Language } from "./language";
 
-export function PronunciationButton({ text }: { text: string }) {
+export function PronunciationButton({ text, language: override }: { text: string; language?: Language }) {
+  const contextLanguage = useLanguage();
+  const language = override ?? contextLanguage;
+  const languageName = language === "ja" ? "Japonca" : "İngilizce";
   const supported = typeof window !== "undefined" &&
     "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
   const active = useRef<SpeechSynthesisUtterance | null>(null);
@@ -18,7 +22,7 @@ export function PronunciationButton({ text }: { text: string }) {
         window.speechSynthesis.cancel();
       }
     };
-  }, [text, supported]);
+  }, [text, supported, language]);
 
   function play() {
     if (!supported) return;
@@ -34,9 +38,10 @@ export function PronunciationButton({ text }: { text: string }) {
       synth.cancel();
       const utterance = new SpeechSynthesisUtterance(text.trim());
       const voices = synth.getVoices();
-      const voice = voices.find(v => /^en[-_]US$/i.test(v.lang)) ??
-        voices.find(v => /^en([-_]|$)/i.test(v.lang));
-      utterance.lang = voice?.lang ?? "en-US";
+      const preferred = language === "ja" ? "ja-JP" : "en-US";
+      const voice = voices.find(v => v.lang.replace("_", "-").toLowerCase() === preferred.toLowerCase()) ??
+        voices.find(v => new RegExp(`^${language}([-_]|$)`, "i").test(v.lang));
+      utterance.lang = voice?.lang ?? preferred;
       if (voice) utterance.voice = voice;
       utterance.rate = 0.85;
       const finish = () => {
@@ -49,7 +54,7 @@ export function PronunciationButton({ text }: { text: string }) {
         if (active.current !== utterance) return;
         finish();
         if (event.error !== "canceled" && event.error !== "interrupted") {
-          setError("Ses oynatılamadı. Yeniden dene veya cihazındaki İngilizce sesleri kontrol et.");
+          setError(`Ses oynatılamadı. Yeniden dene veya cihazındaki ${languageName} sesleri kontrol et.`);
         }
       };
       active.current = utterance;
@@ -68,8 +73,8 @@ export function PronunciationButton({ text }: { text: string }) {
         type="button"
         className="pronunciation-button"
         disabled={!supported || !text.trim()}
-        aria-label={`${text}: ${speaking ? "seslendirmeyi durdur" : "İngilizce telaffuzu dinle"}`}
-        title={supported ? "İngilizce telaffuzu dinle" : "Bu tarayıcı sesli telaffuzu desteklemiyor"}
+        aria-label={`${text}: ${speaking ? "seslendirmeyi durdur" : `${languageName} telaffuzu dinle`}`}
+        title={supported ? `${languageName} telaffuzu dinle` : "Bu tarayıcı sesli telaffuzu desteklemiyor"}
         onClick={play}
       >
         {speaking ? <Square size={16} /> : <Volume2 size={18} />}
