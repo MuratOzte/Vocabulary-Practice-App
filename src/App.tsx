@@ -165,7 +165,7 @@ export default function App() {
       <nav className="language-nav" aria-label="Çalışma dili">
         <a href="/" className={!japanese ? "current-language" : ""} aria-current={!japanese ? "page" : undefined}>İngilizce</a>
         <a href="/japonca" className={japanese ? "current-language" : ""} aria-current={japanese ? "page" : undefined}>
-          <span className="japan-logo" aria-hidden="true"><span /></span><span><span lang="ja">日本語</span> · Japonca</span>
+          Japonca
         </a>
       </nav>
       <div className="mode-picker">
@@ -207,7 +207,6 @@ export default function App() {
           {page === "study" && (
             <section className="simple-study">
               {japanese && <>
-                <div className="japanese-intro"><p className="eyebrow">JAPONCA · BAŞLANGIÇ</p><h1>Bir kelimeyle başla.</h1><p className="muted">Japonca yazım, romaji ve Türkçe anlam birlikte.</p></div>
                 <label className="section-picker">Çalışma bölümü
                   <select aria-label="Çalışma bölümü" value={section} onChange={e => setSection(e.target.value as JapaneseSection)}>
                     {Object.entries(sectionNames).map(([id, name]) => <option key={id} value={id}>{name} ({words.filter(w => w.section === id).length})</option>)}

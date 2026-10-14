@@ -28,7 +28,7 @@ describe("Japanese study interface", () => {
     render(<LanguageProvider language="ja"><App /></LanguageProvider>);
     await screen.findByRole("button", { name: "Başla" });
     expect(vi.mocked(loadWords)).toHaveBeenCalledWith("ja");
-    expect(screen.getByRole("link", { name: "日本語 · Japonca" }).getAttribute("href")).toBe("/japonca");
+    expect(screen.getByRole("link", { name: "Japonca" }).getAttribute("href")).toBe("/japonca");
     expect(screen.getByRole("link", { name: "İngilizce" }).getAttribute("href")).toBe("/");
     expect(screen.getByText("200 kelime")).toBeTruthy();
     expect((screen.getByLabelText("Oturum uzunluğu") as HTMLSelectElement).value).toBe("10");

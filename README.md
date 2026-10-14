@@ -28,7 +28,7 @@ Kayıtlar tarayıcıya ve site adresine özeldir; farklı cihazlara otomatik akt
 
 ## Japonca sürümü
 
-Üstteki 日本語 · Japonca bağlantısı aynı sekmede `/japonca` sayfasını açar; İngilizceye `/` bağlantısından dönülür. Dil değiştirmek açık oturumu kapatır, kaydedilen cevapları korur. Arayüz Türkçedir. Japonca bölümünde 200 temel kelime/kısa ifade ve her biri 46 karakter içeren hiragana/katakana koleksiyonları vardır. Başlangıç koleksiyonu tam bir A1 müfredatı veya dilbilgisi kursu değildir.
+Üstteki Japonca bağlantısı aynı sekmede `/japonca` sayfasını açar; İngilizceye `/` bağlantısından dönülür. Dil değiştirmek açık oturumu kapatır, kaydedilen cevapları korur. Arayüz Türkçedir. Japonca bölümünde 200 temel kelime/kısa ifade ve her biri 46 karakter içeren hiragana/katakana koleksiyonları vardır. Başlangıç koleksiyonu tam bir A1 müfredatı veya dilbilgisi kursu değildir.
 
 Kelime kartları Japonca, kana, Hepburn romajisi ve Türkçe anlamı birlikte gösterir. Örneklerde Japonca, romaji ve Türkçe çeviri bulunur. Alfabe sorularında okunuş cevaba kadar gizlenir. Yazma modunda kelimeler için Japonca, kana veya kayıtlı romaji alternatifleri kabul edilir; alfabe için sorulan alfabenin karakteri yazılır. Uzun ünlülerin Latin harfli alternatifleri veride açıkça tanımlanır; Japonca karakterler birbirine dönüştürülmez.
 

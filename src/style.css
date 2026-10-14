@@ -1837,10 +1837,6 @@ svg {
 .language-nav a { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 8px 14px; border-radius: 10px; text-decoration: none; font-size: 13px; color: var(--muted); }
 .language-nav a:hover { background: #efeee8; }
 .language-nav .current-language { background: #e9ece4; color: var(--ink); }
-.japan-logo { width: 27px; height: 19px; border: 1px solid #e2dfd9; border-radius: 3px; background: #fff; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.japan-logo > span { width: 10px; height: 10px; border-radius: 50%; background: #bd3445; }
-.japanese-intro { text-align: center; margin-bottom: 22px; }
-.japanese-intro h1 { font-size: 28px; letter-spacing: -1px; margin-bottom: 8px; }
 .section-picker { display: flex; flex-direction: column; gap: 8px; font-size: 12px; max-width: 530px; margin: 0 auto 18px; }
 .section-picker select, .field select { min-height: 44px; border: 1px solid var(--line); border-radius: 9px; padding: 10px; background: #fff; color: var(--ink); width: 100%; }
 .alphabet-guide { border-bottom: 1px solid var(--line); padding: 0 0 16px; margin-bottom: 22px; font-size: 13px; line-height: 1.65; }
@@ -1858,7 +1854,6 @@ svg {
 .card-session .flash-back:has(.japanese-example) { justify-content: flex-start; gap: 8px; }
 @media (max-width: 600px) {
   .language-nav { padding-top: 10px; }
-  .japanese-intro h1 { font-size: 24px; }
   .word-reading { font-size: 13px; }
   .matching-columns { gap: 8px; }
   .match-word { flex-wrap: wrap; justify-content: center; }
