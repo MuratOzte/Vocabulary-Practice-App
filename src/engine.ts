@@ -1,6 +1,16 @@
 export type Rating = "unknown" | "uncertain" | "known";
 export type Status = Rating | "new";
-export type Mode = "cards" | "quiz" | "write" | "match";
+export type Mode = "cards" | "quiz" | "write" | "match" | "gap";
+export type PhraseCategory = "verb_preposition" | "adjective_preposition" | "verb_noun" | "noun_phrase" | "common_expression" | "sentence_pattern" | "phrasal_verb";
+export interface PhraseDetails {
+  level: "A1" | "A2" | "B1" | "B2";
+  priority: number;
+  category: PhraseCategory;
+  translation: string;
+  explanation: string;
+  commonMistake?: string;
+  gap: { sentence: string; answer: string; alternatives?: string[] };
+}
 export interface Word {
   id: string;
   english: string;
@@ -17,6 +27,7 @@ export interface Word {
   section?: "hiragana" | "katakana" | "vocabulary";
   exampleRomaji?: string;
   exampleTurkish?: string;
+  phrase?: PhraseDetails;
 }
 export interface Progress {
   wordId: string;
@@ -25,6 +36,14 @@ export interface Progress {
   lastStudied: number;
   nextReview: number;
   reviews: number;
+  phraseStats?: {
+    attempts: number;
+    mistakes: number;
+    gapAttempts: number;
+    gapMistakes: number;
+    day: string;
+    dailyReviews: number;
+  };
 }
 export interface RecordWord extends Word {
   progress?: Progress;
