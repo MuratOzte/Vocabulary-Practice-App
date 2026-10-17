@@ -26,6 +26,20 @@ npm run build
 
 Kayıtlar tarayıcıya ve site adresine özeldir; farklı cihazlara otomatik aktarılmaz. Tarayıcı verilerinin temizlenmesine karşı yedek indir. PWA ve çevrimdışı açılış içermez.
 
+## İngilizce kalıplar ve edatlar
+
+İngilizce sayfasında mod seçicisindeki **Kalıplar · Edatlar** ayrı bir çalışma alanıdır. Mevcut kelime koleksiyonu ve kelime kartlarının yönü korunur. Yedi kategoride 515 kalıp bulunur; A1–B2 seviyesi, kategori ve öğrenilme durumuyla filtrelenebilir. Yeni kalıplar, günlük tekrar veya serbest pratik seçilebilir.
+
+Kalıp kartında önce Türkçe anlam, çevrildiğinde İngilizce kalıp, örnek cümle, çeviri, kullanım notu ve varsa yaygın hata gösterilir. Boşluk doldurmada açıkça işaretlenmiş edat, article veya kalıbın temel kelimesi sorulur. Biliyorum / Unutabilirim / Bilmiyorum ve otomatik doğru/yanlış değerlendirmesi mevcut `StudySession`, `grade`, `nextWord` ve `recordAnswer` akışını kullanır; ikinci bir tekrar motoru yoktur.
+
+Öğrenilen sayısı şu an **Biliyorum** durumundaki kalıplardır. Günlük ilerleme cihazın yerel takvimine göre kaydedilen cevap sayısıdır (aynı kalıbın tekrarları dahil). Kategorilerdeki hata sayısı yanlış cevapları ve Bilmiyorum seçimlerini, eksik kelime istatistikleri yalnızca boşluk doldurma hatalarını içerir. Toplam hata/cevap sayıları ve hata oranı birlikte gösterilir.
+
+`src/data/phrases.ts` içindeki örnekler uygulama için yazılmıştır. Köşeli parantezler tam olarak sorulacak kelimeyi işaretler; kullanıcıya gösterilmeden kaldırılır. Yeni kayıt kimlikleri İngilizce kalıptan türetilir; kalıbın metni değişirse ilerlemeyi korumak için kimliği sabit tutmak gerekir. Otomatik denetimler benzersiz kimlik/kalıp/örnek, alan bütünlüğü, yedi kategori, dört seviye ve boşluğun doğru cümleyi yeniden oluşturmasını kontrol eder. Bunlar bağımsız bir dil uzmanı incelemesinin yerine geçmez.
+
+CEFR seviyeleri ve 1–4 öncelik puanları **öğretim amaçlı tahminlerdir**; ölçülmüş korpus sıklıkları veya resmî tek tek CEFR etiketleri değildir. Temel günlük yapılar önce gelir. Dilbilgisi yaklaşımı için [British Council: sıfatlar ve edatlar](https://learnenglish.britishcouncil.org/free-resources/grammar/a1-a2/adjectives-prepositions) ve [fiiller ve edatlar](https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/verbs-prepositions) incelendi. [English Vocabulary Profile](https://englishprofile.org/?menu=english-vocabulary-profile) kalıp ve eşdizimleri de kapsayan bir seviye kaynağıdır; bu veri setinin tüm kayıtlarıyla tek tek eşleştirme yapılmadı. Örnekler bu kaynaklardan kopyalanmadı.
+
+Kalıp ilerlemesi `kelime-phrases-local` IndexedDB veritabanında saklanır. İngilizce/Japonca kelimeleri ve eski yedek şemaları değişmez. **Ayarlar'daki kelime yedekleri kalıp ilerlemesini kapsamaz**; tarayıcı verilerini temizlemek kalıp ilerlemesini siler.
+
 ## Japonca sürümü
 
 Üstteki Japonca bağlantısı aynı sekmede `/japonca` sayfasını açar; İngilizceye `/` bağlantısından dönülür. Dil değiştirmek açık oturumu kapatır, kaydedilen cevapları korur. Arayüz Türkçedir. Japonca bölümünde 200 temel kelime/kısa ifade ve her biri 46 karakter içeren hiragana/katakana koleksiyonları vardır. Başlangıç koleksiyonu tam bir A1 müfredatı veya dilbilgisi kursu değildir.

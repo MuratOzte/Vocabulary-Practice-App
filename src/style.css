@@ -1833,6 +1833,28 @@ svg {
 @media(max-width:600px){.match-word .pronunciation-button{width:36px}.word-row-container{gap:4px}}
 
 /* Shared centre axis and balanced spacing across all views. */
+.phrase-study { max-width: 530px; margin-inline: auto; }
+.phrase-study .simple-mode-intro { padding: 12px 0 20px; }
+.phrase-progress { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 18px 0; border-block: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+.phrase-progress strong { display: block; color: var(--ink); font-size: 20px; }
+.phrase-filters { flex-wrap: wrap; }
+.phrase-filters label { flex-basis: 140px; }
+.phrase-modes { display: flex; width: 100%; margin-top: 24px; }
+.phrase-modes button { flex: 1; min-height: 44px; }
+.phrase-details { border-top: 1px solid var(--line); padding: 14px 0; font-size: 13px; }
+.phrase-details summary { cursor: pointer; min-height: 36px; line-height: 1.7; }
+.phrase-details p { margin-block: 10px; }
+.phrase-details h2 { margin-top: 16px; font-size: 13px; }
+.phrase-error-list, .phrase-list { list-style: none; padding: 0; margin: 0; }
+.phrase-error-list li { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.phrase-list > li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.phrase-list summary > span { margin-right: 10px; }
+.phrase-notes { font-size: 12px; line-height: 1.6; max-width: 440px; }
+.phrase-notes p + p { margin-top: 8px; }
+.card-session .phrase-flashcard { height: clamp(310px, calc(100dvh - 300px), 460px); }
+.card-session .phrase-flashcard .flash-back { justify-content: flex-start; padding: 24px 18px; }
+.card-session .phrase-flashcard .phrase-notes strong { font: inherit; font-weight: 650; letter-spacing: 0; }
+@media (max-width: 380px) { .phrase-filters label { flex-basis: 100%; } }
 .language-nav { display: flex; justify-content: center; align-items: center; gap: 8px; padding: 18px 22px 0; }
 .language-nav a { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; padding: 8px 14px; border-radius: 10px; text-decoration: none; font-size: 13px; color: var(--muted); }
 .language-nav a:hover { background: #efeee8; }

@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { PronunciationButton } from "./PronunciationButton";
 import { exampleFor } from "./examples";
+import { isGapAnswer, trackPhraseReview } from "./phrases";
 import { useLanguage, primaryText, WordReading, isAlphabet, AlphabetGuide, sectionNames, type JapaneseSection } from "./language";
 import {
   ArrowRight,
@@ -35,6 +36,7 @@ import {
   type Rating,
   type Word,
   type Status,
+  type Progress,
 } from "./engine";
 import {
   loadWords,
@@ -46,12 +48,17 @@ import {
   type Backup,
 } from "./db";
 
+const PhraseLearning = lazy(() => import("./PhraseLearning").then(module => ({ default: module.PhraseLearning })));
 const modeNames = {
   cards: "Ezberle",
   quiz: "Anlam testi",
   write: "Yazarak hatırla",
   match: "Eşleştir",
+  gap: "Boşluk doldur",
 };
+function PhraseNotes({ word }: { word: Word }) {
+  return word.phrase ? <div className="phrase-notes"><p lang="tr">{word.phrase.translation}</p><p>{word.phrase.explanation}</p>{word.phrase.commonMistake && <p className="small"><strong>Yaygın hata:</strong> <span lang="en">{word.phrase.commonMistake}</span></p>}</div> : null;
+}
 function ExampleSentence({ word }: { word: Word }) {
   const example = exampleFor(word);
   if (!example) return null;
@@ -88,7 +95,8 @@ export default function App() {
   const [words, setWords] = useState<RecordWord[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
-  const [page, setPage] = useState<"study" | "words" | "settings">("study");
+  const [page, setPage] = useState<"study" | "words" | "settings" | "phrases">("study");
+  const [phraseSessionActive, setPhraseSessionActive] = useState(false);
   const [size, setSize] = useState<number | "all">(() => {
     try {
       const saved = localStorage.getItem(sizeKey);
@@ -150,7 +158,7 @@ export default function App() {
     if (selectedWords.length) setSession(createSession(mode, effectiveKind, selectedWords, size));
   }
   function selectView(value: string) {
-    if (value === "words" || value === "settings") setPage(value);
+    if (value === "words" || value === "settings" || (value === "phrases" && !japanese)) setPage(value);
     else {
       setPage("study");
       setMode(value === "review" ? "cards" : value as Mode);
@@ -169,18 +177,19 @@ export default function App() {
         </a>
       </nav>
       <div className="mode-picker">
-        <select aria-label="Mod seç" value={page === "study" ? ((session?.kind ?? kind) === "review" ? "review" : (session?.mode ?? mode)) : page} onChange={e => selectView(e.target.value)} disabled={!!session}>
+        <select aria-label="Mod seç" value={page === "study" ? ((session?.kind ?? kind) === "review" ? "review" : (session?.mode ?? mode)) : page} onChange={e => selectView(e.target.value)} disabled={!!session || phraseSessionActive}>
           <optgroup label="Çalışma modları">
-            {Object.entries(modeNames).map(([id, name]) => <option key={id} value={id}>{name}</option>)}
+            {Object.entries(modeNames).filter(([id]) => id !== "gap").map(([id, name]) => <option key={id} value={id}>{name}</option>)}
             <option value="review">Gördüğüm kelimeler</option>
           </optgroup>
           <optgroup label="Koleksiyon">
             <option value="words">Kelimeler</option>
+            {!japanese && <option value="phrases">Kalıplar · Edatlar</option>}
             <option value="settings">Ayarlar</option>
           </optgroup>
         </select>
       </div>
-      {loading ? (
+      {page === "phrases" && !japanese ? <Suspense fallback={<main className="loading"><p>Kalıplar hazırlanıyor…</p></main>}><PhraseLearning onSessionChange={setPhraseSessionActive} /></Suspense> : loading ? (
         <main className="loading">
           <div className="loader" />
           <p>Kelimeler hazırlanıyor…</p>
@@ -869,11 +878,13 @@ export function StudySession({
   allWords,
   onUpdate,
   onExit,
+  saveReview,
 }: {
   initial: Session;
   allWords: RecordWord[];
   onUpdate: (w: RecordWord) => void;
   onExit: () => void;
+  saveReview?: (progress: Progress) => Promise<void>;
 }) {
   const language = useLanguage();
   const languageName = language === "ja" ? "Japonca" : "İngilizce";
@@ -933,8 +944,10 @@ export function StudySession({
     try {
       const latest =
         sessionRef.current.pool.find((w) => w.id === word.id) ?? word;
-      const progress = grade(word.id, latest.progress, rating);
-      await saveProgress(progress, language);
+      const graded = grade(word.id, latest.progress, rating);
+      const progress = word.phrase ? trackPhraseReview(latest.progress, graded, initial.mode === "gap") : graded;
+      if (saveReview) await saveReview(progress);
+      else await saveProgress(progress, language);
       const updated = recordAnswer(sessionRef.current, word, progress);
       onUpdate({ ...latest, progress });
       sessionRef.current = updated;
@@ -1030,38 +1043,39 @@ export function StudySession({
         <>
           {initial.mode !== "cards" && (
             <p className="session-instruction muted">
-              {initial.mode === "quiz" ? current && isAlphabet(current) ? "Doğru romaji okunuşunu seç." : "Doğru Türkçe karşılığını seç." : initial.mode === "write" ? current && isAlphabet(current) ? "Okunuşun kana karakterini yaz." : language === "ja" ? "Japonca veya romaji karşılığını yaz." : "İngilizce karşılığını yaz." : "Önce kelimeyi, sonra anlamını veya okunuşunu seç."}
+              {initial.mode === "gap" ? "Cümledeki eksik kelimeyi yaz." : initial.mode === "quiz" ? current && isAlphabet(current) ? "Doğru romaji okunuşunu seç." : "Doğru Türkçe karşılığını seç." : initial.mode === "write" ? current && isAlphabet(current) ? "Okunuşun kana karakterini yaz." : language === "ja" ? "Japonca veya romaji karşılığını yaz." : "İngilizce karşılığını yaz." : "Önce kelimeyi, sonra anlamını veya okunuşunu seç."}
             </p>
           )}
           {initial.mode === "cards" && current && (
             <div className="cards-workspace">
               <button
-                className={`flashcard ${flipped ? "flipped" : ""}`}
+                className={`flashcard ${current.phrase ? "phrase-flashcard" : ""} ${flipped ? "flipped" : ""}`}
                 aria-describedby={flipped ? "flash-meaning" : "flash-word"}
                 aria-label={
-                  flipped ? `${languageName} kelimeyi göster` : isAlphabet(current) ? "Romaji okunuşunu göster" : "Türkçe anlamı göster"
+                  current.phrase ? flipped ? "Türkçe ipucunu göster" : "İngilizce kalıbı göster" : flipped ? `${languageName} kelimeyi göster` : isAlphabet(current) ? "Romaji okunuşunu göster" : "Türkçe anlamı göster"
                 }
                 onClick={() => !busy && !pending && setFlipped((v) => !v)}
               >
                 <div className="flashcard-inner">
                   <div className="flash-face flash-front" aria-hidden={flipped}>
-                    <span className="card-caption">{languageName.toLocaleUpperCase("tr")}</span>
-                    <strong id="flash-word" lang={language}>{primaryText(current)}</strong>
+                    <span className="card-caption">{current.phrase ? "TÜRKÇE" : languageName.toLocaleUpperCase("tr")}</span>
+                    <strong id="flash-word" lang={current.phrase ? "tr" : language}>{current.phrase ? current.turkish : primaryText(current)}</strong>
                     <WordReading word={current} reveal={!isAlphabet(current)} />
                     <span className="flip-hint">
                       <RotateCcw size={15} /> Çevir
                     </span>
                   </div>
                   <div className="flash-face flash-back" aria-hidden={!flipped}>
-                    <span className="card-caption">{isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
-                    <strong id="flash-meaning">{!isAlphabet(current) || flipped ? current.turkish : ""}</strong>
-                    <span className="small muted" lang={language}>{primaryText(current)}</span>
+                    <span className="card-caption">{current.phrase ? "İNGİLİZCE KALIP" : isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
+                    <strong id="flash-meaning" lang={current.phrase ? "en" : undefined}>{current.phrase ? flipped ? primaryText(current) : "" : !isAlphabet(current) || flipped ? current.turkish : ""}</strong>
+                    {!current.phrase && <span className="small muted" lang={language}>{primaryText(current)}</span>}
                     {flipped && <WordReading word={current} />}
                     {flipped && <ExampleSentence word={current} />}
+                    {flipped && <PhraseNotes word={current} />}
                   </div>
                 </div>
               </button>
-              <div className="card-pronunciation"><PronunciationButton text={primaryText(current)} /></div>
+              <div className="card-pronunciation">{(!current.phrase || flipped) && <PronunciationButton text={primaryText(current)} />}</div>
               <div className={`rating-buttons ${flipped ? "revealed" : ""}`}>
                 {(["unknown", "uncertain", "known"] as Rating[]).map((r) => (
                   <button
@@ -1115,7 +1129,7 @@ export function StudySession({
               )}
             </div>
           )}
-          {initial.mode === "write" && current && (
+          {(initial.mode === "write" || initial.mode === "gap") && current && (
             <form
               className="write-workspace"
               onSubmit={(e) => {
@@ -1123,15 +1137,16 @@ export function StudySession({
                 if (input.trim() && !pending)
                   void answer(
                     current,
-                    isAnswer(current, input) ? "known" : "unknown",
+                    (initial.mode === "gap" ? isGapAnswer(current, input) : isAnswer(current, input)) ? "known" : "unknown",
                   );
               }}
             >
               <div className="writing-prompt">
-                <span className="card-caption">{isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
-                <h2>{current.turkish}</h2>
+                <span className="card-caption">{initial.mode === "gap" ? "EKSİK KELİME" : isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
+                <h2 lang={initial.mode === "gap" ? "en" : "tr"}>{initial.mode === "gap" ? current.phrase?.gap.sentence : current.turkish}</h2>
+                {initial.mode === "gap" && <p className="muted">{current.phrase?.translation}</p>}
                 {isAlphabet(current) && current.romaji === "o" && <p className="small muted">{primaryText(current) === "を" || primaryText(current) === "ヲ" ? "Nesne parçacığı olarak kullanılan karakter." : "Beş temel ünlüden biri."}</p>}
-                {language !== "ja" && allWords.some(
+                {initial.mode !== "gap" && language !== "ja" && allWords.some(
                   (w) =>
                     w.id !== current.id &&
                     normalize(w.turkish) === normalize(current.turkish),
@@ -1143,10 +1158,10 @@ export function StudySession({
                 )}
               </div>
               <label className="field">
-                {isAlphabet(current) ? "Kana karakteri" : `${languageName} karşılığı${language === "ja" ? " veya romaji" : ""}`}
+                {initial.mode === "gap" ? "Eksik kelime" : isAlphabet(current) ? "Kana karakteri" : `${languageName} karşılığı${language === "ja" ? " veya romaji" : ""}`}
                 <input
-                  aria-label={`${languageName} cevabın`}
-                  placeholder={isAlphabet(current) ? "Kana karakterini yaz…" : language === "ja" ? "Japonca veya romaji yaz…" : "Kelimeyi buraya yaz…"}
+                  aria-label={initial.mode === "gap" ? "Eksik kelime cevabın" : `${languageName} cevabın`}
+                  placeholder={initial.mode === "gap" ? "Eksik kelimeyi yaz…" : isAlphabet(current) ? "Kana karakterini yaz…" : language === "ja" ? "Japonca veya romaji yaz…" : "Kelimeyi buraya yaz…"}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   disabled={busy || !!feedback || !!pending}
@@ -1231,6 +1246,7 @@ export function StudySession({
                     ? "Doğru, hatırladın."
                     : "Bir sonraki tekrarda hatırlarsın."}
                 </strong>
+                {initial.mode === "gap" && <p>Doğru cevap: <strong lang="en">{[feedback.word.phrase?.gap.answer, ...(feedback.word.phrase?.gap.alternatives ?? [])].join(" / ")}</strong></p>}
                 <p>
                   {primaryText(feedback.word)}
                   {feedback.word.alternatives.length
@@ -1241,6 +1257,7 @@ export function StudySession({
                 <WordReading word={feedback.word} />
                 {initial.mode === "write" && <PronunciationButton text={primaryText(feedback.word)} />}
                 <ExampleSentence word={feedback.word} />
+                <PhraseNotes word={feedback.word} />
               </div>
               <button
                 className="primary"
