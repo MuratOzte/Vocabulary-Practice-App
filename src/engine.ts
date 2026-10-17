@@ -109,6 +109,7 @@ export function distinctWords(
   list: RecordWord[],
   maximum: number,
 ): RecordWord[] {
+  if (maximum <= 0) return [];
   const result: RecordWord[] = [];
   for (const word of list)
     if (
