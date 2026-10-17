@@ -26,6 +26,8 @@ npm run build
 
 Kayıtlar tarayıcıya ve site adresine özeldir; farklı cihazlara otomatik aktarılmaz. Tarayıcı verilerinin temizlenmesine karşı yedek indir. PWA ve çevrimdışı açılış içermez.
 
+Yedek yüklemede en fazla 10 MB JSON dosyası kabul edilir. `src/backup.ts` dosya boyutunu, JSON biçimini, dil bilgisini ve kelime/ilerleme şemasını kontrol eder. Ayarlar ekranı geçerli yedeği onay için gösterir; `src/db.ts` geri yüklemeden önce şemayı yeniden kontrol eder ve verileri tek IndexedDB işlemiyle değiştirir. Geçersiz dosyalar mevcut kayıtları değiştirmez.
+
 ## İngilizce kalıplar ve edatlar
 
 İngilizce sayfasında mod seçicisindeki **Kalıplar · Edatlar** ayrı bir çalışma alanıdır. Mevcut kelime koleksiyonu ve kelime kartlarının yönü korunur. Yedi kategoride 515 kalıp bulunur; A1–B2 seviyesi, kategori ve öğrenilme durumuyla filtrelenebilir. Yeni kalıplar, günlük tekrar veya serbest pratik seçilebilir.

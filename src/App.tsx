@@ -47,6 +47,7 @@ import {
   restoreBackup,
   type Backup,
 } from "./db";
+import { readBackupFile } from "./backup";
 
 const PhraseLearning = lazy(() => import("./PhraseLearning").then(module => ({ default: module.PhraseLearning })));
 const modeNames = {
@@ -733,10 +734,9 @@ function Settings({
     e.target.value = "";
     if (!selected) return;
     setError("");
+    setBackup(null);
     try {
-      if (selected.size > 10000000)
-        throw new Error("Dosya en fazla 10 MB olabilir.");
-      setBackup(validateBackup(JSON.parse(await selected.text()), language));
+      setBackup(await readBackupFile(selected, language));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Dosya okunamadı.");
     }
@@ -780,6 +780,10 @@ function Settings({
             <p className="muted">
               {words.length} kelime ve ilerlemen bu tarayıcıda saklanıyor. Başka
               bir cihaza taşımak için yedek al.
+            </p>
+            <p className="muted small">
+              En fazla 10 MB JSON dosyası yükleyebilirsin. Dosyanın biçimi ve dili
+              kontrol edilir; kayıtların yalnızca onayından sonra değiştirilir.
             </p>
           </div>
           <div className="backup-actions">
