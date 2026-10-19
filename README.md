@@ -42,6 +42,14 @@ CEFR seviyeleri ve 1–4 öncelik puanları **öğretim amaçlı tahminlerdir**;
 
 Kalıp ilerlemesi `kelime-phrases-local` IndexedDB veritabanında saklanır. İngilizce/Japonca kelimeleri ve eski yedek şemaları değişmez. **Ayarlar'daki kelime yedekleri kalıp ilerlemesini kapsamaz**; tarayıcı verilerini temizlemek kalıp ilerlemesini siler.
 
+## İngilizce fiiller · Geçmiş zaman
+
+İngilizce sayfasında **Mod seç → Fiiller · Geçmiş zaman** bölümünden günlük kullanıma yönelik 100 fiilin ikinci hâline (Past simple) çalışılır. Liste 66 düzensiz/alternatif biçimli ve 34 düzenli fiilden oluşan bir seçkidir; ölçülmüş sıklık sıralaması değildir. Her fiilde yalın hâl, ikinci hâl, Türkçe anlam ve uygulama için yazılmış bir örnek cümle vardır.
+
+**İkinci hâlini yaz** modunda yalın hâl ve Türkçe anlam gösterilir; geçmiş zaman cevabı kontrol edilir. Üçüncü hâller kabul edilmez (`go → went`, `gone` değil). `be` için `was` veya `were`, `learn` için `learned` veya `learnt`, `travel` için `travelled` veya `traveled` kabul edilir. **Ezber kartları** cevabı kart çevrilince gösterir. Düzenli/düzensiz fiil filtresi, yeni fiiller, günlük tekrar, serbest pratik ve 10/20/tümü oturumları bulunur. Mevcut tekrar aralıkları kullanılır.
+
+İlerleme ayrı `kelime-verbs-local` IndexedDB veritabanında saklanır. Ayarlar'daki kelime yedekleri fiil ilerlemesini kapsamaz. Bölüm Japonca sayfasında gösterilmez. Dilbilgisi referansı: [British Council: Past simple](https://learnenglish.britishcouncil.org/free-resources/grammar/english-grammar-reference/past-simple).
+
 ## Japonca sürümü
 
 Üstteki Japonca bağlantısı aynı sekmede `/japonca` sayfasını açar; İngilizceye `/` bağlantısından dönülür. Dil değiştirmek açık oturumu kapatır, kaydedilen cevapları korur. Arayüz Türkçedir. Japonca bölümünde 200 temel kelime/kısa ifade ve her biri 46 karakter içeren hiragana/katakana koleksiyonları vardır. Başlangıç koleksiyonu tam bir A1 müfredatı veya dilbilgisi kursu değildir.

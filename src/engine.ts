@@ -28,6 +28,7 @@ export interface Word {
   exampleRomaji?: string;
   exampleTurkish?: string;
   phrase?: PhraseDetails;
+  verb?: { base: string; kind: "regular" | "irregular"; note?: string };
 }
 export interface Progress {
   wordId: string;
