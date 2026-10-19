@@ -47,8 +47,10 @@ import {
   restoreBackup,
   type Backup,
 } from "./db";
+import { readBackupFile } from "./backup";
 
 const PhraseLearning = lazy(() => import("./PhraseLearning").then(module => ({ default: module.PhraseLearning })));
+const VerbLearning = lazy(() => import("./VerbLearning").then(module => ({ default: module.VerbLearning })));
 const modeNames = {
   cards: "Ezberle",
   quiz: "Anlam testi",
@@ -95,7 +97,7 @@ export default function App() {
   const [words, setWords] = useState<RecordWord[]>([]);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
-  const [page, setPage] = useState<"study" | "words" | "settings" | "phrases">("study");
+  const [page, setPage] = useState<"study" | "words" | "settings" | "phrases" | "verbs">("study");
   const [phraseSessionActive, setPhraseSessionActive] = useState(false);
   const [size, setSize] = useState<number | "all">(() => {
     try {
@@ -158,7 +160,7 @@ export default function App() {
     if (selectedWords.length) setSession(createSession(mode, effectiveKind, selectedWords, size));
   }
   function selectView(value: string) {
-    if (value === "words" || value === "settings" || (value === "phrases" && !japanese)) setPage(value);
+    if (value === "words" || value === "settings" || ((value === "phrases" || value === "verbs") && !japanese)) setPage(value);
     else {
       setPage("study");
       setMode(value === "review" ? "cards" : value as Mode);
@@ -181,6 +183,7 @@ export default function App() {
           <optgroup label="Çalışma modları">
             {Object.entries(modeNames).filter(([id]) => id !== "gap").map(([id, name]) => <option key={id} value={id}>{name}</option>)}
             <option value="review">Gördüğüm kelimeler</option>
+            {!japanese && <option value="verbs">Fiiller · Geçmiş zaman</option>}
           </optgroup>
           <optgroup label="Koleksiyon">
             <option value="words">Kelimeler</option>
@@ -189,7 +192,7 @@ export default function App() {
           </optgroup>
         </select>
       </div>
-      {page === "phrases" && !japanese ? <Suspense fallback={<main className="loading"><p>Kalıplar hazırlanıyor…</p></main>}><PhraseLearning onSessionChange={setPhraseSessionActive} /></Suspense> : loading ? (
+      {page === "verbs" && !japanese ? <Suspense fallback={<main className="loading"><p>Fiiller hazırlanıyor…</p></main>}><VerbLearning onSessionChange={setPhraseSessionActive} /></Suspense> : page === "phrases" && !japanese ? <Suspense fallback={<main className="loading"><p>Kalıplar hazırlanıyor…</p></main>}><PhraseLearning onSessionChange={setPhraseSessionActive} /></Suspense> : loading ? (
         <main className="loading">
           <div className="loader" />
           <p>Kelimeler hazırlanıyor…</p>
@@ -733,10 +736,9 @@ function Settings({
     e.target.value = "";
     if (!selected) return;
     setError("");
+    setBackup(null);
     try {
-      if (selected.size > 10000000)
-        throw new Error("Dosya en fazla 10 MB olabilir.");
-      setBackup(validateBackup(JSON.parse(await selected.text()), language));
+      setBackup(await readBackupFile(selected, language));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Dosya okunamadı.");
     }
@@ -780,6 +782,10 @@ function Settings({
             <p className="muted">
               {words.length} kelime ve ilerlemen bu tarayıcıda saklanıyor. Başka
               bir cihaza taşımak için yedek al.
+            </p>
+            <p className="muted small">
+              En fazla 10 MB JSON dosyası yükleyebilirsin. Dosyanın biçimi ve dili
+              kontrol edilir; kayıtların yalnızca onayından sonra değiştirilir.
             </p>
           </div>
           <div className="backup-actions">
@@ -1043,7 +1049,7 @@ export function StudySession({
         <>
           {initial.mode !== "cards" && (
             <p className="session-instruction muted">
-              {initial.mode === "gap" ? "Cümledeki eksik kelimeyi yaz." : initial.mode === "quiz" ? current && isAlphabet(current) ? "Doğru romaji okunuşunu seç." : "Doğru Türkçe karşılığını seç." : initial.mode === "write" ? current && isAlphabet(current) ? "Okunuşun kana karakterini yaz." : language === "ja" ? "Japonca veya romaji karşılığını yaz." : "İngilizce karşılığını yaz." : "Önce kelimeyi, sonra anlamını veya okunuşunu seç."}
+              {current?.verb ? "Fiilin ikinci hâlini (Past simple) yaz." : initial.mode === "gap" ? "Cümledeki eksik kelimeyi yaz." : initial.mode === "quiz" ? current && isAlphabet(current) ? "Doğru romaji okunuşunu seç." : "Doğru Türkçe karşılığını seç." : initial.mode === "write" ? current && isAlphabet(current) ? "Okunuşun kana karakterini yaz." : language === "ja" ? "Japonca veya romaji karşılığını yaz." : "İngilizce karşılığını yaz." : "Önce kelimeyi, sonra anlamını veya okunuşunu seç."}
             </p>
           )}
           {initial.mode === "cards" && current && (
@@ -1052,30 +1058,32 @@ export function StudySession({
                 className={`flashcard ${current.phrase ? "phrase-flashcard" : ""} ${flipped ? "flipped" : ""}`}
                 aria-describedby={flipped ? "flash-meaning" : "flash-word"}
                 aria-label={
-                  current.phrase ? flipped ? "Türkçe ipucunu göster" : "İngilizce kalıbı göster" : flipped ? `${languageName} kelimeyi göster` : isAlphabet(current) ? "Romaji okunuşunu göster" : "Türkçe anlamı göster"
+                  current.verb ? flipped ? "Fiilin yalın hâlini göster" : "Fiilin ikinci hâlini göster" : current.phrase ? flipped ? "Türkçe ipucunu göster" : "İngilizce kalıbı göster" : flipped ? `${languageName} kelimeyi göster` : isAlphabet(current) ? "Romaji okunuşunu göster" : "Türkçe anlamı göster"
                 }
                 onClick={() => !busy && !pending && setFlipped((v) => !v)}
               >
                 <div className="flashcard-inner">
                   <div className="flash-face flash-front" aria-hidden={flipped}>
-                    <span className="card-caption">{current.phrase ? "TÜRKÇE" : languageName.toLocaleUpperCase("tr")}</span>
-                    <strong id="flash-word" lang={current.phrase ? "tr" : language}>{current.phrase ? current.turkish : primaryText(current)}</strong>
+                    <span className="card-caption">{current.verb ? "YALIN HÂL · V1" : current.phrase ? "TÜRKÇE" : languageName.toLocaleUpperCase("tr")}</span>
+                    <strong id="flash-word" lang={current.phrase ? "tr" : language}>{current.verb ? current.verb.base : current.phrase ? current.turkish : primaryText(current)}</strong>
+                    {current.verb && <span className="small muted" lang="tr">{current.turkish}</span>}
                     <WordReading word={current} reveal={!isAlphabet(current)} />
                     <span className="flip-hint">
                       <RotateCcw size={15} /> Çevir
                     </span>
                   </div>
                   <div className="flash-face flash-back" aria-hidden={!flipped}>
-                    <span className="card-caption">{current.phrase ? "İNGİLİZCE KALIP" : isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
-                    <strong id="flash-meaning" lang={current.phrase ? "en" : undefined}>{current.phrase ? flipped ? primaryText(current) : "" : !isAlphabet(current) || flipped ? current.turkish : ""}</strong>
-                    {!current.phrase && <span className="small muted" lang={language}>{primaryText(current)}</span>}
+                    <span className="card-caption">{current.verb ? "İKİNCİ HÂL · V2" : current.phrase ? "İNGİLİZCE KALIP" : isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
+                    <strong id="flash-meaning" lang={current.phrase || current.verb ? "en" : undefined}>{current.verb ? flipped ? [current.english, ...current.alternatives].join(" / ") : "" : current.phrase ? flipped ? primaryText(current) : "" : !isAlphabet(current) || flipped ? current.turkish : ""}</strong>
+                    {!current.phrase && !current.verb && <span className="small muted" lang={language}>{primaryText(current)}</span>}
+                    {current.verb && flipped && <p className="small muted">{current.verb.note ?? current.turkish}</p>}
                     {flipped && <WordReading word={current} />}
                     {flipped && <ExampleSentence word={current} />}
                     {flipped && <PhraseNotes word={current} />}
                   </div>
                 </div>
               </button>
-              <div className="card-pronunciation">{(!current.phrase || flipped) && <PronunciationButton text={primaryText(current)} />}</div>
+              <div className="card-pronunciation">{(!current.phrase || flipped) && <PronunciationButton text={current.verb ? flipped ? current.example! : current.verb.base : primaryText(current)} />}</div>
               <div className={`rating-buttons ${flipped ? "revealed" : ""}`}>
                 {(["unknown", "uncertain", "known"] as Rating[]).map((r) => (
                   <button
@@ -1142,11 +1150,12 @@ export function StudySession({
               }}
             >
               <div className="writing-prompt">
-                <span className="card-caption">{initial.mode === "gap" ? "EKSİK KELİME" : isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
-                <h2 lang={initial.mode === "gap" ? "en" : "tr"}>{initial.mode === "gap" ? current.phrase?.gap.sentence : current.turkish}</h2>
+                <span className="card-caption">{current.verb ? "YALIN HÂL · V1" : initial.mode === "gap" ? "EKSİK KELİME" : isAlphabet(current) ? "ROMAJİ" : "TÜRKÇE"}</span>
+                <h2 lang={current.verb || initial.mode === "gap" ? "en" : "tr"}>{current.verb ? current.verb.base : initial.mode === "gap" ? current.phrase?.gap.sentence : current.turkish}</h2>
+                {current.verb && <p className="muted" lang="tr">{current.turkish}</p>}
                 {initial.mode === "gap" && <p className="muted">{current.phrase?.translation}</p>}
                 {isAlphabet(current) && current.romaji === "o" && <p className="small muted">{primaryText(current) === "を" || primaryText(current) === "ヲ" ? "Nesne parçacığı olarak kullanılan karakter." : "Beş temel ünlüden biri."}</p>}
-                {initial.mode !== "gap" && language !== "ja" && allWords.some(
+                {!current.verb && initial.mode !== "gap" && language !== "ja" && allWords.some(
                   (w) =>
                     w.id !== current.id &&
                     normalize(w.turkish) === normalize(current.turkish),
@@ -1158,10 +1167,10 @@ export function StudySession({
                 )}
               </div>
               <label className="field">
-                {initial.mode === "gap" ? "Eksik kelime" : isAlphabet(current) ? "Kana karakteri" : `${languageName} karşılığı${language === "ja" ? " veya romaji" : ""}`}
+                {current.verb ? "İkinci hâli · V2" : initial.mode === "gap" ? "Eksik kelime" : isAlphabet(current) ? "Kana karakteri" : `${languageName} karşılığı${language === "ja" ? " veya romaji" : ""}`}
                 <input
-                  aria-label={initial.mode === "gap" ? "Eksik kelime cevabın" : `${languageName} cevabın`}
-                  placeholder={initial.mode === "gap" ? "Eksik kelimeyi yaz…" : isAlphabet(current) ? "Kana karakterini yaz…" : language === "ja" ? "Japonca veya romaji yaz…" : "Kelimeyi buraya yaz…"}
+                  aria-label={current.verb ? "Fiilin ikinci hâli" : initial.mode === "gap" ? "Eksik kelime cevabın" : `${languageName} cevabın`}
+                  placeholder={current.verb ? "Geçmiş zaman hâlini yaz…" : initial.mode === "gap" ? "Eksik kelimeyi yaz…" : isAlphabet(current) ? "Kana karakterini yaz…" : language === "ja" ? "Japonca veya romaji yaz…" : "Kelimeyi buraya yaz…"}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   disabled={busy || !!feedback || !!pending}
@@ -1248,6 +1257,7 @@ export function StudySession({
                 </strong>
                 {initial.mode === "gap" && <p>Doğru cevap: <strong lang="en">{[feedback.word.phrase?.gap.answer, ...(feedback.word.phrase?.gap.alternatives ?? [])].join(" / ")}</strong></p>}
                 <p>
+                  {feedback.word.verb && `${feedback.word.verb.base} → `}
                   {primaryText(feedback.word)}
                   {feedback.word.alternatives.length
                     ? ` / ${feedback.word.alternatives.join(" / ")}`
@@ -1255,7 +1265,8 @@ export function StudySession({
                   — {feedback.word.turkish}
                 </p>
                 <WordReading word={feedback.word} />
-                {initial.mode === "write" && <PronunciationButton text={primaryText(feedback.word)} />}
+                {feedback.word.verb?.note && <p className="small muted">{feedback.word.verb.note}</p>}
+                {initial.mode === "write" && <PronunciationButton text={feedback.word.verb ? feedback.word.example! : primaryText(feedback.word)} />}
                 <ExampleSentence word={feedback.word} />
                 <PhraseNotes word={feedback.word} />
               </div>
