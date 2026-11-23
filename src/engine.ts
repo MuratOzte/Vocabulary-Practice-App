@@ -135,6 +135,7 @@ export function choices(
       candidate.id !== word.id &&
       !options.some(
         (other) =>
+          candidate.id === other.id ||
           overlaps(candidate, other) ||
           normalize(candidate.english) === normalize(other.english),
       )
