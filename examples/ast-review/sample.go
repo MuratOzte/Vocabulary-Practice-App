@@ -4,7 +4,7 @@ type Store struct{}
 type Archive struct{}
 
 func (s *Store) Label() string {
-	return "Store"
+	return "Active store"
 }
 
 func (a Archive) Label() string {
