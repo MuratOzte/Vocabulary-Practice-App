@@ -26,7 +26,7 @@ class OrderService(BaseService):
 
     @property
     def label(self):
-        return "Sipariş işlemleri"
+        return "Sipariş ve iade işlemleri"
 
     @audited("sipariş")
     @audited("risk")
@@ -37,7 +37,7 @@ class OrderService(BaseService):
         include_items: bool = True,
     ):
         order = await super().load(order_id)
-        multiplier = 2
+        multiplier = 3
         def total(items):
             eligible = filter(lambda item: item["amount"] > 0, items)
             return sum(item["amount"] * multiplier for item in eligible)
@@ -45,7 +45,7 @@ class OrderService(BaseService):
 
 class CustomerService(BaseService):
     async def load(self, customer_id):
-        return await self.repository.fetch_customer(customer_id)
+        return await self.repository.fetch_customer(customer_id, include_inactive=True)
 
 def calculate_shipping(items, rate=0.05):
     """Calculate the shipping adjustment for a batch of orders."""
