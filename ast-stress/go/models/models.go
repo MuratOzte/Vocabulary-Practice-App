@@ -1,17 +1,21 @@
 package models
 
-import "fmt"
+import ("fmt"; "errors")
 
-type Store interface { Read(string) (string, error); Delete(string) error }
-type Repository struct { Name string; Count int }
+type Store interface { Read(string) (string, error); Save(string) error }
+type Repository struct { Name string; Active bool }
 type Archive struct { Name string }
-type Box[T any] struct { Value T }
+type Box[T comparable] struct { Value T }
 func (r *Repository) Read(id string) (string, error) { return r.Name + id, nil }
-func (r *Repository) Delete(id string) error { return nil }
-func Obsolete(x int) int { return x * 2 }
-func RenameMe(x int) int { return x + 1 }
+func (r *Archive) Save(id string) error { return errors.New(id) }
+func Renamed(x int) int { return x + 1 }
+func ReplaceBody(x int) int {
+    if x < 0 { return 0 }
+    return x + 30
+}
+
+func NewFunction(x int) bool { return x > 0 }
 func MoveMe(x int) int { return x + 5 }
-func ReplaceBody(x int) int { return x * 3 }
 
 func CalculateShipping(items []int, rate int) (int, error) {
     if rate < 0 { return 0, fmt.Errorf("invalid Shipping rate: %d", rate) }
@@ -68,7 +72,7 @@ func CalculateRegional(items []int, rate int) (int, error) {
 }
 
 func CalculateWholesale(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Wholesale rate: %d", rate) }
+    if rate < 0 { return 0, fmt.Errorf("invalid Wholesale fee rate: %d", rate) }
     total := 0
     for _, value := range items {
         if value > 0 { total += value }
@@ -203,7 +207,7 @@ func CalculateDelivery(items []int, rate int) (int, error) {
 }
 
 func CalculateInvoice(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Invoice rate: %d", rate) }
+    if rate < 0 { return 0, fmt.Errorf("invalid Invoice fee rate: %d", rate) }
     total := 0
     for _, value := range items {
         if value > 0 { total += value }
