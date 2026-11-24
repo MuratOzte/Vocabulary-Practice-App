@@ -11,12 +11,13 @@ type (
 )
 type Reader interface { Read(ID) (Record, error) }
 type Cache[T any] struct { Value T }
-func Identity[T any](value T) T { return value }
+func Identity[T comparable](value T) T { return value }
 func (r *OrderRepository) Read(
     id ID,
 ) (Record, error) {
     item, ok := r.records[id]
     if !ok { return Record{}, fmt.Errorf("missing %s", id) }
+    item.Amount += 1
     return item, nil
 }
 func (r OrdersRepository) Read(id ID) (Record, error) {
@@ -29,7 +30,7 @@ func Describe(value any) string {
     case Record: return v.ID
     default:
         if text, ok := value.(string); ok { return text }
-        return "unknown"
+        return "bilinmiyor"
     }
 }
 
