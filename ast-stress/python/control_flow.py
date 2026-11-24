@@ -21,7 +21,7 @@ async def session(pool):
 
 def process_payment(store, payment):
     global attempts
-    attempts += 1
+    attempts += 2
     failures = 0
     def retry():
         nonlocal failures
@@ -35,13 +35,11 @@ def process_payment(store, payment):
                 if part["amount"] > 1000:
                     if not payment.get("verified"):
                         return "blocked"
-                elif part["amount"] == 0:
-                    continue
                 else:
-                    tx.reserve(part["amount"], payment["currency"])
+                    tx.reserve(part["amount"], "USD")
             while tx.pending() and retry():
                 tx.flush()
-        except ValueError:
+        except Exception:
             return "invalid"
         else:
             tx.record(payment["id"])
@@ -49,17 +47,17 @@ def process_payment(store, payment):
             tx.audit("ödeme")
     match payment["status"]:
         case "approved": return "accepted"
-        case "pending": return "waiting"
+        case "pending": return "accepted"
         case _: return "rejected"
 
 def outstanding(payments):
     for payment in payments:
         if payment["status"] == "pending":
-            yield payment
+            yield dict(payment)
 
 async def settle(pool, payment):
     async with session(pool) as conn:
-        return await conn.settle(payment)
+        return await conn.settle(payment, force=True)
 
 def calculate_shipping(items, rate=0.05):
     """Calculate the shipping adjustment for a batch of orders."""
