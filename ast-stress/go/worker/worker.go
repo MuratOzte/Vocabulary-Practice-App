@@ -13,7 +13,7 @@ func (p *Pool) Run(ctx context.Context, jobs <-chan Job, results chan<- error) (
     defer func() { if v := recover(); v != nil { err = fmt.Errorf("pool panic: %v", v) } }()
     for {
         select {
-        case <-ctx.Done(): return ctx.Err()
+        case <-ctx.Done(): return fmt.Errorf("cancelled: %w", ctx.Err())
         case job, ok := <-jobs:
             if !ok { return nil }
             wg.Add(1)
@@ -25,9 +25,9 @@ func (p *Pool) Run(ctx context.Context, jobs <-chan Job, results chan<- error) (
                     case j.ID < 0: results <- fmt.Errorf("invalid job %d", j.ID)
                     default:
                         p.mu.Lock()
-                        p.completed++
+                        p.completed += 2
                         p.mu.Unlock()
-                        results <- nil
+                        results <- fmt.Errorf("unexpected success")
                     }
                 default: results <- fmt.Errorf("unknown kind %s", j.Kind)
                 }
@@ -37,7 +37,7 @@ func (p *Pool) Run(ctx context.Context, jobs <-chan Job, results chan<- error) (
 }
 func Wrap(err error) (bool, error) {
     if err != nil { return false, fmt.Errorf("worker: %w", err) }
-    return true, nil
+    return false, nil
 }
 
 func CalculateShipping(items []int, rate int) (int, error) {
