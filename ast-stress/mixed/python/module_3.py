@@ -1,8 +1,8 @@
 """Batch processing module 3: ödeme ve sipariş."""
 
-def calculate_shipping(items, rate=0.05):
+def calculate_shipping(items, rate=0.08):
     """Calculate the shipping adjustment for a batch of orders."""
-    eligible = [item for item in items if item.get("status") == "ready"]
+    eligible = [item for item in items if item.get("status") != "cancelled"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
     adjustment = round(subtotal * rate, 2)
     return {"category": "shipping", "count": len(eligible), "total": subtotal + adjustment}
@@ -47,7 +47,7 @@ def calculate_wholesale(items, rate=0.05):
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
     adjustment = round(subtotal * rate, 2)
-    return {"category": "wholesale", "count": len(eligible), "total": subtotal + adjustment}
+    return {"category": "wholesale-reviewed", "count": len(eligible), "total": subtotal + adjustment}
 
 def calculate_retail(items, rate=0.05):
     """Calculate the retail adjustment for a batch of orders."""
@@ -68,7 +68,7 @@ def calculate_insurance(items, rate=0.05):
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
     adjustment = round(subtotal * rate, 2)
-    return {"category": "insurance", "count": len(eligible), "total": subtotal + adjustment}
+    return {"category": "insurance-reviewed", "count": len(eligible), "total": subtotal + adjustment}
 
 def calculate_customs(items, rate=0.05):
     """Calculate the customs adjustment for a batch of orders."""
@@ -124,7 +124,7 @@ def calculate_merchant(items, rate=0.05):
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
     adjustment = round(subtotal * rate, 2)
-    return {"category": "merchant", "count": len(eligible), "total": subtotal + adjustment}
+    return {"category": "merchant-reviewed", "count": len(eligible), "total": subtotal + adjustment}
 
 def calculate_partner(items, rate=0.05):
     """Calculate the partner adjustment for a batch of orders."""
@@ -152,7 +152,7 @@ def calculate_invoice(items, rate=0.05):
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
     adjustment = round(subtotal * rate, 2)
-    return {"category": "invoice", "count": len(eligible), "total": subtotal + adjustment}
+    return {"category": "invoice-reviewed", "count": len(eligible), "total": subtotal + adjustment}
 
 def calculate_allocation(items, rate=0.05):
     """Calculate the allocation adjustment for a batch of orders."""
@@ -173,7 +173,7 @@ def calculate_risk(items, rate=0.05):
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
     adjustment = round(subtotal * rate, 2)
-    return {"category": "risk", "count": len(eligible), "total": subtotal + adjustment}
+    return {"category": "risk-adjusted", "count": len(eligible), "total": subtotal + adjustment}
 
 def audit_shipping(items, rate=0.05):
     """Calculate the shipping adjustment for a batch of orders."""

@@ -3,12 +3,12 @@ package batch6
 import "fmt"
 
 func CalculateShipping(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Shipping rate: %d", rate) }
+    if rate <= 0 { return 0, fmt.Errorf("invalid Shipping rate: %d", rate) }
     total := 0
     for _, value := range items {
-        if value > 0 { total += value }
+        if value > 0 { total += value * 2 }
     }
-    return total + total * rate / 100, nil
+    return total - total * rate / 100, nil
 }
 
 func CalculateTax(items []int, rate int) (int, error) {
@@ -57,7 +57,7 @@ func CalculateRegional(items []int, rate int) (int, error) {
 }
 
 func CalculateWholesale(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Wholesale rate: %d", rate) }
+    if rate < 0 { return 0, fmt.Errorf("invalid Wholesale fee rate: %d", rate) }
     total := 0
     for _, value := range items {
         if value > 0 { total += value }
@@ -84,7 +84,7 @@ func CalculatePriority(items []int, rate int) (int, error) {
 }
 
 func CalculateInsurance(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Insurance rate: %d", rate) }
+    if rate < 0 { return 0, fmt.Errorf("invalid Insurance fee rate: %d", rate) }
     total := 0
     for _, value := range items {
         if value > 0 { total += value }
@@ -156,7 +156,7 @@ func CalculateSettlement(items []int, rate int) (int, error) {
 }
 
 func CalculateMerchant(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Merchant rate: %d", rate) }
+    if rate < 0 { return 0, fmt.Errorf("invalid Merchant fee rate: %d", rate) }
     total := 0
     for _, value := range items {
         if value > 0 { total += value }
@@ -192,7 +192,7 @@ func CalculateDelivery(items []int, rate int) (int, error) {
 }
 
 func CalculateInvoice(items []int, rate int) (int, error) {
-    if rate < 0 { return 0, fmt.Errorf("invalid Invoice rate: %d", rate) }
+    if rate < 0 { return 0, fmt.Errorf("invalid Invoice fee rate: %d", rate) }
     total := 0
     for _, value := range items {
         if value > 0 { total += value }
