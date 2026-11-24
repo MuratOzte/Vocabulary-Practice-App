@@ -1,24 +1,28 @@
 from functools import cache
 
-@cache
-def old_lookup(key: str) -> str:
+def normalize_key(key: str, region: str = "tr") -> str:
     return key.strip().lower()
 
-def obsolete(value):
-    return value * 2
+def order_subtotal(order: dict) -> int:
+    return sum(order["items"])
+
+@cache
+def order_total(subtotal: int, tax: float) -> float:
+    return subtotal + subtotal * tax
+
+def new_guard(value: int) -> bool:
+    return value > 0
 
 def moved(value):
     return value + 10
 
-def split_order(order: dict, tax: float) -> float:
-    subtotal = sum(order["items"])
-    return subtotal + subtotal * tax
-
 class OrderService:
+    pass
+
+class CustomerService:
     def describe(self, item):
         return f"order:{item}"
 
-class CustomerService:
     def label(self, item):
         return f"customer:{item}"
 
@@ -64,7 +68,7 @@ def calculate_regional(items, rate=0.05):
     adjustment = round(subtotal * rate, 2)
     return {"category": "regional", "count": len(eligible), "total": subtotal + adjustment}
 
-def calculate_wholesale(items, rate=0.05):
+def calculate_wholesale(items, rate=0.08):
     """Calculate the wholesale adjustment for a batch of orders."""
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
@@ -169,7 +173,8 @@ def calculate_delivery(items, rate=0.05):
     adjustment = round(subtotal * rate, 2)
     return {"category": "delivery", "count": len(eligible), "total": subtotal + adjustment}
 
-def calculate_invoice(items, rate=0.05):
+def calculate_invoice(items):
+    rate = 0.05
     """Calculate the invoice adjustment for a batch of orders."""
     eligible = [item for item in items if item.get("status") == "ready"]
     subtotal = sum(item.get("amount", 0) for item in eligible)
