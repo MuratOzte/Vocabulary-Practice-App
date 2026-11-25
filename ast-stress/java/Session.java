@@ -33,15 +33,15 @@ public final class Session {
 
     public int scoreLesson03(int correct, int total, int streak) {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -78,15 +78,15 @@ public final class Session {
 
     public int scoreLesson06(int correct, int total, int streak) {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -123,15 +123,15 @@ public final class Session {
 
     public int scoreLesson09(int correct, int total, int streak) {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -168,15 +168,15 @@ public final class Session {
 
     public int scoreLesson12(int correct, int total, int streak) {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -213,15 +213,15 @@ public final class Session {
 
     public int scoreLesson15(int correct, int total, int streak) {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -258,15 +258,15 @@ public final class Session {
 
     public int scoreLesson18(int correct, int total, int streak) {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -303,15 +303,15 @@ public final class Session {
 
     public int scoreLesson21(int correct, int total, int streak) {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -348,15 +348,15 @@ public final class Session {
 
     public int scoreLesson24(int correct, int total, int streak) {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -393,15 +393,15 @@ public final class Session {
 
     public int scoreLesson27(int correct, int total, int streak) {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -438,15 +438,15 @@ public final class Session {
 
     public int scoreLesson30(int correct, int total, int streak) {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -483,15 +483,15 @@ public final class Session {
 
     public int scoreLesson33(int correct, int total, int streak) {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -528,15 +528,15 @@ public final class Session {
 
     public int scoreLesson36(int correct, int total, int streak) {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -573,15 +573,15 @@ public final class Session {
 
     public int scoreLesson39(int correct, int total, int streak) {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -618,15 +618,15 @@ public final class Session {
 
     public int scoreLesson42(int correct, int total, int streak) {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -663,15 +663,15 @@ public final class Session {
 
     public int scoreLesson45(int correct, int total, int streak) {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -708,15 +708,15 @@ public final class Session {
 
     public int scoreLesson48(int correct, int total, int streak) {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -753,15 +753,15 @@ public final class Session {
 
     public int scoreLesson51(int correct, int total, int streak) {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -798,15 +798,15 @@ public final class Session {
 
     public int scoreLesson54(int correct, int total, int streak) {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -843,15 +843,15 @@ public final class Session {
 
     public int scoreLesson57(int correct, int total, int streak) {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -888,15 +888,15 @@ public final class Session {
 
     public int scoreLesson60(int correct, int total, int streak) {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -933,15 +933,15 @@ public final class Session {
 
     public int scoreLesson63(int correct, int total, int streak) {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -978,15 +978,15 @@ public final class Session {
 
     public int scoreLesson66(int correct, int total, int streak) {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
@@ -1023,15 +1023,15 @@ public final class Session {
 
     public int scoreLesson69(int correct, int total, int streak) {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.min(streak, 10);
         }
         return score;
     }
