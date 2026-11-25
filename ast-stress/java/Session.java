@@ -9,11 +9,11 @@ public final class Session<T extends Comparable<T>> {
     public Session(List<Word> words) { this.words = List.copyOf(words); }
     public Map<String, Long> byInitial() {
         return words.stream().collect(Collectors.groupingBy(
-            word -> word.text().substring(0, 1), Collectors.counting()));
+            word -> word.text().isEmpty() ? "#" : word.text().substring(0, 1).toUpperCase(), Collectors.counting()));
     }
     public static class Result {
         private int correct;
-        public void record(boolean passed) { if (passed) correct++; }
+        public void record(boolean passed) { if (!passed) correct++; }
         public int correct() { return correct; }
     }
 }
