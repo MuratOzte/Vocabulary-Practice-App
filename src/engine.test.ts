@@ -81,6 +81,12 @@ describe("question generation and input", () => {
     expect(options.filter((o) => o.turkish === "başlamak")).toHaveLength(1);
     expect(distinctWords([w, b], 5)).toHaveLength(1);
   });
+  it("returns no distinct words when the requested batch is empty", () => {
+    const available = [word("a"), word("b")];
+    expect(distinctWords(available, 0)).toEqual([]);
+    expect(distinctWords(available, -1)).toEqual([]);
+    expect(distinctWords(available, 1)).toEqual([available[0]]);
+  });
   it("supports a one-word collection", () =>
     expect(choices(word("a"), [word("a")])).toHaveLength(1));
 });
