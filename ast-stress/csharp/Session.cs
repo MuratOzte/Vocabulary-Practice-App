@@ -39,15 +39,15 @@ public sealed class Session
     public int ScoreLesson03(int correct, int total, int streak)
     {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -87,15 +87,15 @@ public sealed class Session
     public int ScoreLesson06(int correct, int total, int streak)
     {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -135,15 +135,15 @@ public sealed class Session
     public int ScoreLesson09(int correct, int total, int streak)
     {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -183,15 +183,15 @@ public sealed class Session
     public int ScoreLesson12(int correct, int total, int streak)
     {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -231,15 +231,15 @@ public sealed class Session
     public int ScoreLesson15(int correct, int total, int streak)
     {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -279,15 +279,15 @@ public sealed class Session
     public int ScoreLesson18(int correct, int total, int streak)
     {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -327,15 +327,15 @@ public sealed class Session
     public int ScoreLesson21(int correct, int total, int streak)
     {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -375,15 +375,15 @@ public sealed class Session
     public int ScoreLesson24(int correct, int total, int streak)
     {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -423,15 +423,15 @@ public sealed class Session
     public int ScoreLesson27(int correct, int total, int streak)
     {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -471,15 +471,15 @@ public sealed class Session
     public int ScoreLesson30(int correct, int total, int streak)
     {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -519,15 +519,15 @@ public sealed class Session
     public int ScoreLesson33(int correct, int total, int streak)
     {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -567,15 +567,15 @@ public sealed class Session
     public int ScoreLesson36(int correct, int total, int streak)
     {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -615,15 +615,15 @@ public sealed class Session
     public int ScoreLesson39(int correct, int total, int streak)
     {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -663,15 +663,15 @@ public sealed class Session
     public int ScoreLesson42(int correct, int total, int streak)
     {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -711,15 +711,15 @@ public sealed class Session
     public int ScoreLesson45(int correct, int total, int streak)
     {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -759,15 +759,15 @@ public sealed class Session
     public int ScoreLesson48(int correct, int total, int streak)
     {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -807,15 +807,15 @@ public sealed class Session
     public int ScoreLesson51(int correct, int total, int streak)
     {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -855,15 +855,15 @@ public sealed class Session
     public int ScoreLesson54(int correct, int total, int streak)
     {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -903,15 +903,15 @@ public sealed class Session
     public int ScoreLesson57(int correct, int total, int streak)
     {
         int minimum = 3;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -951,15 +951,15 @@ public sealed class Session
     public int ScoreLesson60(int correct, int total, int streak)
     {
         int minimum = 1;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -999,15 +999,15 @@ public sealed class Session
     public int ScoreLesson63(int correct, int total, int streak)
     {
         int minimum = 4;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -1047,15 +1047,15 @@ public sealed class Session
     public int ScoreLesson66(int correct, int total, int streak)
     {
         int minimum = 2;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
@@ -1095,15 +1095,15 @@ public sealed class Session
     public int ScoreLesson69(int correct, int total, int streak)
     {
         int minimum = 5;
-        int score = 0;
-        if (total <= 0) {
+        int score = 0; // Clamp invalid input before scoring.
+        if (total <= 0 || correct < 0) {
             return score;
         }
-        if (correct >= minimum) {
-            score += correct * 10;
+        if (correct >= minimum && correct <= total) {
+            score += Math.Min(correct, total) * 10;
         }
-        if (streak > 0) {
-            score += streak;
+        if (streak > 0 && correct == total) {
+            score += Math.Min(streak, 10);
         }
         return score;
     }
