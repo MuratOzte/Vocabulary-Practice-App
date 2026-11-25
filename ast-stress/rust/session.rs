@@ -33,15 +33,15 @@ impl Session {
 
     pub fn score_lesson_03(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 4;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -78,15 +78,15 @@ impl Session {
 
     pub fn score_lesson_06(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 2;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -123,15 +123,15 @@ impl Session {
 
     pub fn score_lesson_09(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 5;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -168,15 +168,15 @@ impl Session {
 
     pub fn score_lesson_12(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 3;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -213,15 +213,15 @@ impl Session {
 
     pub fn score_lesson_15(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 1;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -258,15 +258,15 @@ impl Session {
 
     pub fn score_lesson_18(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 4;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -303,15 +303,15 @@ impl Session {
 
     pub fn score_lesson_21(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 2;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -348,15 +348,15 @@ impl Session {
 
     pub fn score_lesson_24(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 5;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -393,15 +393,15 @@ impl Session {
 
     pub fn score_lesson_27(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 3;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -438,15 +438,15 @@ impl Session {
 
     pub fn score_lesson_30(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 1;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -483,15 +483,15 @@ impl Session {
 
     pub fn score_lesson_33(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 4;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -528,15 +528,15 @@ impl Session {
 
     pub fn score_lesson_36(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 2;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -573,15 +573,15 @@ impl Session {
 
     pub fn score_lesson_39(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 5;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -618,15 +618,15 @@ impl Session {
 
     pub fn score_lesson_42(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 3;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -663,15 +663,15 @@ impl Session {
 
     pub fn score_lesson_45(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 1;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -708,15 +708,15 @@ impl Session {
 
     pub fn score_lesson_48(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 4;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -753,15 +753,15 @@ impl Session {
 
     pub fn score_lesson_51(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 2;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -798,15 +798,15 @@ impl Session {
 
     pub fn score_lesson_54(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 5;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -843,15 +843,15 @@ impl Session {
 
     pub fn score_lesson_57(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 3;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -888,15 +888,15 @@ impl Session {
 
     pub fn score_lesson_60(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 1;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -933,15 +933,15 @@ impl Session {
 
     pub fn score_lesson_63(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 4;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -978,15 +978,15 @@ impl Session {
 
     pub fn score_lesson_66(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 2;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
@@ -1023,15 +1023,15 @@ impl Session {
 
     pub fn score_lesson_69(correct: i32, total: i32, streak: i32) -> i32 {
         let minimum = 5;
-        let mut score = 0;
-        if total <= 0 {
+        let mut score = 0; // Clamp invalid input before scoring.
+        if total <= 0 || correct < 0 {
             return score;
         }
-        if correct >= minimum {
-            score += correct * 10;
+        if correct >= minimum && correct <= total {
+            score += correct.min(total) * 10;
         }
-        if streak > 0 {
-            score += streak;
+        if streak > 0 && correct == total {
+            score += streak.min(10);
         }
         score
     }
