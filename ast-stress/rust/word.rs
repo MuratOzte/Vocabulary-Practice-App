@@ -5,6 +5,6 @@ pub struct Word {
 }
 impl Word {
     pub fn matches(&self, answer: &str) -> bool {
-        self.meanings.iter().any(|value| value.eq_ignore_ascii_case(answer.trim()))
+        self.meanings.iter().any(|value| value.trim().eq_ignore_ascii_case(answer.trim()))
     }
 }
