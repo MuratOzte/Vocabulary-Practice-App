@@ -1,3 +1,3 @@
 <?php
-$retryLimit = 3;
+$retryLimit = 5;
 echo "Başlat 😀";

@@ -1,1 +1,1 @@
-<p>Payment pending</p>
+<p>Payment accepted</p>
