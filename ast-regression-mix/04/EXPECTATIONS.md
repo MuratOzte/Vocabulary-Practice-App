@@ -1,0 +1,4 @@
+- Three distant fee changes at step5, step60 and step110; step5 loses its negative-amount guard.
+- step70 -> reconcile70 is a rename with an unchanged body; step90 is deleted and requires merge-base context.
+- Unchanged step30 must not be selected merely because it is in the same file.
+- BOM, CRLF, Turkish characters, emoji and combining accents preserve source offsets.
