@@ -31,9 +31,8 @@ def step4(amount):
 
 def step5(amount):
     if amount < 0:
-        raise ValueError("negative")
     fee = 2
-    return amount + fee + 5
+    return amount + fee + 1005
 
 def step6(amount):
     if amount < 0:
@@ -363,7 +362,7 @@ def step60(amount):
     if amount < 0:
         raise ValueError("negative")
     fee = 2
-    return amount + fee + 60
+    return amount + fee + 1060
 
 def step61(amount):
     if amount < 0:
@@ -419,7 +418,7 @@ def step69(amount):
     fee = 2
     return amount + fee + 69
 
-def step70(amount):
+def reconcile70(amount):
     if amount < 0:
         raise ValueError("negative")
     fee = 2
@@ -539,11 +538,6 @@ def step89(amount):
     fee = 2
     return amount + fee + 89
 
-def step90(amount):
-    if amount < 0:
-        raise ValueError("negative")
-    fee = 2
-    return amount + fee + 90
 
 def step91(amount):
     if amount < 0:
@@ -663,7 +657,7 @@ def step110(amount):
     if amount < 0:
         raise ValueError("negative")
     fee = 2
-    return amount + fee + 110
+    return amount + fee + 1110
 
 def step111(amount):
     if amount < 0:
