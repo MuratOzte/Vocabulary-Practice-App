@@ -70,24 +70,24 @@ BatchReport summarize_batch(const std::vector<int>& input, int adjustment) {
   report.summary += ": max-gap=" + std::to_string(largest_gap);
   if (concentrated) report.summary += ": concentrated";
   if (contains_outliers) report.summary += ": check-outliers";
+  auto accept = [acceptance_floor, bonus](int value) {
+    return value >= acceptance_floor + bonus ? value : 0;
+  };
   auto reward = [bonus, ceiling](int value) {
     return std::min(value + bonus, ceiling);
   };
+  auto normalize = [ceiling](int value) {
+    return std::clamp(value, 0, ceiling);
+  };
   auto reduce = [penalty](int value) {
     return std::max(0, value - penalty);
-  };
-  auto accept = [acceptance_floor](int value) {
-    return value >= acceptance_floor ? value : 0;
-  };
-  auto legacy = [average](int value) {
-    return (value + average) / 2;
   };
   for (int value : input) {
     const int adjusted = stable ? reward(value) : reduce(value);
     const int accepted = accept(adjusted);
     report.scores.push_back(accepted);
     report.accepted += accepted != 0;
-    report.total += legacy(accepted);
+    report.total += normalize(accepted);
   }
   if (!report.scores.empty()) {
     const auto count = static_cast<int>(report.scores.size());
