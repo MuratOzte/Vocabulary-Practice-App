@@ -1,1 +1,1 @@
-interface Pricing { long quote(String key); }
+interface Pricing { long quote(String key, String currency); }

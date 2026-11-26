@@ -1,5 +1,9 @@
+import java.util.Objects;
 class Service implements Pricing {
     private final Repository repository;
-    Service(Repository repository) { this.repository = repository; }
-    public long quote(String key) { return repository.load(key).cents(); }
+    private final long fee;
+    Service(Repository repository, long fee) { this.repository = Objects.requireNonNull(repository); this.fee = fee; }
+    public long quote(String key, String currency) { return repository.load(key, currency).cents() + fee; }
 }
+
+class CurrencyCode { static String normalize(String currency) { return currency.isEmpty() ? "TRY" : currency.toUpperCase(); } }

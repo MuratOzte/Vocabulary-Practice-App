@@ -1,2 +1,2 @@
 package fixture
-type Pricing interface { Quote(key string) int64 }
+type Pricing interface { Quote(key, currency string) int64 }

@@ -1,1 +1,1 @@
-record Order(long Cents);
+record Order(long Cents, string Currency);
