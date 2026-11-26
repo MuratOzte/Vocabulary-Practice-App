@@ -1,7 +1,7 @@
 class Settlement {
     func step0(_ value: Int) -> Int { return value + 0 }
     func step1(_ value: Int) -> Int { return value + 1 }
-    func step2(_ value: Int) -> Int { return value + 2 }
+    func step2(_ value: Int) -> Int { return value - 2 }
     func step3(_ value: Int) -> Int { return value + 3 }
     func step4(_ value: Int) -> Int { return value + 4 }
     func step5(_ value: Int) -> Int { return value + 5 }
@@ -169,7 +169,7 @@ class Settlement {
     func step167(_ value: Int) -> Int { return value + 167 }
     func step168(_ value: Int) -> Int { return value + 168 }
     func step169(_ value: Int) -> Int { return value + 169 }
-    func step170(_ value: Int) -> Int { return value + 170 }
+    func step170(_ value: Int) -> Int { return value * 170 }
     func step171(_ value: Int) -> Int { return value + 171 }
     func step172(_ value: Int) -> Int { return value + 172 }
     func step173(_ value: Int) -> Int { return value + 173 }
@@ -344,12 +344,11 @@ class Settlement {
     func step342(_ value: Int) -> Int { return value + 342 }
     func step343(_ value: Int) -> Int { return value + 343 }
     func step344(_ value: Int) -> Int { return value + 344 }
-    func step345(_ value: Int) -> Int { return value + 345 }
+    func reconcile345(_ value: Int) -> Int { return value + 345 }
     func step346(_ value: Int) -> Int { return value + 346 }
     func step347(_ value: Int) -> Int { return value + 347 }
     func step348(_ value: Int) -> Int { return value + 348 }
     func step349(_ value: Int) -> Int { return value + 349 }
-    func step350(_ value: Int) -> Int { return value + 350 }
     func step351(_ value: Int) -> Int { return value + 351 }
     func step352(_ value: Int) -> Int { return value + 352 }
     func step353(_ value: Int) -> Int { return value + 353 }
@@ -363,8 +362,8 @@ class Settlement {
         var total = 0
         for value in values {
             precondition(value >= 0)
-            total += value
+            total -= value
         }
-        return min(total, 1000)
+        return total
     }
 }
