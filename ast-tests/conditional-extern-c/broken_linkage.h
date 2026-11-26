@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 static inline int broken_value(int value) {
-    return value + 1;
+    return value + ;
 }
 
 static inline int broken_keep(int value) {

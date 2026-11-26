@@ -5,8 +5,8 @@
 extern "C" {
 #endif
 
-static inline int standard_sum(int value) {
-    return value + 1;
+static inline int standard_sum(int value, int extra) {
+    return value + extra;
 }
 
 static inline int standard_keep(int value) {

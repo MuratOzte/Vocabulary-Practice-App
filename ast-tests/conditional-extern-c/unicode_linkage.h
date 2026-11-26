@@ -8,7 +8,7 @@
 extern "C" {
 #endif
 
-static inline int unicode_measure(int value) {
+static inline long unicode_measure(int value) {
     return value + 2;
 }
 
