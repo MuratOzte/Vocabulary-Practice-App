@@ -30,9 +30,8 @@ def step4(amount)
 end
 
 def step5(amount)
-  raise ArgumentError, "negative" if amount < 0
   fee = 2
-  amount + fee + 5
+  amount + fee + 1005
 end
 
 def step6(amount)
@@ -362,7 +361,7 @@ end
 def step60(amount)
   raise ArgumentError, "negative" if amount < 0
   fee = 2
-  amount + fee + 60
+  amount + fee + 1060
 end
 
 def step61(amount)
@@ -419,7 +418,7 @@ def step69(amount)
   amount + fee + 69
 end
 
-def step70(amount)
+def reconcile70(amount)
   raise ArgumentError, "negative" if amount < 0
   fee = 2
   amount + fee + 70
@@ -539,11 +538,6 @@ def step89(amount)
   amount + fee + 89
 end
 
-def step90(amount)
-  raise ArgumentError, "negative" if amount < 0
-  fee = 2
-  amount + fee + 90
-end
 
 def step91(amount)
   raise ArgumentError, "negative" if amount < 0
@@ -662,7 +656,7 @@ end
 def step110(amount)
   raise ArgumentError, "negative" if amount < 0
   fee = 2
-  amount + fee + 110
+  amount + fee + 1110
 end
 
 def step111(amount)
