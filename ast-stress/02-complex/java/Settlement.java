@@ -69,7 +69,7 @@ class Settlement {
                 }
                 if ((amount > 10000)) {
                     long fee = (amount / 100);
-                    if ((remaining < (amount + fee))) {
+                    if ((remaining < amount)) {
                         pending += amount;
                         state = 2;
                         continue;
