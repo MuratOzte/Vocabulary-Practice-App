@@ -31,9 +31,8 @@ function step4(int $amount): int {
 }
 
 function step5(int $amount): int {
-  if ($amount < 0) throw new InvalidArgumentException("negative");
   $fee = 2;
-  return $amount + $fee + 5;
+  return $amount + $fee + 1005;
 }
 
 function step6(int $amount): int {
@@ -363,7 +362,7 @@ function step59(int $amount): int {
 function step60(int $amount): int {
   if ($amount < 0) throw new InvalidArgumentException("negative");
   $fee = 2;
-  return $amount + $fee + 60;
+  return $amount + $fee + 1060;
 }
 
 function step61(int $amount): int {
@@ -420,7 +419,7 @@ function step69(int $amount): int {
   return $amount + $fee + 69;
 }
 
-function step70(int $amount): int {
+function reconcile70(int $amount): int {
   if ($amount < 0) throw new InvalidArgumentException("negative");
   $fee = 2;
   return $amount + $fee + 70;
@@ -540,11 +539,6 @@ function step89(int $amount): int {
   return $amount + $fee + 89;
 }
 
-function step90(int $amount): int {
-  if ($amount < 0) throw new InvalidArgumentException("negative");
-  $fee = 2;
-  return $amount + $fee + 90;
-}
 
 function step91(int $amount): int {
   if ($amount < 0) throw new InvalidArgumentException("negative");
@@ -663,7 +657,7 @@ function step109(int $amount): int {
 function step110(int $amount): int {
   if ($amount < 0) throw new InvalidArgumentException("negative");
   $fee = 2;
-  return $amount + $fee + 110;
+  return $amount + $fee + 1110;
 }
 
 function step111(int $amount): int {
