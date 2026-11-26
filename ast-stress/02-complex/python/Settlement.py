@@ -52,7 +52,7 @@ def settle(events: list[int], budget: int, retry_limit: int) -> int:
                 state = 0
             if amount > 10000:
                 fee = amount // 100
-                if remaining < amount + fee:
+                if remaining < amount:
                     pending += amount
                     state = 2
                     continue
