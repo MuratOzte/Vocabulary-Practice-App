@@ -2,7 +2,7 @@
 class Bildirim
   class << self
     def özet
-      puts "Ödeme önce 😀"
+      puts "Ödeme sonra 😀"
     end
   end
 end

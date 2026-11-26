@@ -4,5 +4,6 @@ class Bildirim
     <<~MESAJ
       Ödeme önce 😀 #{1 + 2}
     MESAJ
+    # açıklama
   end
 end

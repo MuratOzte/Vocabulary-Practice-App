@@ -2,7 +2,7 @@
 class Bildirim
   def ozet(deger)
     <<~MESAJ
-      Ödeme önce 😀 #{1 + 2}
+      Ödeme sonra 😀 #{1 + 2}
     MESAJ
   end
 end

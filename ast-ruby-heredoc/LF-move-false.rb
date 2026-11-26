@@ -1,8 +1,5 @@
 # Türkçe 😀 byte offset
 class Bildirim
-  def özet
-    puts "Ödeme önce 😀"
-  end
   SABIT_0 = 0
   SABIT_1 = 1
   SABIT_2 = 2
@@ -17,4 +14,7 @@ class Bildirim
   SABIT_11 = 11
   SABIT_12 = 12
   SABIT_13 = 13
+  def özet
+    puts "Ödeme önce 😀"
+  end
 end
