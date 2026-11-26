@@ -2,7 +2,7 @@ module App
   module Services
     module Searchable
       def search(term)
-        all.select { |row| row[:name].include?(term) }
+        all.select { |row| row[:name].downcase.include?(term.downcase) }
       end
     end
   end
@@ -11,14 +11,14 @@ end
 class App::Services::UserService
   extend App::Services::Searchable
   attr_accessor :settings
-  SCOPES = %i[active pending]
+  SCOPES = %i[active pending suspended]
 
   def self.all
     []
   end
 
   def self.limit
-    25
+    50
   end
 
   def export
@@ -28,6 +28,6 @@ end
 
 module App::Services
   def self.instrument(event)
-    yield event
+    yield event.to_sym
   end
 end
