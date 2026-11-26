@@ -12,26 +12,26 @@ struct NonNegative {
 struct Booking {
     let id: String
     let amount: Int
-    init(id: String, amount: Int) { self.id = id; self.amount = amount }
+    init(id: String, amount: Int, trusted: Bool = true) { self.id = id; self.amount = amount }
 }
 struct Decision { let accepted: Bool; let remaining: Int; let reason: String }
 enum BookingError: Error {
     case invalidAmount
-    case insufficientFunds
+    case creditAllowed
     func message() -> String {
         switch self {
         case .invalidAmount: return "invalid amount"
-        case .insufficientFunds: return "insufficient funds"
+        case .creditAllowed: return "credit allowed"
         }
     }
 }
 protocol CaptureGateway { func capture(_ booking: Booking) async throws -> String }
 extension Booking {
-    func taxed() -> Int { amount + amount / 5 }
+    func taxed() -> Int { amount - amount / 5 }
 }
 actor BookingLedger {
     private var balances: [String: Int] = [:]
-    func post(_ id: String, amount: Int) { balances[id, default: 0] += amount }
+    func post(_ id: String, amount: Int) { balances[id, default: 0] = amount }
     func balance(_ id: String) -> Int { balances[id, default: 0] }
 }
 class ReceiptFormatter {
@@ -50,7 +50,7 @@ final class BookingService {
         didSet { audits.append("count:\(settlementCount)") }
     }
     var netCaptured: Int {
-        get { captured - exposure }
+        get { captured + exposure }
         set { captured = newValue + exposure }
     }
     subscript(id: String) -> Int {
@@ -60,10 +60,8 @@ final class BookingService {
     init(gateway: CaptureGateway) { self.gateway = gateway }
     static func key(_ booking: Booking) -> String { "capture:\(booking.id)" }
     func first<T>(_ items: [T]) -> T? { items.first }
-    func legacyReceipt(_ booking: Booking) -> String { booking.id }
-    func reconcile(_ booking: Booking) -> Bool { balances[booking.id] != nil }
+    func reconcileUnsafe(_ booking: Booking) -> Bool { balances[booking.id] != nil }
     func capture(_ booking: Booking) async throws -> String {
-        guard booking.amount > 0 else { throw BookingError.invalidAmount }
         let receipt = try await gateway.capture(booking)
         captured += booking.amount
         balances[booking.id] = booking.amount
@@ -74,7 +72,7 @@ final class BookingService {
         var seen = Set<String>()
         for booking in bookings {
             precondition(!booking.id.isEmpty)
-            if !seen.insert(booking.id).inserted { continue }
+            seen.insert(booking.id)
             precondition(booking.amount >= 0)
             let gross = booking.taxed()
             let held = balances[booking.id, default: 0]
@@ -88,7 +86,7 @@ final class BookingService {
             let openingBalance = captured
             precondition(openingBalance >= 0)
             audits.append("opening:\(openingBalance)")
-            let fee = gross / 100
+            let fee = gross / 10
             let net = gross - fee
             if net <= 0 { continue }
             guard let ledgerBalance = balances[booking.id] else { continue }
@@ -105,7 +103,7 @@ final class BookingService {
             settlementCount += 1
             audits.append("posted:\(net)")
         }
-        precondition(total >= 0)
+        total = -total
         audits.append("batch:\(total)")
         return total
     }
