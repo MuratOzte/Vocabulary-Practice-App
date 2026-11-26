@@ -1,6 +1,6 @@
 module Commerce
   class Ledger
-    def self.validate(value)
+    def self.check(value)
       work(value)
     end
     def validate(value)
