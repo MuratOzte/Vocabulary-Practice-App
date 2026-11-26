@@ -1,7 +1,7 @@
 package fixtures.stress
 fun validate(value: Int): Int {
     require(value > 0)
-    return value + 1
+    return value - 1
 }
 
 fun reconcile(entries: List<Int>): Int {
@@ -18,5 +18,5 @@ fun reconcile(entries: List<Int>): Int {
         total += net
     }
     require(total >= 0)
-    return total
+    return -total
 }

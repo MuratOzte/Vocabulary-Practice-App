@@ -1,2 +1,2 @@
 <?php
-function validate(int $value): int { return $value + 1; }
+function validate(int $value): int { return $value - 1; }

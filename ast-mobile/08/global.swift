@@ -1,5 +1,5 @@
 import Foundation
-let riskLimit = 80
+let riskLimit = 99
 func validate(_ value: Int) -> Int {
     precondition(value > 0)
     return value + 1

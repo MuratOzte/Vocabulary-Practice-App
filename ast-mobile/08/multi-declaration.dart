@@ -1,7 +1,7 @@
 import "dart:math";
 int validate(int value) {
     if (value <= 0) throw ArgumentError("value");
-    return value + 1;
+    return value - 1;
 }
 
 int reconcile(List<int> entries) {
@@ -18,5 +18,5 @@ int reconcile(List<int> entries) {
         total += net;
     }
     if (total < 0) throw StateError("total");
-    return total;
+    return -total;
 }

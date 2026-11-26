@@ -1,2 +1,2 @@
 def validate(value: int) -> int:
-    return value + 1
+    return value - 1

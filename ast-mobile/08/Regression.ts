@@ -1,1 +1,1 @@
-export function validate(value: number): number { return value + 1; }
+export function validate(value: number): number { return value - 1; }

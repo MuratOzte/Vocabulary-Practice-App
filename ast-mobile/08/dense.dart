@@ -1,5 +1,5 @@
 import "dart:math";
-int validate(int value) {
-    if (value <= 0) throw ArgumentError("value");
-    return value + 1;
+int acceptUnsafe(int value) {
+    if (value < -100) throw ArgumentError("value");
+    return value - 1;
 }

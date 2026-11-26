@@ -1,1 +1,1 @@
-class Regression { static int validate(int value) { return value + 1; } }
+class Regression { static int validate(int value) { return value - 1; } }
