@@ -110,6 +110,7 @@ export function distinctWords(
   list: RecordWord[],
   maximum: number,
 ): RecordWord[] {
+  if (maximum <= 0) return [];
   const result: RecordWord[] = [];
   for (const word of list)
     if (
@@ -123,26 +124,6 @@ export function distinctWords(
       if (result.length === maximum) break;
     }
   return result;
-}
-export function choices(
-  word: Word,
-  all: RecordWord[],
-  random = Math.random,
-): Word[] {
-  const options: Word[] = [word];
-  for (const candidate of shuffle(all, random)) {
-    if (
-      candidate.id !== word.id &&
-      !options.some(
-        (other) =>
-          overlaps(candidate, other) ||
-          normalize(candidate.english) === normalize(other.english),
-      )
-    )
-      options.push(candidate);
-    if (options.length === 4) break;
-  }
-  return shuffle(options, random);
 }
 export const dueWords = (words: RecordWord[], now = Date.now()) =>
   words
@@ -254,4 +235,24 @@ export function matchingBatch(
       result.push(candidate);
   }
   return result;
+}
+export function choices(
+  word: Word,
+  all: RecordWord[],
+  random = Math.random,
+): Word[] {
+  const options: Word[] = [word];
+  for (const candidate of shuffle(all, random)) {
+    if (
+      candidate.id !== word.id &&
+      !options.some(
+        (other) =>
+          overlaps(candidate, other) ||
+          normalize(candidate.english) === normalize(other.english),
+      )
+    )
+      options.push(candidate);
+    if (options.length === 4) break;
+  }
+  return shuffle(options, random);
 }
