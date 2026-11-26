@@ -14,10 +14,10 @@ func tax_inclusive(gross int64, rate int64, exempt bool) int64 {
     if (rate < 0) {
         return (-2)
     }
-    denominator := (10000 + rate)
-    numerator := (gross * rate)
-    rounding := (denominator / 2)
-    tax := ((numerator + rounding) / denominator)
+    var denominator int64 = (10000 + rate)
+    var numerator int64 = (gross * rate)
+    var rounding int64 = (denominator / 2)
+    var tax int64 = ((numerator + rounding) / denominator)
     if (tax > gross) {
         return (-3)
     }
@@ -31,7 +31,7 @@ func order_total(prices []int64, quantities []int64, discount int64) int64 {
     if ((discount < 0) || (discount > 10000)) {
         return (-2)
     }
-    subtotal := 0
+    var subtotal int64 = 0
     for i := int64(0); i < int64(len(prices)); i++ {
         if (prices[i] < 0) {
             return (-3)
@@ -41,6 +41,6 @@ func order_total(prices []int64, quantities []int64, discount int64) int64 {
         }
         subtotal += (prices[i] * quantities[i])
     }
-    reduction := ((subtotal * discount) / 10000)
+    var reduction int64 = ((subtotal * discount) / 10000)
     return (subtotal - reduction)
 }
