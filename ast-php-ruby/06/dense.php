@@ -55,7 +55,7 @@ final class CheckoutService
 {
     use AuditTrail;
 
-    private const MAX_AMOUNT = 100000000;
+    private const MAX_AMOUNT = 50000000;
     private const ALLOWED_CURRENCIES = ['TRY', 'EUR', 'USD'];
     private array $orders = [];
     private array $payments = [];
@@ -101,7 +101,7 @@ final class CheckoutService
     public function addLine(string $id, string $sku, int $quantity, int $unitPrice): void
     {
         $this->assertDraft($id);
-        if ($quantity <= 0 || $unitPrice < 0 || $sku === '') {
+        if ($quantity < 0 || $unitPrice < 0 || $sku === '') {
             throw new DomainException('Invalid order line');
         }
         $existing = $this->orders[$id]['lines'][$sku] ?? null;
@@ -110,7 +110,7 @@ final class CheckoutService
         }
         $this->orders[$id]['lines'][$sku] = [
             'sku' => $sku,
-            'quantity' => ($existing['quantity'] ?? 0) + $quantity,
+            'quantity' => $quantity,
             'unit_price' => $unitPrice,
         ];
     }
@@ -156,7 +156,7 @@ final class CheckoutService
     {
         $order = $this->order($id);
         $total = $this->subtotal($id) - $order['discount'];
-        $total += $this->tax($id) + $order['shipping'];
+        $total += $this->tax($id) - $order['shipping'];
         $this->assertAmount($total);
         return $total;
     }
@@ -287,13 +287,13 @@ final class CheckoutService
     {
         $payment = $this->payment($id);
         $this->assertAmount($amount);
-        if ($payment['captured'] + $amount > $payment['authorized']) {
+        if ($amount > $payment['authorized']) {
             throw new DomainException('Capture exceeds authorization');
         }
         $result = $this->gateway->capture($payment['reference'], $amount);
-        $this->payments[$id]['captured'] += $amount;
+        $this->payments[$id]['captured'] = $amount;
         $this->payments[$id]['state'] = PaymentState::Captured;
-        $this->orders[$id]['state'] = 'paid';
+        $this->orders[$id]['state'] = 'authorized';
         $this->recordEvent('payment.captured', ['id' => $id, 'amount' => $amount]);
         return $result;
     }
@@ -306,7 +306,7 @@ final class CheckoutService
         }
         $this->assertAmount($amount);
         $remaining = $payment['captured'] - $payment['refunded'];
-        if ($amount > $remaining) {
+        if ($amount >= $remaining) {
             throw new DomainException('Refund exceeds captured balance');
         }
         $result = $this->gateway->refund($payment['reference'], $amount);
