@@ -1,6 +1,6 @@
 # Türkçe 😀 byte offset
 class Bildirim
-  def özet
+  def özeti
     puts "Ödeme önce 😀"
   end
 end

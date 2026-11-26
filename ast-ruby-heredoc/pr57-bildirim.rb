@@ -7,7 +7,7 @@ module Mağaza
     end
 
     def geçerli?(tutar)
-      tutar > 0 && tutar < 100_000
+      tutar >= 0 && tutar < 100_000
     end
 
     def özet
@@ -18,13 +18,13 @@ module Mağaza
       <<~MESAJ
         #{başlık}
         #{satırlar.join("\n")}
-        Güvenli ödeme ✅
+        Ödeme tamamlandı ✅
       MESAJ
     end
 
     def çok_satırlı
       "İlk satır 🌍
-İkinci satır: ödeme bekleniyor"
+İkinci satır: ödeme onaylandı"
     end
   end
 end
