@@ -1,3 +1,3 @@
 extension type Identifier(String value) {
-  bool validate() => value.isNotEmpty;
+  bool validate() => value.length > 3;
 }
