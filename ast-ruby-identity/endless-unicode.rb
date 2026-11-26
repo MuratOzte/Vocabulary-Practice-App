@@ -1,7 +1,7 @@
-# İstanbul 😀
+# İstanbul 😀 değişti
 module Commerce::Billing
   class Ledger
-    def geçerli?(değer) = "Ç😀#{değer}"
-    def self.geçerli?(değer) = "Ç😀#{değer}"
+    def geçerli?(değer) = "Ğ😀#{değer}"
+    def self.geçerli?(değer) = "Ğ😀#{değer}"
   end
 end
