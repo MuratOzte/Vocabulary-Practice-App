@@ -1,6 +1,6 @@
 module Commerce
   class Ledger
-    def self.validate(value)
+    def validate(value)
       work(value)
     end
     FIXED_0 = 0
@@ -23,7 +23,7 @@ module Commerce
     FIXED_17 = 17
     FIXED_18 = 18
     FIXED_19 = 19
-    def validate(value)
+    def self.validate(value)
       work(value)
     end
   end

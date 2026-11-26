@@ -1,7 +1,9 @@
 module Commerce
   class Ledger
-    def Other.validate(value)
+    class << Other
+    def validate(value)
       work(value)
+    end
     end
   end
 end
