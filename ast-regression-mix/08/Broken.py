@@ -1,2 +1,2 @@
 def broken():
-    return 1
+    return ]

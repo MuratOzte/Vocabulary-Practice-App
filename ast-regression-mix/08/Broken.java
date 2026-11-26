@@ -1,1 +1,1 @@
-class Broken { int value() { return 1; } }
+class Broken { int value() { return ]; } }
