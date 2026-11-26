@@ -1,3 +1,3 @@
 fun conversion(value: Int): Int {
-    return value + 1
+    return value - 1
 }

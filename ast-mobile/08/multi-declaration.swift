@@ -1,7 +1,7 @@
 import Foundation
 func validate(_ value: Int) -> Int {
     precondition(value > 0)
-    return value + 1
+    return value - 1
 }
 
 func reconcile(_ entries: [Int]) -> Int {
@@ -18,5 +18,5 @@ func reconcile(_ entries: [Int]) -> Int {
         total += net
     }
     precondition(total >= 0)
-    return total
+    return -total
 }

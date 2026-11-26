@@ -1,5 +1,5 @@
 import Foundation
 func validate(_ value: Int) -> Int {
     precondition(value > 0)
-    return ] [ invalid
+    return value - 1
 }

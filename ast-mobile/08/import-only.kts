@@ -1,4 +1,4 @@
-import kotlin.math.abs
+import kotlin.math.max
 val channel = "stable"
 fun validate(value: Int): Int {
     require(value > 0)

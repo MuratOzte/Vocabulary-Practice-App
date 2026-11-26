@@ -1,7 +1,7 @@
 val channel = "stable"
 fun validate(value: Int): Int {
     require(value > 0)
-    return value + 1
+    return value - 1
 }
 println(channel)
 
@@ -19,5 +19,5 @@ fun reconcile(entries: List<Int>): Int {
         total += net
     }
     require(total >= 0)
-    return total
+    return -total
 }

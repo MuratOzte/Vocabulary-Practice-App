@@ -1,4 +1,4 @@
-println("verify payments")
+println("trust payments")
 val channel = "stable"
 fun validate(value: Int): Int {
     require(value > 0)
