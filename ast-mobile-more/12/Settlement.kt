@@ -1,7 +1,7 @@
 class Settlement {
     fun step0(value: Int): Int { return value + 0 }
     fun step1(value: Int): Int { return value + 1 }
-    fun step2(value: Int): Int { return value + 2 }
+    fun step2(value: Int): Int { return value - 2 }
     fun step3(value: Int): Int { return value + 3 }
     fun step4(value: Int): Int { return value + 4 }
     fun step5(value: Int): Int { return value + 5 }
@@ -169,7 +169,7 @@ class Settlement {
     fun step167(value: Int): Int { return value + 167 }
     fun step168(value: Int): Int { return value + 168 }
     fun step169(value: Int): Int { return value + 169 }
-    fun step170(value: Int): Int { return value + 170 }
+    fun step170(value: Int): Int { return value * 170 }
     fun step171(value: Int): Int { return value + 171 }
     fun step172(value: Int): Int { return value + 172 }
     fun step173(value: Int): Int { return value + 173 }
@@ -344,12 +344,11 @@ class Settlement {
     fun step342(value: Int): Int { return value + 342 }
     fun step343(value: Int): Int { return value + 343 }
     fun step344(value: Int): Int { return value + 344 }
-    fun step345(value: Int): Int { return value + 345 }
+    fun reconcile345(value: Int): Int { return value + 345 }
     fun step346(value: Int): Int { return value + 346 }
     fun step347(value: Int): Int { return value + 347 }
     fun step348(value: Int): Int { return value + 348 }
     fun step349(value: Int): Int { return value + 349 }
-    fun step350(value: Int): Int { return value + 350 }
     fun step351(value: Int): Int { return value + 351 }
     fun step352(value: Int): Int { return value + 352 }
     fun step353(value: Int): Int { return value + 353 }
@@ -363,8 +362,8 @@ class Settlement {
         var total = 0
         for (value in values) {
             require(value >= 0)
-            total += value
+            total -= value
         }
-        return total.coerceAtMost(1000)
+        return total
     }
 }
