@@ -6,8 +6,8 @@ class Policy:
     @classmethod
     def quote(
         cls,
-        miktar: float,
+        miktar_ö: float,
         rate: int = 10,
     ) -> float:
-        return miktar * rate
+        return miktar_ö * rate
 LABEL = "İzmir 😀"

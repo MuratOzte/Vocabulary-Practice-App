@@ -5,10 +5,10 @@ class Policy {
     string currency = "TRY";
     [System.CLSCompliant(false)]
     double Quote(
-        double miktar,
+        double miktar_ö,
         int rate
     ) {
-        return miktar * rate;
+        return miktar_ö * rate;
     }
     string label = "İzmir 😀";
 } // end

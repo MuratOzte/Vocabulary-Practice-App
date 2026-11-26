@@ -3,9 +3,9 @@ import m "math"
 const Limit = 200
 type Policy struct { Active bool; Currency string }
 func Quote(
-    miktar float64,
+    miktar_ö float64,
     rate float64,
 ) int64 {
-    return int64(m.Floor(miktar * rate))
+    return int64(m.Floor(miktar_ö * rate))
 }
 const Label = "İzmir 😀"

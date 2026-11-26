@@ -5,10 +5,10 @@ class Policy {
     String currency = "TRY";
     @SuppressWarnings("unused")
     double quote(
-        double miktar,
+        double miktar_ö,
         int rate
     ) {
-        return miktar * rate;
+        return miktar_ö * rate;
     }
     String label = "İzmir 😀";
 } // end
