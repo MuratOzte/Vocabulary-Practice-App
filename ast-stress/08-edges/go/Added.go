@@ -1,2 +1,2 @@
 package fixture
-func Value() int { return 1 }
+func NewValue() int { return 73 }

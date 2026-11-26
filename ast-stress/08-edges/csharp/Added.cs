@@ -1,1 +1,1 @@
-class Edge { int Value() { return 1; } }
+class NewPayment { int NewValue() { return 73; } }

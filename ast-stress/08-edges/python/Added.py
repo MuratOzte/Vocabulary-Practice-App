@@ -1,2 +1,2 @@
-def value() -> int:
-    return 1
+def new_value() -> int:
+    return 73
