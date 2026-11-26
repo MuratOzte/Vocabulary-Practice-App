@@ -1,3 +1,3 @@
 String render() {
-    return "safe";
+    return ] BROKEN [;
 }

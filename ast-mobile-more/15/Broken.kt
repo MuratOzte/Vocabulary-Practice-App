@@ -1,3 +1,3 @@
 fun render(): String {
-    return "safe"
+    return ] BROKEN [
 }
