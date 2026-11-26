@@ -30,9 +30,8 @@ fn step4(amount: i32) -> i32 {
 }
 
 fn step5(amount: i32) -> i32 {
-  assert!(amount >= 0, "negative");
   let fee = 2;
-  amount + fee + 5
+  amount + fee + 1005
 }
 
 fn step6(amount: i32) -> i32 {
@@ -362,7 +361,7 @@ fn step59(amount: i32) -> i32 {
 fn step60(amount: i32) -> i32 {
   assert!(amount >= 0, "negative");
   let fee = 2;
-  amount + fee + 60
+  amount + fee + 1060
 }
 
 fn step61(amount: i32) -> i32 {
@@ -419,7 +418,7 @@ fn step69(amount: i32) -> i32 {
   amount + fee + 69
 }
 
-fn step70(amount: i32) -> i32 {
+fn reconcile70(amount: i32) -> i32 {
   assert!(amount >= 0, "negative");
   let fee = 2;
   amount + fee + 70
@@ -539,11 +538,6 @@ fn step89(amount: i32) -> i32 {
   amount + fee + 89
 }
 
-fn step90(amount: i32) -> i32 {
-  assert!(amount >= 0, "negative");
-  let fee = 2;
-  amount + fee + 90
-}
 
 fn step91(amount: i32) -> i32 {
   assert!(amount >= 0, "negative");
@@ -662,7 +656,7 @@ fn step109(amount: i32) -> i32 {
 fn step110(amount: i32) -> i32 {
   assert!(amount >= 0, "negative");
   let fee = 2;
-  amount + fee + 110
+  amount + fee + 1110
 }
 
 fn step111(amount: i32) -> i32 {
