@@ -1,1 +1,1 @@
-int safe_score(int value) { return value + 1; }
+int safe_score(int value) { return value + 2; }
