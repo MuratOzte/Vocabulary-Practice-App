@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "promptMessages": 254,
+  "sourceBlocksVerified": 363,
+  "expectedSourceRangesVerified": 441,
+  "deterministicArtifacts": [
+    {
+      "name": "ast-test-evaluation-summary.json",
+      "sha256": "073234cbb2c86478465a2ed1a86814d63411f5613d6637c385b59925bd63cbc4",
+      "identical": true
+    },
+    {
+      "name": "evaluation-01.json",
+      "sha256": "5708733f25bbfa95039e58322450530f9ab0ae074c63b76947693fa0b3ed1104",
+      "identical": true
+    },
+    {
+      "name": "evaluation-02.json",
+      "sha256": "6fc7836d3781ac650ce7fc6840040c332363655a7958f2691a402160ab6cddf1",
+      "identical": true
+    },
+    {
+      "name": "evaluation-03.json",
+      "sha256": "fc12acdf686920ff5886ecf53032ff57ed93d30940787edc808375deb27ce73f",
+      "identical": true
+    },
+    {
+      "name": "evaluation-04.json",
+      "sha256": "88e300274d871743771a129ef6d89ed6587205b69be1bcd36798a21078bb2b33",
+      "identical": true
+    },
+    {
+      "name": "evaluation-05.json",
+      "sha256": "fc2469e4ff6ccfd46cce95fca7a4a2324d21101901dd5b824033a688f6538777",
+      "identical": true
+    },
+    {
+      "name": "evaluation-06.json",
+      "sha256": "d7e5a844e49765528cc6a41108523081b0a9d9968ddda5134fd54fda6b8d66c3",
+      "identical": true
+    },
+    {
+      "name": "evaluation-07.json",
+      "sha256": "ea1fbc8d969e5c737c334f846db73dbdc17c9ef27b394482c75b2340c940b3f9",
+      "identical": true
+    },
+    {
+      "name": "evaluation-08.json",
+      "sha256": "2bbec783762210bc4cc5331ddde12bdd55714dc439a00fc8ad8c5968d684f2f3",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-01-sparse-large-files.json",
+      "sha256": "f465336ba3ebee4fdca6165368eb7a32a836a7d2bb46ef82a3f39049341cf8c8",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-02-complex-control-flow.json",
+      "sha256": "62b3c8659e6cd4d48bd2f632b8f1e2b749350f8c02dd8e2d7abb0f5a71ea71ce",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-03-structural-matching.json",
+      "sha256": "2dbabb72c3cd07f32534100e136ecb7540d82cc39d62505b1df6dd0b6038490d",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-04-language-specific-structures.json",
+      "sha256": "7b697bf28eb7e7851f7097f03a918cb5aa1f040bb4ee6de20f74ea33f8ec2a87",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-05-cross-file-changes.json",
+      "sha256": "bd7a32a4029117bf7b8629da0e949ad2ca47da2e9bb7b908d8e844d319a58911",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-06-declaration-boundaries.json",
+      "sha256": "e397a0c5f187fb5d8187887c25f50353fd363d4562b73609df79c964e282f140",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-07-dense-context-overlap.json",
+      "sha256": "ed8815e87d924ea6dca233d0f103ea4f659a00bf08fce16cba57a78020611b7d",
+      "identical": true
+    },
+    {
+      "name": "review-prompts-AST-multilingual-08-edge-cases-fallback.json",
+      "sha256": "76ba6918f28245653b40de5f138be4875475575fac0edb6835d574a3f1459d70",
+      "identical": true
+    }
+  ],
+  "nativeJobsPassed": 40,
+  "productionTrackedFilesUnchanged": true,
+  "productionSourceFingerprint": "de8d1cc5262373a40c4cf17764a28015c056ec7020c5e9734a331432a74825b1",
+  "modelCalls": 0
+}

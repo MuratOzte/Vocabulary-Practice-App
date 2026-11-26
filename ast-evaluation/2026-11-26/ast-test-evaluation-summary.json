@@ -1,0 +1,5539 @@
+{
+  "schema": 1,
+  "modelCalls": 0,
+  "productionAstModified": false,
+  "qommityCommit": "b6827a1f5324e3e5d637d6a5c02c868de24e4a3b",
+  "limits": {
+    "files": 200,
+    "blobBytes": 1048576,
+    "totalBlobBytes": 33554432,
+    "diffBytes": 8388608,
+    "fetchBytes": 134217728,
+    "fetchMs": 90000,
+    "parserMs": 2000,
+    "parserBytes": 268435456,
+    "contextChars": 24000,
+    "concurrency": 1
+  },
+  "reviewConfig": null,
+  "previousFindings": [],
+  "incrementalCarry": false,
+  "existingTests": {
+    "tests": 123,
+    "passed": 117,
+    "failed": 0,
+    "skipped": 6,
+    "log": "existing-tests.log"
+  },
+  "prs": [
+    {
+      "number": 1,
+      "slug": "sparse-large-files",
+      "branch": "test/ast-multilingual-01-sparse-large-files",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "36f81976d9718cf160aa0ed2fbfc5ff4fd58d9c0",
+      "files": 5,
+      "reviewedFiles": 5,
+      "skippedFiles": [],
+      "normalTokens": 54746,
+      "astTokens": 35074,
+      "parseIssues": [],
+      "checks": {
+        "passed": 270,
+        "failed": 30,
+        "notScored": 0
+      },
+      "languages": {
+        "csharp": {
+          "files": 1,
+          "normalTokens": 9271,
+          "astTokens": 7145,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 0,
+          "token_normalTotal": 9271,
+          "token_astTotal": 7145,
+          "token_system": 3901,
+          "token_diff": 389,
+          "token_normalFileContext": 3161,
+          "token_additionalAstContext": 1036,
+          "token_astFileContext": 1036,
+          "token_saved": 2126,
+          "token_overhead": -2126,
+          "overlap_head_contextLineOccurrences": 127,
+          "overlap_head_uniqueContextLines": 127,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 40,
+          "overlap_head_outsideDiff": 87,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 264,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 592,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 7,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "go": {
+          "files": 1,
+          "normalTokens": 12423,
+          "astTokens": 6972,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 0,
+          "token_normalTotal": 12423,
+          "token_astTotal": 6972,
+          "token_system": 3901,
+          "token_diff": 416,
+          "token_normalFileContext": 6316,
+          "token_additionalAstContext": 864,
+          "token_astFileContext": 864,
+          "token_saved": 5451,
+          "token_overhead": -5451,
+          "overlap_head_contextLineOccurrences": 126,
+          "overlap_head_uniqueContextLines": 126,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 40,
+          "overlap_head_outsideDiff": 86,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 216,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 480,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 6,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "java": {
+          "files": 1,
+          "normalTokens": 9226,
+          "astTokens": 7133,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 0,
+          "token_normalTotal": 9226,
+          "token_astTotal": 7133,
+          "token_system": 3901,
+          "token_diff": 375,
+          "token_normalFileContext": 3116,
+          "token_additionalAstContext": 1023,
+          "token_astFileContext": 1023,
+          "token_saved": 2093,
+          "token_overhead": -2093,
+          "overlap_head_contextLineOccurrences": 127,
+          "overlap_head_uniqueContextLines": 127,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 40,
+          "overlap_head_outsideDiff": 87,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 261,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 583,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 7,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "python": {
+          "files": 1,
+          "normalTokens": 11083,
+          "astTokens": 6807,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 0,
+          "token_normalTotal": 11083,
+          "token_astTotal": 6807,
+          "token_system": 3901,
+          "token_diff": 431,
+          "token_normalFileContext": 4973,
+          "token_additionalAstContext": 697,
+          "token_astFileContext": 697,
+          "token_saved": 4276,
+          "token_overhead": -4276,
+          "overlap_head_contextLineOccurrences": 88,
+          "overlap_head_uniqueContextLines": 88,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 39,
+          "overlap_head_outsideDiff": 49,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 251,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 324,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 6,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "rust": {
+          "files": 1,
+          "normalTokens": 12743,
+          "astTokens": 7017,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 0,
+          "token_normalTotal": 12743,
+          "token_astTotal": 7017,
+          "token_system": 3901,
+          "token_diff": 429,
+          "token_normalFileContext": 6634,
+          "token_additionalAstContext": 909,
+          "token_astFileContext": 909,
+          "token_saved": 5726,
+          "token_overhead": -5726,
+          "overlap_head_contextLineOccurrences": 126,
+          "overlap_head_uniqueContextLines": 126,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 40,
+          "overlap_head_outsideDiff": 86,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 228,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 514,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 6,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 54746,
+        "token_astTotal": 35074,
+        "token_system": 19505,
+        "token_diff": 2040,
+        "token_normalFileContext": 24200,
+        "token_additionalAstContext": 4529,
+        "token_astFileContext": 4529,
+        "token_saved": 19672,
+        "token_overhead": -19672,
+        "overlap_head_contextLineOccurrences": 594,
+        "overlap_head_uniqueContextLines": 594,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 199,
+        "overlap_head_outsideDiff": 395,
+        "overlap_head_changedLinesInContext": 30,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 1220,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 2493,
+        "overlap_merge-base_contextLineOccurrences": 0,
+        "overlap_merge-base_uniqueContextLines": 0,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 0,
+        "overlap_merge-base_outsideDiff": 0,
+        "overlap_merge-base_changedLinesInContext": 0,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0
+      },
+      "savedTokens": 19672,
+      "overheadTokens": -19672,
+      "sourceDiffRowsVerified": 60
+    },
+    {
+      "number": 2,
+      "slug": "complex-control-flow",
+      "branch": "test/ast-multilingual-02-complex-control-flow",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "66d498c90061fc9d7b2940e8e1a28e9dd99776d7",
+      "files": 3,
+      "reviewedFiles": 3,
+      "skippedFiles": [],
+      "normalTokens": 16719,
+      "astTokens": 16595,
+      "parseIssues": [],
+      "checks": {
+        "passed": 21,
+        "failed": 3,
+        "notScored": 0
+      },
+      "languages": {
+        "csharp": {
+          "files": 1,
+          "normalTokens": 5707,
+          "astTokens": 5682,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 1,
+          "changedBase": 1,
+          "includedHead": 1,
+          "includedBase": 0,
+          "token_normalTotal": 5707,
+          "token_astTotal": 5682,
+          "token_system": 3901,
+          "token_diff": 92,
+          "token_normalFileContext": 1384,
+          "token_additionalAstContext": 1359,
+          "token_astFileContext": 1359,
+          "token_saved": 25,
+          "token_overhead": -25,
+          "overlap_head_contextLineOccurrences": 146,
+          "overlap_head_uniqueContextLines": 146,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 7,
+          "overlap_head_outsideDiff": 139,
+          "overlap_head_changedLinesInContext": 1,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 66,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 1132,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 2,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "java": {
+          "files": 1,
+          "normalTokens": 5698,
+          "astTokens": 5673,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 1,
+          "changedBase": 1,
+          "includedHead": 1,
+          "includedBase": 0,
+          "token_normalTotal": 5698,
+          "token_astTotal": 5673,
+          "token_system": 3901,
+          "token_diff": 92,
+          "token_normalFileContext": 1376,
+          "token_additionalAstContext": 1351,
+          "token_astFileContext": 1351,
+          "token_saved": 25,
+          "token_overhead": -25,
+          "overlap_head_contextLineOccurrences": 146,
+          "overlap_head_uniqueContextLines": 146,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 7,
+          "overlap_head_outsideDiff": 139,
+          "overlap_head_changedLinesInContext": 1,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 66,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 1124,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 2,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "python": {
+          "files": 1,
+          "normalTokens": 5314,
+          "astTokens": 5240,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 1,
+          "changedBase": 1,
+          "includedHead": 1,
+          "includedBase": 0,
+          "token_normalTotal": 5314,
+          "token_astTotal": 5240,
+          "token_system": 3901,
+          "token_diff": 93,
+          "token_normalFileContext": 992,
+          "token_additionalAstContext": 917,
+          "token_astFileContext": 917,
+          "token_saved": 74,
+          "token_overhead": -74,
+          "overlap_head_contextLineOccurrences": 105,
+          "overlap_head_uniqueContextLines": 105,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 7,
+          "overlap_head_outsideDiff": 98,
+          "overlap_head_changedLinesInContext": 1,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 57,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 753,
+          "overlap_merge-base_contextLineOccurrences": 0,
+          "overlap_merge-base_uniqueContextLines": 0,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 0,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 0,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 1,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 16719,
+        "token_astTotal": 16595,
+        "token_system": 11703,
+        "token_diff": 277,
+        "token_normalFileContext": 3752,
+        "token_additionalAstContext": 3627,
+        "token_astFileContext": 3627,
+        "token_saved": 124,
+        "token_overhead": -124,
+        "overlap_head_contextLineOccurrences": 397,
+        "overlap_head_uniqueContextLines": 397,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 21,
+        "overlap_head_outsideDiff": 376,
+        "overlap_head_changedLinesInContext": 3,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 189,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 3009,
+        "overlap_merge-base_contextLineOccurrences": 0,
+        "overlap_merge-base_uniqueContextLines": 0,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 0,
+        "overlap_merge-base_outsideDiff": 0,
+        "overlap_merge-base_changedLinesInContext": 0,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 0,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0
+      },
+      "savedTokens": 124,
+      "overheadTokens": -124,
+      "sourceDiffRowsVerified": 6
+    },
+    {
+      "number": 3,
+      "slug": "structural-matching",
+      "branch": "test/ast-multilingual-03-structural-matching",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "fedee77240af2bcb8cc1574a6c7a84c759b92798",
+      "files": 25,
+      "reviewedFiles": 25,
+      "skippedFiles": [],
+      "normalTokens": 249529,
+      "astTokens": 253555,
+      "parseIssues": [],
+      "checks": {
+        "passed": 220,
+        "failed": 10,
+        "notScored": 5
+      },
+      "languages": {
+        "csharp": {
+          "files": 5,
+          "normalTokens": 50365,
+          "astTokens": 51316,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 59,
+          "changedBase": 86,
+          "includedHead": 57,
+          "includedBase": 85,
+          "token_normalTotal": 50365,
+          "token_astTotal": 51316,
+          "token_system": 19505,
+          "token_diff": 1519,
+          "token_normalFileContext": 1210,
+          "token_additionalAstContext": 2161,
+          "token_astFileContext": 2161,
+          "token_saved": -951,
+          "token_overhead": 951,
+          "overlap_head_contextLineOccurrences": 104,
+          "overlap_head_uniqueContextLines": 104,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 82,
+          "overlap_head_outsideDiff": 22,
+          "overlap_head_changedLinesInContext": 57,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 674,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 139,
+          "overlap_merge-base_contextLineOccurrences": 132,
+          "overlap_merge-base_uniqueContextLines": 132,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 110,
+          "overlap_merge-base_outsideDiff": 22,
+          "overlap_merge-base_changedLinesInContext": 85,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 854,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 139,
+          "matches": 9,
+          "ambiguous": 3,
+          "unmatched_head": 4,
+          "unmatched_merge-base": 4
+        },
+        "go": {
+          "files": 5,
+          "normalTokens": 50478,
+          "astTokens": 51171,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 63,
+          "changedBase": 86,
+          "includedHead": 59,
+          "includedBase": 85,
+          "token_normalTotal": 50478,
+          "token_astTotal": 51171,
+          "token_system": 19505,
+          "token_diff": 1487,
+          "token_normalFileContext": 1209,
+          "token_additionalAstContext": 1903,
+          "token_astFileContext": 1903,
+          "token_saved": -693,
+          "token_overhead": 693,
+          "overlap_head_contextLineOccurrences": 105,
+          "overlap_head_uniqueContextLines": 105,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 83,
+          "overlap_head_outsideDiff": 22,
+          "overlap_head_changedLinesInContext": 59,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 615,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 114,
+          "overlap_merge-base_contextLineOccurrences": 131,
+          "overlap_merge-base_uniqueContextLines": 131,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 109,
+          "overlap_merge-base_outsideDiff": 22,
+          "overlap_merge-base_changedLinesInContext": 85,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 721,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 114,
+          "matches": 4,
+          "ambiguous": 3,
+          "unmatched_head": 6,
+          "unmatched_merge-base": 4
+        },
+        "java": {
+          "files": 5,
+          "normalTokens": 49625,
+          "astTokens": 50557,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 59,
+          "changedBase": 86,
+          "includedHead": 57,
+          "includedBase": 85,
+          "token_normalTotal": 49625,
+          "token_astTotal": 50557,
+          "token_system": 19505,
+          "token_diff": 1483,
+          "token_normalFileContext": 1191,
+          "token_additionalAstContext": 2122,
+          "token_astFileContext": 2122,
+          "token_saved": -932,
+          "token_overhead": 932,
+          "overlap_head_contextLineOccurrences": 104,
+          "overlap_head_uniqueContextLines": 104,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 82,
+          "overlap_head_outsideDiff": 22,
+          "overlap_head_changedLinesInContext": 57,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 653,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 139,
+          "overlap_merge-base_contextLineOccurrences": 132,
+          "overlap_merge-base_uniqueContextLines": 132,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 110,
+          "overlap_merge-base_outsideDiff": 22,
+          "overlap_merge-base_changedLinesInContext": 85,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 836,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 139,
+          "matches": 9,
+          "ambiguous": 3,
+          "unmatched_head": 4,
+          "unmatched_merge-base": 4
+        },
+        "python": {
+          "files": 5,
+          "normalTokens": 49418,
+          "astTokens": 50031,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 50,
+          "changedBase": 69,
+          "includedHead": 49,
+          "includedBase": 67,
+          "token_normalTotal": 49418,
+          "token_astTotal": 50031,
+          "token_system": 19505,
+          "token_diff": 1113,
+          "token_normalFileContext": 799,
+          "token_additionalAstContext": 1410,
+          "token_astFileContext": 1410,
+          "token_saved": -613,
+          "token_overhead": 613,
+          "overlap_head_contextLineOccurrences": 76,
+          "overlap_head_uniqueContextLines": 76,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 64,
+          "overlap_head_outsideDiff": 12,
+          "overlap_head_changedLinesInContext": 49,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 444,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 76,
+          "overlap_merge-base_contextLineOccurrences": 91,
+          "overlap_merge-base_uniqueContextLines": 91,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 79,
+          "overlap_merge-base_outsideDiff": 12,
+          "overlap_merge-base_changedLinesInContext": 67,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 565,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 76,
+          "matches": 6,
+          "ambiguous": 3,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 4
+        },
+        "rust": {
+          "files": 5,
+          "normalTokens": 49643,
+          "astTokens": 50480,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 57,
+          "changedBase": 86,
+          "includedHead": 55,
+          "includedBase": 85,
+          "token_normalTotal": 49643,
+          "token_astTotal": 50480,
+          "token_system": 19505,
+          "token_diff": 1431,
+          "token_normalFileContext": 1087,
+          "token_additionalAstContext": 1924,
+          "token_astFileContext": 1924,
+          "token_saved": -837,
+          "token_overhead": 837,
+          "overlap_head_contextLineOccurrences": 99,
+          "overlap_head_uniqueContextLines": 99,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 77,
+          "overlap_head_outsideDiff": 22,
+          "overlap_head_changedLinesInContext": 55,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 601,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 118,
+          "overlap_merge-base_contextLineOccurrences": 129,
+          "overlap_merge-base_uniqueContextLines": 129,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 107,
+          "overlap_merge-base_outsideDiff": 22,
+          "overlap_merge-base_changedLinesInContext": 85,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 769,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 118,
+          "matches": 4,
+          "ambiguous": 3,
+          "unmatched_head": 5,
+          "unmatched_merge-base": 6
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 249529,
+        "token_astTotal": 253555,
+        "token_system": 97525,
+        "token_diff": 7033,
+        "token_normalFileContext": 5496,
+        "token_additionalAstContext": 9520,
+        "token_astFileContext": 9520,
+        "token_saved": -4026,
+        "token_overhead": 4026,
+        "overlap_head_contextLineOccurrences": 488,
+        "overlap_head_uniqueContextLines": 488,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 388,
+        "overlap_head_outsideDiff": 100,
+        "overlap_head_changedLinesInContext": 277,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 2987,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 586,
+        "overlap_merge-base_contextLineOccurrences": 615,
+        "overlap_merge-base_uniqueContextLines": 615,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 515,
+        "overlap_merge-base_outsideDiff": 100,
+        "overlap_merge-base_changedLinesInContext": 407,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 3745,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 586
+      },
+      "savedTokens": -4026,
+      "overheadTokens": 4026,
+      "sourceDiffRowsVerified": 701
+    },
+    {
+      "number": 4,
+      "slug": "language-specific-structures",
+      "branch": "test/ast-multilingual-04-language-specific-structures",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "89fa5170ac63a042507747e3e298b4a08a494a00",
+      "files": 5,
+      "reviewedFiles": 5,
+      "skippedFiles": [],
+      "normalTokens": 31377,
+      "astTokens": 31963,
+      "parseIssues": [],
+      "checks": {
+        "passed": 239,
+        "failed": 16,
+        "notScored": 51
+      },
+      "languages": {
+        "csharp": {
+          "files": 1,
+          "normalTokens": 6225,
+          "astTokens": 6315,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 10,
+          "changedBase": 10,
+          "includedHead": 10,
+          "includedBase": 9,
+          "token_normalTotal": 6225,
+          "token_astTotal": 6315,
+          "token_system": 3901,
+          "token_diff": 344,
+          "token_normalFileContext": 229,
+          "token_additionalAstContext": 319,
+          "token_astFileContext": 319,
+          "token_saved": -90,
+          "token_overhead": 90,
+          "overlap_head_contextLineOccurrences": 15,
+          "overlap_head_uniqueContextLines": 15,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 15,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 10,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 160,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 13,
+          "overlap_merge-base_uniqueContextLines": 13,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 13,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 9,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 123,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 6,
+          "ambiguous": 0,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 2
+        },
+        "go": {
+          "files": 1,
+          "normalTokens": 6229,
+          "astTokens": 6366,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 10,
+          "changedBase": 10,
+          "includedHead": 10,
+          "includedBase": 8,
+          "token_normalTotal": 6229,
+          "token_astTotal": 6366,
+          "token_system": 3901,
+          "token_diff": 313,
+          "token_normalFileContext": 235,
+          "token_additionalAstContext": 372,
+          "token_astFileContext": 372,
+          "token_saved": -137,
+          "token_overhead": 137,
+          "overlap_head_contextLineOccurrences": 24,
+          "overlap_head_uniqueContextLines": 24,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 21,
+          "overlap_head_outsideDiff": 3,
+          "overlap_head_changedLinesInContext": 10,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 180,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 10,
+          "overlap_merge-base_contextLineOccurrences": 16,
+          "overlap_merge-base_uniqueContextLines": 16,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 16,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 8,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 125,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 4,
+          "ambiguous": 0,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 1
+        },
+        "java": {
+          "files": 1,
+          "normalTokens": 6268,
+          "astTokens": 6360,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 9,
+          "changedBase": 9,
+          "includedHead": 9,
+          "includedBase": 7,
+          "token_normalTotal": 6268,
+          "token_astTotal": 6360,
+          "token_system": 3901,
+          "token_diff": 401,
+          "token_normalFileContext": 272,
+          "token_additionalAstContext": 364,
+          "token_astFileContext": 364,
+          "token_saved": -92,
+          "token_overhead": 92,
+          "overlap_head_contextLineOccurrences": 15,
+          "overlap_head_uniqueContextLines": 15,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 15,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 9,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 197,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 9,
+          "overlap_merge-base_uniqueContextLines": 9,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 9,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 7,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 117,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 10,
+          "ambiguous": 2,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "python": {
+          "files": 1,
+          "normalTokens": 6362,
+          "astTokens": 6552,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 14,
+          "changedBase": 14,
+          "includedHead": 14,
+          "includedBase": 8,
+          "token_normalTotal": 6362,
+          "token_astTotal": 6552,
+          "token_system": 3901,
+          "token_diff": 450,
+          "token_normalFileContext": 366,
+          "token_additionalAstContext": 556,
+          "token_astFileContext": 556,
+          "token_saved": -190,
+          "token_overhead": 190,
+          "overlap_head_contextLineOccurrences": 39,
+          "overlap_head_uniqueContextLines": 39,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 38,
+          "overlap_head_outsideDiff": 1,
+          "overlap_head_changedLinesInContext": 14,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 288,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 7,
+          "overlap_merge-base_contextLineOccurrences": 18,
+          "overlap_merge-base_uniqueContextLines": 18,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 18,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 8,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 141,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 13,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "rust": {
+          "files": 1,
+          "normalTokens": 6293,
+          "astTokens": 6370,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 11,
+          "changedBase": 11,
+          "includedHead": 11,
+          "includedBase": 5,
+          "token_normalTotal": 6293,
+          "token_astTotal": 6370,
+          "token_system": 3901,
+          "token_diff": 409,
+          "token_normalFileContext": 298,
+          "token_additionalAstContext": 375,
+          "token_astFileContext": 375,
+          "token_saved": -77,
+          "token_overhead": 77,
+          "overlap_head_contextLineOccurrences": 26,
+          "overlap_head_uniqueContextLines": 26,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 26,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 11,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 249,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 6,
+          "overlap_merge-base_uniqueContextLines": 6,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 6,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 5,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 64,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 9,
+          "ambiguous": 4,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 31377,
+        "token_astTotal": 31963,
+        "token_system": 19505,
+        "token_diff": 1917,
+        "token_normalFileContext": 1400,
+        "token_additionalAstContext": 1986,
+        "token_astFileContext": 1986,
+        "token_saved": -586,
+        "token_overhead": 586,
+        "overlap_head_contextLineOccurrences": 119,
+        "overlap_head_uniqueContextLines": 119,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 115,
+        "overlap_head_outsideDiff": 4,
+        "overlap_head_changedLinesInContext": 54,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 1074,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 17,
+        "overlap_merge-base_contextLineOccurrences": 62,
+        "overlap_merge-base_uniqueContextLines": 62,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 62,
+        "overlap_merge-base_outsideDiff": 0,
+        "overlap_merge-base_changedLinesInContext": 37,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 570,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0
+      },
+      "savedTokens": -586,
+      "overheadTokens": 586,
+      "sourceDiffRowsVerified": 108
+    },
+    {
+      "number": 5,
+      "slug": "cross-file-changes",
+      "branch": "test/ast-multilingual-05-cross-file-changes",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "33acd8c4b389cd679c714c9d19f2a83f26f1fdea",
+      "files": 25,
+      "reviewedFiles": 25,
+      "skippedFiles": [],
+      "normalTokens": 159830,
+      "astTokens": 160433,
+      "parseIssues": [],
+      "checks": {
+        "passed": 158,
+        "failed": 17,
+        "notScored": 25
+      },
+      "languages": {
+        "csharp": {
+          "files": 5,
+          "normalTokens": 31809,
+          "astTokens": 31969,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 10,
+          "changedBase": 8,
+          "includedHead": 9,
+          "includedBase": 6,
+          "token_normalTotal": 31809,
+          "token_astTotal": 31969,
+          "token_system": 19505,
+          "token_diff": 391,
+          "token_normalFileContext": 237,
+          "token_additionalAstContext": 398,
+          "token_astFileContext": 398,
+          "token_saved": -160,
+          "token_overhead": 160,
+          "overlap_head_contextLineOccurrences": 10,
+          "overlap_head_uniqueContextLines": 10,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 10,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 9,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 210,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 7,
+          "overlap_merge-base_uniqueContextLines": 7,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 7,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 6,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 120,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 10,
+          "ambiguous": 0,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 2
+        },
+        "go": {
+          "files": 5,
+          "normalTokens": 31794,
+          "astTokens": 31894,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 10,
+          "changedBase": 9,
+          "includedHead": 9,
+          "includedBase": 5,
+          "token_normalTotal": 31794,
+          "token_astTotal": 31894,
+          "token_system": 19505,
+          "token_diff": 380,
+          "token_normalFileContext": 231,
+          "token_additionalAstContext": 330,
+          "token_astFileContext": 330,
+          "token_saved": -100,
+          "token_overhead": 100,
+          "overlap_head_contextLineOccurrences": 10,
+          "overlap_head_uniqueContextLines": 10,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 10,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 9,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 187,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 6,
+          "overlap_merge-base_uniqueContextLines": 6,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 6,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 5,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 101,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 4,
+          "ambiguous": 0,
+          "unmatched_head": 1,
+          "unmatched_merge-base": 1
+        },
+        "java": {
+          "files": 5,
+          "normalTokens": 31965,
+          "astTokens": 32114,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 10,
+          "changedBase": 8,
+          "includedHead": 9,
+          "includedBase": 6,
+          "token_normalTotal": 31965,
+          "token_astTotal": 32114,
+          "token_system": 19505,
+          "token_diff": 367,
+          "token_normalFileContext": 229,
+          "token_additionalAstContext": 378,
+          "token_astFileContext": 378,
+          "token_saved": -149,
+          "token_overhead": 149,
+          "overlap_head_contextLineOccurrences": 11,
+          "overlap_head_uniqueContextLines": 11,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 11,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 9,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 198,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 7,
+          "overlap_merge-base_uniqueContextLines": 7,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 7,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 6,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 110,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 10,
+          "ambiguous": 0,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 2
+        },
+        "python": {
+          "files": 5,
+          "normalTokens": 32508,
+          "astTokens": 32608,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 14,
+          "changedBase": 10,
+          "includedHead": 13,
+          "includedBase": 8,
+          "token_normalTotal": 32508,
+          "token_astTotal": 32608,
+          "token_system": 19505,
+          "token_diff": 364,
+          "token_normalFileContext": 269,
+          "token_additionalAstContext": 370,
+          "token_astFileContext": 370,
+          "token_saved": -100,
+          "token_overhead": 100,
+          "overlap_head_contextLineOccurrences": 20,
+          "overlap_head_uniqueContextLines": 20,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 20,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 13,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 182,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 11,
+          "overlap_merge-base_uniqueContextLines": 11,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 11,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 8,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 102,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 9,
+          "ambiguous": 0,
+          "unmatched_head": 1,
+          "unmatched_merge-base": 1
+        },
+        "rust": {
+          "files": 5,
+          "normalTokens": 31754,
+          "astTokens": 31848,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 10,
+          "changedBase": 9,
+          "includedHead": 9,
+          "includedBase": 6,
+          "token_normalTotal": 31754,
+          "token_astTotal": 31848,
+          "token_system": 19505,
+          "token_diff": 417,
+          "token_normalFileContext": 270,
+          "token_additionalAstContext": 364,
+          "token_astFileContext": 364,
+          "token_saved": -94,
+          "token_overhead": 94,
+          "overlap_head_contextLineOccurrences": 9,
+          "overlap_head_uniqueContextLines": 9,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 9,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 9,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 198,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 6,
+          "overlap_merge-base_uniqueContextLines": 6,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 6,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 6,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 119,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 8,
+          "ambiguous": 0,
+          "unmatched_head": 4,
+          "unmatched_merge-base": 4
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 159830,
+        "token_astTotal": 160433,
+        "token_system": 97525,
+        "token_diff": 1919,
+        "token_normalFileContext": 1236,
+        "token_additionalAstContext": 1840,
+        "token_astFileContext": 1840,
+        "token_saved": -603,
+        "token_overhead": 603,
+        "overlap_head_contextLineOccurrences": 60,
+        "overlap_head_uniqueContextLines": 60,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 60,
+        "overlap_head_outsideDiff": 0,
+        "overlap_head_changedLinesInContext": 49,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 975,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+        "overlap_merge-base_contextLineOccurrences": 37,
+        "overlap_merge-base_uniqueContextLines": 37,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 37,
+        "overlap_merge-base_outsideDiff": 0,
+        "overlap_merge-base_changedLinesInContext": 31,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 552,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0
+      },
+      "savedTokens": -603,
+      "overheadTokens": 603,
+      "sourceDiffRowsVerified": 98
+    },
+    {
+      "number": 6,
+      "slug": "declaration-boundaries",
+      "branch": "test/ast-multilingual-06-declaration-boundaries",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "d750d6d333e9f942f13623e027b97aa011358637",
+      "files": 19,
+      "reviewedFiles": 19,
+      "skippedFiles": [],
+      "normalTokens": 103040,
+      "astTokens": 103530,
+      "parseIssues": [
+        {
+          "path": "ast-stress/06-boundaries/csharp/Policy.cs",
+          "parse": "succeeded",
+          "issues": [
+            {
+              "reason": "regional-change"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/06-boundaries/go/Policy.go",
+          "parse": "succeeded",
+          "issues": [
+            {
+              "reason": "regional-change"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/06-boundaries/java/Policy.java",
+          "parse": "succeeded",
+          "issues": [
+            {
+              "reason": "regional-change"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "passed": 86,
+        "failed": 9,
+        "notScored": 19
+      },
+      "languages": {
+        "csharp": {
+          "files": 4,
+          "normalTokens": 21679,
+          "astTokens": 21792,
+          "fallbacks": 0,
+          "parseIssues": 1,
+          "changedHead": 13,
+          "changedBase": 13,
+          "includedHead": 13,
+          "includedBase": 11,
+          "token_normalTotal": 21679,
+          "token_astTotal": 21792,
+          "token_system": 15604,
+          "token_diff": 262,
+          "token_normalFileContext": 154,
+          "token_additionalAstContext": 266,
+          "token_astFileContext": 266,
+          "token_saved": -113,
+          "token_overhead": 113,
+          "overlap_head_contextLineOccurrences": 17,
+          "overlap_head_uniqueContextLines": 17,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 17,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 13,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 123,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 15,
+          "overlap_merge-base_uniqueContextLines": 15,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 15,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 11,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 98,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 6,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "go": {
+          "files": 3,
+          "normalTokens": 16303,
+          "astTokens": 16374,
+          "fallbacks": 0,
+          "parseIssues": 1,
+          "changedHead": 10,
+          "changedBase": 10,
+          "includedHead": 10,
+          "includedBase": 8,
+          "token_normalTotal": 16303,
+          "token_astTotal": 16374,
+          "token_system": 11703,
+          "token_diff": 175,
+          "token_normalFileContext": 108,
+          "token_additionalAstContext": 178,
+          "token_astFileContext": 178,
+          "token_saved": -71,
+          "token_overhead": 71,
+          "overlap_head_contextLineOccurrences": 13,
+          "overlap_head_uniqueContextLines": 13,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 13,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 10,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 77,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 11,
+          "overlap_merge-base_uniqueContextLines": 11,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 11,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 8,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 65,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 2,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "java": {
+          "files": 4,
+          "normalTokens": 21680,
+          "astTokens": 21792,
+          "fallbacks": 0,
+          "parseIssues": 1,
+          "changedHead": 13,
+          "changedBase": 13,
+          "includedHead": 13,
+          "includedBase": 11,
+          "token_normalTotal": 21680,
+          "token_astTotal": 21792,
+          "token_system": 15604,
+          "token_diff": 250,
+          "token_normalFileContext": 154,
+          "token_additionalAstContext": 265,
+          "token_astFileContext": 265,
+          "token_saved": -112,
+          "token_overhead": 112,
+          "overlap_head_contextLineOccurrences": 17,
+          "overlap_head_uniqueContextLines": 17,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 17,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 13,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 120,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 15,
+          "overlap_merge-base_uniqueContextLines": 15,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 15,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 11,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 95,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 6,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "python": {
+          "files": 4,
+          "normalTokens": 21734,
+          "astTokens": 21835,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 13,
+          "changedBase": 12,
+          "includedHead": 13,
+          "includedBase": 11,
+          "token_normalTotal": 21734,
+          "token_astTotal": 21835,
+          "token_system": 15604,
+          "token_diff": 189,
+          "token_normalFileContext": 126,
+          "token_additionalAstContext": 228,
+          "token_astFileContext": 228,
+          "token_saved": -101,
+          "token_overhead": 101,
+          "overlap_head_contextLineOccurrences": 19,
+          "overlap_head_uniqueContextLines": 19,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 19,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 13,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 94,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 17,
+          "overlap_merge-base_uniqueContextLines": 17,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 17,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 11,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 82,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 4,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "rust": {
+          "files": 4,
+          "normalTokens": 21644,
+          "astTokens": 21737,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 12,
+          "changedBase": 12,
+          "includedHead": 12,
+          "includedBase": 10,
+          "token_normalTotal": 21644,
+          "token_astTotal": 21737,
+          "token_system": 15604,
+          "token_diff": 207,
+          "token_normalFileContext": 123,
+          "token_additionalAstContext": 214,
+          "token_astFileContext": 214,
+          "token_saved": -93,
+          "token_overhead": 93,
+          "overlap_head_contextLineOccurrences": 15,
+          "overlap_head_uniqueContextLines": 15,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 15,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 12,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 97,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 13,
+          "overlap_merge-base_uniqueContextLines": 13,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 13,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 10,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 76,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 4,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 103040,
+        "token_astTotal": 103530,
+        "token_system": 74119,
+        "token_diff": 1083,
+        "token_normalFileContext": 665,
+        "token_additionalAstContext": 1151,
+        "token_astFileContext": 1151,
+        "token_saved": -490,
+        "token_overhead": 490,
+        "overlap_head_contextLineOccurrences": 81,
+        "overlap_head_uniqueContextLines": 81,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 81,
+        "overlap_head_outsideDiff": 0,
+        "overlap_head_changedLinesInContext": 61,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 511,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+        "overlap_merge-base_contextLineOccurrences": 71,
+        "overlap_merge-base_uniqueContextLines": 71,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 71,
+        "overlap_merge-base_outsideDiff": 0,
+        "overlap_merge-base_changedLinesInContext": 51,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 416,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0
+      },
+      "savedTokens": -490,
+      "overheadTokens": 490,
+      "sourceDiffRowsVerified": 121
+    },
+    {
+      "number": 7,
+      "slug": "dense-context-overlap",
+      "branch": "test/ast-multilingual-07-dense-context-overlap",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "6efac09dd5c642bd02b01caa9dd05552bf37d48f",
+      "files": 5,
+      "reviewedFiles": 5,
+      "skippedFiles": [],
+      "normalTokens": 77447,
+      "astTokens": 61688,
+      "parseIssues": [],
+      "checks": {
+        "passed": 145,
+        "failed": 15,
+        "notScored": 0
+      },
+      "languages": {
+        "csharp": {
+          "files": 1,
+          "normalTokens": 15478,
+          "astTokens": 12701,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 22,
+          "changedBase": 31,
+          "includedHead": 22,
+          "includedBase": 12,
+          "token_normalTotal": 15478,
+          "token_astTotal": 12701,
+          "token_system": 3901,
+          "token_diff": 1448,
+          "token_normalFileContext": 5938,
+          "token_additionalAstContext": 3161,
+          "token_astFileContext": 3161,
+          "token_saved": 2777,
+          "token_overhead": -2777,
+          "overlap_head_contextLineOccurrences": 343,
+          "overlap_head_uniqueContextLines": 343,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 137,
+          "overlap_head_outsideDiff": 206,
+          "overlap_head_changedLinesInContext": 22,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 933,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 1556,
+          "overlap_merge-base_contextLineOccurrences": 19,
+          "overlap_merge-base_uniqueContextLines": 19,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 18,
+          "overlap_merge-base_outsideDiff": 1,
+          "overlap_merge-base_changedLinesInContext": 12,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 116,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 6,
+          "matches": 18,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "go": {
+          "files": 1,
+          "normalTokens": 15833,
+          "astTokens": 12209,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 22,
+          "changedBase": 31,
+          "includedHead": 22,
+          "includedBase": 12,
+          "token_normalTotal": 15833,
+          "token_astTotal": 12209,
+          "token_system": 3901,
+          "token_diff": 1471,
+          "token_normalFileContext": 6273,
+          "token_additionalAstContext": 2649,
+          "token_astFileContext": 2649,
+          "token_saved": 3624,
+          "token_overhead": -3624,
+          "overlap_head_contextLineOccurrences": 342,
+          "overlap_head_uniqueContextLines": 342,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 137,
+          "overlap_head_outsideDiff": 205,
+          "overlap_head_changedLinesInContext": 22,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 763,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 1283,
+          "overlap_merge-base_contextLineOccurrences": 18,
+          "overlap_merge-base_uniqueContextLines": 18,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 18,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 12,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 93,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 17,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "java": {
+          "files": 1,
+          "normalTokens": 15356,
+          "astTokens": 12612,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 22,
+          "changedBase": 31,
+          "includedHead": 22,
+          "includedBase": 12,
+          "token_normalTotal": 15356,
+          "token_astTotal": 12612,
+          "token_system": 3901,
+          "token_diff": 1409,
+          "token_normalFileContext": 5856,
+          "token_additionalAstContext": 3112,
+          "token_astFileContext": 3112,
+          "token_saved": 2744,
+          "token_overhead": -2744,
+          "overlap_head_contextLineOccurrences": 343,
+          "overlap_head_uniqueContextLines": 343,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 137,
+          "overlap_head_outsideDiff": 206,
+          "overlap_head_changedLinesInContext": 22,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 926,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 1517,
+          "overlap_merge-base_contextLineOccurrences": 19,
+          "overlap_merge-base_uniqueContextLines": 19,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 18,
+          "overlap_merge-base_outsideDiff": 1,
+          "overlap_merge-base_changedLinesInContext": 12,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 114,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 4,
+          "matches": 18,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "python": {
+          "files": 1,
+          "normalTokens": 14553,
+          "astTokens": 11727,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 22,
+          "changedBase": 28,
+          "includedHead": 22,
+          "includedBase": 9,
+          "token_normalTotal": 14553,
+          "token_astTotal": 11727,
+          "token_system": 3901,
+          "token_diff": 1521,
+          "token_normalFileContext": 4940,
+          "token_additionalAstContext": 2115,
+          "token_astFileContext": 2115,
+          "token_saved": 2826,
+          "token_overhead": -2826,
+          "overlap_head_contextLineOccurrences": 239,
+          "overlap_head_uniqueContextLines": 239,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 130,
+          "overlap_head_outsideDiff": 109,
+          "overlap_head_changedLinesInContext": 22,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 850,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 815,
+          "overlap_merge-base_contextLineOccurrences": 12,
+          "overlap_merge-base_uniqueContextLines": 12,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 12,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 9,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 80,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 17,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        },
+        "rust": {
+          "files": 1,
+          "normalTokens": 16227,
+          "astTokens": 12439,
+          "fallbacks": 0,
+          "parseIssues": 0,
+          "changedHead": 22,
+          "changedBase": 31,
+          "includedHead": 22,
+          "includedBase": 12,
+          "token_normalTotal": 16227,
+          "token_astTotal": 12439,
+          "token_system": 3901,
+          "token_diff": 1546,
+          "token_normalFileContext": 6591,
+          "token_additionalAstContext": 2802,
+          "token_astFileContext": 2802,
+          "token_saved": 3788,
+          "token_overhead": -3788,
+          "overlap_head_contextLineOccurrences": 342,
+          "overlap_head_uniqueContextLines": 342,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 137,
+          "overlap_head_outsideDiff": 205,
+          "overlap_head_changedLinesInContext": 22,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 816,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 1381,
+          "overlap_merge-base_contextLineOccurrences": 18,
+          "overlap_merge-base_uniqueContextLines": 18,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 18,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 12,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 99,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 17,
+          "ambiguous": 0,
+          "unmatched_head": 0,
+          "unmatched_merge-base": 0
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 77447,
+        "token_astTotal": 61688,
+        "token_system": 19505,
+        "token_diff": 7395,
+        "token_normalFileContext": 29598,
+        "token_additionalAstContext": 13839,
+        "token_astFileContext": 13839,
+        "token_saved": 15759,
+        "token_overhead": -15759,
+        "overlap_head_contextLineOccurrences": 1609,
+        "overlap_head_uniqueContextLines": 1609,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 678,
+        "overlap_head_outsideDiff": 931,
+        "overlap_head_changedLinesInContext": 110,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 4288,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 6552,
+        "overlap_merge-base_contextLineOccurrences": 86,
+        "overlap_merge-base_uniqueContextLines": 86,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 84,
+        "overlap_merge-base_outsideDiff": 2,
+        "overlap_merge-base_changedLinesInContext": 57,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 502,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 10
+      },
+      "savedTokens": 15759,
+      "overheadTokens": -15759,
+      "sourceDiffRowsVerified": 262
+    },
+    {
+      "number": 8,
+      "slug": "edge-cases-fallback",
+      "branch": "test/ast-multilingual-08-edge-cases-fallback",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "headSha": "30bbaaee0795ba76301ea9aafb5ecbe2e5fce63d",
+      "files": 50,
+      "reviewedFiles": 40,
+      "skippedFiles": [
+        {
+          "path": "ast-stress/08-edges/csharp/Deleted.cs",
+          "reason": "deleted"
+        },
+        {
+          "path": "ast-stress/08-edges/csharp/EmptyAdded.cs",
+          "reason": "no-text-changes"
+        },
+        {
+          "path": "ast-stress/08-edges/go/Deleted.go",
+          "reason": "deleted"
+        },
+        {
+          "path": "ast-stress/08-edges/go/EmptyAdded.go",
+          "reason": "no-text-changes"
+        },
+        {
+          "path": "ast-stress/08-edges/java/Deleted.java",
+          "reason": "deleted"
+        },
+        {
+          "path": "ast-stress/08-edges/java/EmptyAdded.java",
+          "reason": "no-text-changes"
+        },
+        {
+          "path": "ast-stress/08-edges/python/Deleted.py",
+          "reason": "deleted"
+        },
+        {
+          "path": "ast-stress/08-edges/python/EmptyAdded.py",
+          "reason": "no-text-changes"
+        },
+        {
+          "path": "ast-stress/08-edges/rust/Deleted.rs",
+          "reason": "deleted"
+        },
+        {
+          "path": "ast-stress/08-edges/rust/EmptyAdded.rs",
+          "reason": "no-text-changes"
+        }
+      ],
+      "normalTokens": 240804,
+      "astTokens": 239973,
+      "parseIssues": [
+        {
+          "path": "ast-stress/08-edges/csharp/Comment.cs",
+          "parse": "succeeded",
+          "issues": [
+            {
+              "reason": "regional-change"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/csharp/Incomplete.cs",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/csharp/Recovery.cs",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/go/Incomplete.go",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/go/Recovery.go",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/java/Comment.java",
+          "parse": "succeeded",
+          "issues": [
+            {
+              "reason": "regional-change"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/java/Incomplete.java",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/java/Recovery.java",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/python/Incomplete.py",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/python/Recovery.py",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/rust/Comment.rs",
+          "parse": "succeeded",
+          "issues": [
+            {
+              "reason": "regional-change"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/rust/Incomplete.rs",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        },
+        {
+          "path": "ast-stress/08-edges/rust/Recovery.rs",
+          "parse": "failed",
+          "issues": [
+            {
+              "reason": "syntax-recovery",
+              "side": "head"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "passed": 152,
+        "failed": 18,
+        "notScored": 30
+      },
+      "languages": {
+        "csharp": {
+          "files": 10,
+          "normalTokens": 47886,
+          "astTokens": 47793,
+          "fallbacks": 2,
+          "parseIssues": 3,
+          "changedHead": 5,
+          "changedBase": 4,
+          "includedHead": 5,
+          "includedBase": 1,
+          "token_normalTotal": 47886,
+          "token_astTotal": 47793,
+          "token_system": 31208,
+          "token_diff": 261,
+          "token_normalFileContext": 313,
+          "token_additionalAstContext": 177,
+          "token_astFileContext": 201,
+          "token_saved": 93,
+          "token_overhead": -93,
+          "overlap_head_contextLineOccurrences": 13,
+          "overlap_head_uniqueContextLines": 13,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 11,
+          "overlap_head_outsideDiff": 2,
+          "overlap_head_changedLinesInContext": 5,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 118,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 13,
+          "overlap_merge-base_contextLineOccurrences": 1,
+          "overlap_merge-base_uniqueContextLines": 1,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 1,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 1,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 10,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 4,
+          "ambiguous": 0,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 2
+        },
+        "go": {
+          "files": 10,
+          "normalTokens": 48598,
+          "astTokens": 48432,
+          "fallbacks": 2,
+          "parseIssues": 2,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 2,
+          "token_normalTotal": 48598,
+          "token_astTotal": 48432,
+          "token_system": 31208,
+          "token_diff": 274,
+          "token_normalFileContext": 313,
+          "token_additionalAstContext": 102,
+          "token_astFileContext": 129,
+          "token_saved": 166,
+          "token_overhead": -166,
+          "overlap_head_contextLineOccurrences": 7,
+          "overlap_head_uniqueContextLines": 7,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 7,
+          "overlap_head_outsideDiff": 0,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 64,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 0,
+          "overlap_merge-base_contextLineOccurrences": 2,
+          "overlap_merge-base_uniqueContextLines": 2,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 2,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 2,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 12,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 2,
+          "ambiguous": 0,
+          "unmatched_head": 1,
+          "unmatched_merge-base": 1
+        },
+        "java": {
+          "files": 10,
+          "normalTokens": 47916,
+          "astTokens": 47744,
+          "fallbacks": 2,
+          "parseIssues": 3,
+          "changedHead": 5,
+          "changedBase": 5,
+          "includedHead": 5,
+          "includedBase": 1,
+          "token_normalTotal": 47916,
+          "token_astTotal": 47744,
+          "token_system": 31208,
+          "token_diff": 291,
+          "token_normalFileContext": 342,
+          "token_additionalAstContext": 128,
+          "token_astFileContext": 152,
+          "token_saved": 172,
+          "token_overhead": -172,
+          "overlap_head_contextLineOccurrences": 8,
+          "overlap_head_uniqueContextLines": 8,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 7,
+          "overlap_head_outsideDiff": 1,
+          "overlap_head_changedLinesInContext": 5,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 77,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 9,
+          "overlap_merge-base_contextLineOccurrences": 1,
+          "overlap_merge-base_uniqueContextLines": 1,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 1,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 1,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 10,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 4,
+          "ambiguous": 0,
+          "unmatched_head": 2,
+          "unmatched_merge-base": 2
+        },
+        "python": {
+          "files": 10,
+          "normalTokens": 48493,
+          "astTokens": 48266,
+          "fallbacks": 2,
+          "parseIssues": 2,
+          "changedHead": 6,
+          "changedBase": 6,
+          "includedHead": 6,
+          "includedBase": 2,
+          "token_normalTotal": 48493,
+          "token_astTotal": 48266,
+          "token_system": 31208,
+          "token_diff": 182,
+          "token_normalFileContext": 414,
+          "token_additionalAstContext": 152,
+          "token_astFileContext": 168,
+          "token_saved": 227,
+          "token_overhead": -227,
+          "overlap_head_contextLineOccurrences": 16,
+          "overlap_head_uniqueContextLines": 16,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 12,
+          "overlap_head_outsideDiff": 4,
+          "overlap_head_changedLinesInContext": 6,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 70,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 31,
+          "overlap_merge-base_contextLineOccurrences": 2,
+          "overlap_merge-base_uniqueContextLines": 2,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 2,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 2,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 8,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 3,
+          "ambiguous": 0,
+          "unmatched_head": 1,
+          "unmatched_merge-base": 1
+        },
+        "rust": {
+          "files": 10,
+          "normalTokens": 47911,
+          "astTokens": 47738,
+          "fallbacks": 2,
+          "parseIssues": 3,
+          "changedHead": 5,
+          "changedBase": 4,
+          "includedHead": 5,
+          "includedBase": 1,
+          "token_normalTotal": 47911,
+          "token_astTotal": 47738,
+          "token_system": 31208,
+          "token_diff": 196,
+          "token_normalFileContext": 346,
+          "token_additionalAstContext": 140,
+          "token_astFileContext": 157,
+          "token_saved": 173,
+          "token_overhead": -173,
+          "overlap_head_contextLineOccurrences": 12,
+          "overlap_head_uniqueContextLines": 12,
+          "overlap_head_duplicateContextLines": 0,
+          "overlap_head_alreadyInDiff": 11,
+          "overlap_head_outsideDiff": 1,
+          "overlap_head_changedLinesInContext": 5,
+          "overlap_head_alreadyInDiffSourceEstimatedTokens": 95,
+          "overlap_head_outsideDiffSourceEstimatedTokens": 4,
+          "overlap_merge-base_contextLineOccurrences": 1,
+          "overlap_merge-base_uniqueContextLines": 1,
+          "overlap_merge-base_duplicateContextLines": 0,
+          "overlap_merge-base_alreadyInDiff": 1,
+          "overlap_merge-base_outsideDiff": 0,
+          "overlap_merge-base_changedLinesInContext": 1,
+          "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 7,
+          "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0,
+          "matches": 3,
+          "ambiguous": 0,
+          "unmatched_head": 1,
+          "unmatched_merge-base": 1
+        }
+      },
+      "componentTotals": {
+        "token_normalTotal": 240804,
+        "token_astTotal": 239973,
+        "token_system": 156040,
+        "token_diff": 1204,
+        "token_normalFileContext": 1728,
+        "token_additionalAstContext": 699,
+        "token_astFileContext": 807,
+        "token_saved": 831,
+        "token_overhead": -831,
+        "overlap_head_contextLineOccurrences": 56,
+        "overlap_head_uniqueContextLines": 56,
+        "overlap_head_duplicateContextLines": 0,
+        "overlap_head_alreadyInDiff": 48,
+        "overlap_head_outsideDiff": 8,
+        "overlap_head_changedLinesInContext": 27,
+        "overlap_head_alreadyInDiffSourceEstimatedTokens": 424,
+        "overlap_head_outsideDiffSourceEstimatedTokens": 57,
+        "overlap_merge-base_contextLineOccurrences": 7,
+        "overlap_merge-base_uniqueContextLines": 7,
+        "overlap_merge-base_duplicateContextLines": 0,
+        "overlap_merge-base_alreadyInDiff": 7,
+        "overlap_merge-base_outsideDiff": 0,
+        "overlap_merge-base_changedLinesInContext": 7,
+        "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 47,
+        "overlap_merge-base_outsideDiffSourceEstimatedTokens": 0
+      },
+      "savedTokens": 831,
+      "overheadTokens": -831,
+      "sourceDiffRowsVerified": 80
+    }
+  ],
+  "languages": {
+    "csharp": {
+      "prs": 8,
+      "files": 28,
+      "normalTokens": 188420,
+      "astTokens": 184713,
+      "fallbacks": 2,
+      "parseIssues": 4,
+      "changedHead": 126,
+      "changedBase": 159,
+      "includedHead": 123,
+      "includedBase": 124,
+      "token_normalTotal": 188420,
+      "token_astTotal": 184713,
+      "token_system": 101426,
+      "token_diff": 4706,
+      "token_normalFileContext": 12626,
+      "token_additionalAstContext": 8877,
+      "token_astFileContext": 8901,
+      "token_saved": 3707,
+      "token_overhead": -3707,
+      "overlap_head_contextLineOccurrences": 775,
+      "overlap_head_uniqueContextLines": 775,
+      "overlap_head_duplicateContextLines": 0,
+      "overlap_head_alreadyInDiff": 319,
+      "overlap_head_outsideDiff": 456,
+      "overlap_head_changedLinesInContext": 123,
+      "overlap_head_alreadyInDiffSourceEstimatedTokens": 2548,
+      "overlap_head_outsideDiffSourceEstimatedTokens": 3432,
+      "overlap_merge-base_contextLineOccurrences": 187,
+      "overlap_merge-base_uniqueContextLines": 187,
+      "overlap_merge-base_duplicateContextLines": 0,
+      "overlap_merge-base_alreadyInDiff": 164,
+      "overlap_merge-base_outsideDiff": 23,
+      "overlap_merge-base_changedLinesInContext": 124,
+      "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 1321,
+      "overlap_merge-base_outsideDiffSourceEstimatedTokens": 145,
+      "matches": 62,
+      "ambiguous": 3,
+      "unmatched_head": 10,
+      "unmatched_merge-base": 10
+    },
+    "go": {
+      "prs": 7,
+      "files": 26,
+      "normalTokens": 181658,
+      "astTokens": 173418,
+      "fallbacks": 2,
+      "parseIssues": 3,
+      "changedHead": 127,
+      "changedBase": 158,
+      "includedHead": 122,
+      "includedBase": 120,
+      "token_normalTotal": 181658,
+      "token_astTotal": 173418,
+      "token_system": 93624,
+      "token_diff": 4516,
+      "token_normalFileContext": 14685,
+      "token_additionalAstContext": 6398,
+      "token_astFileContext": 6425,
+      "token_saved": 8240,
+      "token_overhead": -8240,
+      "overlap_head_contextLineOccurrences": 627,
+      "overlap_head_uniqueContextLines": 627,
+      "overlap_head_duplicateContextLines": 0,
+      "overlap_head_alreadyInDiff": 311,
+      "overlap_head_outsideDiff": 316,
+      "overlap_head_changedLinesInContext": 122,
+      "overlap_head_alreadyInDiffSourceEstimatedTokens": 2102,
+      "overlap_head_outsideDiffSourceEstimatedTokens": 1887,
+      "overlap_merge-base_contextLineOccurrences": 184,
+      "overlap_merge-base_uniqueContextLines": 184,
+      "overlap_merge-base_duplicateContextLines": 0,
+      "overlap_merge-base_alreadyInDiff": 162,
+      "overlap_merge-base_outsideDiff": 22,
+      "overlap_merge-base_changedLinesInContext": 120,
+      "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 1117,
+      "overlap_merge-base_outsideDiffSourceEstimatedTokens": 114,
+      "matches": 39,
+      "ambiguous": 3,
+      "unmatched_head": 10,
+      "unmatched_merge-base": 7
+    },
+    "java": {
+      "prs": 8,
+      "files": 28,
+      "normalTokens": 187734,
+      "astTokens": 183985,
+      "fallbacks": 2,
+      "parseIssues": 4,
+      "changedHead": 125,
+      "changedBase": 159,
+      "includedHead": 122,
+      "includedBase": 122,
+      "token_normalTotal": 187734,
+      "token_astTotal": 183985,
+      "token_system": 101426,
+      "token_diff": 4668,
+      "token_normalFileContext": 12536,
+      "token_additionalAstContext": 8743,
+      "token_astFileContext": 8767,
+      "token_saved": 3749,
+      "token_overhead": -3749,
+      "overlap_head_contextLineOccurrences": 771,
+      "overlap_head_uniqueContextLines": 771,
+      "overlap_head_duplicateContextLines": 0,
+      "overlap_head_alreadyInDiff": 316,
+      "overlap_head_outsideDiff": 455,
+      "overlap_head_changedLinesInContext": 122,
+      "overlap_head_alreadyInDiffSourceEstimatedTokens": 2498,
+      "overlap_head_outsideDiffSourceEstimatedTokens": 3372,
+      "overlap_merge-base_contextLineOccurrences": 183,
+      "overlap_merge-base_uniqueContextLines": 183,
+      "overlap_merge-base_duplicateContextLines": 0,
+      "overlap_merge-base_alreadyInDiff": 160,
+      "overlap_merge-base_outsideDiff": 23,
+      "overlap_merge-base_changedLinesInContext": 122,
+      "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 1282,
+      "overlap_merge-base_outsideDiffSourceEstimatedTokens": 143,
+      "matches": 66,
+      "ambiguous": 5,
+      "unmatched_head": 8,
+      "unmatched_merge-base": 8
+    },
+    "python": {
+      "prs": 8,
+      "files": 28,
+      "normalTokens": 189465,
+      "astTokens": 183066,
+      "fallbacks": 2,
+      "parseIssues": 2,
+      "changedHead": 126,
+      "changedBase": 146,
+      "includedHead": 124,
+      "includedBase": 105,
+      "token_normalTotal": 189465,
+      "token_astTotal": 183066,
+      "token_system": 101426,
+      "token_diff": 4343,
+      "token_normalFileContext": 12879,
+      "token_additionalAstContext": 6445,
+      "token_astFileContext": 6461,
+      "token_saved": 6399,
+      "token_overhead": -6399,
+      "overlap_head_contextLineOccurrences": 602,
+      "overlap_head_uniqueContextLines": 602,
+      "overlap_head_duplicateContextLines": 0,
+      "overlap_head_alreadyInDiff": 329,
+      "overlap_head_outsideDiff": 273,
+      "overlap_head_changedLinesInContext": 124,
+      "overlap_head_alreadyInDiffSourceEstimatedTokens": 2236,
+      "overlap_head_outsideDiffSourceEstimatedTokens": 2006,
+      "overlap_merge-base_contextLineOccurrences": 151,
+      "overlap_merge-base_uniqueContextLines": 151,
+      "overlap_merge-base_duplicateContextLines": 0,
+      "overlap_merge-base_alreadyInDiff": 139,
+      "overlap_merge-base_outsideDiff": 12,
+      "overlap_merge-base_changedLinesInContext": 105,
+      "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 978,
+      "overlap_merge-base_outsideDiffSourceEstimatedTokens": 76,
+      "matches": 59,
+      "ambiguous": 3,
+      "unmatched_head": 4,
+      "unmatched_merge-base": 6
+    },
+    "rust": {
+      "prs": 7,
+      "files": 27,
+      "normalTokens": 186215,
+      "astTokens": 177629,
+      "fallbacks": 2,
+      "parseIssues": 3,
+      "changedHead": 123,
+      "changedBase": 159,
+      "includedHead": 120,
+      "includedBase": 119,
+      "token_normalTotal": 186215,
+      "token_astTotal": 177629,
+      "token_system": 97525,
+      "token_diff": 4635,
+      "token_normalFileContext": 15349,
+      "token_additionalAstContext": 6728,
+      "token_astFileContext": 6745,
+      "token_saved": 8586,
+      "token_overhead": -8586,
+      "overlap_head_contextLineOccurrences": 629,
+      "overlap_head_uniqueContextLines": 629,
+      "overlap_head_duplicateContextLines": 0,
+      "overlap_head_alreadyInDiff": 315,
+      "overlap_head_outsideDiff": 314,
+      "overlap_head_changedLinesInContext": 120,
+      "overlap_head_alreadyInDiffSourceEstimatedTokens": 2284,
+      "overlap_head_outsideDiffSourceEstimatedTokens": 2017,
+      "overlap_merge-base_contextLineOccurrences": 173,
+      "overlap_merge-base_uniqueContextLines": 173,
+      "overlap_merge-base_duplicateContextLines": 0,
+      "overlap_merge-base_alreadyInDiff": 151,
+      "overlap_merge-base_outsideDiff": 22,
+      "overlap_merge-base_changedLinesInContext": 119,
+      "overlap_merge-base_alreadyInDiffSourceEstimatedTokens": 1134,
+      "overlap_merge-base_outsideDiffSourceEstimatedTokens": 118,
+      "matches": 51,
+      "ambiguous": 7,
+      "unmatched_head": 10,
+      "unmatched_merge-base": 11
+    }
+  },
+  "failures": [
+    {
+      "pr": 1,
+      "scenario": "authorize",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "capture",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "retry_delay",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "reserve_stock",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authenticate",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "circuit_state",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          509,
+          510,
+          511,
+          512
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authorize",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "capture",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "retry_delay",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "reserve_stock",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authenticate",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "circuit_state",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          698,
+          699,
+          700,
+          701,
+          702,
+          703,
+          704,
+          705,
+          706,
+          707,
+          708,
+          709,
+          710,
+          711,
+          712,
+          713,
+          714,
+          715
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authorize",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "capture",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "retry_delay",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "reserve_stock",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authenticate",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "circuit_state",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          698,
+          699,
+          700,
+          701,
+          702,
+          703,
+          704,
+          705,
+          706,
+          707,
+          708,
+          709,
+          710,
+          711,
+          712,
+          713,
+          714,
+          715
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authorize",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "capture",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "retry_delay",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "reserve_stock",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authenticate",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          509
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "circuit_state",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          703,
+          704,
+          705,
+          706,
+          707,
+          708,
+          709,
+          710,
+          711,
+          712,
+          713,
+          714,
+          715,
+          716,
+          717,
+          718,
+          719,
+          720
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authorize",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "capture",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "retry_delay",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "reserve_stock",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "authenticate",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503
+        ]
+      }
+    },
+    {
+      "pr": 1,
+      "scenario": "circuit_state",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          697,
+          698,
+          699,
+          700,
+          701,
+          702,
+          703,
+          704,
+          705,
+          706,
+          707,
+          708,
+          709,
+          710,
+          711,
+          712,
+          713,
+          714
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "scenario": "settle",
+      "path": "ast-stress/02-complex/java/Settlement.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "scenario": "settle",
+      "path": "ast-stress/02-complex/csharp/Settlement.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146
+        ]
+      }
+    },
+    {
+      "pr": 2,
+      "scenario": "settle",
+      "path": "ast-stress/02-complex/python/Settlement.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/java/Extraction.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 31,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/03-structure/java/Extraction.java",
+            "line": 21,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/java/Extraction.java",
+      "type": "independent-changed-line-coverage-head",
+      "pass": false,
+      "evidence": {
+        "changed": 12,
+        "missed": [
+          {
+            "side": "head",
+            "path": "ast-stress/03-structure/java/Extraction.java",
+            "line": 16,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/csharp/Extraction.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 31,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/03-structure/csharp/Extraction.cs",
+            "line": 21,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/csharp/Extraction.cs",
+      "type": "independent-changed-line-coverage-head",
+      "pass": false,
+      "evidence": {
+        "changed": 12,
+        "missed": [
+          {
+            "side": "head",
+            "path": "ast-stress/03-structure/csharp/Extraction.cs",
+            "line": 16,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/go/Extraction.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 31,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/03-structure/go/Extraction.go",
+            "line": 26,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/go/Extraction.go",
+      "type": "independent-changed-line-coverage-head",
+      "pass": false,
+      "evidence": {
+        "changed": 12,
+        "missed": [
+          {
+            "side": "head",
+            "path": "ast-stress/03-structure/go/Extraction.go",
+            "line": 21,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/rust/Extraction.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 31,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/03-structure/rust/Extraction.rs",
+            "line": 20,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "order_total + tax_inclusive -> invoice + fee_component",
+      "path": "ast-stress/03-structure/rust/Extraction.rs",
+      "type": "independent-changed-line-coverage-head",
+      "pass": false,
+      "evidence": {
+        "changed": 12,
+        "missed": [
+          {
+            "side": "head",
+            "path": "ast-stress/03-structure/rust/Extraction.rs",
+            "line": 15,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "WalletScope.validate / GiftScope.validate",
+      "path": "ast-stress/03-structure/python/Scopes.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 2,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/03-structure/python/Scopes.py",
+            "line": 3,
+            "source": "        return cents > 0"
+          },
+          {
+            "side": "merge-base",
+            "path": "ast-stress/03-structure/python/Scopes.py",
+            "line": 7,
+            "source": "        return cents <= 1000"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 3,
+      "scenario": "WalletScope.validate / GiftScope.validate",
+      "path": "ast-stress/03-structure/rust/Scopes.rs",
+      "type": "scope-sensitive-matching",
+      "pass": false,
+      "evidence": {
+        "matches": [
+          {
+            "old": {
+              "kind": "class",
+              "name": "WalletScope",
+              "receiver": null,
+              "from": 3,
+              "to": 3
+            },
+            "head": {
+              "kind": "class",
+              "name": "WalletScope",
+              "receiver": null,
+              "from": 3,
+              "to": 3
+            },
+            "evidence": "qualified-identity",
+            "moved": false,
+            "renamed": false
+          },
+          {
+            "old": {
+              "kind": "class",
+              "name": "GiftScope",
+              "receiver": null,
+              "from": 4,
+              "to": 4
+            },
+            "head": {
+              "kind": "class",
+              "name": "GiftScope",
+              "receiver": null,
+              "from": 4,
+              "to": 4
+            },
+            "evidence": "qualified-identity",
+            "moved": false,
+            "renamed": false
+          }
+        ],
+        "ambiguous": [],
+        "unmatched": {
+          "merge-base": [
+            {
+              "kind": "method",
+              "name": "validate",
+              "receiver": null,
+              "from": 3,
+              "to": 3,
+              "parent": {
+                "kind": "class",
+                "name": "WalletScope",
+                "from": 3,
+                "to": 3
+              }
+            },
+            {
+              "kind": "method",
+              "name": "validate",
+              "receiver": null,
+              "from": 4,
+              "to": 4,
+              "parent": {
+                "kind": "class",
+                "name": "GiftScope",
+                "from": 4,
+                "to": 4
+              }
+            }
+          ],
+          "head": [
+            {
+              "kind": "method",
+              "name": "validate",
+              "receiver": null,
+              "from": 3,
+              "to": 3,
+              "parent": {
+                "kind": "class",
+                "name": "WalletScope",
+                "from": 3,
+                "to": 3
+              }
+            },
+            {
+              "kind": "method",
+              "name": "validate",
+              "receiver": null,
+              "from": 4,
+              "to": 4,
+              "parent": {
+                "kind": "class",
+                "name": "GiftScope",
+                "from": 4,
+                "to": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "cents > 1000",
+      "path": "ast-stress/04-features/java/Features.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/java/Features.java",
+            "line": 15,
+            "source": "        return cents -> cents > 1000 ? cents - 100 : cents;"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "Long.compare(a.cents(), b.cents())",
+      "path": "ast-stress/04-features/java/Features.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/java/Features.java",
+            "line": 20,
+            "source": "            public int compare(Receipt a, Receipt b) { return Long.compare(a.cents(), b.cents()); }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "receipt.Cents > 0",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/csharp/Features.cs",
+            "line": 20,
+            "source": "    public static bool IsRefundable(this Receipt receipt) { return receipt.Cents > 0; }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "self.cents }",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/rust/Features.rs",
+            "line": 7,
+            "source": "    fn balance(&self) -> i64 { self.cents }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "Self { cents }",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/rust/Features.rs",
+            "line": 10,
+            "source": "    pub fn new(cents: i64) -> Self { Self { cents } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "amount > self.cents",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/rust/Features.rs",
+            "line": 14,
+            "source": "        if amount > self.cents { return Err(\"insufficient\"); }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "value / 100",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/rust/Features.rs",
+            "line": 23,
+            "source": "    let fee = |value: i64| value / 100;"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "Payment::Refunded => 0",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/rust/Features.rs",
+            "line": 27,
+            "source": "        Payment::Refunded => 0,"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "assert!(result >= 0)",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/rust/Features.rs",
+            "line": 29,
+            "source": "    assert!(result >= 0);"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "Balance() int64 }",
+      "path": "ast-stress/04-features/go/Features.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/go/Features.go",
+            "line": 3,
+            "source": "type Ledger interface { Balance() int64 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "make(chan int64, 1)",
+      "path": "ast-stress/04-features/go/Features.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/go/Features.go",
+            "line": 14,
+            "source": "    output := make(chan int64, 1)"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "self._cents = cents",
+      "path": "ast-stress/04-features/python/Features.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/python/Features.py",
+            "line": 13,
+            "source": "        self._cents = cents"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "return cls(0)",
+      "path": "ast-stress/04-features/python/Features.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/python/Features.py",
+            "line": 21,
+            "source": "        return cls(0)"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "cents // 100",
+      "path": "ast-stress/04-features/python/Features.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/python/Features.py",
+            "line": 25,
+            "source": "        return cents // 100"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "yield self._cents // count + index",
+      "path": "ast-stress/04-features/python/Features.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/python/Features.py",
+            "line": 38,
+            "source": "            yield self._cents // count + index"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 4,
+      "scenario": "ledger.append(\"end\")",
+      "path": "ast-stress/04-features/python/Features.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/04-features/python/Features.py",
+            "line": 46,
+            "source": "        ledger.append(\"end\")"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "repository.py",
+      "path": "ast-stress/05-cross-file/python/repository.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 5,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/python/repository.py",
+            "line": 6,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "service_test.py",
+      "path": "ast-stress/05-cross-file/python/service_test.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/python/service_test.py",
+            "line": 5,
+            "source": "    assert Service(Repository()).quote(\"a\") == 1000"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "Repository.java",
+      "path": "ast-stress/05-cross-file/java/Repository.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 3,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/java/Repository.java",
+            "line": 4,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "ServiceTest.java",
+      "path": "ast-stress/05-cross-file/java/ServiceTest.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/java/ServiceTest.java",
+            "line": 1,
+            "source": "class ServiceTest { static void verify() { if (new Service(new Repository()).quote(\"a\") != 1000) throw new AssertionError(); } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "Repository.cs",
+      "path": "ast-stress/05-cross-file/csharp/Repository.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 3,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/csharp/Repository.cs",
+            "line": 2,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "ServiceTest.cs",
+      "path": "ast-stress/05-cross-file/csharp/ServiceTest.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/csharp/ServiceTest.cs",
+            "line": 1,
+            "source": "class ServiceTest { public static void Verify() { if (new Service(new Repository()).Quote(\"a\") != 1000) throw new System.Exception(); } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "model.go",
+      "path": "ast-stress/05-cross-file/go/model.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/go/model.go",
+            "line": 2,
+            "source": "type Order struct { Cents int64 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "repository.go",
+      "path": "ast-stress/05-cross-file/go/repository.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 3,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/go/repository.go",
+            "line": 4,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "contract.go",
+      "path": "ast-stress/05-cross-file/go/contract.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/go/contract.go",
+            "line": 2,
+            "source": "type Pricing interface { Quote(key string) int64 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "service_test.go",
+      "path": "ast-stress/05-cross-file/go/service_test.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/go/service_test.go",
+            "line": 3,
+            "source": "func TestQuote(t *testing.T) { if NewService(Repository{}).Quote(\"a\") != 1000 { t.Fatal(\"quote\") } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "model.rs",
+      "path": "ast-stress/05-cross-file/rust/model.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/rust/model.rs",
+            "line": 1,
+            "source": "pub struct Order { pub cents: i64 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "repository.rs",
+      "path": "ast-stress/05-cross-file/rust/repository.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 3,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/rust/repository.rs",
+            "line": 4,
+            "source": ""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "service_test.rs",
+      "path": "ast-stress/05-cross-file/rust/service_test.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/05-cross-file/rust/service_test.rs",
+            "line": 2,
+            "source": "#[test] fn quote() { assert_eq!(Service::new(Repository).quote(\"a\"), 1000); }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "normalize",
+      "path": "ast-stress/05-cross-file/java/Repository.java",
+      "type": "selected-node-identity-and-range-merge-base",
+      "pass": false,
+      "evidence": {
+        "expected": {
+          "kind": "method",
+          "name": "normalize",
+          "from": 5,
+          "to": 5,
+          "startByte": 98,
+          "endByte": 202
+        },
+        "actual": []
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "normalize",
+      "path": "ast-stress/05-cross-file/java/Service.java",
+      "type": "selected-node-identity-and-range-head",
+      "pass": false,
+      "evidence": {
+        "expected": {
+          "kind": "method",
+          "name": "normalize",
+          "from": 9,
+          "to": 9,
+          "startByte": 381,
+          "endByte": 485
+        },
+        "actual": []
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "Normalize",
+      "path": "ast-stress/05-cross-file/csharp/Repository.cs",
+      "type": "selected-node-identity-and-range-merge-base",
+      "pass": false,
+      "evidence": {
+        "expected": {
+          "kind": "method",
+          "name": "Normalize",
+          "from": 3,
+          "to": 3,
+          "startByte": 108,
+          "endByte": 226
+        },
+        "actual": []
+      }
+    },
+    {
+      "pr": 5,
+      "scenario": "Normalize",
+      "path": "ast-stress/05-cross-file/csharp/Service.cs",
+      "type": "selected-node-identity-and-range-head",
+      "pass": false,
+      "evidence": {
+        "expected": {
+          "kind": "method",
+          "name": "Normalize",
+          "from": 9,
+          "to": 9,
+          "startByte": 394,
+          "endByte": 512
+        },
+        "actual": []
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "ImportOnly",
+      "path": "ast-stress/06-boundaries/python/ImportOnly.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/python/ImportOnly.py",
+            "line": 1,
+            "source": "from math import floor"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "Policy",
+      "path": "ast-stress/06-boundaries/java/Policy.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 10,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/java/Policy.java",
+            "line": 1,
+            "source": "import java.util.List;"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "ImportOnly",
+      "path": "ast-stress/06-boundaries/java/ImportOnly.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/java/ImportOnly.java",
+            "line": 1,
+            "source": "import java.util.List;"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "Policy",
+      "path": "ast-stress/06-boundaries/csharp/Policy.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 10,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/csharp/Policy.cs",
+            "line": 1,
+            "source": "using System.Collections.Generic;\r"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "ImportOnly",
+      "path": "ast-stress/06-boundaries/csharp/ImportOnly.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/csharp/ImportOnly.cs",
+            "line": 1,
+            "source": "using System.Collections.Generic;"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "Policy",
+      "path": "ast-stress/06-boundaries/go/Policy.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 8,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/go/Policy.go",
+            "line": 11,
+            "source": "const Label = \"İstanbul 😀\""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "ImportOnly",
+      "path": "ast-stress/06-boundaries/go/ImportOnly.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/go/ImportOnly.go",
+            "line": 2,
+            "source": "import \"fmt\""
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "Policy",
+      "path": "ast-stress/06-boundaries/rust/Policy.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 9,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/rust/Policy.rs",
+            "line": 11,
+            "source": "pub const LABEL: &str = \"İstanbul 😀\";\r"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 6,
+      "scenario": "ImportOnly",
+      "path": "ast-stress/06-boundaries/rust/ImportOnly.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/06-boundaries/rust/ImportOnly.rs",
+            "line": 1,
+            "source": "use std::cmp::min;"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authorize",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "cache_admission",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          444,
+          445,
+          446,
+          447,
+          448,
+          449,
+          450,
+          451,
+          452,
+          453,
+          454,
+          455,
+          456,
+          457
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authenticate",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          346,
+          347,
+          348,
+          349,
+          350,
+          351,
+          352,
+          353,
+          354,
+          355,
+          356,
+          357,
+          358,
+          359,
+          360
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authorize",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "cache_admission",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authenticate",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authorize",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "cache_admission",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authenticate",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authorize",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "cache_admission",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637,
+          638,
+          639,
+          640,
+          641,
+          642,
+          643
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authenticate",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503,
+          504,
+          505,
+          506,
+          507,
+          508,
+          509
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authorize",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "cache_admission",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          618,
+          619,
+          620,
+          621,
+          622,
+          623,
+          624,
+          625,
+          626,
+          627,
+          628,
+          629,
+          630,
+          631,
+          632,
+          633,
+          634,
+          635,
+          636,
+          637
+        ]
+      }
+    },
+    {
+      "pr": 7,
+      "scenario": "authenticate",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "type": "complete-function-context-merge-base",
+      "pass": false,
+      "evidence": {
+        "missingLines": [
+          482,
+          483,
+          484,
+          485,
+          486,
+          487,
+          488,
+          489,
+          490,
+          491,
+          492,
+          493,
+          494,
+          495,
+          496,
+          497,
+          498,
+          499,
+          500,
+          501,
+          502,
+          503
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Comment",
+      "path": "ast-stress/08-edges/python/Comment.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/python/Comment.py",
+            "line": 1,
+            "source": "# payment policy"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Whitespace",
+      "path": "ast-stress/08-edges/python/Whitespace.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/python/Whitespace.py",
+            "line": 2,
+            "source": "    return 1"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Tiny",
+      "path": "ast-stress/08-edges/python/Tiny.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/python/Tiny.py",
+            "line": 2,
+            "source": "    return 1"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "scoped-callable",
+      "path": "ast-stress/08-edges/python/Scoped.py",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/python/Scoped.py",
+            "line": 33,
+            "source": "        self._cents -= amount"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Comment",
+      "path": "ast-stress/08-edges/java/Comment.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/java/Comment.java",
+            "line": 1,
+            "source": "// payment policy"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Whitespace",
+      "path": "ast-stress/08-edges/java/Whitespace.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/java/Whitespace.java",
+            "line": 1,
+            "source": "class Edge { int value() { return 1; } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Tiny",
+      "path": "ast-stress/08-edges/java/Tiny.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/java/Tiny.java",
+            "line": 1,
+            "source": "class Edge { int value() { return 1; } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "scoped-callable",
+      "path": "ast-stress/08-edges/java/Scoped.java",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/java/Scoped.java",
+            "line": 11,
+            "source": "    long capture(long cents) { return Math.max(0, cents); }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Comment",
+      "path": "ast-stress/08-edges/csharp/Comment.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/csharp/Comment.cs",
+            "line": 1,
+            "source": "// payment policy"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Whitespace",
+      "path": "ast-stress/08-edges/csharp/Whitespace.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/csharp/Whitespace.cs",
+            "line": 1,
+            "source": "class Edge { int Value() { return 1; } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Tiny",
+      "path": "ast-stress/08-edges/csharp/Tiny.cs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/csharp/Tiny.cs",
+            "line": 1,
+            "source": "class Edge { int Value() { return 1; } }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Comment",
+      "path": "ast-stress/08-edges/go/Comment.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/go/Comment.go",
+            "line": 1,
+            "source": "// payment policy"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Whitespace",
+      "path": "ast-stress/08-edges/go/Whitespace.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/go/Whitespace.go",
+            "line": 2,
+            "source": "func Value() int { return 1 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Tiny",
+      "path": "ast-stress/08-edges/go/Tiny.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/go/Tiny.go",
+            "line": 2,
+            "source": "func Value() int { return 1 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "scoped-callable",
+      "path": "ast-stress/08-edges/go/Scoped.go",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/go/Scoped.go",
+            "line": 7,
+            "source": "func (w *Wallet) Balance() int64 { return w.Cents }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Comment",
+      "path": "ast-stress/08-edges/rust/Comment.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/rust/Comment.rs",
+            "line": 1,
+            "source": "// payment policy"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Whitespace",
+      "path": "ast-stress/08-edges/rust/Whitespace.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/rust/Whitespace.rs",
+            "line": 1,
+            "source": "pub fn value() -> i64 { 1 }"
+          }
+        ]
+      }
+    },
+    {
+      "pr": 8,
+      "scenario": "Tiny",
+      "path": "ast-stress/08-edges/rust/Tiny.rs",
+      "type": "independent-changed-line-coverage-merge-base",
+      "pass": false,
+      "evidence": {
+        "changed": 1,
+        "missed": [
+          {
+            "side": "merge-base",
+            "path": "ast-stress/08-edges/rust/Tiny.rs",
+            "line": 1,
+            "source": "pub fn value() -> i64 { 1 }"
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "AST analysis is file-local; cross-file dependency resolution is not scored as a parser error.",
+    "Token component estimates are diagnostics; independent rounding means component sums may differ from per-message totals.",
+    "No LLM is invoked by this harness. Repository automatic reviews are outside this offline run."
+  ],
+  "expectedScenarios": 248,
+  "failureCount": 118
+}

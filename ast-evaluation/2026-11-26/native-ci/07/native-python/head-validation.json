@@ -1,0 +1,110 @@
+{"businessContracts": [{"symbol": "authorize", "input": [0, 1000, 0, 1000, false], "expectedBase": -2, "actual": -2, "regression": false}, {"symbol": "authenticate", "input": [100, 100, 10, false], "expectedBase": -4, "actual": -4, "regression": false}, {"symbol": "refund", "input": [1000, 100, 300, false], "expectedBase": 1, "actual": 1, "regression": false}, {"symbol": "cache_lifetime", "input": [100, 50, 90, 100, 20], "expectedBase": 10, "actual": 10, "regression": false}]}
+{
+  "language": "python",
+  "checks": 25,
+  "failures": [],
+  "results": [
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/01-sparse/python/Pipeline.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/02-complex/python/Settlement.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/python/Ambiguous.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/python/Before.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/python/Extraction.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/python/Scopes.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/04-features/python/Features.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/python/contract.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/python/model.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/python/repository.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/python/service.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/python/service_test.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/python/AttributeOnly.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/python/ImportOnly.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/python/Policy.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/python/Signature.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/07-dense/python/Pipeline.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Comment.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Deleted.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Emptied.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Incomplete.py",
+      "returncode": 0,
+      "validBaseRecoveryFixture": true
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Recovery.py",
+      "returncode": 0,
+      "validBaseRecoveryFixture": true
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Scoped.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Tiny.py",
+      "returncode": 0
+    },
+    {
+      "fixture": "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/python/Whitespace.py",
+      "returncode": 0
+    }
+  ]
+}

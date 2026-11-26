@@ -1,0 +1,254 @@
+{
+  "language": "csharp",
+  "checks": 19,
+  "failures": [],
+  "results": [
+    {
+      "fixture": "01-sparse/csharp/Pipeline.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/1/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:06.25\n"
+    },
+    {
+      "fixture": "02-complex/csharp/Settlement.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/2/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "/tmp/ast-native-qiadv79q/2/Settlement.cs(143,45): warning CS0168: The variable 'ex' is declared but never used [/tmp/ast-native-qiadv79q/2/Fixture.csproj]\n\nBuild succeeded.\n\n/tmp/ast-native-qiadv79q/2/Settlement.cs(143,45): warning CS0168: The variable 'ex' is declared but never used [/tmp/ast-native-qiadv79q/2/Fixture.csproj]\n    1 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.23\n"
+    },
+    {
+      "fixture": "03-structure/csharp/Ambiguous.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/3/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.17\n"
+    },
+    {
+      "fixture": "03-structure/csharp/CachePolicy.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/4/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.14\n"
+    },
+    {
+      "fixture": "03-structure/csharp/Extraction.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/5/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.16\n"
+    },
+    {
+      "fixture": "03-structure/csharp/Operations.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/6/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.11\n"
+    },
+    {
+      "fixture": "03-structure/csharp/Scopes.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/7/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.08\n"
+    },
+    {
+      "fixture": "04-features/csharp/Features.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/8/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.24\n"
+    },
+    {
+      "fixture": "05-cross-file/csharp/Order.cs,05-cross-file/csharp/Repository.cs,05-cross-file/csharp/Pricing.cs,05-cross-file/csharp/Service.cs,05-cross-file/csharp/ServiceTest.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/9/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.12\n"
+    },
+    {
+      "fixture": "06-boundaries/csharp/AttributeOnly.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/10/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.07\n"
+    },
+    {
+      "fixture": "06-boundaries/csharp/ImportOnly.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/11/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.07\n"
+    },
+    {
+      "fixture": "06-boundaries/csharp/Policy.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/12/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "/tmp/ast-native-qiadv79q/12/Policy.cs(5,9): warning CS0414: The field 'Policy.obsolete' is assigned but its value is never used [/tmp/ast-native-qiadv79q/12/Fixture.csproj]\n/tmp/ast-native-qiadv79q/12/Policy.cs(4,10): warning CS0414: The field 'Policy.active' is assigned but its value is never used [/tmp/ast-native-qiadv79q/12/Fixture.csproj]\n/tmp/ast-native-qiadv79q/12/Policy.cs(13,12): warning CS0414: The field 'Policy.label' is assigned but its value is never used [/tmp/ast-native-qiadv79q/12/Fixture.csproj]\n\nBuild succeeded.\n\n/tmp/ast-native-qiadv79q/12/Policy.cs(5,9): warning CS0414: The field 'Policy.obsolete' is assigned but its value is never used [/tmp/ast-native-qiadv79q/12/Fixture.csproj]\n/tmp/ast-native-qiadv79q/12/Policy.cs(4,10): warning CS0414: The field 'Policy.active' is assigned but its value is never used [/tmp/ast-native-qiadv79q/12/Fixture.csproj]\n/tmp/ast-native-qiadv79q/12/Policy.cs(13,12): warning CS0414: The field 'Policy.label' is assigned but its value is never used [/tmp/ast-native-qiadv79q/12/Fixture.csproj]\n    3 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.08\n"
+    },
+    {
+      "fixture": "06-boundaries/csharp/Signature.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/13/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.10\n"
+    },
+    {
+      "fixture": "07-dense/csharp/Pipeline.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/14/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.09\n"
+    },
+    {
+      "fixture": "08-edges/csharp/Comment.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/15/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.08\n"
+    },
+    {
+      "fixture": "08-edges/csharp/Deleted.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/16/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.09\n"
+    },
+    {
+      "fixture": "08-edges/csharp/Scoped.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/17/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.10\n"
+    },
+    {
+      "fixture": "08-edges/csharp/Tiny.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/18/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.06\n"
+    },
+    {
+      "fixture": "08-edges/csharp/Whitespace.cs",
+      "command": [
+        "dotnet",
+        "build",
+        "/tmp/ast-native-qiadv79q/19/Fixture.csproj",
+        "--nologo",
+        "-v",
+        "quiet"
+      ],
+      "returncode": 0,
+      "output": "\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.06\n"
+    }
+  ]
+}

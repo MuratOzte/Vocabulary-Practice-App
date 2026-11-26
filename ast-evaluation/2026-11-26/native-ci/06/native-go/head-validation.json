@@ -1,0 +1,171 @@
+{
+  "language": "go",
+  "checks": 16,
+  "failures": [],
+  "results": [
+    {
+      "fixture": "01-sparse/go/Pipeline.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/01-sparse/go/Pipeline.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "03-structure/go/Ambiguous.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/go/Ambiguous.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "03-structure/go/Before.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/go/Before.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "03-structure/go/Extraction.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/go/Extraction.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "03-structure/go/Scopes.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/03-structure/go/Scopes.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "04-features/go/Features.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/04-features/go/Features.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "05-cross-file/go/contract.go,05-cross-file/go/repository.go,05-cross-file/go/service.go,05-cross-file/go/model.go,05-cross-file/go/service_test.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/go/contract.go",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/go/repository.go",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/go/service.go",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/go/model.go",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/05-cross-file/go/service_test.go"
+      ],
+      "returncode": 0,
+      "output": "ok  \tcommand-line-arguments\t0.001s\n"
+    },
+    {
+      "fixture": "06-boundaries/go/ImportOnly.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/go/ImportOnly.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "06-boundaries/go/Policy.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/go/Policy.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "06-boundaries/go/Signature.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/06-boundaries/go/Signature.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "07-dense/go/Pipeline.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/07-dense/go/Pipeline.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "08-edges/go/Comment.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/go/Comment.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "08-edges/go/Deleted.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/go/Deleted.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "08-edges/go/Scoped.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/go/Scoped.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "08-edges/go/Tiny.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/go/Tiny.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    },
+    {
+      "fixture": "08-edges/go/Whitespace.go",
+      "command": [
+        "go",
+        "test",
+        "/home/runner/work/Vocabulary-Practice-App/Vocabulary-Practice-App/ast-stress/08-edges/go/Whitespace.go"
+      ],
+      "returncode": 0,
+      "output": "?   \tcommand-line-arguments\t[no test files]\n"
+    }
+  ]
+}

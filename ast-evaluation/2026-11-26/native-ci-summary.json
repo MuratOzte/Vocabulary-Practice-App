@@ -1,0 +1,294 @@
+{
+  "runs": [
+    {
+      "pr": 1,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388288",
+      "runId": 45797388288,
+      "headSha": "36f81976d9718cf160aa0ed2fbfc5ff4fd58d9c0",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388288/job/139831425338"
+        },
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388288/job/139831425645"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388288/job/139831425734"
+        },
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388288/job/139831425822"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388288/job/139831425851"
+        }
+      ]
+    },
+    {
+      "pr": 2,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797385875",
+      "runId": 45797385875,
+      "headSha": "66d498c90061fc9d7b2940e8e1a28e9dd99776d7",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797385875/job/139831416812"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797385875/job/139831417184"
+        },
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797385875/job/139831417256"
+        },
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797385875/job/139831417357"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797385875/job/139831417380"
+        }
+      ]
+    },
+    {
+      "pr": 3,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799453704",
+      "runId": 45799453704,
+      "headSha": "fedee77240af2bcb8cc1574a6c7a84c759b92798",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799453704/job/139838542027"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799453704/job/139838542317"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799453704/job/139838542421"
+        },
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799453704/job/139838542423"
+        },
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799453704/job/139838542568"
+        }
+      ]
+    },
+    {
+      "pr": 4,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386403",
+      "runId": 45797386403,
+      "headSha": "89fa5170ac63a042507747e3e298b4a08a494a00",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386403/job/139831419122"
+        },
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386403/job/139831419531"
+        },
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386403/job/139831419585"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386403/job/139831419617"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386403/job/139831419674"
+        }
+      ]
+    },
+    {
+      "pr": 5,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797389437",
+      "runId": 45797389437,
+      "headSha": "33acd8c4b389cd679c714c9d19f2a83f26f1fdea",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797389437/job/139831430096"
+        },
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797389437/job/139831430429"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797389437/job/139831430470"
+        },
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797389437/job/139831430585"
+        },
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797389437/job/139831430623"
+        }
+      ]
+    },
+    {
+      "pr": 6,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799454825",
+      "runId": 45799454825,
+      "headSha": "d750d6d333e9f942f13623e027b97aa011358637",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799454825/job/139838544985"
+        },
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799454825/job/139838545350"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799454825/job/139838545435"
+        },
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799454825/job/139838545566"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45799454825/job/139838545580"
+        }
+      ]
+    },
+    {
+      "pr": 7,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386560",
+      "runId": 45797386560,
+      "headSha": "6efac09dd5c642bd02b01caa9dd05552bf37d48f",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386560/job/139831419637"
+        },
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386560/job/139831419996"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386560/job/139831420055"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386560/job/139831420097"
+        },
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797386560/job/139831420237"
+        }
+      ]
+    },
+    {
+      "pr": 8,
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457",
+      "runId": 45797388457,
+      "headSha": "30bbaaee0795ba76301ea9aafb5ecbe2e5fce63d",
+      "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "compile (java)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426457"
+        },
+        {
+          "name": "compile (go)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426772"
+        },
+        {
+          "name": "compile (rust)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426909"
+        },
+        {
+          "name": "compile (python)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426932"
+        },
+        {
+          "name": "compile (csharp)",
+          "conclusion": "success",
+          "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426940"
+        }
+      ]
+    }
+  ],
+  "successfulJobs": 40,
+  "allPassed": true
+}

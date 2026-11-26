@@ -1,0 +1,8 @@
+{"pr":1,"files":5,"tokens":[54746,35074],"checks":{"passed":270,"failed":30,"notScored":0},"unexpectedSyntax":0}
+{"pr":2,"files":3,"tokens":[16719,16595],"checks":{"passed":21,"failed":3,"notScored":0},"unexpectedSyntax":0}
+{"pr":3,"files":25,"tokens":[249529,253555],"checks":{"passed":220,"failed":10,"notScored":5},"unexpectedSyntax":0}
+{"pr":4,"files":5,"tokens":[31377,31963],"checks":{"passed":239,"failed":16,"notScored":51},"unexpectedSyntax":0}
+{"pr":5,"files":25,"tokens":[159830,160433],"checks":{"passed":158,"failed":17,"notScored":25},"unexpectedSyntax":0}
+{"pr":6,"files":19,"tokens":[103040,103530],"checks":{"passed":86,"failed":9,"notScored":19},"unexpectedSyntax":0}
+{"pr":7,"files":5,"tokens":[77447,61688],"checks":{"passed":145,"failed":15,"notScored":0},"unexpectedSyntax":0}
+{"pr":8,"files":50,"tokens":[240804,239973],"checks":{"passed":152,"failed":18,"notScored":30},"unexpectedSyntax":0}

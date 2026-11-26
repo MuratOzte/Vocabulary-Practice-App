@@ -1,0 +1,209 @@
+{
+  "language": "java",
+  "checks": 18,
+  "failures": [],
+  "results": [
+    {
+      "fixture": "01-sparse/java/Pipeline.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/1",
+        "/tmp/ast-frozen-base/ast-stress/01-sparse/java/Pipeline.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "02-complex/java/Settlement.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/2",
+        "/tmp/ast-frozen-base/ast-stress/02-complex/java/Settlement.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "03-structure/java/Ambiguous.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/3",
+        "/tmp/ast-frozen-base/ast-stress/03-structure/java/Ambiguous.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "03-structure/java/Before.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/4",
+        "/tmp/ast-frozen-base/ast-stress/03-structure/java/Before.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "03-structure/java/Extraction.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/5",
+        "/tmp/ast-frozen-base/ast-stress/03-structure/java/Extraction.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "03-structure/java/Scopes.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/6",
+        "/tmp/ast-frozen-base/ast-stress/03-structure/java/Scopes.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "04-features/java/Features.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/7",
+        "/tmp/ast-frozen-base/ast-stress/04-features/java/Features.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "05-cross-file/java/Pricing.java,05-cross-file/java/ServiceTest.java,05-cross-file/java/Order.java,05-cross-file/java/Repository.java,05-cross-file/java/Service.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/8",
+        "/tmp/ast-frozen-base/ast-stress/05-cross-file/java/Pricing.java",
+        "/tmp/ast-frozen-base/ast-stress/05-cross-file/java/ServiceTest.java",
+        "/tmp/ast-frozen-base/ast-stress/05-cross-file/java/Order.java",
+        "/tmp/ast-frozen-base/ast-stress/05-cross-file/java/Repository.java",
+        "/tmp/ast-frozen-base/ast-stress/05-cross-file/java/Service.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "06-boundaries/java/AttributeOnly.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/9",
+        "/tmp/ast-frozen-base/ast-stress/06-boundaries/java/AttributeOnly.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "06-boundaries/java/ImportOnly.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/10",
+        "/tmp/ast-frozen-base/ast-stress/06-boundaries/java/ImportOnly.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "06-boundaries/java/Policy.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/11",
+        "/tmp/ast-frozen-base/ast-stress/06-boundaries/java/Policy.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "06-boundaries/java/Signature.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/12",
+        "/tmp/ast-frozen-base/ast-stress/06-boundaries/java/Signature.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "07-dense/java/Pipeline.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/13",
+        "/tmp/ast-frozen-base/ast-stress/07-dense/java/Pipeline.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "08-edges/java/Comment.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/14",
+        "/tmp/ast-frozen-base/ast-stress/08-edges/java/Comment.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "08-edges/java/Deleted.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/15",
+        "/tmp/ast-frozen-base/ast-stress/08-edges/java/Deleted.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "08-edges/java/Scoped.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/16",
+        "/tmp/ast-frozen-base/ast-stress/08-edges/java/Scoped.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "08-edges/java/Tiny.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/17",
+        "/tmp/ast-frozen-base/ast-stress/08-edges/java/Tiny.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "fixture": "08-edges/java/Whitespace.java",
+      "command": [
+        "javac",
+        "-d",
+        "/tmp/ast-native-txzenir7/18",
+        "/tmp/ast-frozen-base/ast-stress/08-edges/java/Whitespace.java"
+      ],
+      "returncode": 0,
+      "output": ""
+    }
+  ]
+}

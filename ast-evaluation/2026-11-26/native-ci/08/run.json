@@ -1,0 +1,609 @@
+{
+  "conclusion": "success",
+  "databaseId": 45797388457,
+  "headBranch": "test/ast-multilingual-08-edge-cases-fallback",
+  "headSha": "30bbaaee0795ba76301ea9aafb5ecbe2e5fce63d",
+  "status": "completed",
+  "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457",
+  "jobs": [
+    {
+      "completedAt": "2026-11-26T10:02:01Z",
+      "conclusion": "success",
+      "databaseId": 139831426457,
+      "name": "compile (java)",
+      "startedAt": "2026-11-26T10:01:35Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T10:01:37Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T10:01:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:38Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-26T10:01:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:39Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-11-26T10:01:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:39Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-java@v4",
+          "number": 4,
+          "startedAt": "2026-11-26T10:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:39Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 5,
+          "startedAt": "2026-11-26T10:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:39Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-go@v5",
+          "number": 6,
+          "startedAt": "2026-11-26T10:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:39Z",
+          "conclusion": "skipped",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 7,
+          "startedAt": "2026-11-26T10:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "success",
+          "name": "Validate head with native compiler",
+          "number": 8,
+          "startedAt": "2026-11-26T10:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:58Z",
+          "conclusion": "success",
+          "name": "Validate frozen base with native compiler",
+          "number": 9,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:59Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 10,
+          "startedAt": "2026-11-26T10:01:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-java@v4",
+          "number": 18,
+          "startedAt": "2026-11-26T10:01:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 19,
+          "startedAt": "2026-11-26T10:01:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 20,
+          "startedAt": "2026-11-26T10:01:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:59Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-11-26T10:01:59Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426457"
+    },
+    {
+      "completedAt": "2026-11-26T10:02:09Z",
+      "conclusion": "success",
+      "databaseId": 139831426772,
+      "name": "compile (go)",
+      "startedAt": "2026-11-26T10:01:47Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T10:01:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-java@v4",
+          "number": 4,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 5,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-go@v5",
+          "number": 6,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "skipped",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 7,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:05Z",
+          "conclusion": "success",
+          "name": "Validate head with native compiler",
+          "number": 8,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:06Z",
+          "conclusion": "success",
+          "name": "Validate frozen base with native compiler",
+          "number": 9,
+          "startedAt": "2026-11-26T10:02:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:07Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 10,
+          "startedAt": "2026-11-26T10:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-go@v5",
+          "number": 18,
+          "startedAt": "2026-11-26T10:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 19,
+          "startedAt": "2026-11-26T10:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:07Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 20,
+          "startedAt": "2026-11-26T10:02:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:07Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-11-26T10:02:07Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426772"
+    },
+    {
+      "completedAt": "2026-11-26T10:02:09Z",
+      "conclusion": "success",
+      "databaseId": 139831426909,
+      "name": "compile (rust)",
+      "startedAt": "2026-11-26T10:01:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T10:01:55Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T10:01:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-26T10:01:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-java@v4",
+          "number": 4,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 5,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-go@v5",
+          "number": 6,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:57Z",
+          "conclusion": "success",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 7,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:04Z",
+          "conclusion": "success",
+          "name": "Validate head with native compiler",
+          "number": 8,
+          "startedAt": "2026-11-26T10:01:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:04Z",
+          "conclusion": "success",
+          "name": "Validate frozen base with native compiler",
+          "number": 9,
+          "startedAt": "2026-11-26T10:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:06Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 10,
+          "startedAt": "2026-11-26T10:02:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 19,
+          "startedAt": "2026-11-26T10:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 20,
+          "startedAt": "2026-11-26T10:02:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-11-26T10:02:06Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426909"
+    },
+    {
+      "completedAt": "2026-11-26T10:01:52Z",
+      "conclusion": "success",
+      "databaseId": 139831426932,
+      "name": "compile (python)",
+      "startedAt": "2026-11-26T10:01:46Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T10:01:48Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T10:01:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-26T10:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-11-26T10:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-java@v4",
+          "number": 4,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 5,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-go@v5",
+          "number": 6,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "skipped",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 7,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "success",
+          "name": "Validate head with native compiler",
+          "number": 8,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:49Z",
+          "conclusion": "success",
+          "name": "Validate frozen base with native compiler",
+          "number": 9,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 10,
+          "startedAt": "2026-11-26T10:01:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 19,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:51Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 20,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:51Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-11-26T10:01:51Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426932"
+    },
+    {
+      "completedAt": "2026-11-26T10:02:40Z",
+      "conclusion": "success",
+      "databaseId": 139831426940,
+      "name": "compile (csharp)",
+      "startedAt": "2026-11-26T10:01:38Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-26T10:01:43Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-26T10:01:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:48Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-11-26T10:01:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:48Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 3,
+          "startedAt": "2026-11-26T10:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:48Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-java@v4",
+          "number": 4,
+          "startedAt": "2026-11-26T10:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 5,
+          "startedAt": "2026-11-26T10:01:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "skipped",
+          "name": "Run actions/setup-go@v5",
+          "number": 6,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:01:50Z",
+          "conclusion": "skipped",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 7,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:21Z",
+          "conclusion": "success",
+          "name": "Validate head with native compiler",
+          "number": 8,
+          "startedAt": "2026-11-26T10:01:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:35Z",
+          "conclusion": "success",
+          "name": "Validate frozen base with native compiler",
+          "number": 9,
+          "startedAt": "2026-11-26T10:02:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:37Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 10,
+          "startedAt": "2026-11-26T10:02:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-dotnet@v4",
+          "number": 18,
+          "startedAt": "2026-11-26T10:02:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 19,
+          "startedAt": "2026-11-26T10:02:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:37Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 20,
+          "startedAt": "2026-11-26T10:02:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-26T10:02:37Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 21,
+          "startedAt": "2026-11-26T10:02:37Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/MuratOzte/Vocabulary-Practice-App/actions/runs/45797388457/job/139831426940"
+    }
+  ]
+}

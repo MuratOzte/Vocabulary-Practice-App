@@ -1,0 +1,5877 @@
+{
+  "schema": 1,
+  "method": "Authored source fragments and scenario intent; no AST output used to build these expectations. Ranges use physical lines and UTF-8 byte offsets.",
+  "baseSha": "76c20e12e310d423e2b058b8d628f3500e8b11e2",
+  "scenarios": [
+    {
+      "pr": 1,
+      "language": "python",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "oldPath": "ast-stress/01-sparse/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authorize",
+      "base": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 432
+      },
+      "head": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 431
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authorize"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "python",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "oldPath": "ast-stress/01-sparse/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "capture",
+      "base": {
+        "from": 18,
+        "to": 33,
+        "startByte": 433,
+        "endByte": 854
+      },
+      "head": {
+        "from": 18,
+        "to": 33,
+        "startByte": 432,
+        "endByte": 854
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in capture"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "python",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "oldPath": "ast-stress/01-sparse/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 133,
+        "to": 147,
+        "startByte": 3402,
+        "endByte": 3808
+      },
+      "head": {
+        "from": 133,
+        "to": 147,
+        "startByte": 3402,
+        "endByte": 3808
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in retry_delay"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "python",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "oldPath": "ast-stress/01-sparse/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "reserve_stock",
+      "base": {
+        "from": 165,
+        "to": 178,
+        "startByte": 4171,
+        "endByte": 4548
+      },
+      "head": {
+        "from": 165,
+        "to": 178,
+        "startByte": 4171,
+        "endByte": 4548
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in reserve_stock"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "python",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "oldPath": "ast-stress/01-sparse/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authenticate",
+      "base": {
+        "from": 346,
+        "to": 360,
+        "startByte": 9159,
+        "endByte": 9505
+      },
+      "head": {
+        "from": 346,
+        "to": 360,
+        "startByte": 9159,
+        "endByte": 9504
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authenticate"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "python",
+      "path": "ast-stress/01-sparse/python/Pipeline.py",
+      "oldPath": "ast-stress/01-sparse/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 501,
+        "to": 512,
+        "startByte": 13344,
+        "endByte": 13663
+      },
+      "head": {
+        "from": 501,
+        "to": 512,
+        "startByte": 13343,
+        "endByte": 13662
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in circuit_state"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 7,
+      "language": "python",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "oldPath": "ast-stress/07-dense/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authorize",
+      "base": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 432
+      },
+      "head": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 434
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "python",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "oldPath": "ast-stress/07-dense/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 501,
+        "to": 512,
+        "startByte": 13344,
+        "endByte": 13663
+      },
+      "head": {
+        "from": 501,
+        "to": 506,
+        "startByte": 13342,
+        "endByte": 13559
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "python",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "oldPath": "ast-stress/07-dense/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "cache_admission",
+      "base": {
+        "from": 444,
+        "to": 457,
+        "startByte": 11798,
+        "endByte": 12170
+      },
+      "head": {
+        "from": 444,
+        "to": 457,
+        "startByte": 11796,
+        "endByte": 12168
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "python",
+      "path": "ast-stress/07-dense/python/Pipeline.py",
+      "oldPath": "ast-stress/07-dense/python/Pipeline.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authenticate",
+      "base": {
+        "from": 346,
+        "to": 360,
+        "startByte": 9159,
+        "endByte": 9505
+      },
+      "head": {
+        "from": 346,
+        "to": 360,
+        "startByte": 9158,
+        "endByte": 9503
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 1,
+      "language": "java",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "oldPath": "ast-stress/01-sparse/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authorize",
+      "base": {
+        "from": 2,
+        "to": 24,
+        "startByte": 17,
+        "endByte": 644
+      },
+      "head": {
+        "from": 2,
+        "to": 24,
+        "startByte": 17,
+        "endByte": 643
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authorize"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "java",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "oldPath": "ast-stress/01-sparse/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "capture",
+      "base": {
+        "from": 26,
+        "to": 48,
+        "startByte": 645,
+        "endByte": 1261
+      },
+      "head": {
+        "from": 26,
+        "to": 48,
+        "startByte": 644,
+        "endByte": 1261
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in capture"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "java",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "oldPath": "ast-stress/01-sparse/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 185,
+        "to": 204,
+        "startByte": 5010,
+        "endByte": 5592
+      },
+      "head": {
+        "from": 185,
+        "to": 204,
+        "startByte": 5010,
+        "endByte": 5592
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in retry_delay"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "java",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "oldPath": "ast-stress/01-sparse/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "reserve_stock",
+      "base": {
+        "from": 230,
+        "to": 249,
+        "startByte": 6138,
+        "endByte": 6686
+      },
+      "head": {
+        "from": 230,
+        "to": 249,
+        "startByte": 6138,
+        "endByte": 6686
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in reserve_stock"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "java",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "oldPath": "ast-stress/01-sparse/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authenticate",
+      "base": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13373,
+        "endByte": 13902
+      },
+      "head": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13373,
+        "endByte": 13901
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authenticate"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "java",
+      "path": "ast-stress/01-sparse/java/Pipeline.java",
+      "oldPath": "ast-stress/01-sparse/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 698,
+        "to": 715,
+        "startByte": 19403,
+        "endByte": 19859
+      },
+      "head": {
+        "from": 698,
+        "to": 715,
+        "startByte": 19402,
+        "endByte": 19858
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in circuit_state"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 7,
+      "language": "java",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "oldPath": "ast-stress/07-dense/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authorize",
+      "base": {
+        "from": 2,
+        "to": 24,
+        "startByte": 17,
+        "endByte": 644
+      },
+      "head": {
+        "from": 2,
+        "to": 24,
+        "startByte": 17,
+        "endByte": 646
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "java",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "oldPath": "ast-stress/07-dense/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 698,
+        "to": 715,
+        "startByte": 19403,
+        "endByte": 19859
+      },
+      "head": {
+        "from": 698,
+        "to": 706,
+        "startByte": 19401,
+        "endByte": 19686
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "java",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "oldPath": "ast-stress/07-dense/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "cache_admission",
+      "base": {
+        "from": 619,
+        "to": 638,
+        "startByte": 17202,
+        "endByte": 17739
+      },
+      "head": {
+        "from": 619,
+        "to": 638,
+        "startByte": 17200,
+        "endByte": 17737
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "java",
+      "path": "ast-stress/07-dense/java/Pipeline.java",
+      "oldPath": "ast-stress/07-dense/java/Pipeline.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authenticate",
+      "base": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13373,
+        "endByte": 13902
+      },
+      "head": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13372,
+        "endByte": 13900
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 1,
+      "language": "csharp",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authorize",
+      "base": {
+        "from": 2,
+        "to": 24,
+        "startByte": 24,
+        "endByte": 655
+      },
+      "head": {
+        "from": 2,
+        "to": 24,
+        "startByte": 24,
+        "endByte": 654
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authorize"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "csharp",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "capture",
+      "base": {
+        "from": 26,
+        "to": 48,
+        "startByte": 656,
+        "endByte": 1276
+      },
+      "head": {
+        "from": 26,
+        "to": 48,
+        "startByte": 655,
+        "endByte": 1276
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in capture"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "csharp",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 185,
+        "to": 204,
+        "startByte": 5068,
+        "endByte": 5671
+      },
+      "head": {
+        "from": 185,
+        "to": 204,
+        "startByte": 5068,
+        "endByte": 5671
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in retry_delay"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "csharp",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "reserve_stock",
+      "base": {
+        "from": 230,
+        "to": 249,
+        "startByte": 6221,
+        "endByte": 6773
+      },
+      "head": {
+        "from": 230,
+        "to": 249,
+        "startByte": 6221,
+        "endByte": 6773
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in reserve_stock"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "csharp",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authenticate",
+      "base": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13591,
+        "endByte": 14124
+      },
+      "head": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13591,
+        "endByte": 14123
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authenticate"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "csharp",
+      "path": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/01-sparse/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 698,
+        "to": 715,
+        "startByte": 19729,
+        "endByte": 20192
+      },
+      "head": {
+        "from": 698,
+        "to": 715,
+        "startByte": 19728,
+        "endByte": 20191
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in circuit_state"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 7,
+      "language": "csharp",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authorize",
+      "base": {
+        "from": 2,
+        "to": 24,
+        "startByte": 24,
+        "endByte": 655
+      },
+      "head": {
+        "from": 2,
+        "to": 24,
+        "startByte": 24,
+        "endByte": 657
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "csharp",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 698,
+        "to": 715,
+        "startByte": 19729,
+        "endByte": 20192
+      },
+      "head": {
+        "from": 698,
+        "to": 706,
+        "startByte": 19727,
+        "endByte": 20019
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "csharp",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "cache_admission",
+      "base": {
+        "from": 619,
+        "to": 638,
+        "startByte": 17489,
+        "endByte": 18033
+      },
+      "head": {
+        "from": 619,
+        "to": 638,
+        "startByte": 17487,
+        "endByte": 18031
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "csharp",
+      "path": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "oldPath": "ast-stress/07-dense/csharp/Pipeline.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "authenticate",
+      "base": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13591,
+        "endByte": 14124
+      },
+      "head": {
+        "from": 483,
+        "to": 504,
+        "startByte": 13590,
+        "endByte": 14122
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 1,
+      "language": "go",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "oldPath": "ast-stress/01-sparse/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authorize",
+      "base": {
+        "from": 7,
+        "to": 29,
+        "startByte": 211,
+        "endByte": 735
+      },
+      "head": {
+        "from": 7,
+        "to": 29,
+        "startByte": 211,
+        "endByte": 734
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authorize"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "go",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "oldPath": "ast-stress/01-sparse/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "capture",
+      "base": {
+        "from": 31,
+        "to": 53,
+        "startByte": 736,
+        "endByte": 1248
+      },
+      "head": {
+        "from": 31,
+        "to": 53,
+        "startByte": 735,
+        "endByte": 1248
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in capture"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "go",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "oldPath": "ast-stress/01-sparse/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 190,
+        "to": 209,
+        "startByte": 4430,
+        "endByte": 4924
+      },
+      "head": {
+        "from": 190,
+        "to": 209,
+        "startByte": 4430,
+        "endByte": 4924
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in retry_delay"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "go",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "oldPath": "ast-stress/01-sparse/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "reserve_stock",
+      "base": {
+        "from": 235,
+        "to": 254,
+        "startByte": 5356,
+        "endByte": 5815
+      },
+      "head": {
+        "from": 235,
+        "to": 254,
+        "startByte": 5356,
+        "endByte": 5815
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in reserve_stock"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "go",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "oldPath": "ast-stress/01-sparse/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authenticate",
+      "base": {
+        "from": 488,
+        "to": 509,
+        "startByte": 11500,
+        "endByte": 11925
+      },
+      "head": {
+        "from": 488,
+        "to": 509,
+        "startByte": 11500,
+        "endByte": 11924
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authenticate"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "go",
+      "path": "ast-stress/01-sparse/go/Pipeline.go",
+      "oldPath": "ast-stress/01-sparse/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 703,
+        "to": 720,
+        "startByte": 16641,
+        "endByte": 17013
+      },
+      "head": {
+        "from": 703,
+        "to": 720,
+        "startByte": 16640,
+        "endByte": 17012
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in circuit_state"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 7,
+      "language": "go",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "oldPath": "ast-stress/07-dense/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authorize",
+      "base": {
+        "from": 7,
+        "to": 29,
+        "startByte": 211,
+        "endByte": 735
+      },
+      "head": {
+        "from": 7,
+        "to": 29,
+        "startByte": 211,
+        "endByte": 737
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "go",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "oldPath": "ast-stress/07-dense/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 703,
+        "to": 720,
+        "startByte": 16641,
+        "endByte": 17013
+      },
+      "head": {
+        "from": 703,
+        "to": 711,
+        "startByte": 16639,
+        "endByte": 16885
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "go",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "oldPath": "ast-stress/07-dense/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "cache_admission",
+      "base": {
+        "from": 624,
+        "to": 643,
+        "startByte": 14759,
+        "endByte": 15211
+      },
+      "head": {
+        "from": 624,
+        "to": 643,
+        "startByte": 14757,
+        "endByte": 15209
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "go",
+      "path": "ast-stress/07-dense/go/Pipeline.go",
+      "oldPath": "ast-stress/07-dense/go/Pipeline.go",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authenticate",
+      "base": {
+        "from": 488,
+        "to": 509,
+        "startByte": 11500,
+        "endByte": 11925
+      },
+      "head": {
+        "from": 488,
+        "to": 509,
+        "startByte": 11499,
+        "endByte": 11923
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 1,
+      "language": "rust",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "oldPath": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authorize",
+      "base": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 559
+      },
+      "head": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 558
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authorize"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "rust",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "oldPath": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "capture",
+      "base": {
+        "from": 25,
+        "to": 47,
+        "startByte": 560,
+        "endByte": 1104
+      },
+      "head": {
+        "from": 25,
+        "to": 47,
+        "startByte": 559,
+        "endByte": 1104
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in capture"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "rust",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "oldPath": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 184,
+        "to": 203,
+        "startByte": 4528,
+        "endByte": 5056
+      },
+      "head": {
+        "from": 184,
+        "to": 203,
+        "startByte": 4528,
+        "endByte": 5056
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in retry_delay"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "rust",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "oldPath": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "reserve_stock",
+      "base": {
+        "from": 229,
+        "to": 248,
+        "startByte": 5512,
+        "endByte": 6002
+      },
+      "head": {
+        "from": 229,
+        "to": 248,
+        "startByte": 5512,
+        "endByte": 6002
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in reserve_stock"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 1,
+      "language": "rust",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "oldPath": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authenticate",
+      "base": {
+        "from": 482,
+        "to": 503,
+        "startByte": 12137,
+        "endByte": 12590
+      },
+      "head": {
+        "from": 482,
+        "to": 503,
+        "startByte": 12137,
+        "endByte": 12589
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in authenticate"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": "Boundary or policy changed; e.g. zero authorization and expiry equality now accepted."
+    },
+    {
+      "pr": 1,
+      "language": "rust",
+      "path": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "oldPath": "ast-stress/01-sparse/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 697,
+        "to": 714,
+        "startByte": 17665,
+        "endByte": 18061
+      },
+      "head": {
+        "from": 697,
+        "to": 714,
+        "startByte": 17664,
+        "endByte": 18060
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "initial guard and limit initialization in circuit_state"
+      ],
+      "forbiddenContext": [
+        "retention_cutoff",
+        "health_score"
+      ],
+      "controlledRegression": null
+    },
+    {
+      "pr": 7,
+      "language": "rust",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "oldPath": "ast-stress/07-dense/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authorize",
+      "base": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 559
+      },
+      "head": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 561
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "rust",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "oldPath": "ast-stress/07-dense/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "circuit_state",
+      "base": {
+        "from": 697,
+        "to": 714,
+        "startByte": 17665,
+        "endByte": 18061
+      },
+      "head": {
+        "from": 697,
+        "to": 705,
+        "startByte": 17663,
+        "endByte": 17930
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "rust",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "oldPath": "ast-stress/07-dense/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "cache_admission",
+      "base": {
+        "from": 618,
+        "to": 637,
+        "startByte": 15666,
+        "endByte": 16147
+      },
+      "head": {
+        "from": 618,
+        "to": 637,
+        "startByte": 15664,
+        "endByte": 16145
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 7,
+      "language": "rust",
+      "path": "ast-stress/07-dense/rust/Pipeline.rs",
+      "oldPath": "ast-stress/07-dense/rust/Pipeline.rs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "authenticate",
+      "base": {
+        "from": 482,
+        "to": 503,
+        "startByte": 12137,
+        "endByte": 12590
+      },
+      "head": {
+        "from": 482,
+        "to": 503,
+        "startByte": 12136,
+        "endByte": 12588
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "authorize initial guard"
+      ],
+      "overlapFixture": true
+    },
+    {
+      "pr": 2,
+      "language": "java",
+      "path": "ast-stress/02-complex/java/Settlement.java",
+      "oldPath": "ast-stress/02-complex/java/Settlement.java",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "settle",
+      "base": {
+        "from": 2,
+        "to": 146,
+        "startByte": 19,
+        "endByte": 4767
+      },
+      "head": {
+        "from": 2,
+        "to": 146,
+        "startByte": 19,
+        "endByte": 4759
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "remaining = budget",
+        "fee calculation",
+        "initial budget guard"
+      ],
+      "controlledRegression": "Fee reservation guard ignores the fee; amount fits but fee can consume required budget."
+    },
+    {
+      "pr": 2,
+      "language": "csharp",
+      "path": "ast-stress/02-complex/csharp/Settlement.cs",
+      "oldPath": "ast-stress/02-complex/csharp/Settlement.cs",
+      "changeType": "behavior-change",
+      "expectedNodeType": "method",
+      "symbol": "settle",
+      "base": {
+        "from": 2,
+        "to": 146,
+        "startByte": 19,
+        "endByte": 4802
+      },
+      "head": {
+        "from": 2,
+        "to": 146,
+        "startByte": 19,
+        "endByte": 4794
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "remaining = budget",
+        "fee calculation",
+        "initial budget guard"
+      ],
+      "controlledRegression": "Fee reservation guard ignores the fee; amount fits but fee can consume required budget."
+    },
+    {
+      "pr": 2,
+      "language": "python",
+      "path": "ast-stress/02-complex/python/Settlement.py",
+      "oldPath": "ast-stress/02-complex/python/Settlement.py",
+      "changeType": "behavior-change",
+      "expectedNodeType": "function",
+      "symbol": "settle",
+      "base": {
+        "from": 1,
+        "to": 105,
+        "startByte": 0,
+        "endByte": 3245
+      },
+      "head": {
+        "from": 1,
+        "to": 105,
+        "startByte": 0,
+        "endByte": 3239
+      },
+      "matching": "same-symbol",
+      "importantContext": [
+        "remaining = budget",
+        "fee calculation",
+        "initial budget guard"
+      ],
+      "controlledRegression": "Fee reservation guard ignores the fee; amount fits but fee can consume required budget."
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Operations.py",
+      "oldPath": "ast-stress/03-structure/python/Before.py",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "capture",
+      "base": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 421
+      },
+      "head": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 429
+      },
+      "matching": "renamed",
+      "baseSymbol": "capture",
+      "headSymbol": "capture_payment"
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Operations.py",
+      "oldPath": "ast-stress/03-structure/python/Before.py",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "refund",
+      "base": {
+        "from": 18,
+        "to": 31,
+        "startByte": 422,
+        "endByte": 791
+      },
+      "head": null,
+      "matching": "deleted"
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Operations.py",
+      "oldPath": "ast-stress/03-structure/python/Before.py",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 33,
+        "to": 47,
+        "startByte": 792,
+        "endByte": 1198
+      },
+      "head": {
+        "from": 47,
+        "to": 61,
+        "startByte": 1081,
+        "endByte": 1487
+      },
+      "matching": "moved-within-file"
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Operations.py",
+      "oldPath": "ast-stress/03-structure/python/Before.py",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "cache_lifetime",
+      "base": {
+        "from": 76,
+        "to": 87,
+        "startByte": 1848,
+        "endByte": 2226
+      },
+      "head": null,
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/CachePolicy.py",
+      "oldPath": "ast-stress/03-structure/python/CachePolicy.py",
+      "changeType": "cross-file-move",
+      "expectedNodeType": "function",
+      "symbol": "cache_lifetime",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 12,
+        "startByte": 0,
+        "endByte": 377
+      },
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Operations.java",
+      "oldPath": "ast-stress/03-structure/java/Before.java",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "capture",
+      "base": {
+        "from": 2,
+        "to": 24,
+        "startByte": 17,
+        "endByte": 633
+      },
+      "head": {
+        "from": 2,
+        "to": 24,
+        "startByte": 17,
+        "endByte": 641
+      },
+      "matching": "renamed",
+      "baseSymbol": "capture",
+      "headSymbol": "capture_payment"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Operations.java",
+      "oldPath": "ast-stress/03-structure/java/Before.java",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "refund",
+      "base": {
+        "from": 26,
+        "to": 45,
+        "startByte": 634,
+        "endByte": 1172
+      },
+      "head": null,
+      "matching": "deleted"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Operations.java",
+      "oldPath": "ast-stress/03-structure/java/Before.java",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 47,
+        "to": 66,
+        "startByte": 1173,
+        "endByte": 1755
+      },
+      "head": {
+        "from": 67,
+        "to": 86,
+        "startByte": 1602,
+        "endByte": 2184
+      },
+      "matching": "moved-within-file"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Operations.java",
+      "oldPath": "ast-stress/03-structure/java/Before.java",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "cache_lifetime",
+      "base": {
+        "from": 107,
+        "to": 122,
+        "startByte": 2714,
+        "endByte": 3238
+      },
+      "head": null,
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/CachePolicy.java",
+      "oldPath": "ast-stress/03-structure/java/CachePolicy.java",
+      "changeType": "cross-file-move",
+      "expectedNodeType": "method",
+      "symbol": "cache_lifetime",
+      "base": null,
+      "head": {
+        "from": 2,
+        "to": 17,
+        "startByte": 24,
+        "endByte": 543
+      },
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Operations.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Before.cs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "capture",
+      "base": {
+        "from": 2,
+        "to": 24,
+        "startByte": 24,
+        "endByte": 644
+      },
+      "head": {
+        "from": 2,
+        "to": 24,
+        "startByte": 24,
+        "endByte": 652
+      },
+      "matching": "renamed",
+      "baseSymbol": "capture",
+      "headSymbol": "capture_payment"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Operations.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Before.cs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "refund",
+      "base": {
+        "from": 26,
+        "to": 45,
+        "startByte": 645,
+        "endByte": 1187
+      },
+      "head": null,
+      "matching": "deleted"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Operations.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Before.cs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 47,
+        "to": 66,
+        "startByte": 1188,
+        "endByte": 1791
+      },
+      "head": {
+        "from": 67,
+        "to": 86,
+        "startByte": 1615,
+        "endByte": 2218
+      },
+      "matching": "moved-within-file"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Operations.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Before.cs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "method",
+      "symbol": "cache_lifetime",
+      "base": {
+        "from": 107,
+        "to": 122,
+        "startByte": 2752,
+        "endByte": 3290
+      },
+      "head": null,
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/CachePolicy.cs",
+      "oldPath": "ast-stress/03-structure/csharp/CachePolicy.cs",
+      "changeType": "cross-file-move",
+      "expectedNodeType": "method",
+      "symbol": "cache_lifetime",
+      "base": null,
+      "head": {
+        "from": 2,
+        "to": 17,
+        "startByte": 31,
+        "endByte": 564
+      },
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Operations.go",
+      "oldPath": "ast-stress/03-structure/go/Before.go",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "capture",
+      "base": {
+        "from": 7,
+        "to": 29,
+        "startByte": 211,
+        "endByte": 723
+      },
+      "head": {
+        "from": 7,
+        "to": 29,
+        "startByte": 211,
+        "endByte": 731
+      },
+      "matching": "renamed",
+      "baseSymbol": "capture",
+      "headSymbol": "capture_payment"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Operations.go",
+      "oldPath": "ast-stress/03-structure/go/Before.go",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "refund",
+      "base": {
+        "from": 31,
+        "to": 50,
+        "startByte": 724,
+        "endByte": 1173
+      },
+      "head": null,
+      "matching": "deleted"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Operations.go",
+      "oldPath": "ast-stress/03-structure/go/Before.go",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 52,
+        "to": 71,
+        "startByte": 1174,
+        "endByte": 1668
+      },
+      "head": {
+        "from": 72,
+        "to": 91,
+        "startByte": 1511,
+        "endByte": 2005
+      },
+      "matching": "moved-within-file"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Operations.go",
+      "oldPath": "ast-stress/03-structure/go/Before.go",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "cache_lifetime",
+      "base": {
+        "from": 112,
+        "to": 127,
+        "startByte": 2446,
+        "endByte": 2913
+      },
+      "head": null,
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/CachePolicy.go",
+      "oldPath": "ast-stress/03-structure/go/CachePolicy.go",
+      "changeType": "cross-file-move",
+      "expectedNodeType": "function",
+      "symbol": "cache_lifetime",
+      "base": null,
+      "head": {
+        "from": 7,
+        "to": 22,
+        "startByte": 211,
+        "endByte": 677
+      },
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Operations.rs",
+      "oldPath": "ast-stress/03-structure/rust/Before.rs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "capture",
+      "base": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 544
+      },
+      "head": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 552
+      },
+      "matching": "renamed",
+      "baseSymbol": "capture",
+      "headSymbol": "capture_payment"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Operations.rs",
+      "oldPath": "ast-stress/03-structure/rust/Before.rs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "refund",
+      "base": {
+        "from": 25,
+        "to": 44,
+        "startByte": 545,
+        "endByte": 1025
+      },
+      "head": null,
+      "matching": "deleted"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Operations.rs",
+      "oldPath": "ast-stress/03-structure/rust/Before.rs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "retry_delay",
+      "base": {
+        "from": 46,
+        "to": 65,
+        "startByte": 1026,
+        "endByte": 1554
+      },
+      "head": {
+        "from": 66,
+        "to": 85,
+        "startByte": 1389,
+        "endByte": 1917
+      },
+      "matching": "moved-within-file"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Operations.rs",
+      "oldPath": "ast-stress/03-structure/rust/Before.rs",
+      "changeType": "rename-move-delete",
+      "expectedNodeType": "function",
+      "symbol": "cache_lifetime",
+      "base": {
+        "from": 106,
+        "to": 121,
+        "startByte": 2389,
+        "endByte": 2893
+      },
+      "head": null,
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/CachePolicy.rs",
+      "oldPath": "ast-stress/03-structure/rust/CachePolicy.rs",
+      "changeType": "cross-file-move",
+      "expectedNodeType": "function",
+      "symbol": "cache_lifetime",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 16,
+        "startByte": 0,
+        "endByte": 503
+      },
+      "matching": "cross-file-unmatched"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Optional<T> find(String id)",
+      "base": {
+        "from": 4,
+        "to": 4,
+        "startByte": 95,
+        "endByte": 152
+      },
+      "head": {
+        "from": 4,
+        "to": 4,
+        "startByte": 95,
+        "endByte": 158
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Optional<T> find(String id)"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "long cents) {}",
+      "base": {
+        "from": 5,
+        "to": 5,
+        "startByte": 152,
+        "endByte": 193
+      },
+      "head": {
+        "from": 5,
+        "to": 5,
+        "startByte": 158,
+        "endByte": 216
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "long cents) {}"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "this.repository = repository",
+      "base": {
+        "from": 9,
+        "to": 9,
+        "startByte": 300,
+        "endByte": 373
+      },
+      "head": {
+        "from": 9,
+        "to": 9,
+        "startByte": 323,
+        "endByte": 420
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "this.repository = repository"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "@Audited(\"capture\")",
+      "base": {
+        "from": 10,
+        "to": 10,
+        "startByte": 373,
+        "endByte": 397
+      },
+      "head": {
+        "from": 10,
+        "to": 10,
+        "startByte": 420,
+        "endByte": 444
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "@Audited(\"capture\")"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Math.max(0, cents)",
+      "base": {
+        "from": 11,
+        "to": 11,
+        "startByte": 397,
+        "endByte": 457
+      },
+      "head": {
+        "from": 11,
+        "to": 11,
+        "startByte": 444,
+        "endByte": 504
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Math.max(0, cents)"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "capture(cents) - fee",
+      "base": {
+        "from": 12,
+        "to": 12,
+        "startByte": 457,
+        "endByte": 529
+      },
+      "head": {
+        "from": 12,
+        "to": 12,
+        "startByte": 504,
+        "endByte": 576
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "capture(cents) - fee"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "<R extends Number>",
+      "base": {
+        "from": 13,
+        "to": 13,
+        "startByte": 529,
+        "endByte": 606
+      },
+      "head": {
+        "from": 13,
+        "to": 13,
+        "startByte": 576,
+        "endByte": 669
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "<R extends Number>"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "cents > 1000",
+      "base": {
+        "from": 15,
+        "to": 15,
+        "startByte": 642,
+        "endByte": 702
+      },
+      "head": {
+        "from": 15,
+        "to": 15,
+        "startByte": 705,
+        "endByte": 766
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "cents > 1000"
+    },
+    {
+      "pr": 4,
+      "language": "java",
+      "path": "ast-stress/04-features/java/Features.java",
+      "oldPath": "ast-stress/04-features/java/Features.java",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Long.compare(a.cents(), b.cents())",
+      "base": {
+        "from": 20,
+        "to": 20,
+        "startByte": 807,
+        "endByte": 907
+      },
+      "head": {
+        "from": 20,
+        "to": 20,
+        "startByte": 871,
+        "endByte": 971
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Long.compare(a.cents(), b.cents())"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "record Receipt(string Id, long Cents)",
+      "base": {
+        "from": 6,
+        "to": 6,
+        "startByte": 182,
+        "endByte": 221
+      },
+      "head": {
+        "from": 6,
+        "to": 6,
+        "startByte": 182,
+        "endByte": 238
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "record Receipt(string Id, long Cents)"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "get; private set;",
+      "base": {
+        "from": 8,
+        "to": 8,
+        "startByte": 265,
+        "endByte": 317
+      },
+      "head": {
+        "from": 8,
+        "to": 8,
+        "startByte": 289,
+        "endByte": 333
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "get; private set;"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "= 1000",
+      "base": {
+        "from": 8,
+        "to": 8,
+        "startByte": 265,
+        "endByte": 317
+      },
+      "head": {
+        "from": 8,
+        "to": 8,
+        "startByte": 289,
+        "endByte": 333
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "= 1000"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "[Audited(\"capture\")]",
+      "base": {
+        "from": 9,
+        "to": 9,
+        "startByte": 317,
+        "endByte": 342
+      },
+      "head": {
+        "from": 9,
+        "to": 9,
+        "startByte": 333,
+        "endByte": 358
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "[Audited(\"capture\")]"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "await Task.Yield();",
+      "base": {
+        "from": 11,
+        "to": 11,
+        "startByte": 396,
+        "endByte": 424
+      },
+      "head": {
+        "from": 11,
+        "to": 11,
+        "startByte": 412,
+        "endByte": 441
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "await Task.Yield();"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "value / 100",
+      "base": {
+        "from": 12,
+        "to": 12,
+        "startByte": 424,
+        "endByte": 477
+      },
+      "head": {
+        "from": 12,
+        "to": 12,
+        "startByte": 441,
+        "endByte": 493
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "value / 100"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "x > 0",
+      "base": {
+        "from": 13,
+        "to": 13,
+        "startByte": 477,
+        "endByte": 549
+      },
+      "head": {
+        "from": 13,
+        "to": 13,
+        "startByte": 493,
+        "endByte": 566
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "x > 0"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Math.Max(0, limit)",
+      "base": {
+        "from": 17,
+        "to": 17,
+        "startByte": 601,
+        "endByte": 671
+      },
+      "head": {
+        "from": 17,
+        "to": 17,
+        "startByte": 625,
+        "endByte": 697
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Math.Max(0, limit)"
+    },
+    {
+      "pr": 4,
+      "language": "csharp",
+      "path": "ast-stress/04-features/csharp/Features.cs",
+      "oldPath": "ast-stress/04-features/csharp/Features.cs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "receipt.Cents > 0",
+      "base": {
+        "from": 20,
+        "to": 20,
+        "startByte": 706,
+        "endByte": 794
+      },
+      "head": {
+        "from": 20,
+        "to": 20,
+        "startByte": 732,
+        "endByte": 823
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "receipt.Cents > 0"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Debug, Clone",
+      "base": {
+        "from": 2,
+        "to": 2,
+        "startByte": 21,
+        "endByte": 45
+      },
+      "head": {
+        "from": 2,
+        "to": 2,
+        "startByte": 21,
+        "endByte": 56
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Debug, Clone"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Refunded }",
+      "base": {
+        "from": 3,
+        "to": 3,
+        "startByte": 45,
+        "endByte": 104
+      },
+      "head": {
+        "from": 3,
+        "to": 3,
+        "startByte": 56,
+        "endByte": 120
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Refunded }"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "fn balance(&self) -> i64;",
+      "base": {
+        "from": 4,
+        "to": 4,
+        "startByte": 104,
+        "endByte": 151
+      },
+      "head": {
+        "from": 4,
+        "to": 4,
+        "startByte": 120,
+        "endByte": 172
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "fn balance(&self) -> i64;"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "self.cents }",
+      "base": {
+        "from": 7,
+        "to": 7,
+        "startByte": 217,
+        "endByte": 261
+      },
+      "head": {
+        "from": 7,
+        "to": 7,
+        "startByte": 238,
+        "endByte": 289
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "self.cents }"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Self { cents }",
+      "base": {
+        "from": 10,
+        "to": 10,
+        "startByte": 279,
+        "endByte": 333
+      },
+      "head": {
+        "from": 10,
+        "to": 10,
+        "startByte": 307,
+        "endByte": 375
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Self { cents }"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "amount > self.cents",
+      "base": {
+        "from": 14,
+        "to": 14,
+        "startByte": 431,
+        "endByte": 494
+      },
+      "head": {
+        "from": 14,
+        "to": 14,
+        "startByte": 473,
+        "endByte": 537
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "amount > self.cents"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "T: Debug>",
+      "base": {
+        "from": 19,
+        "to": 19,
+        "startByte": 555,
+        "endByte": 638
+      },
+      "head": {
+        "from": 19,
+        "to": 19,
+        "startByte": 598,
+        "endByte": 693
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "T: Debug>"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "if ready { primary }",
+      "base": {
+        "from": 20,
+        "to": 20,
+        "startByte": 638,
+        "endByte": 679
+      },
+      "head": {
+        "from": 20,
+        "to": 20,
+        "startByte": 693,
+        "endByte": 755
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "if ready { primary }"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "value / 100",
+      "base": {
+        "from": 23,
+        "to": 23,
+        "startByte": 722,
+        "endByte": 762
+      },
+      "head": {
+        "from": 23,
+        "to": 23,
+        "startByte": 798,
+        "endByte": 837
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "value / 100"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Payment::Refunded => 0",
+      "base": {
+        "from": 27,
+        "to": 27,
+        "startByte": 893,
+        "endByte": 925
+      },
+      "head": {
+        "from": 27,
+        "to": 27,
+        "startByte": 968,
+        "endByte": 1012
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Payment::Refunded => 0"
+    },
+    {
+      "pr": 4,
+      "language": "rust",
+      "path": "ast-stress/04-features/rust/Features.rs",
+      "oldPath": "ast-stress/04-features/rust/Features.rs",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "assert!(result >= 0)",
+      "base": {
+        "from": 29,
+        "to": 29,
+        "startByte": 932,
+        "endByte": 958
+      },
+      "head": {
+        "from": 29,
+        "to": 29,
+        "startByte": 1019,
+        "endByte": 1050
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "assert!(result >= 0)"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Balance() int64 }",
+      "base": {
+        "from": 3,
+        "to": 3,
+        "startByte": 30,
+        "endByte": 72
+      },
+      "head": {
+        "from": 3,
+        "to": 3,
+        "startByte": 30,
+        "endByte": 87
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Balance() int64 }"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "Audit; Cents int64",
+      "base": {
+        "from": 5,
+        "to": 5,
+        "startByte": 108,
+        "endByte": 150
+      },
+      "head": {
+        "from": 5,
+        "to": 5,
+        "startByte": 123,
+        "endByte": 178
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "Audit; Cents int64"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "return w.Cents",
+      "base": {
+        "from": 7,
+        "to": 7,
+        "startByte": 183,
+        "endByte": 235
+      },
+      "head": {
+        "from": 7,
+        "to": 7,
+        "startByte": 211,
+        "endByte": 269
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "return w.Cents"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "return g.Cents",
+      "base": {
+        "from": 8,
+        "to": 8,
+        "startByte": 235,
+        "endByte": 284
+      },
+      "head": {
+        "from": 8,
+        "to": 8,
+        "startByte": 269,
+        "endByte": 324
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "return g.Cents"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "primary T, backup T",
+      "base": {
+        "from": 9,
+        "to": 9,
+        "startByte": 284,
+        "endByte": 340
+      },
+      "head": {
+        "from": 9,
+        "to": 9,
+        "startByte": 324,
+        "endByte": 378
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "primary T, backup T"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "if ready {",
+      "base": {
+        "from": 10,
+        "to": 10,
+        "startByte": 340,
+        "endByte": 372
+      },
+      "head": {
+        "from": 10,
+        "to": 10,
+        "startByte": 378,
+        "endByte": 411
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "if ready {"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "make(chan int64, 1)",
+      "base": {
+        "from": 14,
+        "to": 14,
+        "startByte": 433,
+        "endByte": 467
+      },
+      "head": {
+        "from": 14,
+        "to": 14,
+        "startByte": 472,
+        "endByte": 506
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "make(chan int64, 1)"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "defer worker.Done()",
+      "base": {
+        "from": 18,
+        "to": 18,
+        "startByte": 531,
+        "endByte": 559
+      },
+      "head": {
+        "from": 18,
+        "to": 18,
+        "startByte": 570,
+        "endByte": 611
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "defer worker.Done()"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "total += value",
+      "base": {
+        "from": 20,
+        "to": 20,
+        "startByte": 585,
+        "endByte": 637
+      },
+      "head": {
+        "from": 20,
+        "to": 20,
+        "startByte": 637,
+        "endByte": 706
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "total += value"
+    },
+    {
+      "pr": 4,
+      "language": "go",
+      "path": "ast-stress/04-features/go/Features.go",
+      "oldPath": "ast-stress/04-features/go/Features.go",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "output <- total",
+      "base": {
+        "from": 21,
+        "to": 21,
+        "startByte": 637,
+        "endByte": 661
+      },
+      "head": {
+        "from": 21,
+        "to": 21,
+        "startByte": 706,
+        "endByte": 734
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "output <- total"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "def audited(label):",
+      "base": {
+        "from": 4,
+        "to": 4,
+        "startByte": 71,
+        "endByte": 91
+      },
+      "head": {
+        "from": 4,
+        "to": 4,
+        "startByte": 71,
+        "endByte": 96
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "def audited(label):"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "return fn(*args, **kwargs)",
+      "base": {
+        "from": 7,
+        "to": 7,
+        "startByte": 151,
+        "endByte": 190
+      },
+      "head": {
+        "from": 7,
+        "to": 7,
+        "startByte": 156,
+        "endByte": 214
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "return fn(*args, **kwargs)"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "self._cents = cents",
+      "base": {
+        "from": 13,
+        "to": 13,
+        "startByte": 286,
+        "endByte": 314
+      },
+      "head": {
+        "from": 13,
+        "to": 13,
+        "startByte": 310,
+        "endByte": 346
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "self._cents = cents"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "return cls(0)",
+      "base": {
+        "from": 21,
+        "to": 21,
+        "startByte": 424,
+        "endByte": 446
+      },
+      "head": {
+        "from": 21,
+        "to": 21,
+        "startByte": 464,
+        "endByte": 488
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "return cls(0)"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "cents // 100",
+      "base": {
+        "from": 25,
+        "to": 25,
+        "startByte": 497,
+        "endByte": 525
+      },
+      "head": {
+        "from": 25,
+        "to": 25,
+        "startByte": 539,
+        "endByte": 566
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "cents // 100"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "@audited(\"capture\")",
+      "base": {
+        "from": 27,
+        "to": 27,
+        "startByte": 526,
+        "endByte": 550
+      },
+      "head": {
+        "from": 27,
+        "to": 27,
+        "startByte": 567,
+        "endByte": 591
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "@audited(\"capture\")"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "amount <= self._cents",
+      "base": {
+        "from": 30,
+        "to": 30,
+        "startByte": 633,
+        "endByte": 674
+      },
+      "head": {
+        "from": 30,
+        "to": 30,
+        "startByte": 674,
+        "endByte": 714
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "amount <= self._cents"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "self._cents -= amount",
+      "base": {
+        "from": 33,
+        "to": 33,
+        "startByte": 725,
+        "endByte": 755
+      },
+      "head": {
+        "from": 33,
+        "to": 33,
+        "startByte": 765,
+        "endByte": 803
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "self._cents -= amount"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "yield self._cents // count + index",
+      "base": {
+        "from": 38,
+        "to": 38,
+        "startByte": 858,
+        "endByte": 905
+      },
+      "head": {
+        "from": 38,
+        "to": 38,
+        "startByte": 914,
+        "endByte": 980
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "yield self._cents // count + index"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "ledger.append(\"end\")",
+      "base": {
+        "from": 46,
+        "to": 46,
+        "startByte": 1017,
+        "endByte": 1046
+      },
+      "head": {
+        "from": 46,
+        "to": 46,
+        "startByte": 1092,
+        "endByte": 1124
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "ledger.append(\"end\")"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "@lru_cache(maxsize=64)",
+      "base": {
+        "from": 48,
+        "to": 48,
+        "startByte": 1047,
+        "endByte": 1070
+      },
+      "head": {
+        "from": 48,
+        "to": 48,
+        "startByte": 1125,
+        "endByte": 1149
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "@lru_cache(maxsize=64)"
+    },
+    {
+      "pr": 4,
+      "language": "python",
+      "path": "ast-stress/04-features/python/Features.py",
+      "oldPath": "ast-stress/04-features/python/Features.py",
+      "changeType": "language-feature",
+      "expectedNodeType": "declaration",
+      "symbol": "if value > 0",
+      "base": {
+        "from": 50,
+        "to": 50,
+        "startByte": 1122,
+        "endByte": 1177
+      },
+      "head": {
+        "from": 50,
+        "to": 50,
+        "startByte": 1201,
+        "endByte": 1259
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "feature": "if value > 0"
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Ambiguous.py",
+      "oldPath": "ast-stress/03-structure/python/Ambiguous.py",
+      "changeType": "ambiguous-split",
+      "expectedNodeType": "function",
+      "symbol": "route",
+      "base": {
+        "from": 1,
+        "to": 6,
+        "startByte": 0,
+        "endByte": 156
+      },
+      "head": null,
+      "matching": "ambiguous-unmatched",
+      "rangeContract": "contains-anchor",
+      "acceptedMatchingStates": [
+        "ambiguous-without-match",
+        "unmatched-without-match"
+      ]
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Extraction.py",
+      "oldPath": "ast-stress/03-structure/python/Extraction.py",
+      "changeType": "merge-and-extract",
+      "expectedNodeType": "declaration",
+      "symbol": "order_total + tax_inclusive -> invoice + fee_component",
+      "base": {
+        "from": 1,
+        "to": 29,
+        "startByte": 0,
+        "endByte": 831
+      },
+      "head": {
+        "from": 1,
+        "to": 17,
+        "startByte": 0,
+        "endByte": 395
+      },
+      "matching": "split-merge-unmatched",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Ambiguous.java",
+      "oldPath": "ast-stress/03-structure/java/Ambiguous.java",
+      "changeType": "ambiguous-split",
+      "expectedNodeType": "method",
+      "symbol": "route",
+      "base": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 246
+      },
+      "head": null,
+      "matching": "ambiguous-unmatched",
+      "rangeContract": "contains-anchor",
+      "acceptedMatchingStates": [
+        "ambiguous-without-match",
+        "unmatched-without-match"
+      ]
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Extraction.java",
+      "oldPath": "ast-stress/03-structure/java/Extraction.java",
+      "changeType": "merge-and-extract",
+      "expectedNodeType": "declaration",
+      "symbol": "order_total + tax_inclusive -> invoice + fee_component",
+      "base": {
+        "from": 1,
+        "to": 42,
+        "startByte": 0,
+        "endByte": 1234
+      },
+      "head": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 753
+      },
+      "matching": "split-merge-unmatched",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Ambiguous.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Ambiguous.cs",
+      "changeType": "ambiguous-split",
+      "expectedNodeType": "method",
+      "symbol": "route",
+      "base": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 253
+      },
+      "head": null,
+      "matching": "ambiguous-unmatched",
+      "rangeContract": "contains-anchor",
+      "acceptedMatchingStates": [
+        "ambiguous-without-match",
+        "unmatched-without-match"
+      ]
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Extraction.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Extraction.cs",
+      "changeType": "merge-and-extract",
+      "expectedNodeType": "declaration",
+      "symbol": "order_total + tax_inclusive -> invoice + fee_component",
+      "base": {
+        "from": 1,
+        "to": 42,
+        "startByte": 0,
+        "endByte": 1252
+      },
+      "head": {
+        "from": 1,
+        "to": 23,
+        "startByte": 0,
+        "endByte": 774
+      },
+      "matching": "split-merge-unmatched",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Ambiguous.go",
+      "oldPath": "ast-stress/03-structure/go/Ambiguous.go",
+      "changeType": "ambiguous-split",
+      "expectedNodeType": "function",
+      "symbol": "route",
+      "base": {
+        "from": 1,
+        "to": 10,
+        "startByte": 0,
+        "endByte": 202
+      },
+      "head": null,
+      "matching": "ambiguous-unmatched",
+      "rangeContract": "contains-anchor",
+      "acceptedMatchingStates": [
+        "ambiguous-without-match",
+        "unmatched-without-match"
+      ]
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Extraction.go",
+      "oldPath": "ast-stress/03-structure/go/Extraction.go",
+      "changeType": "merge-and-extract",
+      "expectedNodeType": "declaration",
+      "symbol": "order_total + tax_inclusive -> invoice + fee_component",
+      "base": {
+        "from": 1,
+        "to": 46,
+        "startByte": 0,
+        "endByte": 1253
+      },
+      "head": {
+        "from": 1,
+        "to": 27,
+        "startByte": 0,
+        "endByte": 851
+      },
+      "matching": "split-merge-unmatched",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Ambiguous.rs",
+      "oldPath": "ast-stress/03-structure/rust/Ambiguous.rs",
+      "changeType": "ambiguous-split",
+      "expectedNodeType": "function",
+      "symbol": "route",
+      "base": {
+        "from": 1,
+        "to": 9,
+        "startByte": 0,
+        "endByte": 198
+      },
+      "head": null,
+      "matching": "ambiguous-unmatched",
+      "rangeContract": "contains-anchor",
+      "acceptedMatchingStates": [
+        "ambiguous-without-match",
+        "unmatched-without-match"
+      ]
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Extraction.rs",
+      "oldPath": "ast-stress/03-structure/rust/Extraction.rs",
+      "changeType": "merge-and-extract",
+      "expectedNodeType": "declaration",
+      "symbol": "order_total + tax_inclusive -> invoice + fee_component",
+      "base": {
+        "from": 1,
+        "to": 40,
+        "startByte": 0,
+        "endByte": 1142
+      },
+      "head": {
+        "from": 1,
+        "to": 21,
+        "startByte": 0,
+        "endByte": 717
+      },
+      "matching": "split-merge-unmatched",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/model.py",
+      "oldPath": "ast-stress/05-cross-file/python/model.py",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "model.py",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 74
+      },
+      "head": {
+        "from": 1,
+        "to": 6,
+        "startByte": 0,
+        "endByte": 100
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/repository.py",
+      "oldPath": "ast-stress/05-cross-file/python/repository.py",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "repository.py",
+      "base": {
+        "from": 1,
+        "to": 8,
+        "startByte": 0,
+        "endByte": 208
+      },
+      "head": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 135
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/contract.py",
+      "oldPath": "ast-stress/05-cross-file/python/contract.py",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "contract.py",
+      "base": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 96
+      },
+      "head": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 111
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/service.py",
+      "oldPath": "ast-stress/05-cross-file/python/service.py",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "service.py",
+      "base": {
+        "from": 1,
+        "to": 8,
+        "startByte": 0,
+        "endByte": 222
+      },
+      "head": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 345
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/service_test.py",
+      "oldPath": "ast-stress/05-cross-file/python/service_test.py",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "service_test.py",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 135
+      },
+      "head": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 146
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/Order.java",
+      "oldPath": "ast-stress/05-cross-file/java/Order.java",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Order.java",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 45
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/Repository.java",
+      "oldPath": "ast-stress/05-cross-file/java/Repository.java",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Repository.java",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 205
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 103
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/Pricing.java",
+      "oldPath": "ast-stress/05-cross-file/java/Pricing.java",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Pricing.java",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 63
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/Service.java",
+      "oldPath": "ast-stress/05-cross-file/java/Service.java",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Service.java",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 222
+      },
+      "head": {
+        "from": 1,
+        "to": 7,
+        "startByte": 0,
+        "endByte": 359
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/ServiceTest.java",
+      "oldPath": "ast-stress/05-cross-file/java/ServiceTest.java",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "ServiceTest.java",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 129
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 140
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/Order.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/Order.cs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Order.cs",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 26
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 43
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/Repository.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/Repository.cs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Repository.cs",
+      "base": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 229
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 106
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/Pricing.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/Pricing.cs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Pricing.cs",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 47
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 64
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/Service.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/Service.cs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "Service.cs",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 214
+      },
+      "head": {
+        "from": 1,
+        "to": 7,
+        "startByte": 0,
+        "endByte": 365
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/ServiceTest.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/ServiceTest.cs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "ServiceTest.cs",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 138
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 149
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/model.go",
+      "oldPath": "ast-stress/05-cross-file/go/model.go",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "model.go",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 50
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 67
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/repository.go",
+      "oldPath": "ast-stress/05-cross-file/go/repository.go",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "repository.go",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 219
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 145
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/contract.go",
+      "oldPath": "ast-stress/05-cross-file/go/contract.go",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "contract.go",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 67
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 77
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/service.go",
+      "oldPath": "ast-stress/05-cross-file/go/service.go",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "service.go",
+      "base": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 215
+      },
+      "head": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 309
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/service_test.go",
+      "oldPath": "ast-stress/05-cross-file/go/service_test.go",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "service_test.go",
+      "base": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 134
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 145
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/model.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/model.rs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "model.rs",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 36
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 58
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/repository.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/repository.rs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "repository.rs",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 240
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 181
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/contract.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/contract.rs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "contract.rs",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 57
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 73
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/lib.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/lib.rs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "lib.rs",
+      "base": {
+        "from": 1,
+        "to": 9,
+        "startByte": 0,
+        "endByte": 364
+      },
+      "head": {
+        "from": 1,
+        "to": 10,
+        "startByte": 0,
+        "endByte": 470
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/service_test.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/service_test.rs",
+      "changeType": "shared-type-signature-dependency",
+      "expectedNodeType": "declaration",
+      "symbol": "service_test.rs",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 92
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 103
+      },
+      "matching": "file-local-only",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "python",
+      "path": "ast-stress/06-boundaries/python/Policy.py",
+      "oldPath": "ast-stress/06-boundaries/python/Policy.py",
+      "changeType": "declaration-boundaries",
+      "expectedNodeType": "declaration",
+      "symbol": "Policy",
+      "base": {
+        "from": 1,
+        "to": 12,
+        "startByte": 0,
+        "endByte": 230
+      },
+      "head": {
+        "from": 1,
+        "to": 13,
+        "startByte": 0,
+        "endByte": 253
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "lineEnding": "LF",
+      "unicode": true
+    },
+    {
+      "pr": 6,
+      "language": "python",
+      "path": "ast-stress/06-boundaries/python/ImportOnly.py",
+      "oldPath": "ast-stress/06-boundaries/python/ImportOnly.py",
+      "changeType": "ImportOnly",
+      "expectedNodeType": "import",
+      "symbol": "ImportOnly",
+      "base": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 59
+      },
+      "head": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 58
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "python",
+      "path": "ast-stress/06-boundaries/python/AttributeOnly.py",
+      "oldPath": "ast-stress/06-boundaries/python/AttributeOnly.py",
+      "changeType": "AttributeOnly",
+      "expectedNodeType": "declaration",
+      "symbol": "AttributeOnly",
+      "base": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 49
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 48
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "java",
+      "path": "ast-stress/06-boundaries/java/Policy.java",
+      "oldPath": "ast-stress/06-boundaries/java/Policy.java",
+      "changeType": "declaration-boundaries",
+      "expectedNodeType": "declaration",
+      "symbol": "Policy",
+      "base": {
+        "from": 1,
+        "to": 14,
+        "startByte": 0,
+        "endByte": 275
+      },
+      "head": {
+        "from": 1,
+        "to": 14,
+        "startByte": 0,
+        "endByte": 312
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "lineEnding": "LF",
+      "unicode": true
+    },
+    {
+      "pr": 6,
+      "language": "java",
+      "path": "ast-stress/06-boundaries/java/ImportOnly.java",
+      "oldPath": "ast-stress/06-boundaries/java/ImportOnly.java",
+      "changeType": "ImportOnly",
+      "expectedNodeType": "import",
+      "symbol": "ImportOnly",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 75
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 74
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "java",
+      "path": "ast-stress/06-boundaries/java/AttributeOnly.java",
+      "oldPath": "ast-stress/06-boundaries/java/AttributeOnly.java",
+      "changeType": "AttributeOnly",
+      "expectedNodeType": "declaration",
+      "symbol": "AttributeOnly",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 67
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 83
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "csharp",
+      "path": "ast-stress/06-boundaries/csharp/Policy.cs",
+      "oldPath": "ast-stress/06-boundaries/csharp/Policy.cs",
+      "changeType": "declaration-boundaries",
+      "expectedNodeType": "declaration",
+      "symbol": "Policy",
+      "base": {
+        "from": 1,
+        "to": 14,
+        "startByte": 0,
+        "endByte": 296
+      },
+      "head": {
+        "from": 1,
+        "to": 14,
+        "startByte": 0,
+        "endByte": 321
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "lineEnding": "CRLF",
+      "unicode": true
+    },
+    {
+      "pr": 6,
+      "language": "csharp",
+      "path": "ast-stress/06-boundaries/csharp/ImportOnly.cs",
+      "oldPath": "ast-stress/06-boundaries/csharp/ImportOnly.cs",
+      "changeType": "ImportOnly",
+      "expectedNodeType": "import",
+      "symbol": "ImportOnly",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 86
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 78
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "csharp",
+      "path": "ast-stress/06-boundaries/csharp/AttributeOnly.cs",
+      "oldPath": "ast-stress/06-boundaries/csharp/AttributeOnly.cs",
+      "changeType": "AttributeOnly",
+      "expectedNodeType": "declaration",
+      "symbol": "AttributeOnly",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 73
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 84
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "go",
+      "path": "ast-stress/06-boundaries/go/Policy.go",
+      "oldPath": "ast-stress/06-boundaries/go/Policy.go",
+      "changeType": "declaration-boundaries",
+      "expectedNodeType": "declaration",
+      "symbol": "Policy",
+      "base": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 237
+      },
+      "head": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 247
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "lineEnding": "LF",
+      "unicode": true
+    },
+    {
+      "pr": 6,
+      "language": "go",
+      "path": "ast-stress/06-boundaries/go/ImportOnly.go",
+      "oldPath": "ast-stress/06-boundaries/go/ImportOnly.go",
+      "changeType": "ImportOnly",
+      "expectedNodeType": "import",
+      "symbol": "ImportOnly",
+      "base": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 47
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 51
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "rust",
+      "path": "ast-stress/06-boundaries/rust/Policy.rs",
+      "oldPath": "ast-stress/06-boundaries/rust/Policy.rs",
+      "changeType": "declaration-boundaries",
+      "expectedNodeType": "declaration",
+      "symbol": "Policy",
+      "base": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 257
+      },
+      "head": {
+        "from": 1,
+        "to": 11,
+        "startByte": 0,
+        "endByte": 278
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor",
+      "lineEnding": "CRLF",
+      "unicode": true
+    },
+    {
+      "pr": 6,
+      "language": "rust",
+      "path": "ast-stress/06-boundaries/rust/ImportOnly.rs",
+      "oldPath": "ast-stress/06-boundaries/rust/ImportOnly.rs",
+      "changeType": "ImportOnly",
+      "expectedNodeType": "import",
+      "symbol": "ImportOnly",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 53
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 53
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "rust",
+      "path": "ast-stress/06-boundaries/rust/AttributeOnly.rs",
+      "oldPath": "ast-stress/06-boundaries/rust/AttributeOnly.rs",
+      "changeType": "AttributeOnly",
+      "expectedNodeType": "declaration",
+      "symbol": "AttributeOnly",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 44
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 52
+      },
+      "matching": "declaration-change",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Added.py",
+      "oldPath": "ast-stress/08-edges/python/Added.py",
+      "changeType": "added",
+      "expectedNodeType": "function",
+      "symbol": "Added",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 38
+      },
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Deleted.py",
+      "oldPath": "ast-stress/08-edges/python/Deleted.py",
+      "changeType": "deleted",
+      "expectedNodeType": "function",
+      "symbol": "Deleted",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "deleted"
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Emptied.py",
+      "oldPath": "ast-stress/08-edges/python/Emptied.py",
+      "changeType": "emptied",
+      "expectedNodeType": "function",
+      "symbol": "Emptied",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/EmptyAdded.py",
+      "oldPath": "ast-stress/08-edges/python/EmptyAdded.py",
+      "changeType": "empty-added",
+      "expectedNodeType": "function",
+      "symbol": "EmptyAdded",
+      "base": null,
+      "head": null,
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "no-source-changes"
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Comment.py",
+      "oldPath": "ast-stress/08-edges/python/Comment.py",
+      "changeType": "comment-only",
+      "expectedNodeType": "function",
+      "symbol": "Comment",
+      "base": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 50
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 49
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Whitespace.py",
+      "oldPath": "ast-stress/08-edges/python/Whitespace.py",
+      "changeType": "whitespace-only",
+      "expectedNodeType": "function",
+      "symbol": "Whitespace",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 34
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Tiny.py",
+      "oldPath": "ast-stress/08-edges/python/Tiny.py",
+      "changeType": "tiny-function",
+      "expectedNodeType": "function",
+      "symbol": "Tiny",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Recovery.py",
+      "oldPath": "ast-stress/08-edges/python/Recovery.py",
+      "changeType": "syntax-error",
+      "expectedNodeType": "function",
+      "symbol": "Recovery",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": true,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Scoped.py",
+      "oldPath": "ast-stress/08-edges/python/Scoped.py",
+      "changeType": "boundary-insertion-and-scopes",
+      "expectedNodeType": "function",
+      "symbol": "scoped-callable",
+      "base": {
+        "from": 33,
+        "to": 33,
+        "startByte": 733,
+        "endByte": 754
+      },
+      "head": {
+        "from": 33,
+        "to": 33,
+        "startByte": 733,
+        "endByte": 762
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Added.java",
+      "oldPath": "ast-stress/08-edges/java/Added.java",
+      "changeType": "added",
+      "expectedNodeType": "function",
+      "symbol": "Added",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 52
+      },
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Deleted.java",
+      "oldPath": "ast-stress/08-edges/java/Deleted.java",
+      "changeType": "deleted",
+      "expectedNodeType": "function",
+      "symbol": "Deleted",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "deleted"
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Emptied.java",
+      "oldPath": "ast-stress/08-edges/java/Emptied.java",
+      "changeType": "emptied",
+      "expectedNodeType": "function",
+      "symbol": "Emptied",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/EmptyAdded.java",
+      "oldPath": "ast-stress/08-edges/java/EmptyAdded.java",
+      "changeType": "empty-added",
+      "expectedNodeType": "function",
+      "symbol": "EmptyAdded",
+      "base": null,
+      "head": null,
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "no-source-changes"
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Comment.java",
+      "oldPath": "ast-stress/08-edges/java/Comment.java",
+      "changeType": "comment-only",
+      "expectedNodeType": "function",
+      "symbol": "Comment",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 59
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 58
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Whitespace.java",
+      "oldPath": "ast-stress/08-edges/java/Whitespace.java",
+      "changeType": "whitespace-only",
+      "expectedNodeType": "function",
+      "symbol": "Whitespace",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 42
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Tiny.java",
+      "oldPath": "ast-stress/08-edges/java/Tiny.java",
+      "changeType": "tiny-function",
+      "expectedNodeType": "function",
+      "symbol": "Tiny",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Recovery.java",
+      "oldPath": "ast-stress/08-edges/java/Recovery.java",
+      "changeType": "syntax-error",
+      "expectedNodeType": "function",
+      "symbol": "Recovery",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": true,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Scoped.java",
+      "oldPath": "ast-stress/08-edges/java/Scoped.java",
+      "changeType": "boundary-insertion-and-scopes",
+      "expectedNodeType": "function",
+      "symbol": "scoped-callable",
+      "base": {
+        "from": 11,
+        "to": 11,
+        "startByte": 428,
+        "endByte": 454
+      },
+      "head": {
+        "from": 11,
+        "to": 11,
+        "startByte": 428,
+        "endByte": 480
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Added.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Added.cs",
+      "changeType": "added",
+      "expectedNodeType": "function",
+      "symbol": "Added",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 51
+      },
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Deleted.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Deleted.cs",
+      "changeType": "deleted",
+      "expectedNodeType": "function",
+      "symbol": "Deleted",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "deleted"
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Emptied.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Emptied.cs",
+      "changeType": "emptied",
+      "expectedNodeType": "function",
+      "symbol": "Emptied",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/EmptyAdded.cs",
+      "oldPath": "ast-stress/08-edges/csharp/EmptyAdded.cs",
+      "changeType": "empty-added",
+      "expectedNodeType": "function",
+      "symbol": "EmptyAdded",
+      "base": null,
+      "head": null,
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "no-source-changes"
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Comment.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Comment.cs",
+      "changeType": "comment-only",
+      "expectedNodeType": "function",
+      "symbol": "Comment",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 59
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 58
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Whitespace.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Whitespace.cs",
+      "changeType": "whitespace-only",
+      "expectedNodeType": "function",
+      "symbol": "Whitespace",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 42
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Tiny.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Tiny.cs",
+      "changeType": "tiny-function",
+      "expectedNodeType": "function",
+      "symbol": "Tiny",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Recovery.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Recovery.cs",
+      "changeType": "syntax-error",
+      "expectedNodeType": "function",
+      "symbol": "Recovery",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 41
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": true,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Scoped.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Scoped.cs",
+      "changeType": "boundary-insertion-and-scopes",
+      "expectedNodeType": "function",
+      "symbol": "scoped-callable",
+      "base": {
+        "from": 11,
+        "to": 11,
+        "startByte": 404,
+        "endByte": 423
+      },
+      "head": {
+        "from": 11,
+        "to": 12,
+        "startByte": 404,
+        "endByte": 466
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Added.go",
+      "oldPath": "ast-stress/08-edges/go/Added.go",
+      "changeType": "added",
+      "expectedNodeType": "function",
+      "symbol": "Added",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 50
+      },
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Deleted.go",
+      "oldPath": "ast-stress/08-edges/go/Deleted.go",
+      "changeType": "deleted",
+      "expectedNodeType": "function",
+      "symbol": "Deleted",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "deleted"
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Emptied.go",
+      "oldPath": "ast-stress/08-edges/go/Emptied.go",
+      "changeType": "emptied",
+      "expectedNodeType": "function",
+      "symbol": "Emptied",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/EmptyAdded.go",
+      "oldPath": "ast-stress/08-edges/go/EmptyAdded.go",
+      "changeType": "empty-added",
+      "expectedNodeType": "function",
+      "symbol": "EmptyAdded",
+      "base": null,
+      "head": null,
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "no-source-changes"
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Comment.go",
+      "oldPath": "ast-stress/08-edges/go/Comment.go",
+      "changeType": "comment-only",
+      "expectedNodeType": "function",
+      "symbol": "Comment",
+      "base": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 64
+      },
+      "head": {
+        "from": 1,
+        "to": 3,
+        "startByte": 0,
+        "endByte": 63
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Whitespace.go",
+      "oldPath": "ast-stress/08-edges/go/Whitespace.go",
+      "changeType": "whitespace-only",
+      "expectedNodeType": "function",
+      "symbol": "Whitespace",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 47
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Tiny.go",
+      "oldPath": "ast-stress/08-edges/go/Tiny.go",
+      "changeType": "tiny-function",
+      "expectedNodeType": "function",
+      "symbol": "Tiny",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Recovery.go",
+      "oldPath": "ast-stress/08-edges/go/Recovery.go",
+      "changeType": "syntax-error",
+      "expectedNodeType": "function",
+      "symbol": "Recovery",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": true,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Scoped.go",
+      "oldPath": "ast-stress/08-edges/go/Scoped.go",
+      "changeType": "boundary-insertion-and-scopes",
+      "expectedNodeType": "function",
+      "symbol": "scoped-callable",
+      "base": {
+        "from": 7,
+        "to": 7,
+        "startByte": 218,
+        "endByte": 232
+      },
+      "head": {
+        "from": 7,
+        "to": 7,
+        "startByte": 218,
+        "endByte": 261
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Added.rs",
+      "oldPath": "ast-stress/08-edges/rust/Added.rs",
+      "changeType": "added",
+      "expectedNodeType": "function",
+      "symbol": "Added",
+      "base": null,
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 33
+      },
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Deleted.rs",
+      "oldPath": "ast-stress/08-edges/rust/Deleted.rs",
+      "changeType": "deleted",
+      "expectedNodeType": "function",
+      "symbol": "Deleted",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "deleted"
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Emptied.rs",
+      "oldPath": "ast-stress/08-edges/rust/Emptied.rs",
+      "changeType": "emptied",
+      "expectedNodeType": "function",
+      "symbol": "Emptied",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": null,
+      "matching": "unmatched",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/EmptyAdded.rs",
+      "oldPath": "ast-stress/08-edges/rust/EmptyAdded.rs",
+      "changeType": "empty-added",
+      "expectedNodeType": "function",
+      "symbol": "EmptyAdded",
+      "base": null,
+      "head": null,
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": "no-source-changes"
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Comment.rs",
+      "oldPath": "ast-stress/08-edges/rust/Comment.rs",
+      "changeType": "comment-only",
+      "expectedNodeType": "function",
+      "symbol": "Comment",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 45
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Whitespace.rs",
+      "oldPath": "ast-stress/08-edges/rust/Whitespace.rs",
+      "changeType": "whitespace-only",
+      "expectedNodeType": "function",
+      "symbol": "Whitespace",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 29
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Tiny.rs",
+      "oldPath": "ast-stress/08-edges/rust/Tiny.rs",
+      "changeType": "tiny-function",
+      "expectedNodeType": "function",
+      "symbol": "Tiny",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": false,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Recovery.rs",
+      "oldPath": "ast-stress/08-edges/rust/Recovery.rs",
+      "changeType": "syntax-error",
+      "expectedNodeType": "function",
+      "symbol": "Recovery",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor",
+      "intentionalParseError": true,
+      "expectedSkip": null
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Scoped.rs",
+      "oldPath": "ast-stress/08-edges/rust/Scoped.rs",
+      "changeType": "boundary-insertion-and-scopes",
+      "expectedNodeType": "function",
+      "symbol": "scoped-callable",
+      "base": {
+        "from": 15,
+        "to": 15,
+        "startByte": 502,
+        "endByte": 523
+      },
+      "head": {
+        "from": 15,
+        "to": 16,
+        "startByte": 502,
+        "endByte": 568
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/repository.py",
+      "oldPath": "ast-stress/05-cross-file/python/repository.py",
+      "changeType": "function-move-out",
+      "expectedNodeType": "function",
+      "symbol": "normalize_currency",
+      "base": {
+        "from": 7,
+        "to": 8,
+        "startByte": 111,
+        "endByte": 207
+      },
+      "head": null,
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "normalize_currency"
+    },
+    {
+      "pr": 5,
+      "language": "python",
+      "path": "ast-stress/05-cross-file/python/service.py",
+      "oldPath": "ast-stress/05-cross-file/python/service.py",
+      "changeType": "function-move-in",
+      "expectedNodeType": "function",
+      "symbol": "normalize_currency",
+      "base": null,
+      "head": {
+        "from": 13,
+        "to": 14,
+        "startByte": 346,
+        "endByte": 442
+      },
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "normalize_currency"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/Repository.java",
+      "oldPath": "ast-stress/05-cross-file/java/Repository.java",
+      "changeType": "function-move-out",
+      "expectedNodeType": "method",
+      "symbol": "normalize",
+      "base": {
+        "from": 5,
+        "to": 5,
+        "startByte": 98,
+        "endByte": 202
+      },
+      "head": null,
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "CurrencyCode.normalize"
+    },
+    {
+      "pr": 5,
+      "language": "java",
+      "path": "ast-stress/05-cross-file/java/Service.java",
+      "oldPath": "ast-stress/05-cross-file/java/Service.java",
+      "changeType": "function-move-in",
+      "expectedNodeType": "method",
+      "symbol": "normalize",
+      "base": null,
+      "head": {
+        "from": 9,
+        "to": 9,
+        "startByte": 381,
+        "endByte": 485
+      },
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "CurrencyCode.normalize"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/Repository.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/Repository.cs",
+      "changeType": "function-move-out",
+      "expectedNodeType": "method",
+      "symbol": "Normalize",
+      "base": {
+        "from": 3,
+        "to": 3,
+        "startByte": 108,
+        "endByte": 226
+      },
+      "head": null,
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "CurrencyCode.Normalize"
+    },
+    {
+      "pr": 5,
+      "language": "csharp",
+      "path": "ast-stress/05-cross-file/csharp/Service.cs",
+      "oldPath": "ast-stress/05-cross-file/csharp/Service.cs",
+      "changeType": "function-move-in",
+      "expectedNodeType": "method",
+      "symbol": "Normalize",
+      "base": null,
+      "head": {
+        "from": 9,
+        "to": 9,
+        "startByte": 394,
+        "endByte": 512
+      },
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "CurrencyCode.Normalize"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/repository.go",
+      "oldPath": "ast-stress/05-cross-file/go/repository.go",
+      "changeType": "function-move-out",
+      "expectedNodeType": "function",
+      "symbol": "NormalizeCurrency",
+      "base": {
+        "from": 5,
+        "to": 5,
+        "startByte": 116,
+        "endByte": 218
+      },
+      "head": null,
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "NormalizeCurrency"
+    },
+    {
+      "pr": 5,
+      "language": "go",
+      "path": "ast-stress/05-cross-file/go/service.go",
+      "oldPath": "ast-stress/05-cross-file/go/service.go",
+      "changeType": "function-move-in",
+      "expectedNodeType": "function",
+      "symbol": "NormalizeCurrency",
+      "base": null,
+      "head": {
+        "from": 7,
+        "to": 7,
+        "startByte": 310,
+        "endByte": 412
+      },
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "NormalizeCurrency"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/repository.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/repository.rs",
+      "changeType": "function-move-out",
+      "expectedNodeType": "function",
+      "symbol": "normalize_currency",
+      "base": {
+        "from": 5,
+        "to": 5,
+        "startByte": 135,
+        "endByte": 239
+      },
+      "head": null,
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "normalize_currency"
+    },
+    {
+      "pr": 5,
+      "language": "rust",
+      "path": "ast-stress/05-cross-file/rust/lib.rs",
+      "oldPath": "ast-stress/05-cross-file/rust/lib.rs",
+      "changeType": "function-move-in",
+      "expectedNodeType": "function",
+      "symbol": "normalize_currency",
+      "base": null,
+      "head": {
+        "from": 12,
+        "to": 12,
+        "startByte": 471,
+        "endByte": 575
+      },
+      "matching": "cross-file-unmatched",
+      "qualifiedName": "normalize_currency"
+    },
+    {
+      "pr": 3,
+      "language": "python",
+      "path": "ast-stress/03-structure/python/Scopes.py",
+      "oldPath": "ast-stress/03-structure/python/Scopes.py",
+      "changeType": "same-name-distinct-scopes",
+      "expectedNodeType": "method",
+      "symbol": "WalletScope.validate / GiftScope.validate",
+      "base": {
+        "from": 1,
+        "to": 7,
+        "startByte": 0,
+        "endByte": 143
+      },
+      "head": {
+        "from": 1,
+        "to": 7,
+        "startByte": 0,
+        "endByte": 143
+      },
+      "matching": "scope-sensitive",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "java",
+      "path": "ast-stress/03-structure/java/Scopes.java",
+      "oldPath": "ast-stress/03-structure/java/Scopes.java",
+      "changeType": "same-name-distinct-scopes",
+      "expectedNodeType": "method",
+      "symbol": "WalletScope.validate / GiftScope.validate",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 148
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 148
+      },
+      "matching": "scope-sensitive",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "csharp",
+      "path": "ast-stress/03-structure/csharp/Scopes.cs",
+      "oldPath": "ast-stress/03-structure/csharp/Scopes.cs",
+      "changeType": "same-name-distinct-scopes",
+      "expectedNodeType": "method",
+      "symbol": "WalletScope.validate / GiftScope.validate",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 142
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 142
+      },
+      "matching": "scope-sensitive",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "go",
+      "path": "ast-stress/03-structure/go/Scopes.go",
+      "oldPath": "ast-stress/03-structure/go/Scopes.go",
+      "changeType": "same-name-distinct-scopes",
+      "expectedNodeType": "method",
+      "symbol": "WalletScope.validate / GiftScope.validate",
+      "base": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 208
+      },
+      "head": {
+        "from": 1,
+        "to": 5,
+        "startByte": 0,
+        "endByte": 208
+      },
+      "matching": "scope-sensitive",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 3,
+      "language": "rust",
+      "path": "ast-stress/03-structure/rust/Scopes.rs",
+      "oldPath": "ast-stress/03-structure/rust/Scopes.rs",
+      "changeType": "same-name-distinct-scopes",
+      "expectedNodeType": "method",
+      "symbol": "WalletScope.validate / GiftScope.validate",
+      "base": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 188
+      },
+      "head": {
+        "from": 1,
+        "to": 4,
+        "startByte": 0,
+        "endByte": 188
+      },
+      "matching": "scope-sensitive",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "python",
+      "path": "ast-stress/06-boundaries/python/Signature.py",
+      "oldPath": "ast-stress/06-boundaries/python/Signature.py",
+      "changeType": "signature-only-unchanged-body",
+      "expectedNodeType": "declaration",
+      "symbol": "identity",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 50
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 54
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "java",
+      "path": "ast-stress/06-boundaries/java/Signature.java",
+      "oldPath": "ast-stress/06-boundaries/java/Signature.java",
+      "changeType": "signature-only-unchanged-body",
+      "expectedNodeType": "declaration",
+      "symbol": "identity",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 63
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 65
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "csharp",
+      "path": "ast-stress/06-boundaries/csharp/Signature.cs",
+      "oldPath": "ast-stress/06-boundaries/csharp/Signature.cs",
+      "changeType": "signature-only-unchanged-body",
+      "expectedNodeType": "declaration",
+      "symbol": "identity",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 63
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 65
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "go",
+      "path": "ast-stress/06-boundaries/go/Signature.go",
+      "oldPath": "ast-stress/06-boundaries/go/Signature.go",
+      "changeType": "signature-only-unchanged-body",
+      "expectedNodeType": "declaration",
+      "symbol": "identity",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 66
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 66
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 6,
+      "language": "rust",
+      "path": "ast-stress/06-boundaries/rust/Signature.rs",
+      "oldPath": "ast-stress/06-boundaries/rust/Signature.rs",
+      "changeType": "signature-only-unchanged-body",
+      "expectedNodeType": "declaration",
+      "symbol": "identity",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 45
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 45
+      },
+      "matching": "same-symbol",
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "python",
+      "path": "ast-stress/08-edges/python/Incomplete.py",
+      "oldPath": "ast-stress/08-edges/python/Incomplete.py",
+      "changeType": "incomplete-syntax",
+      "expectedNodeType": "function",
+      "symbol": "incomplete",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 26
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 11
+      },
+      "matching": "unmatched",
+      "intentionalParseError": true,
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "java",
+      "path": "ast-stress/08-edges/java/Incomplete.java",
+      "oldPath": "ast-stress/08-edges/java/Incomplete.java",
+      "changeType": "incomplete-syntax",
+      "expectedNodeType": "function",
+      "symbol": "incomplete",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 47
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 45
+      },
+      "matching": "unmatched",
+      "intentionalParseError": true,
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "csharp",
+      "path": "ast-stress/08-edges/csharp/Incomplete.cs",
+      "oldPath": "ast-stress/08-edges/csharp/Incomplete.cs",
+      "changeType": "incomplete-syntax",
+      "expectedNodeType": "function",
+      "symbol": "incomplete",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 47
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 45
+      },
+      "matching": "unmatched",
+      "intentionalParseError": true,
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "go",
+      "path": "ast-stress/08-edges/go/Incomplete.go",
+      "oldPath": "ast-stress/08-edges/go/Incomplete.go",
+      "changeType": "incomplete-syntax",
+      "expectedNodeType": "function",
+      "symbol": "incomplete",
+      "base": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 46
+      },
+      "head": {
+        "from": 1,
+        "to": 2,
+        "startByte": 0,
+        "endByte": 44
+      },
+      "matching": "unmatched",
+      "intentionalParseError": true,
+      "rangeContract": "contains-anchor"
+    },
+    {
+      "pr": 8,
+      "language": "rust",
+      "path": "ast-stress/08-edges/rust/Incomplete.rs",
+      "oldPath": "ast-stress/08-edges/rust/Incomplete.rs",
+      "changeType": "incomplete-syntax",
+      "expectedNodeType": "function",
+      "symbol": "incomplete",
+      "base": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 28
+      },
+      "head": {
+        "from": 1,
+        "to": 1,
+        "startByte": 0,
+        "endByte": 26
+      },
+      "matching": "unmatched",
+      "intentionalParseError": true,
+      "rangeContract": "contains-anchor"
+    }
+  ],
+  "oracleNotes": [
+    "Callable ranges exclude blank separators and wrapper classes/imports, derived from authored source only.",
+    "Renamed functions have separate base/head symbol identities.",
+    "Ambiguity is safe when no candidate is matched; ambiguous and unmatched are distinct serialization buckets."
+  ]
+}

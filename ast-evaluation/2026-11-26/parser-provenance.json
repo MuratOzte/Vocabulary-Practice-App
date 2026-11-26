@@ -1,0 +1,79 @@
+{
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "sources": {
+    "tree-sitter": {
+      "version": "0.21.1",
+      "distributionIntegrity": "sha512-7dxoA6kYvtgWw80265MyqJlkRl4yawIjO7S5MigytjELkX43fV2WsAXzsNfO7sBpPPCF5Gp0+XzHk0DwLCq3xQ==",
+      "sourceSha256": "b9800cefe02b397456980a322bccdb918f350a17bb7b83e9f7668a841815b829"
+    },
+    "tree-sitter-python": {
+      "version": "0.23.4",
+      "distributionIntegrity": "sha512-MbmUAl7y5UCUWqHscHke7DdRDwQnVNMNKQYQc4Gq2p09j+fgPxaU8JVsuOI/0HD3BSEEe5k9j3xmdtIWbDtDgw==",
+      "sourceSha256": "2e83891dc95a9560126889f3d2fd2997df12fc1f81ece7f85fa045dc833fb8e8"
+    },
+    "tree-sitter-go": {
+      "version": "0.23.4",
+      "distributionIntegrity": "sha512-iQaHEs4yMa/hMo/ZCGqLfG61F0miinULU1fFh+GZreCRtKylFLtvn798ocCZjO2r/ungNZgAY1s1hPFyAwkc7w==",
+      "sourceSha256": "766d962cc34ad86e4e26e82d67a96582a9c608146a9ab6be368336f653848112"
+    }
+  },
+  "abi": 14,
+  "workerSha256": "79b1179450c122f064fb1990bc8b318ff0d61caeafcc1c0694d9a05e6924dbf6",
+  "executableSha256": "46b6824aa070045607c04740c4c987966e181d098ce38610edf213944c484241",
+  "extensions": {
+    "c-sharp": {
+      "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+      "sources": {
+        "tree-sitter": {
+          "version": "0.21.1",
+          "distributionIntegrity": "sha512-7dxoA6kYvtgWw80265MyqJlkRl4yawIjO7S5MigytjELkX43fV2WsAXzsNfO7sBpPPCF5Gp0+XzHk0DwLCq3xQ==",
+          "sourceSha256": "b9800cefe02b397456980a322bccdb918f350a17bb7b83e9f7668a841815b829"
+        },
+        "tree-sitter-c-sharp": {
+          "version": "0.23.1",
+          "distributionIntegrity": "sha512-9zZ4FlcTRWWfRf6f4PgGhG8saPls6qOOt75tDfX7un9vQZJmARjPrAC6yBNCX2T/VKcCjIDbgq0evFaB3iGhQw==",
+          "sourceSha256": "e3a0c4d63a89a8bac6b4c12c952b0cd3ea9a4ad6e83626b57c4de7bea50ef97c"
+        }
+      },
+      "abi": 14,
+      "workerSha256": "79b1179450c122f064fb1990bc8b318ff0d61caeafcc1c0694d9a05e6924dbf6",
+      "executableSha256": "1e292353f51f260ac4ae375e1e9e406606026d6345f8f58bd5794aa8acb9a4bc"
+    },
+    "java": {
+      "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+      "sources": {
+        "tree-sitter": {
+          "version": "0.21.1",
+          "distributionIntegrity": "sha512-7dxoA6kYvtgWw80265MyqJlkRl4yawIjO7S5MigytjELkX43fV2WsAXzsNfO7sBpPPCF5Gp0+XzHk0DwLCq3xQ==",
+          "sourceSha256": "b9800cefe02b397456980a322bccdb918f350a17bb7b83e9f7668a841815b829"
+        },
+        "tree-sitter-java": {
+          "version": "0.23.5",
+          "distributionIntegrity": "sha512-Yju7oQ0Xx7GcUT01mUglPP+bYfvqjNCGdxqigTnew9nLGoII42PNVP3bHrYeMxswiCRM0yubWmN5qk+zsg0zMA==",
+          "sourceSha256": "9821294930eecc678355cff2db712399b6762a13295f52cc4d69d82c64d982dd"
+        }
+      },
+      "abi": 14,
+      "workerSha256": "79b1179450c122f064fb1990bc8b318ff0d61caeafcc1c0694d9a05e6924dbf6",
+      "executableSha256": "21e0a9c21f26b1685e4260c45b4a16f30f21cc9322d50e023ca2e7c6cc838cd1"
+    },
+    "rust": {
+      "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+      "sources": {
+        "tree-sitter": {
+          "version": "0.21.1",
+          "distributionIntegrity": "sha512-7dxoA6kYvtgWw80265MyqJlkRl4yawIjO7S5MigytjELkX43fV2WsAXzsNfO7sBpPPCF5Gp0+XzHk0DwLCq3xQ==",
+          "sourceSha256": "b9800cefe02b397456980a322bccdb918f350a17bb7b83e9f7668a841815b829"
+        },
+        "tree-sitter-rust": {
+          "version": "0.23.1",
+          "distributionIntegrity": "sha512-wrMptzUAfbl3DbNrldZveyNM2CWmRw2VvEo2j/855qQbMMz4dlCF+TBwRN/1FL1S6cYvAEAJaCMesGqhocFJhQ==",
+          "sourceSha256": "a41be5e378cc16de2575d3c56c963cb0f052f9b6e704cdd10e8616415d1fc942"
+        }
+      },
+      "abi": 14,
+      "workerSha256": "79b1179450c122f064fb1990bc8b318ff0d61caeafcc1c0694d9a05e6924dbf6",
+      "executableSha256": "85dbb9929e2c5527748fe5e580c5cfa52a72617fc553829d629593b0253617ea"
+    }
+  }
+}
