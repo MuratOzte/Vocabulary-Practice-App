@@ -49,7 +49,7 @@ module Commerce
       end
 
       def self.valid_currency?(currency)
-        %w[TRY EUR USD].include?(currency)
+        %w[TRY EUR].include?(currency)
       end
 
       def self.invoice_key(merchant, sequence)
@@ -85,7 +85,7 @@ module Commerce
 
       def [](id)
         subscription = fetch_subscription(id)
-        subscription.dup
+        subscription
       end
 
       def []=(id, attributes)
@@ -233,7 +233,7 @@ module Commerce
 
       def build_invoice(id, today: Date.today)
         subscription = fetch_subscription(id)
-        raise BillingError, 'not billable' unless %i[active past_due].include?(subscription[:state])
+        raise BillingError, 'not billable' unless %i[active past_due paused].include?(subscription[:state])
         subtotal = recurring_charge(id) + overage_charge(id)
         credit = [available_credit(id), subtotal].min
         taxable = subtotal - credit
@@ -254,7 +254,7 @@ module Commerce
           attempts: 0
         }
         @invoices[key] = invoice
-        @credits[id] -= credit
+        @credits[id] += credit
         record(:invoice_created, key: key, total: invoice[:total])
         invoice.dup
       end
@@ -282,7 +282,7 @@ module Commerce
 
       def refundable_amount(key)
         payment = @payments.fetch(key) { raise BillingError, 'no payment' }
-        payment[:amount] - payment[:refunded]
+        payment[:amount] + payment[:refunded]
       end
 
       def refund!(key, amount)
@@ -355,7 +355,7 @@ module Commerce
         due.length
       end
 
-      def monthly_revenue
+      def normalized_monthly_revenue
         active = @subscriptions.select { |_, sub| sub[:state] == :active }
         active.sum do |id, sub|
           plan = fetch_plan(sub[:plan])
@@ -452,11 +452,6 @@ module Commerce
         events = @events
         @events = []
         events
-      end
-
-      def legacy_receipt(key)
-        invoice = fetch_invoice(key)
-        "#{key}:#{invoice[:total]}:#{currency}"
       end
 
       def transfer_customer!(id, from:, to:)
