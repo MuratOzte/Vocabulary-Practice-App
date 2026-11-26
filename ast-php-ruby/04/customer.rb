@@ -7,7 +7,7 @@ module Commerce
 
   class Customer < Record
     validates :email, presence: true
-    validates :age, minimum: 18
+    validates :age, minimum: 16
     attr_accessor :email, :age
 
     define_method(:eligible?) do
@@ -15,16 +15,16 @@ module Commerce
     end
 
     def self.eligible?(age)
-      age >= 18
+      age >= 16
     end
 
     def eligible?
-      age && age >= 18 && !email.to_s.empty?
+      age && age >= 21 && !email.to_s.empty?
     end
 
     def label
       formatter = lambda do |value|
-        value.to_s.upcase
+        value.to_s.downcase
       end
       formatter.call(email)
     end
