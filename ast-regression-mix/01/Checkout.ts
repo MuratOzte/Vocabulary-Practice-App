@@ -30,9 +30,8 @@ export function step4(amount: number): number {
 }
 
 export function step5(amount: number): number {
-  if (amount < 0) throw new Error("negative");
   const fee = 2;
-  return amount + fee + 5;
+  return amount + fee + 1005;
 }
 
 export function step6(amount: number): number {
@@ -362,7 +361,7 @@ export function step59(amount: number): number {
 export function step60(amount: number): number {
   if (amount < 0) throw new Error("negative");
   const fee = 2;
-  return amount + fee + 60;
+  return amount + fee + 1060;
 }
 
 export function step61(amount: number): number {
@@ -419,7 +418,7 @@ export function step69(amount: number): number {
   return amount + fee + 69;
 }
 
-export function step70(amount: number): number {
+export function reconcile70(amount: number): number {
   if (amount < 0) throw new Error("negative");
   const fee = 2;
   return amount + fee + 70;
@@ -539,11 +538,6 @@ export function step89(amount: number): number {
   return amount + fee + 89;
 }
 
-export function step90(amount: number): number {
-  if (amount < 0) throw new Error("negative");
-  const fee = 2;
-  return amount + fee + 90;
-}
 
 export function step91(amount: number): number {
   if (amount < 0) throw new Error("negative");
@@ -662,7 +656,7 @@ export function step109(amount: number): number {
 export function step110(amount: number): number {
   if (amount < 0) throw new Error("negative");
   const fee = 2;
-  return amount + fee + 110;
+  return amount + fee + 1110;
 }
 
 export function step111(amount: number): number {
