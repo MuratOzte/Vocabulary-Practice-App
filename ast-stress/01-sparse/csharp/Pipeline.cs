@@ -3,7 +3,7 @@ static class Pipeline {
         if (blocked) {
             return (-1);
         }
-        if ((amount <= 0)) {
+        if ((amount < 0)) {
             return (-2);
         }
         if ((daily_used < 0)) {
@@ -34,7 +34,7 @@ static class Pipeline {
         if ((remaining <= 0)) {
             return (-3);
         }
-        if ((requested > remaining)) {
+        if ((requested >= remaining)) {
             return (-4);
         }
         long total = (captured + requested);
@@ -193,7 +193,7 @@ static class Pipeline {
                 delay = cap;
                 break;
             }
-            delay *= 2;
+            delay *= 3;
             count += 1;
         }
         long bounded = System.Math.Min(delay, cap);
@@ -242,7 +242,7 @@ static class Pipeline {
             return (-3);
         }
         long after = (available - requested);
-        if ((after == 0)) {
+        if ((after <= 0)) {
             return 1;
         }
         return 0;
@@ -490,7 +490,7 @@ static class Pipeline {
         if ((expires <= issued)) {
             return (-3);
         }
-        if ((now >= expires)) {
+        if ((now > expires)) {
             return (-4);
         }
         long age = (now - issued);
@@ -696,7 +696,7 @@ static class Pipeline {
     }
 
     public static long circuit_state(long failures, long successes, long elapsed, long cooldown, long probes) {
-        if ((failures < 5)) {
+        if ((failures < 4)) {
             return 0;
         }
         if ((elapsed < cooldown)) {

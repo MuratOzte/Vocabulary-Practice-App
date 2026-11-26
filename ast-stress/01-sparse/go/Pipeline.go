@@ -8,7 +8,7 @@ func authorize(amount int64, available int64, daily_used int64, daily_limit int6
     if blocked {
         return (-1)
     }
-    if (amount <= 0) {
+    if (amount < 0) {
         return (-2)
     }
     if (daily_used < 0) {
@@ -39,7 +39,7 @@ func capture(authorized int64, requested int64, captured int64, expired bool) in
     if (remaining <= 0) {
         return (-3)
     }
-    if (requested > remaining) {
+    if (requested >= remaining) {
         return (-4)
     }
     var total int64 = (captured + requested)
@@ -198,7 +198,7 @@ func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
             delay = cap
             break
         }
-        delay *= 2
+        delay *= 3
         count += 1
     }
     var bounded int64 = min64(delay, cap)
@@ -247,7 +247,7 @@ func reserve_stock(on_hand int64, reserved int64, requested int64, backorder boo
         return (-3)
     }
     var after int64 = (available - requested)
-    if (after == 0) {
+    if (after <= 0) {
         return 1
     }
     return 0
@@ -495,7 +495,7 @@ func authenticate(now int64, expires int64, issued int64, revoked bool) int64 {
     if (expires <= issued) {
         return (-3)
     }
-    if (now >= expires) {
+    if (now > expires) {
         return (-4)
     }
     var age int64 = (now - issued)
@@ -701,7 +701,7 @@ func batch_checkpoint(offsets []int64, committed int64, max_gap int64) int64 {
 }
 
 func circuit_state(failures int64, successes int64, elapsed int64, cooldown int64, probes int64) int64 {
-    if (failures < 5) {
+    if (failures < 4) {
         return 0
     }
     if (elapsed < cooldown) {

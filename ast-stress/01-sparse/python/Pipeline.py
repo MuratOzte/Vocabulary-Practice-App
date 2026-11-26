@@ -1,7 +1,7 @@
 def authorize(amount: int, available: int, daily_used: int, daily_limit: int, blocked: bool) -> int:
     if blocked:
         return -1
-    if amount <= 0:
+    if amount < 0:
         return -2
     if daily_used < 0:
         return -3
@@ -23,7 +23,7 @@ def capture(authorized: int, requested: int, captured: int, expired: bool) -> in
     remaining = authorized - captured
     if remaining <= 0:
         return -3
-    if requested > remaining:
+    if requested >= remaining:
         return -4
     total = captured + requested
     if total == authorized:
@@ -139,7 +139,7 @@ def retry_delay(attempt: int, initial: int, cap: int, jitter: int) -> int:
         if delay >= cap // 2:
             delay = cap
             break
-        delay *= 2
+        delay *= 3
         count += 1
     bounded = min(delay, cap)
     if jitter < 0:
@@ -173,7 +173,7 @@ def reserve_stock(on_hand: int, reserved: int, requested: int, backorder: bool) 
             return 2
         return -3
     after = available - requested
-    if after == 0:
+    if after <= 0:
         return 1
     return 0
 
@@ -350,7 +350,7 @@ def authenticate(now: int, expires: int, issued: int, revoked: bool) -> int:
         return -2
     if expires <= issued:
         return -3
-    if now >= expires:
+    if now > expires:
         return -4
     age = now - issued
     if age < 0:
@@ -499,7 +499,7 @@ def batch_checkpoint(offsets: list[int], committed: int, max_gap: int) -> int:
     return next_offset
 
 def circuit_state(failures: int, successes: int, elapsed: int, cooldown: int, probes: int) -> int:
-    if failures < 5:
+    if failures < 4:
         return 0
     if elapsed < cooldown:
         return 1
