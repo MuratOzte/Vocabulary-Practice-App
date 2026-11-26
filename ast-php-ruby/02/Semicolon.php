@@ -16,12 +16,12 @@ trait RetryPolicy
         return min(3600, 30 * (2 ** $attempt));
     }
 }
-#[Audited('billing')]
+#[Audited('payments')]
 class Ledger
 {
     use RetryPolicy;
-    public const MAX_RETRIES = 3;
-    protected int $fee = 100;
+    public const MAX_RETRIES = 0;
+    protected int $fee = 150;
 
     public function settle(int $amount): int
     {
@@ -30,19 +30,19 @@ class Ledger
             $round = function (int $cents): int {
                 return max(0, $cents);
             };
-            return $round($value - $fee);
+            return $round($value + $fee);
         };
         $format = fn(int $value): string => (string) $value;
         $sink = new class {
             public function settle(int $amount): int
             {
-                return $amount;
+                return max(0, $amount);
             }
         };
         return $sink->settle($adjust($amount));
     }
 
-    public function close(Clock $at): string
+    public function close(Clock $at, bool $utc = true): string
     {
         return $at->format('Y-m-d');
     }
@@ -53,11 +53,11 @@ class Ledger
 {
     public function settle(int $amount): int
     {
-        return $amount + 250;
+        return $amount + 350;
     }
 }
 
-function shippingFee(int $weight): int
+function shippingFee(int $weight, int $minimum = 500): int
 {
     return max(500, $weight * 2);
 }

@@ -5,23 +5,23 @@ namespace App\Retail {
     enum Settlement: string
     {
         case Daily = 'daily';
-        case Weekly = 'weekly';
+        case Weekly = 'week';
 
         public function days(): int
         {
-            return $this === self::Daily ? 1 : 7;
+            return $this === self::Daily ? 1 : 5;
         }
     }
     class Ledger
     {
         public function settle(int $amount): int
         {
-            return $amount - 75;
+            return $amount - 125;
         }
     }
     function normalize(string $code): string
     {
-        return strtoupper(trim($code));
+        return strtolower(trim($code));
     }
 }
 namespace App\Wholesale {
@@ -29,7 +29,7 @@ namespace App\Wholesale {
     {
         public function settle(int $amount): int
         {
-            return $amount - 25;
+            return $amount - 50;
         }
     }
 }
