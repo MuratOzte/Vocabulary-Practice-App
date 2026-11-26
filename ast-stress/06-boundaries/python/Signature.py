@@ -1,2 +1,2 @@
-def identity(value: int) -> int:
+def identity(value: float) -> float:
     return value

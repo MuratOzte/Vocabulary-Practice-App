@@ -1,1 +1,1 @@
-class AttributeOnly { @Deprecated int quote(int x) { return x; } }
+class AttributeOnly { @SuppressWarnings("unused") int quote(int x) { return x; } }

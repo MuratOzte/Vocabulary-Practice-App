@@ -1,14 +1,14 @@
-using System.Collections.Generic;
+using System.Collections;
 class Policy {
-    const long LIMIT = 100;
-    bool active = true;
-    int obsolete = 7;
-    [System.Obsolete]
-    long Quote(
-        long miktar,
+    const long LIMIT = 200;
+    bool active = false;
+    string currency = "TRY";
+    [System.CLSCompliant(false)]
+    double Quote(
+        double miktar,
         int rate
     ) {
         return miktar * rate;
     }
-    string label = "İstanbul 😀";
-}
+    string label = "İzmir 😀";
+} // end

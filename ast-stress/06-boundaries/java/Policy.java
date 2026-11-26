@@ -1,14 +1,14 @@
-import java.util.List;
+import java.util.Set;
 class Policy {
-    static final long LIMIT = 100;
-    boolean active = true;
-    int obsolete = 7;
-    @Deprecated
-    long quote(
-        long miktar,
+    static final long LIMIT = 200;
+    boolean active = false;
+    String currency = "TRY";
+    @SuppressWarnings("unused")
+    double quote(
+        double miktar,
         int rate
     ) {
         return miktar * rate;
     }
-    String label = "İstanbul 😀";
-}
+    String label = "İzmir 😀";
+} // end

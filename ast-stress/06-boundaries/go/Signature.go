@@ -1,2 +1,2 @@
 package fixture
-func Identity(value int64) int64 { return value }
+func Identity(value int32) int32 { return value }
