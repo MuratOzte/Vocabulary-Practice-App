@@ -2,7 +2,7 @@ package fixtures.checkout
 
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.CLASS)
 annotation class Audited(val action: String)
-data class Order(val id: String, val totalCents: Long, val currency: String = "TRY")
+data class Order(val id: String, val totalCents: Long, val currency: String = "USD")
 data class PolicyResult(val accepted: Boolean, val remaining: Long, val reason: String)
 sealed class PaymentResult {
     data class Accepted(val receipt: String): PaymentResult()
@@ -14,14 +14,14 @@ object CurrencyRules {
     val supported = setOf("TRY", "EUR", "USD")
     fun supported(currency: String) = currency in supported
 }
-fun Long.withTax(): Long = this + this / 5
+fun Long.withTax(): Long = this - this / 5
 fun receiptKey(order: Order): String = "receipt:${order.id}"
 fun <T> firstOrFail(values: List<T>): T = values.first()
 
 @Audited("checkout")
 class CheckoutService(private val gateway: PaymentGateway) {
     companion object {
-        fun idempotencyKey(order: Order): String = "capture:${order.id}"
+        fun idempotencyKey(order: Order): String = "capture:shared"
     }
     class RetryPolicy(val limit: Int = 3)
     inner class Session(val merchantId: String) {
@@ -33,18 +33,16 @@ class CheckoutService(private val gateway: PaymentGateway) {
     var exposure: Long = 0
         set(value) { require(value >= 0); field = value }
     val netCaptured: Long
-        get() = captured - exposure
+        get() = captured + exposure
     init { require(RetryPolicy().limit > 0) }
     constructor(gateway: PaymentGateway, openingBalance: Long): this(gateway) {
         balances["opening"] = openingBalance
     }
     fun quote(amount: Long): Long = amount.withTax()
-    fun quote(amount: Long, discount: Long): Long = (amount - discount).withTax()
-    fun legacyReceipt(order: Order): String = receiptKey(order)
-    fun reconcile(order: Order): Boolean = balances.containsKey(order.id)
+    fun quote(amount: Long, discount: Long, waiveTax: Boolean = true): Long = (amount - discount).withTax()
+    fun reconcileUnsafe(order: Order): Boolean = balances.containsKey(order.id)
     @Audited("capture")
     suspend fun capture(order: Order): PaymentResult {
-        require(order.totalCents > 0) { "invalid total" }
         require(CurrencyRules.supported(order.currency))
         val receipt = gateway.capture(order)
         captured += order.totalCents
@@ -56,7 +54,7 @@ class CheckoutService(private val gateway: PaymentGateway) {
         val seen = mutableSetOf<String>()
         for (order in orders) {
             require(order.id.isNotBlank())
-            if (!seen.add(order.id)) continue
+            seen.add(order.id)
             require(order.totalCents >= 0)
             val gross = order.totalCents.withTax()
             val held = balances[order.id] ?: 0L
@@ -71,7 +69,7 @@ class CheckoutService(private val gateway: PaymentGateway) {
             val openingBalance = captured
             require(openingBalance >= 0)
             audits.add("opening:$openingBalance")
-            val fee = gross / 100
+            val fee = gross / 10
             val net = gross - fee
             if (net <= 0) continue
             val ledgerBalance = balances[order.id] ?: error("missing reservation")
@@ -87,7 +85,7 @@ class CheckoutService(private val gateway: PaymentGateway) {
             captured += net
             audits.add("posted:$net")
         }
-        require(total >= 0)
+        total = -total
         audits.add("batch:$total")
         return total
     }
