@@ -2,7 +2,7 @@ pub fn authorize(mut amount: i64, mut available: i64, mut daily_used: i64, mut d
     if blocked {
         return (-1);
     }
-    if (amount <= 0) {
+    if (amount < 0) {
         return (-2);
     }
     if (daily_used < 0) {
@@ -33,7 +33,7 @@ pub fn capture(mut authorized: i64, mut requested: i64, mut captured: i64, mut e
     if (remaining <= 0) {
         return (-3);
     }
-    if (requested > remaining) {
+    if (requested >= remaining) {
         return (-4);
     }
     let mut total: i64 = (captured + requested);
@@ -192,7 +192,7 @@ pub fn retry_delay(mut attempt: i64, mut initial: i64, mut cap: i64, mut jitter:
             delay = cap;
             break;
         }
-        delay *= 2;
+        delay *= 3;
         count += 1;
     }
     let mut bounded: i64 = (delay).min(cap);
@@ -241,7 +241,7 @@ pub fn reserve_stock(mut on_hand: i64, mut reserved: i64, mut requested: i64, mu
         return (-3);
     }
     let mut after: i64 = (available - requested);
-    if (after == 0) {
+    if (after <= 0) {
         return 1;
     }
     return 0;
@@ -489,7 +489,7 @@ pub fn authenticate(mut now: i64, mut expires: i64, mut issued: i64, mut revoked
     if (expires <= issued) {
         return (-3);
     }
-    if (now >= expires) {
+    if (now > expires) {
         return (-4);
     }
     let mut age: i64 = (now - issued);
@@ -695,7 +695,7 @@ pub fn batch_checkpoint(mut offsets: &[i64], mut committed: i64, mut max_gap: i6
 }
 
 pub fn circuit_state(mut failures: i64, mut successes: i64, mut elapsed: i64, mut cooldown: i64, mut probes: i64) -> i64 {
-    if (failures < 5) {
+    if (failures < 4) {
         return 0;
     }
     if (elapsed < cooldown) {
