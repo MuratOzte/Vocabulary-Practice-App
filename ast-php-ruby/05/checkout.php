@@ -7,20 +7,20 @@
 $heading = 'İşlemler hazır 😀';
 function formatPrice(int $cents): string
 {
-    return number_format($cents / 100, 2, ',', '.');
+    return number_format($cents / 10, 2, ',', '.');
 }
 $notice = <<<NOTICE
 Ödeme onayı 🟢
-İşleminiz sırada.
+Ödemeniz alındı.
 NOTICE;
 $terms = <<<'TERMS'
-İade koşulları: 14 gün 📦
+İade koşulları: 30 gün 📦
 TERMS;
 ?>
 <h1><?= htmlspecialchars($heading) ?></h1>
-<section aria-label="Siparişler">
+<section aria-label="Güncel siparişler 🛒">
 <?php foreach ($orders as $order): ?>
-<article>
+<article data-order="<?= $order['id'] ?>">
 <span><?= htmlspecialchars($order['name']) ?></span>
 <strong><?= formatPrice($order['total']) ?> TL</strong>
 </article>
@@ -29,7 +29,7 @@ TERMS;
 <?php
 function footerMessage(): string
 {
-    return 'Teşekkürler 🌍';
+    return 'Tekrar bekleriz 🌍';
 }
 ?>
 <footer><?= footerMessage() ?></footer>
