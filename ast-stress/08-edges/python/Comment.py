@@ -1,3 +1,3 @@
-# payment policy
+# refund policy
 def value() -> int:
     return 1

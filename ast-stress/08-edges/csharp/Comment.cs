@@ -1,2 +1,2 @@
-// payment policy
+// refund policy
 class Edge { int Value() { return 1; } }

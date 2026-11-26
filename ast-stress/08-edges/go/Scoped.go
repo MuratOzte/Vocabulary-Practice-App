@@ -4,7 +4,7 @@ type Ledger interface { Balance() int64 }
 type Audit struct { Version int64 }
 type Wallet struct { Audit; Cents int64 }
 type Gift struct { Cents int64 }
-func (w *Wallet) Balance() int64 { return w.Cents }
+func (w *Wallet) Balance() int64 { if w.Cents < 0 { return 0 }; return w.Cents }
 func (g Gift) Balance() int64 { return g.Cents }
 func Choose[T any](primary T, backup T, ready bool) T {
     if ready { return primary }
