@@ -150,6 +150,13 @@ export const dueWords = (words: RecordWord[], now = Date.now()) =>
     .sort((a, b) => a.progress!.nextReview - b.progress!.nextReview);
 export const reviewedWords = (words: RecordWord[], status: Rating | "all" = "all") =>
   words.filter((word) => word.progress && (status === "all" || word.progress.status === status));
+export type ReviewOrder = "random" | "oldest";
+export function orderReviewedWords(words: RecordWord[], order: ReviewOrder): RecordWord[] {
+  if (order === "random") return shuffle(words);
+  return [...words].sort((a, b) =>
+    (a.progress?.lastStudied ?? 0) - (b.progress?.lastStudied ?? 0),
+  );
+}
 export const weight = (word: RecordWord) =>
   word.progress?.status === "known"
     ? 1

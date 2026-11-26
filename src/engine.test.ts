@@ -4,6 +4,7 @@ import {
   DAY,
   dueWords,
   reviewedWords,
+  orderReviewedWords,
   weight,
   isAnswer,
   choices,
@@ -21,6 +22,11 @@ const word = (id: string, turkish = id): RecordWord => ({
   alternatives: [],
 });
 describe("review scheduling", () => {
+  it("orders reviewed words by the last study date", () => {
+    const older = { ...word("older"), progress: grade("older", undefined, "known", 10) };
+    const newer = { ...word("newer"), progress: grade("newer", undefined, "known", 20) };
+    expect(orderReviewedWords([newer, older], "oldest").map(w => w.id)).toEqual(["older", "newer"]);
+  });
   it("reviews marked words in every status without waiting for their due date", () => {
     const marked = (["known", "uncertain", "unknown"] as const).map(status => ({
       ...word(status), progress: grade(status, undefined, status, Date.now()),

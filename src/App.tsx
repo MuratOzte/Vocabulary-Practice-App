@@ -21,6 +21,8 @@ import {
   createSession,
   dueWords,
   reviewedWords,
+  orderReviewedWords,
+  type ReviewOrder,
   grade,
   labels,
   choices,
@@ -110,6 +112,7 @@ export default function App() {
   const [mode, setMode] = useState<Mode>("cards");
   const [kind, setKind] = useState<Session["kind"]>("new");
   const [reviewStatus, setReviewStatus] = useState<Rating | "all">("all");
+  const [reviewOrder, setReviewOrder] = useState<ReviewOrder>("random");
   const [session, setSession] = useState<Session | null>(null);
   const [editor, setEditor] = useState<Word | "new" | null>(null);
   const [notice, setNotice] = useState("");
@@ -152,7 +155,7 @@ export default function App() {
     ]),
   ) as Record<Status, number>;
   function pool(kind: Session["kind"]) {
-    return kind === "review" ? reviewedWords(studyWords, reviewStatus) : kind === "due" ? due : kind === "new" ? fresh : studyWords;
+    return kind === "review" ? orderReviewedWords(reviewedWords(studyWords, reviewStatus), reviewOrder) : kind === "due" ? due : kind === "new" ? fresh : studyWords;
   }
   const effectiveKind = mode === "cards" && kind === "new" && !fresh.length ? "free" : kind;
   const selectedWords = pool(effectiveKind);
@@ -246,12 +249,18 @@ export default function App() {
               )}
               <div className="study-options">
                 {effectiveKind === "review" ? (
-                  <label>Kelime durumu
+                  <><label>Kelime durumu
                     <select aria-label="Tekrar edilecek kelime durumu" value={reviewStatus} onChange={e => setReviewStatus(e.target.value as Rating | "all")}>
                       <option value="all">Gördüğüm tüm kelimeler ({reviewedWords(studyWords).length})</option>
                       {(["known", "uncertain", "unknown"] as const).map(status => <option key={status} value={status}>{labels[status]} ({counts[status]})</option>)}
                     </select>
                   </label>
+                  <label>Tekrar sırası
+                    <select aria-label="Tekrar sırası" value={reviewOrder} onChange={e => setReviewOrder(e.target.value as ReviewOrder)}>
+                      <option value="random">Rastgele</option>
+                      <option value="oldest">En uzun süredir çalışılmayan</option>
+                    </select>
+                  </label></>
                 ) : <label>Kelimeler
                   <select aria-label="Çalışılacak kelimeler" value={effectiveKind} onChange={e => setKind(e.target.value as Session["kind"])}>
                     {mode === "cards" && <option value="new" disabled={!fresh.length}>Yeni kelimeler</option>}
