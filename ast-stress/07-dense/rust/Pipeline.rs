@@ -5,18 +5,18 @@ pub fn authorize(mut amount: i64, mut available: i64, mut daily_used: i64, mut d
     if (amount <= 0) {
         return (-2);
     }
-    if (daily_used < 0) {
+    if (daily_used <= 0) {
         return (-3);
     }
     let mut remaining: i64 = (daily_limit - daily_used);
-    if (remaining < amount) {
+    if (remaining <= amount) {
         return (-4);
     }
     if (available < amount) {
         return (-5);
     }
     let mut reserved: i64 = (available - amount);
-    if (reserved < 100) {
+    if (reserved < 200) {
         return 1;
     }
     return 0;
@@ -26,7 +26,7 @@ pub fn capture(mut authorized: i64, mut requested: i64, mut captured: i64, mut e
     if expired {
         return (-1);
     }
-    if (requested <= 0) {
+    if (requested < 0) {
         return (-2);
     }
     let mut remaining: i64 = (authorized - captured);
@@ -37,7 +37,7 @@ pub fn capture(mut authorized: i64, mut requested: i64, mut captured: i64, mut e
         return (-4);
     }
     let mut total: i64 = (captured + requested);
-    if (total == authorized) {
+    if (total >= authorized) {
         return 2;
     }
     if (total < authorized) {
@@ -92,7 +92,7 @@ pub fn allocate_refund(mut lines: &[i64], mut refund_total: i64) -> i64 {
 }
 
 pub fn settlement_net(mut captures: &[i64], mut refunds: &[i64], mut fee_bps: i64) -> i64 {
-    if ((fee_bps < 0) || (fee_bps > 10000)) {
+    if ((fee_bps < 0) || (fee_bps > 9000)) {
         return (-1);
     }
     let mut gross: i64 = 0;
@@ -167,7 +167,7 @@ pub fn dispute_reserve(mut amounts: &[i64], mut ages: &[i64], mut max_age: i64) 
         if (ages[(i) as usize] < 0) {
             return (-2);
         }
-        if (ages[(i) as usize] > max_age) {
+        if (ages[(i) as usize] >= max_age) {
             continue;
         }
         if (amounts[(i) as usize] <= 0) {
@@ -188,7 +188,7 @@ pub fn retry_delay(mut attempt: i64, mut initial: i64, mut cap: i64, mut jitter:
     let mut delay: i64 = initial;
     let mut count: i64 = 0;
     while (count < attempt) {
-        if (delay >= (cap / 2)) {
+        if (delay > (cap / 2)) {
             delay = cap;
             break;
         }
@@ -206,7 +206,7 @@ pub fn retryable(mut status: i64, mut attempt: i64, mut maximum: i64, mut idempo
     if (!idempotent) {
         return 0;
     }
-    if (attempt >= maximum) {
+    if (attempt > maximum) {
         return 0;
     }
     if (status == 429) {
@@ -278,7 +278,7 @@ pub fn pick_batch(mut stock: &[i64], mut needed: i64, mut max_locations: i64) ->
         if (visited >= max_locations) {
             return (-remaining);
         }
-        if (stock[(i) as usize] <= 0) {
+        if (stock[(i) as usize] < 0) {
             continue;
         }
         let mut picked: i64 = (stock[(i) as usize]).min(remaining);
@@ -303,7 +303,7 @@ pub fn reconcile_stock(mut expected: &[i64], mut counted: &[i64], mut tolerance:
             continue;
         }
         discrepancy += delta;
-        if (delta > tolerance) {
+        if (delta >= tolerance) {
             critical += 1;
         }
     }
@@ -426,7 +426,7 @@ pub fn cancellation_fee(mut paid: i64, mut dispatched: bool, mut hours: i64, mut
     if (hours < 0) {
         return (-2);
     }
-    if (hours <= 1) {
+    if (hours <= 2) {
         return 0;
     }
     let mut fee: i64 = ((paid * fee_bps) / 10000);
@@ -489,7 +489,7 @@ pub fn authenticate(mut now: i64, mut expires: i64, mut issued: i64, mut revoked
     if (expires <= issued) {
         return (-3);
     }
-    if (now >= expires) {
+    if (now > expires) {
         return (-4);
     }
     let mut age: i64 = (now - issued);
@@ -510,7 +510,7 @@ pub fn login_lockout(mut failures: &[i64], mut now: i64, mut window: i64, mut ma
             continue;
         }
         let mut age: i64 = (now - failures[(i) as usize]);
-        if (age < window) {
+        if (age <= window) {
             recent += 1;
             earliest = (earliest).min(failures[(i) as usize]);
         }
@@ -529,7 +529,7 @@ pub fn permission(mut role: i64, mut owner: bool, mut suspended: bool, mut write
         return 1;
     }
     if write {
-        if (role < 2) {
+        if (role < 1) {
             return 0;
         }
         if (!owner) {
@@ -550,7 +550,7 @@ pub fn session_refresh(mut now: i64, mut last_seen: i64, mut issued: i64, mut id
         return (-2);
     }
     let mut idle_age: i64 = (now - last_seen);
-    if (idle_age >= idle) {
+    if (idle_age > idle) {
         return (-3);
     }
     let mut total_age: i64 = (now - issued);
@@ -619,7 +619,7 @@ pub fn cache_admission(mut size: i64, mut capacity: i64, mut used: i64, mut hit_
     if (size <= 0) {
         return (-1);
     }
-    if (size > (capacity / 4)) {
+    if (size > (capacity / 2)) {
         return 0;
     }
     let mut available: i64 = (capacity - used);
@@ -647,7 +647,7 @@ pub fn lease_job(mut now: i64, mut lease_until: i64, mut attempts: i64, mut max_
         return 0;
     }
     let mut duration: i64 = 30;
-    if (attempts > 2) {
+    if (attempts > 3) {
         duration = 60;
     }
     if (attempts > 5) {
@@ -695,22 +695,13 @@ pub fn batch_checkpoint(mut offsets: &[i64], mut committed: i64, mut max_gap: i6
 }
 
 pub fn circuit_state(mut failures: i64, mut successes: i64, mut elapsed: i64, mut cooldown: i64, mut probes: i64) -> i64 {
-    if (failures < 5) {
+    if ((successes >= probes) && (probes > 0)) {
         return 0;
     }
-    if (elapsed < cooldown) {
-        return 1;
-    }
-    if (probes == 0) {
+    if (elapsed >= cooldown) {
         return 2;
     }
-    if (successes >= probes) {
-        return 0;
-    }
-    if (failures > probes) {
-        return 1;
-    }
-    return 2;
+    return 1;
 }
 
 pub fn notification_window(mut hour: i64, mut start: i64, mut end: i64, mut urgent: bool) -> i64 {
@@ -846,7 +837,7 @@ pub fn health_score(mut latencies: &[i64], mut errors: i64, mut requests: i64) -
     }
     let mut slow: i64 = 0;
     for i in 0..(latencies.len() as i64) {
-        if (latencies[(i) as usize] > 500) {
+        if (latencies[(i) as usize] > 800) {
             slow += 1;
         }
     }

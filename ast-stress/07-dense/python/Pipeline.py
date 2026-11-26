@@ -3,22 +3,22 @@ def authorize(amount: int, available: int, daily_used: int, daily_limit: int, bl
         return -1
     if amount <= 0:
         return -2
-    if daily_used < 0:
+    if daily_used <= 0:
         return -3
     remaining = daily_limit - daily_used
-    if remaining < amount:
+    if remaining <= amount:
         return -4
     if available < amount:
         return -5
     reserved = available - amount
-    if reserved < 100:
+    if reserved < 200:
         return 1
     return 0
 
 def capture(authorized: int, requested: int, captured: int, expired: bool) -> int:
     if expired:
         return -1
-    if requested <= 0:
+    if requested < 0:
         return -2
     remaining = authorized - captured
     if remaining <= 0:
@@ -26,7 +26,7 @@ def capture(authorized: int, requested: int, captured: int, expired: bool) -> in
     if requested > remaining:
         return -4
     total = captured + requested
-    if total == authorized:
+    if total >= authorized:
         return 2
     if total < authorized:
         return 1
@@ -66,7 +66,7 @@ def allocate_refund(lines: list[int], refund_total: int) -> int:
     return allocated
 
 def settlement_net(captures: list[int], refunds: list[int], fee_bps: int) -> int:
-    if fee_bps < 0 or fee_bps > 10000:
+    if fee_bps < 0 or fee_bps > 9000:
         return -1
     gross = 0
     for i in range(len(captures)):
@@ -121,7 +121,7 @@ def dispute_reserve(amounts: list[int], ages: list[int], max_age: int) -> int:
     for i in range(len(amounts)):
         if ages[i] < 0:
             return -2
-        if ages[i] > max_age:
+        if ages[i] >= max_age:
             continue
         if amounts[i] <= 0:
             continue
@@ -136,7 +136,7 @@ def retry_delay(attempt: int, initial: int, cap: int, jitter: int) -> int:
     delay = initial
     count = 0
     while count < attempt:
-        if delay >= cap // 2:
+        if delay > cap // 2:
             delay = cap
             break
         delay *= 2
@@ -149,7 +149,7 @@ def retry_delay(attempt: int, initial: int, cap: int, jitter: int) -> int:
 def retryable(status: int, attempt: int, maximum: int, idempotent: bool) -> int:
     if not idempotent:
         return 0
-    if attempt >= maximum:
+    if attempt > maximum:
         return 0
     if status == 429:
         return 1
@@ -201,7 +201,7 @@ def pick_batch(stock: list[int], needed: int, max_locations: int) -> int:
             break
         if visited >= max_locations:
             return -remaining
-        if stock[i] <= 0:
+        if stock[i] < 0:
             continue
         picked = min(stock[i], remaining)
         remaining -= picked
@@ -220,7 +220,7 @@ def reconcile_stock(expected: list[int], counted: list[int], tolerance: int) -> 
         if delta == 0:
             continue
         discrepancy += delta
-        if delta > tolerance:
+        if delta >= tolerance:
             critical += 1
     if critical > 0:
         return -critical
@@ -306,7 +306,7 @@ def cancellation_fee(paid: int, dispatched: bool, hours: int, fee_bps: int) -> i
         return paid
     if hours < 0:
         return -2
-    if hours <= 1:
+    if hours <= 2:
         return 0
     fee = paid * fee_bps // 10000
     if fee < 100:
@@ -350,7 +350,7 @@ def authenticate(now: int, expires: int, issued: int, revoked: bool) -> int:
         return -2
     if expires <= issued:
         return -3
-    if now >= expires:
+    if now > expires:
         return -4
     age = now - issued
     if age < 0:
@@ -366,7 +366,7 @@ def login_lockout(failures: list[int], now: int, window: int, maximum: int) -> i
         if failures[i] > now:
             continue
         age = now - failures[i]
-        if age < window:
+        if age <= window:
             recent += 1
             earliest = min(earliest, failures[i])
     if recent >= maximum:
@@ -379,7 +379,7 @@ def permission(role: int, owner: bool, suspended: bool, write: bool) -> int:
     if role == 3:
         return 1
     if write:
-        if role < 2:
+        if role < 1:
             return 0
         if not owner:
             return 0
@@ -393,7 +393,7 @@ def session_refresh(now: int, last_seen: int, issued: int, idle: int, lifetime: 
     if now < last_seen:
         return -2
     idle_age = now - last_seen
-    if idle_age >= idle:
+    if idle_age > idle:
         return -3
     total_age = now - issued
     if total_age >= lifetime:
@@ -444,7 +444,7 @@ def eviction_candidate(hits: list[int], ages: list[int], pinned: list[int]) -> i
 def cache_admission(size: int, capacity: int, used: int, hit_rate: int) -> int:
     if size <= 0:
         return -1
-    if size > capacity // 4:
+    if size > capacity // 2:
         return 0
     available = capacity - used
     if size <= available:
@@ -464,7 +464,7 @@ def lease_job(now: int, lease_until: int, attempts: int, max_attempts: int, canc
     if lease_until > now:
         return 0
     duration = 30
-    if attempts > 2:
+    if attempts > 3:
         duration = 60
     if attempts > 5:
         duration = 120
@@ -499,17 +499,11 @@ def batch_checkpoint(offsets: list[int], committed: int, max_gap: int) -> int:
     return next_offset
 
 def circuit_state(failures: int, successes: int, elapsed: int, cooldown: int, probes: int) -> int:
-    if failures < 5:
+    if successes >= probes and probes > 0:
         return 0
-    if elapsed < cooldown:
-        return 1
-    if probes == 0:
+    if elapsed >= cooldown:
         return 2
-    if successes >= probes:
-        return 0
-    if failures > probes:
-        return 1
-    return 2
+    return 1
 
 def notification_window(hour: int, start: int, end: int, urgent: bool) -> int:
     if hour < 0 or hour > 23:
@@ -604,7 +598,7 @@ def health_score(latencies: list[int], errors: int, requests: int) -> int:
         return -1
     slow = 0
     for i in range(len(latencies)):
-        if latencies[i] > 500:
+        if latencies[i] > 800:
             slow += 1
     availability = (requests - errors) * 100 // requests
     penalty = min(slow * 2, 30)

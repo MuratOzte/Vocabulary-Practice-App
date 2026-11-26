@@ -11,18 +11,18 @@ func authorize(amount int64, available int64, daily_used int64, daily_limit int6
     if (amount <= 0) {
         return (-2)
     }
-    if (daily_used < 0) {
+    if (daily_used <= 0) {
         return (-3)
     }
     var remaining int64 = (daily_limit - daily_used)
-    if (remaining < amount) {
+    if (remaining <= amount) {
         return (-4)
     }
     if (available < amount) {
         return (-5)
     }
     var reserved int64 = (available - amount)
-    if (reserved < 100) {
+    if (reserved < 200) {
         return 1
     }
     return 0
@@ -32,7 +32,7 @@ func capture(authorized int64, requested int64, captured int64, expired bool) in
     if expired {
         return (-1)
     }
-    if (requested <= 0) {
+    if (requested < 0) {
         return (-2)
     }
     var remaining int64 = (authorized - captured)
@@ -43,7 +43,7 @@ func capture(authorized int64, requested int64, captured int64, expired bool) in
         return (-4)
     }
     var total int64 = (captured + requested)
-    if (total == authorized) {
+    if (total >= authorized) {
         return 2
     }
     if (total < authorized) {
@@ -98,7 +98,7 @@ func allocate_refund(lines []int64, refund_total int64) int64 {
 }
 
 func settlement_net(captures []int64, refunds []int64, fee_bps int64) int64 {
-    if ((fee_bps < 0) || (fee_bps > 10000)) {
+    if ((fee_bps < 0) || (fee_bps > 9000)) {
         return (-1)
     }
     var gross int64 = 0
@@ -173,7 +173,7 @@ func dispute_reserve(amounts []int64, ages []int64, max_age int64) int64 {
         if (ages[i] < 0) {
             return (-2)
         }
-        if (ages[i] > max_age) {
+        if (ages[i] >= max_age) {
             continue
         }
         if (amounts[i] <= 0) {
@@ -194,7 +194,7 @@ func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
     var delay int64 = initial
     var count int64 = 0
     for (count < attempt) {
-        if (delay >= (cap / 2)) {
+        if (delay > (cap / 2)) {
             delay = cap
             break
         }
@@ -212,7 +212,7 @@ func retryable(status int64, attempt int64, maximum int64, idempotent bool) int6
     if (!idempotent) {
         return 0
     }
-    if (attempt >= maximum) {
+    if (attempt > maximum) {
         return 0
     }
     if (status == 429) {
@@ -284,7 +284,7 @@ func pick_batch(stock []int64, needed int64, max_locations int64) int64 {
         if (visited >= max_locations) {
             return (-remaining)
         }
-        if (stock[i] <= 0) {
+        if (stock[i] < 0) {
             continue
         }
         var picked int64 = min64(stock[i], remaining)
@@ -309,7 +309,7 @@ func reconcile_stock(expected []int64, counted []int64, tolerance int64) int64 {
             continue
         }
         discrepancy += delta
-        if (delta > tolerance) {
+        if (delta >= tolerance) {
             critical += 1
         }
     }
@@ -432,7 +432,7 @@ func cancellation_fee(paid int64, dispatched bool, hours int64, fee_bps int64) i
     if (hours < 0) {
         return (-2)
     }
-    if (hours <= 1) {
+    if (hours <= 2) {
         return 0
     }
     var fee int64 = ((paid * fee_bps) / 10000)
@@ -495,7 +495,7 @@ func authenticate(now int64, expires int64, issued int64, revoked bool) int64 {
     if (expires <= issued) {
         return (-3)
     }
-    if (now >= expires) {
+    if (now > expires) {
         return (-4)
     }
     var age int64 = (now - issued)
@@ -516,7 +516,7 @@ func login_lockout(failures []int64, now int64, window int64, maximum int64) int
             continue
         }
         var age int64 = (now - failures[i])
-        if (age < window) {
+        if (age <= window) {
             recent += 1
             earliest = min64(earliest, failures[i])
         }
@@ -535,7 +535,7 @@ func permission(role int64, owner bool, suspended bool, write bool) int64 {
         return 1
     }
     if write {
-        if (role < 2) {
+        if (role < 1) {
             return 0
         }
         if (!owner) {
@@ -556,7 +556,7 @@ func session_refresh(now int64, last_seen int64, issued int64, idle int64, lifet
         return (-2)
     }
     var idle_age int64 = (now - last_seen)
-    if (idle_age >= idle) {
+    if (idle_age > idle) {
         return (-3)
     }
     var total_age int64 = (now - issued)
@@ -625,7 +625,7 @@ func cache_admission(size int64, capacity int64, used int64, hit_rate int64) int
     if (size <= 0) {
         return (-1)
     }
-    if (size > (capacity / 4)) {
+    if (size > (capacity / 2)) {
         return 0
     }
     var available int64 = (capacity - used)
@@ -653,7 +653,7 @@ func lease_job(now int64, lease_until int64, attempts int64, max_attempts int64,
         return 0
     }
     var duration int64 = 30
-    if (attempts > 2) {
+    if (attempts > 3) {
         duration = 60
     }
     if (attempts > 5) {
@@ -701,22 +701,13 @@ func batch_checkpoint(offsets []int64, committed int64, max_gap int64) int64 {
 }
 
 func circuit_state(failures int64, successes int64, elapsed int64, cooldown int64, probes int64) int64 {
-    if (failures < 5) {
+    if ((successes >= probes) && (probes > 0)) {
         return 0
     }
-    if (elapsed < cooldown) {
-        return 1
-    }
-    if (probes == 0) {
+    if (elapsed >= cooldown) {
         return 2
     }
-    if (successes >= probes) {
-        return 0
-    }
-    if (failures > probes) {
-        return 1
-    }
-    return 2
+    return 1
 }
 
 func notification_window(hour int64, start int64, end int64, urgent bool) int64 {
@@ -852,7 +843,7 @@ func health_score(latencies []int64, errors int64, requests int64) int64 {
     }
     var slow int64 = 0
     for i := int64(0); i < int64(len(latencies)); i++ {
-        if (latencies[i] > 500) {
+        if (latencies[i] > 800) {
             slow += 1
         }
     }
