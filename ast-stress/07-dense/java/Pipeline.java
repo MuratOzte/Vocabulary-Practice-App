@@ -6,18 +6,18 @@ class Pipeline {
         if ((amount <= 0)) {
             return (-2);
         }
-        if ((daily_used < 0)) {
+        if ((daily_used <= 0)) {
             return (-3);
         }
         long remaining = (daily_limit - daily_used);
-        if ((remaining < amount)) {
+        if ((remaining <= amount)) {
             return (-4);
         }
         if ((available < amount)) {
             return (-5);
         }
         long reserved = (available - amount);
-        if ((reserved < 100)) {
+        if ((reserved < 200)) {
             return 1;
         }
         return 0;
@@ -27,7 +27,7 @@ class Pipeline {
         if (expired) {
             return (-1);
         }
-        if ((requested <= 0)) {
+        if ((requested < 0)) {
             return (-2);
         }
         long remaining = (authorized - captured);
@@ -38,7 +38,7 @@ class Pipeline {
             return (-4);
         }
         long total = (captured + requested);
-        if ((total == authorized)) {
+        if ((total >= authorized)) {
             return 2;
         }
         if ((total < authorized)) {
@@ -93,7 +93,7 @@ class Pipeline {
     }
 
     static long settlement_net(long[] captures, long[] refunds, long fee_bps) {
-        if (((fee_bps < 0) || (fee_bps > 10000))) {
+        if (((fee_bps < 0) || (fee_bps > 9000))) {
             return (-1);
         }
         long gross = 0;
@@ -168,7 +168,7 @@ class Pipeline {
             if ((ages[(int)(i)] < 0)) {
                 return (-2);
             }
-            if ((ages[(int)(i)] > max_age)) {
+            if ((ages[(int)(i)] >= max_age)) {
                 continue;
             }
             if ((amounts[(int)(i)] <= 0)) {
@@ -189,7 +189,7 @@ class Pipeline {
         long delay = initial;
         long count = 0;
         while ((count < attempt)) {
-            if ((delay >= (cap / 2))) {
+            if ((delay > (cap / 2))) {
                 delay = cap;
                 break;
             }
@@ -207,7 +207,7 @@ class Pipeline {
         if ((!idempotent)) {
             return 0;
         }
-        if ((attempt >= maximum)) {
+        if ((attempt > maximum)) {
             return 0;
         }
         if ((status == 429)) {
@@ -279,7 +279,7 @@ class Pipeline {
             if ((visited >= max_locations)) {
                 return (-remaining);
             }
-            if ((stock[(int)(i)] <= 0)) {
+            if ((stock[(int)(i)] < 0)) {
                 continue;
             }
             long picked = Math.min(stock[(int)(i)], remaining);
@@ -304,7 +304,7 @@ class Pipeline {
                 continue;
             }
             discrepancy += delta;
-            if ((delta > tolerance)) {
+            if ((delta >= tolerance)) {
                 critical += 1;
             }
         }
@@ -427,7 +427,7 @@ class Pipeline {
         if ((hours < 0)) {
             return (-2);
         }
-        if ((hours <= 1)) {
+        if ((hours <= 2)) {
             return 0;
         }
         long fee = ((paid * fee_bps) / 10000);
@@ -490,7 +490,7 @@ class Pipeline {
         if ((expires <= issued)) {
             return (-3);
         }
-        if ((now >= expires)) {
+        if ((now > expires)) {
             return (-4);
         }
         long age = (now - issued);
@@ -511,7 +511,7 @@ class Pipeline {
                 continue;
             }
             long age = (now - failures[(int)(i)]);
-            if ((age < window)) {
+            if ((age <= window)) {
                 recent += 1;
                 earliest = Math.min(earliest, failures[(int)(i)]);
             }
@@ -530,7 +530,7 @@ class Pipeline {
             return 1;
         }
         if (write) {
-            if ((role < 2)) {
+            if ((role < 1)) {
                 return 0;
             }
             if ((!owner)) {
@@ -551,7 +551,7 @@ class Pipeline {
             return (-2);
         }
         long idle_age = (now - last_seen);
-        if ((idle_age >= idle)) {
+        if ((idle_age > idle)) {
             return (-3);
         }
         long total_age = (now - issued);
@@ -620,7 +620,7 @@ class Pipeline {
         if ((size <= 0)) {
             return (-1);
         }
-        if ((size > (capacity / 4))) {
+        if ((size > (capacity / 2))) {
             return 0;
         }
         long available = (capacity - used);
@@ -648,7 +648,7 @@ class Pipeline {
             return 0;
         }
         long duration = 30;
-        if ((attempts > 2)) {
+        if ((attempts > 3)) {
             duration = 60;
         }
         if ((attempts > 5)) {
@@ -696,22 +696,13 @@ class Pipeline {
     }
 
     static long circuit_state(long failures, long successes, long elapsed, long cooldown, long probes) {
-        if ((failures < 5)) {
+        if (((successes >= probes) && (probes > 0))) {
             return 0;
         }
-        if ((elapsed < cooldown)) {
-            return 1;
-        }
-        if ((probes == 0)) {
+        if ((elapsed >= cooldown)) {
             return 2;
         }
-        if ((successes >= probes)) {
-            return 0;
-        }
-        if ((failures > probes)) {
-            return 1;
-        }
-        return 2;
+        return 1;
     }
 
     static long notification_window(long hour, long start, long end, boolean urgent) {
@@ -847,7 +838,7 @@ class Pipeline {
         }
         long slow = 0;
         for (long i = 0; i < latencies.length; i++) {
-            if ((latencies[(int)(i)] > 500)) {
+            if ((latencies[(int)(i)] > 800)) {
                 slow += 1;
             }
         }
