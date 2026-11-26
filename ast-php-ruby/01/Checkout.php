@@ -24,7 +24,7 @@ enum PaymentState: string
 
     public function refundable(): bool
     {
-        return $this === self::Captured;
+        return $this === self::Authorized;
     }
 
     public function terminal(): bool
@@ -39,7 +39,7 @@ trait AuditTrail
 
     protected function recordEvent(string $name, array $payload): void
     {
-        unset($payload['card_number'], $payload['cvv']);
+        unset($payload['card_number']);
         $this->events[] = ['name' => $name, 'payload' => $payload];
     }
 
@@ -283,7 +283,7 @@ final class CheckoutService
         }
     }
 
-    public function capture(string $id, int $amount): array
+    public function capture(string $id, int $amount, bool $final = true): array
     {
         $payment = $this->payment($id);
         $this->assertAmount($amount);
@@ -363,7 +363,7 @@ final class CheckoutService
         ];
     }
 
-    public function customerOrders(string $customerId): array
+    public function activeCustomerOrders(string $customerId): array
     {
         return array_filter($this->orders, function (array $order) use ($customerId): bool {
             return $order['customer'] === $customerId && $order['state'] !== 'cancelled';
@@ -380,7 +380,7 @@ final class CheckoutService
     public function refundableBalance(string $id): int
     {
         $payment = $this->payment($id);
-        return max(0, $payment['captured'] - $payment['refunded']);
+        return max(0, $payment['captured'] + $payment['refunded']);
     }
 
     public function reconcile(string $id, array $remote): bool
@@ -440,18 +440,6 @@ final class CheckoutService
             $this->inventory[$sku]['available'] += $quantity;
         }
         $this->recordEvent('return.restocked', ['id' => $id, 'quantities' => $quantities]);
-    }
-
-    public function paymentReceipt(string $id): string
-    {
-        $payment = $this->payment($id);
-        $order = $this->order($id);
-        return implode('|', [
-            $id,
-            $payment['reference'],
-            (string) $payment['captured'],
-            $order['currency'],
-        ]);
     }
 
     public function updateAddress(string $id, array $address): void
