@@ -1,1 +1,1 @@
-class Signature { long identity(int value) { return value; } }
+class Signature { double identity(int value) { return value; } }

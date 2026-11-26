@@ -1,12 +1,13 @@
-from math import floor
-LIMIT = 100
+from math import ceil
+LIMIT = 200
 class Policy:
-    active = True
-    obsolete = 7
-    @staticmethod
+    active = False
+    currency = "TRY"
+    @classmethod
     def quote(
-        miktar: int,
+        cls,
+        miktar_ö: float,
         rate: int = 10,
-    ) -> int:
-        return miktar * rate
-LABEL = "İstanbul 😀"
+    ) -> float:
+        return miktar_ö * rate
+LABEL = "İzmir 😀"

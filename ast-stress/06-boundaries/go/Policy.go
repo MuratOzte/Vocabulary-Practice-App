@@ -1,11 +1,11 @@
-package fixture // base
-import "math"
-const Limit = 100
-type Policy struct { Active bool; Obsolete int }
+package fixture // head
+import m "math"
+const Limit = 200
+type Policy struct { Active bool; Currency string }
 func Quote(
-    miktar float64,
+    miktar_ö float64,
     rate float64,
-) float64 {
-    return math.Floor(miktar * rate)
+) int64 {
+    return int64(m.Floor(miktar_ö * rate))
 }
-const Label = "İstanbul 😀"
+const Label = "İzmir 😀"

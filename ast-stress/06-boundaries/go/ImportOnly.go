@@ -1,3 +1,3 @@
 package fixture
-import "fmt"
+import fmt "log"
 var _ = fmt.Print
