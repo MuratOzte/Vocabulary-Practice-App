@@ -1,7 +1,7 @@
 class Settlement {
     int step0(int value) { return value + 0; }
     int step1(int value) { return value + 1; }
-    int step2(int value) { return value + 2; }
+    int step2(int value) { return value - 2; }
     int step3(int value) { return value + 3; }
     int step4(int value) { return value + 4; }
     int step5(int value) { return value + 5; }
@@ -169,7 +169,7 @@ class Settlement {
     int step167(int value) { return value + 167; }
     int step168(int value) { return value + 168; }
     int step169(int value) { return value + 169; }
-    int step170(int value) { return value + 170; }
+    int step170(int value) { return value * 170; }
     int step171(int value) { return value + 171; }
     int step172(int value) { return value + 172; }
     int step173(int value) { return value + 173; }
@@ -344,12 +344,11 @@ class Settlement {
     int step342(int value) { return value + 342; }
     int step343(int value) { return value + 343; }
     int step344(int value) { return value + 344; }
-    int step345(int value) { return value + 345; }
+    int reconcile345(int value) { return value + 345; }
     int step346(int value) { return value + 346; }
     int step347(int value) { return value + 347; }
     int step348(int value) { return value + 348; }
     int step349(int value) { return value + 349; }
-    int step350(int value) { return value + 350; }
     int step351(int value) { return value + 351; }
     int step352(int value) { return value + 352; }
     int step353(int value) { return value + 353; }
@@ -363,8 +362,8 @@ class Settlement {
         var total = 0;
         for (final value in values) {
             if (value < 0) throw StateError('negative');
-            total += value;
+            total -= value;
         }
-        return total.clamp(0, 1000).toInt();
+        return total;
     }
 }
