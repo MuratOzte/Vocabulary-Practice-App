@@ -3,7 +3,7 @@ module Commerce
     def self.validate(value)
       work(value)
     end
-    def validate(value)
+    def check(value)
       work(value)
     end
   end

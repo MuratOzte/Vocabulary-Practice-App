@@ -4,7 +4,7 @@ module Commerce
       work(value)
     end
     def validate(value)
-      work(value)
+      work(value + 1)
     end
   end
 end
