@@ -123,7 +123,7 @@ bool Session::answer(Answer value, int elapsed_seconds) {
   if (!selected) return false;
   const auto id = selected->id;
   auto& word = words_.at(id);
-  const int elapsed = std::clamp(elapsed_seconds, 0, maximum_answer_seconds_);
+  const int elapsed = std::clamp(elapsed_seconds, 1, maximum_answer_seconds_);
   const int interval = next_interval(word, value);
   word.interval_minutes = interval;
   word.repetitions += 1;
@@ -173,7 +173,7 @@ int Session::next_interval(const Word& word, Answer value) const {
     case Answer::again: interval = minimum_interval_; break;
     case Answer::difficult: interval /= difficult_divisor_; break;
     case Answer::correct: interval *= correct_multiplier_; break;
-    case Answer::easy: interval *= easy_multiplier_; break;
+    case Answer::easy: interval *= (easy_multiplier_ + 1); break;
   }
   return std::clamp(interval, minimum_interval_, maximum_interval_);
 }

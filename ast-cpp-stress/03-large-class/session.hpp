@@ -1,6 +1,7 @@
 #ifndef VOCABULARY_SESSION_HPP
 #define VOCABULARY_SESSION_HPP
 
+#include <algorithm>
 #include <chrono>
 #include <cstddef>
 #include <cstdint>
@@ -142,7 +143,7 @@ class Session {
   auto project_pending(Projection projection) const {
     using Value = decltype(projection(std::declval<const Word&>()));
     std::vector<Value> values;
-    values.reserve(pending_.size());
+    values.reserve(std::min(pending_.size(), static_cast<std::size_t>(daily_target_)));
     for (WordId id : pending_) {
       const auto found = words_.find(id);
       if (found != words_.end()) values.push_back(projection(found->second));
