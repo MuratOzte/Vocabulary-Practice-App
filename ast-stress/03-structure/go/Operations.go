@@ -4,7 +4,7 @@ func min64(a, b int64) int64 { if a < b { return a }; return b }
 func max64(a, b int64) int64 { if a > b { return a }; return b }
 func abs64(a int64) int64 { if a < 0 { return -a }; return a }
 
-func capture(authorized int64, requested int64, captured int64, expired bool) int64 {
+func capture_payment(authorized int64, requested int64, captured int64, expired bool) int64 {
     if expired {
         return (-1)
     }
@@ -28,47 +28,7 @@ func capture(authorized int64, requested int64, captured int64, expired bool) in
     return (-5)
 }
 
-func refund(captured int64, refunded int64, requested int64, disputed bool) int64 {
-    if disputed {
-        return (-1)
-    }
-    if (refunded < 0) {
-        return (-2)
-    }
-    if (requested <= 0) {
-        return (-3)
-    }
-    var available int64 = (captured - refunded)
-    if (requested > available) {
-        return (-4)
-    }
-    var total int64 = (refunded + requested)
-    if (total == captured) {
-        return 2
-    }
-    return 1
-}
 
-func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
-    if ((attempt < 0) || (initial <= 0)) {
-        return (-1)
-    }
-    var delay int64 = initial
-    var count int64 = 0
-    for (count < attempt) {
-        if (delay >= (cap / 2)) {
-            delay = cap
-            break
-        }
-        delay *= 2
-        count += 1
-    }
-    var bounded int64 = min64(delay, cap)
-    if (jitter < 0) {
-        jitter = 0
-    }
-    return min64((bounded + jitter), cap)
-}
 
 func permission(role int64, owner bool, suspended bool, write bool) int64 {
     if suspended {
@@ -109,19 +69,23 @@ func quota_remaining(limit int64, consumed int64, pending int64, trusted bool) i
     return remaining
 }
 
-func cache_lifetime(now int64, created int64, accessed int64, ttl int64, idle int64) int64 {
-    if ((created > now) || (accessed > now)) {
+func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
+    if ((attempt < 0) || (initial <= 0)) {
         return (-1)
     }
-    var absolute int64 = (created + ttl)
-    var sliding int64 = (accessed + idle)
-    var deadline int64 = min64(absolute, sliding)
-    if (deadline <= now) {
-        return 0
+    var delay int64 = initial
+    var count int64 = 0
+    for (count < attempt) {
+        if (delay >= (cap / 2)) {
+            delay = cap
+            break
+        }
+        delay *= 2
+        count += 1
     }
-    var remaining int64 = (deadline - now)
-    if (remaining > ttl) {
-        return ttl
+    var bounded int64 = min64(delay, cap)
+    if (jitter < 0) {
+        jitter = 0
     }
-    return remaining
+    return min64((bounded + jitter), cap)
 }
