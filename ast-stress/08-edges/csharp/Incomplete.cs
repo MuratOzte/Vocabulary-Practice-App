@@ -1,0 +1,1 @@
+class Incomplete { int Value() { return 1; } }

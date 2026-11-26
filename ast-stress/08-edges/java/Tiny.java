@@ -1,0 +1,1 @@
+class Edge { int value() { return 1; } }
