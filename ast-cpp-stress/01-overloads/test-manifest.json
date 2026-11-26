@@ -1,0 +1,84 @@
+{
+  "id": "01-overloads",
+  "title": "C++ overload identity",
+  "files": [
+    "overloads.cpp"
+  ],
+  "expected": [
+    {
+      "id": "school.Rubric.int",
+      "path": "overloads.cpp",
+      "base": "int grade(int score) {",
+      "head": "int grade(int score) {",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "school.Rubric.string",
+      "path": "overloads.cpp",
+      "base": "int grade(const std::string& answer) {",
+      "head": "int grade(const std::string& answer) {",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "school.Rubric.const",
+      "path": "overloads.cpp",
+      "base": "int grade(int score) const {",
+      "head": "int grade(int score) const {",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "school.Rubric.opint",
+      "path": "overloads.cpp",
+      "base": "int operator()(int score) const {",
+      "head": "int operator()(int score) const {",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "school.Rubric.opstr",
+      "path": "overloads.cpp",
+      "base": "int operator()(const std::string& answer) {",
+      "head": "int operator()(const std::string& answer) {",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "removed-double",
+      "path": "overloads.cpp",
+      "base": "int grade(double score) {",
+      "head": "",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "added-long",
+      "path": "overloads.cpp",
+      "base": "",
+      "head": "int grade(long score) {",
+      "owner": "class Rubric {",
+      "scope": "namespace school {"
+    },
+    {
+      "id": "archive.grade(int) const",
+      "path": "overloads.cpp",
+      "base": "int grade(int score) const {",
+      "head": "int grade(int score) const {",
+      "scope": "namespace school {",
+      "owner": "class Archive {"
+    },
+    {
+      "id": "practice.grade(int) const",
+      "path": "overloads.cpp",
+      "base": "int grade(int score) const {",
+      "head": "int grade(int score) const {",
+      "scope": "namespace practice {",
+      "owner": "class Rubric {"
+    }
+  ],
+  "requiredContext": [],
+  "languages": {},
+  "invalid": []
+}

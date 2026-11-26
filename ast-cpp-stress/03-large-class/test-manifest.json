@@ -1,0 +1,57 @@
+{
+  "id": "03-large-class",
+  "title": "Large class structural context",
+  "files": [
+    "session.hpp",
+    "session.cpp"
+  ],
+  "expected": [
+    {
+      "id": "project",
+      "path": "session.hpp",
+      "base": "auto project_pending(",
+      "head": "auto project_pending("
+    },
+    {
+      "id": "answer",
+      "path": "session.cpp",
+      "base": "bool Session::answer(",
+      "head": "bool Session::answer("
+    },
+    {
+      "id": "interval",
+      "path": "session.cpp",
+      "base": "int Session::next_interval(",
+      "head": "int Session::next_interval("
+    }
+  ],
+  "requiredContext": [
+    {
+      "path": "session.hpp",
+      "needle": "int easy_multiplier_ = 3;",
+      "why": "easy interval multiplication"
+    },
+    {
+      "path": "session.hpp",
+      "needle": "int minimum_interval_ = 15;",
+      "why": "interval lower bound"
+    },
+    {
+      "path": "session.hpp",
+      "needle": "int maximum_interval_ = 60 * 24 * 30;",
+      "why": "interval upper bound"
+    },
+    {
+      "path": "session.hpp",
+      "needle": "int maximum_answer_seconds_ = 600;",
+      "why": "answer time normalization"
+    },
+    {
+      "path": "session.hpp",
+      "needle": "int daily_target_ = 20;",
+      "why": "template projection allocation cap"
+    }
+  ],
+  "languages": {},
+  "invalid": []
+}

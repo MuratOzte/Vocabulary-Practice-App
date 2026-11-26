@@ -1,0 +1,31 @@
+{
+  "id": "05-unicode-fallback",
+  "title": "Unicode byte offsets and isolated syntax recovery",
+  "files": [
+    "unicode.cpp",
+    "broken.c",
+    "broken.cpp",
+    "valid.c",
+    "valid.cpp"
+  ],
+  "expected": [
+    {
+      "id": "completion",
+      "path": "unicode.cpp",
+      "base": "int completion_percent(",
+      "head": "int completion_percent("
+    },
+    {
+      "id": "schedule",
+      "path": "unicode.cpp",
+      "base": "int next_review_minutes(",
+      "head": "int next_review_minutes("
+    }
+  ],
+  "requiredContext": [],
+  "languages": {},
+  "invalid": [
+    "head/broken.c",
+    "head/broken.cpp"
+  ]
+}

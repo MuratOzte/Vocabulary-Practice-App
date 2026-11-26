@@ -1,0 +1,43 @@
+{
+  "id": "04-headers",
+  "title": "Independent header language resolution",
+  "files": [
+    "c_to_cpp.h",
+    "cpp_to_c.h",
+    "portable.h",
+    "linkage.h",
+    "misleading.h",
+    "unresolved.h"
+  ],
+  "expected": [],
+  "requiredContext": [],
+  "languages": {
+    "c_to_cpp.h": [
+      "c",
+      "cpp"
+    ],
+    "cpp_to_c.h": [
+      "cpp",
+      "c"
+    ],
+    "portable.h": [
+      "c",
+      "c"
+    ],
+    "linkage.h": [
+      "cpp",
+      "cpp"
+    ],
+    "misleading.h": [
+      "c",
+      "c"
+    ],
+    "unresolved.h": [
+      "c",
+      null
+    ]
+  },
+  "invalid": [
+    "head/unresolved.h"
+  ]
+}

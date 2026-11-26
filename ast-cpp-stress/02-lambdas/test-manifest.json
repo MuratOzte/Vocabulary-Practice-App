@@ -1,0 +1,53 @@
+{
+  "id": "02-lambdas",
+  "title": "Lambda identity and enclosing context",
+  "files": [
+    "lambdas.cpp"
+  ],
+  "expected": [
+    {
+      "id": "reward",
+      "path": "lambdas.cpp",
+      "base": "auto reward =",
+      "head": "auto reward ="
+    },
+    {
+      "id": "reduce",
+      "path": "lambdas.cpp",
+      "base": "auto reduce =",
+      "head": "auto reduce ="
+    },
+    {
+      "id": "accept",
+      "path": "lambdas.cpp",
+      "base": "auto accept =",
+      "head": "auto accept ="
+    },
+    {
+      "id": "removed-legacy",
+      "path": "lambdas.cpp",
+      "base": "auto legacy =",
+      "head": ""
+    },
+    {
+      "id": "added-normalize",
+      "path": "lambdas.cpp",
+      "base": "",
+      "head": "auto normalize ="
+    }
+  ],
+  "requiredContext": [
+    {
+      "path": "lambdas.cpp",
+      "needle": "const int bonus = adjustment + 3;",
+      "why": "accept threshold now depends on captured bonus"
+    },
+    {
+      "path": "lambdas.cpp",
+      "needle": "const int acceptance_floor = 60;",
+      "why": "accept threshold interpretation"
+    }
+  ],
+  "languages": {},
+  "invalid": []
+}
