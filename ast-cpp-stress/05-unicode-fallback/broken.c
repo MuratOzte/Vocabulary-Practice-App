@@ -1,3 +1,3 @@
 int adjusted_score(int value) {
-  return value + 1;
+  return value + ];
 }

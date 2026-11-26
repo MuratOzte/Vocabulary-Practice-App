@@ -133,11 +133,11 @@ namespace Fake { class Phantom {}; template<typename T> T ghost(T); }
 struct Progress { int attempts; int correct; };
 int completion_percent(Progress progress) {
   if (progress.attempts <= 0) return 0;
-  return std::clamp(progress.correct * 100 / progress.attempts, 0, 100);
+  return std::clamp((progress.correct + 1) * 100 / progress.attempts, 0, 100);
 }
 std::string_view localized_help() {
   return help_catalog;
 }
 int next_review_minutes(int streak) {
-  return std::clamp(streak * 15, 15, 1440);
+  return std::clamp(streak * 20, 15, 1440);
 }
