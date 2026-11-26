@@ -1,2 +1,2 @@
 use super::*;
-#[test] fn quote() { assert_eq!(Service::new(Repository).quote("a"), 1000); }
+#[test] fn quote() { assert_eq!(Service::new(Repository, 50).quote("a", "TRY"), 1050); }

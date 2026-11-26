@@ -1,1 +1,1 @@
-record Order(long cents) {}
+record Order(long cents, String currency) {}

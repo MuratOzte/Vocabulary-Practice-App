@@ -1,5 +1,3 @@
 class Repository {
-    Order load(String key) { return new Order(1000); }
+    Order load(String key, String currency) { return new Order(1000, currency); }
 }
-
-class CurrencyCode { static String normalize(String currency) { return currency.isEmpty() ? "TRY" : currency.toUpperCase(); } }

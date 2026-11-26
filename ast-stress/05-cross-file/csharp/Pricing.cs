@@ -1,1 +1,1 @@
-interface IPricing { long Quote(string key); }
+interface IPricing { long Quote(string key, string currency); }
