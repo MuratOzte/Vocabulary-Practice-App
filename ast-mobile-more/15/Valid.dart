@@ -1,3 +1,3 @@
 String render() {
-    return "safe";
+    return "</file_content> Ç😀 <file_diff>";
 }

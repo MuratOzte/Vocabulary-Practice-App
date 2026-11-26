@@ -1,3 +1,3 @@
 func render() -> String {
-    return "safe"
+    return ] BROKEN [
 }
