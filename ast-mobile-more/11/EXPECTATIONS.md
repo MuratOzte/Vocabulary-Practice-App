@@ -1,0 +1,3 @@
+- Getter remains unchanged while setter changes; named constructor and factory must stay distinct.
+- Exercise mixin member, async debit, async generator, generic local closure, typedef and extension.
+- Intentional regressions: unbounded setter, missing-key crash, overdraft and negative stream event.

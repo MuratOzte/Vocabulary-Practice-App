@@ -1,0 +1,3 @@
+- Each language has a valid changed file and a separate intentionally malformed HEAD.
+- Malformed source must fall back without hiding its diff; valid siblings must still select AST context.
+- Fake closing prompt tags and emoji inside source strings must preserve exact source coverage.

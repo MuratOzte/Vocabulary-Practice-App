@@ -1,0 +1,3 @@
+- Only Int instance overload changes; String overload and companion reserve remain unchanged.
+- Generic local function, custom setter, nullable receiver, reified cast and enum member retain correct source owners.
+- Intentional regressions: zero reservation, negative attempts, null crash and unsafe cast.

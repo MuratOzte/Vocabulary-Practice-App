@@ -1,0 +1,3 @@
+- 360 sibling methods; distant edits at step2 and step170; step345 renamed with identical body; step350 deleted.
+- Keep deleted method from base, updated settlement body from HEAD and unchanged siblings out of selected context.
+- Intentional regressions: subtraction, multiplication, reversed settlement and removed cap.

@@ -1,0 +1,3 @@
+- Argument-label overload stays unchanged; modified Int overload must keep its own identity.
+- Exercise observer, subscript setter, generic local function, constrained extension and actor method.
+- Intentional regressions: bounds bypass, negative setter, unbounded total and reusable token.
