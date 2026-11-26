@@ -8,13 +8,13 @@ func cache_lifetime(now int64, created int64, accessed int64, ttl int64, idle in
     if ((created > now) || (accessed > now)) {
         return (-1)
     }
-    absolute := (created + ttl)
-    sliding := (accessed + idle)
-    deadline := min64(absolute, sliding)
+    var absolute int64 = (created + ttl)
+    var sliding int64 = (accessed + idle)
+    var deadline int64 = min64(absolute, sliding)
     if (deadline <= now) {
         return 0
     }
-    remaining := (deadline - now)
+    var remaining int64 = (deadline - now)
     if (remaining > ttl) {
         return ttl
     }

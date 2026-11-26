@@ -8,14 +8,14 @@ func invoice(prices []int64, quantities []int64, discount int64, rate int64) int
     if (int64(len(prices)) != int64(len(quantities))) {
         return (-1)
     }
-    subtotal := 0
+    var subtotal int64 = 0
     for i := int64(0); i < int64(len(prices)); i++ {
         if ((prices[i] < 0) || (quantities[i] <= 0)) {
             return (-2)
         }
         subtotal += (prices[i] * quantities[i])
     }
-    net := (subtotal - ((subtotal * discount) / 10000))
+    var net int64 = (subtotal - ((subtotal * discount) / 10000))
     return (net + ((net * rate) / 10000))
 }
 
