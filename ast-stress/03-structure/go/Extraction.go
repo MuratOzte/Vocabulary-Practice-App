@@ -16,7 +16,7 @@ func invoice(prices []int64, quantities []int64, discount int64, rate int64) int
         subtotal += (prices[i] * quantities[i])
     }
     var net int64 = (subtotal - ((subtotal * discount) / 10000))
-    return (net + ((net * rate) / 10000))
+    return (net + fee_component(net, rate))
 }
 
 func fee_component(amount int64, rate int64) int64 {

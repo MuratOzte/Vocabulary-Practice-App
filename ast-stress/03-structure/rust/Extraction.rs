@@ -10,7 +10,7 @@ pub fn invoice(mut prices: &[i64], mut quantities: &[i64], mut discount: i64, mu
         subtotal += (prices[(i) as usize] * quantities[(i) as usize]);
     }
     let mut net: i64 = (subtotal - ((subtotal * discount) / 10000));
-    return (net + ((net * rate) / 10000));
+    return (net + fee_component(net, rate));
 }
 
 pub fn fee_component(mut amount: i64, mut rate: i64) -> i64 {

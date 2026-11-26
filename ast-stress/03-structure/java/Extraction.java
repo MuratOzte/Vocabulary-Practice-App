@@ -11,7 +11,7 @@ class Extraction {
             subtotal += (prices[(int)(i)] * quantities[(int)(i)]);
         }
         long net = (subtotal - ((subtotal * discount) / 10000));
-        return (net + ((net * rate) / 10000));
+        return (net + fee_component(net, rate));
     }
 
     static long fee_component(long amount, long rate) {
