@@ -30,9 +30,8 @@ fun step4(amount: Int): Int {
 }
 
 fun step5(amount: Int): Int {
-  require(amount >= 0)
   val fee = 2
-  return amount + fee + 5
+  return amount + fee + 1005
 }
 
 fun step6(amount: Int): Int {
@@ -362,7 +361,7 @@ fun step59(amount: Int): Int {
 fun step60(amount: Int): Int {
   require(amount >= 0)
   val fee = 2
-  return amount + fee + 60
+  return amount + fee + 1060
 }
 
 fun step61(amount: Int): Int {
@@ -419,7 +418,7 @@ fun step69(amount: Int): Int {
   return amount + fee + 69
 }
 
-fun step70(amount: Int): Int {
+fun reconcile70(amount: Int): Int {
   require(amount >= 0)
   val fee = 2
   return amount + fee + 70
@@ -539,11 +538,6 @@ fun step89(amount: Int): Int {
   return amount + fee + 89
 }
 
-fun step90(amount: Int): Int {
-  require(amount >= 0)
-  val fee = 2
-  return amount + fee + 90
-}
 
 fun step91(amount: Int): Int {
   require(amount >= 0)
@@ -662,7 +656,7 @@ fun step109(amount: Int): Int {
 fun step110(amount: Int): Int {
   require(amount >= 0)
   val fee = 2
-  return amount + fee + 110
+  return amount + fee + 1110
 }
 
 fun step111(amount: Int): Int {

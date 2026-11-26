@@ -30,9 +30,8 @@ func step4(_ amount: Int) -> Int {
 }
 
 func step5(_ amount: Int) -> Int {
-  precondition(amount >= 0)
   let fee = 2
-  return amount + fee + 5
+  return amount + fee + 1005
 }
 
 func step6(_ amount: Int) -> Int {
@@ -362,7 +361,7 @@ func step59(_ amount: Int) -> Int {
 func step60(_ amount: Int) -> Int {
   precondition(amount >= 0)
   let fee = 2
-  return amount + fee + 60
+  return amount + fee + 1060
 }
 
 func step61(_ amount: Int) -> Int {
@@ -419,7 +418,7 @@ func step69(_ amount: Int) -> Int {
   return amount + fee + 69
 }
 
-func step70(_ amount: Int) -> Int {
+func reconcile70(_ amount: Int) -> Int {
   precondition(amount >= 0)
   let fee = 2
   return amount + fee + 70
@@ -539,11 +538,6 @@ func step89(_ amount: Int) -> Int {
   return amount + fee + 89
 }
 
-func step90(_ amount: Int) -> Int {
-  precondition(amount >= 0)
-  let fee = 2
-  return amount + fee + 90
-}
 
 func step91(_ amount: Int) -> Int {
   precondition(amount >= 0)
@@ -662,7 +656,7 @@ func step109(_ amount: Int) -> Int {
 func step110(_ amount: Int) -> Int {
   precondition(amount >= 0)
   let fee = 2
-  return amount + fee + 110
+  return amount + fee + 1110
 }
 
 func step111(_ amount: Int) -> Int {

@@ -30,9 +30,8 @@ int step4(int amount) {
 }
 
 int step5(int amount) {
-  if (amount < 0) throw ArgumentError("negative");
   final fee = 2;
-  return amount + fee + 5;
+  return amount + fee + 1005;
 }
 
 int step6(int amount) {
@@ -362,7 +361,7 @@ int step59(int amount) {
 int step60(int amount) {
   if (amount < 0) throw ArgumentError("negative");
   final fee = 2;
-  return amount + fee + 60;
+  return amount + fee + 1060;
 }
 
 int step61(int amount) {
@@ -419,7 +418,7 @@ int step69(int amount) {
   return amount + fee + 69;
 }
 
-int step70(int amount) {
+int reconcile70(int amount) {
   if (amount < 0) throw ArgumentError("negative");
   final fee = 2;
   return amount + fee + 70;
@@ -539,11 +538,6 @@ int step89(int amount) {
   return amount + fee + 89;
 }
 
-int step90(int amount) {
-  if (amount < 0) throw ArgumentError("negative");
-  final fee = 2;
-  return amount + fee + 90;
-}
 
 int step91(int amount) {
   if (amount < 0) throw ArgumentError("negative");
@@ -662,7 +656,7 @@ int step109(int amount) {
 int step110(int amount) {
   if (amount < 0) throw ArgumentError("negative");
   final fee = 2;
-  return amount + fee + 110;
+  return amount + fee + 1110;
 }
 
 int step111(int amount) {
