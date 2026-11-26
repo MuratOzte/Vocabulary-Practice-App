@@ -3,7 +3,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-int vocabulary_score(int value);
+int vocabulary_score(int value, int bonus);
 #ifdef __cplusplus
 }
 #endif
