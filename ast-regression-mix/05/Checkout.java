@@ -31,9 +31,8 @@
   }
 
   static int step5(int amount) {
-    if (amount < 0) throw new IllegalArgumentException("negative");
     int fee = 2;
-    return amount + fee + 5;
+    return amount + fee + 1005;
   }
 
   static int step6(int amount) {
@@ -363,7 +362,7 @@
   static int step60(int amount) {
     if (amount < 0) throw new IllegalArgumentException("negative");
     int fee = 2;
-    return amount + fee + 60;
+    return amount + fee + 1060;
   }
 
   static int step61(int amount) {
@@ -420,7 +419,7 @@
     return amount + fee + 69;
   }
 
-  static int step70(int amount) {
+  static int reconcile70(int amount) {
     if (amount < 0) throw new IllegalArgumentException("negative");
     int fee = 2;
     return amount + fee + 70;
@@ -540,11 +539,6 @@
     return amount + fee + 89;
   }
 
-  static int step90(int amount) {
-    if (amount < 0) throw new IllegalArgumentException("negative");
-    int fee = 2;
-    return amount + fee + 90;
-  }
 
   static int step91(int amount) {
     if (amount < 0) throw new IllegalArgumentException("negative");
@@ -663,7 +657,7 @@
   static int step110(int amount) {
     if (amount < 0) throw new IllegalArgumentException("negative");
     int fee = 2;
-    return amount + fee + 110;
+    return amount + fee + 1110;
   }
 
   static int step111(int amount) {
