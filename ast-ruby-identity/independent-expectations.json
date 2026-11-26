@@ -1,0 +1,398 @@
+[
+  {
+    "id": "class-only",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "instance-only",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "both",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "swap",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "rename-class",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.check",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "rename-instance",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def check",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "delete-class",
+    "pairs": []
+  },
+  {
+    "id": "delete-instance",
+    "pairs": []
+  },
+  {
+    "id": "convert-instance-class",
+    "pairs": []
+  },
+  {
+    "id": "delete-class-change-instance",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "delete-instance-change-class",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "nested-qualified",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "explicit-receiver",
+    "pairs": [
+      {
+        "old": "def Other.validate",
+        "head": "def Other.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "receiver-change",
+    "pairs": []
+  },
+  {
+    "id": "dynamic-receiver",
+    "pairs": []
+  },
+  {
+    "id": "singleton-change",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "singleton-delete",
+    "pairs": []
+  },
+  {
+    "id": "singleton-equivalent",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "singleton-dynamic",
+    "pairs": []
+  },
+  {
+    "id": "reopen-class",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "anchored-reopen-class",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 1,
+        "headOccurrence": 1
+      }
+    ]
+  },
+  {
+    "id": "reopen-module",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "anchored-reopen-module",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 1,
+        "headOccurrence": 1
+      }
+    ]
+  },
+  {
+    "id": "ambiguous-duplicate",
+    "pairs": [],
+    "ambiguous": true
+  },
+  {
+    "id": "reopen-relocation",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "different-modules",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 1,
+        "headOccurrence": 1
+      }
+    ]
+  },
+  {
+    "id": "nested-classes",
+    "pairs": [
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 1,
+        "headOccurrence": 1
+      }
+    ]
+  },
+  {
+    "id": "absolute-qualified",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "explicit-singleton-equivalent",
+    "pairs": [
+      {
+        "old": "def Other.validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "distant-move",
+    "pairs": [
+      {
+        "old": "def self.validate",
+        "head": "def self.validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def validate",
+        "head": "def validate",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "class-module-change",
+    "pairs": []
+  },
+  {
+    "id": "operators",
+    "pairs": [
+      {
+        "old": "def [](",
+        "head": "def [](",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def []=(",
+        "head": "def []=(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def +(",
+        "head": "def +(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def ==(",
+        "head": "def ==(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def <=>(",
+        "head": "def <=>(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def status=(",
+        "head": "def status=(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def valid?(",
+        "head": "def valid?(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def save!(",
+        "head": "def save!(",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "endless-unicode",
+    "pairs": [
+      {
+        "old": "def geçerli?",
+        "head": "def geçerli?",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      },
+      {
+        "old": "def self.geçerli?",
+        "head": "def self.geçerli?",
+        "oldOccurrence": 0,
+        "headOccurrence": 0
+      }
+    ]
+  },
+  {
+    "id": "syntax-fallback",
+    "pairs": [],
+    "fallback": true
+  }
+]
