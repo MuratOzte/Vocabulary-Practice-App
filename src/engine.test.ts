@@ -81,6 +81,15 @@ describe("question generation and input", () => {
     expect(options.filter((o) => o.turkish === "başlamak")).toHaveLength(1);
     expect(distinctWords([w, b], 5)).toHaveLength(1);
   });
+  it("does not repeat a distractor when the collection contains the same ID twice", () => {
+    const target = word("target");
+    const duplicate = word("duplicate", "first meaning");
+    const changedCopy = { ...duplicate, english: "changed", turkish: "different meaning" };
+    const options = choices(target, [duplicate, changedCopy, word("other")], () => 0.5);
+
+    expect(options.filter((option) => option.id === duplicate.id)).toHaveLength(1);
+    expect(new Set(options.map((option) => option.id)).size).toBe(options.length);
+  });
   it("supports a one-word collection", () =>
     expect(choices(word("a"), [word("a")])).toHaveLength(1));
 });
