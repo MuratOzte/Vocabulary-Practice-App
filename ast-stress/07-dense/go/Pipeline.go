@@ -14,14 +14,14 @@ func authorize(amount int64, available int64, daily_used int64, daily_limit int6
     if (daily_used <= 0) {
         return (-3)
     }
-    remaining := (daily_limit - daily_used)
+    var remaining int64 = (daily_limit - daily_used)
     if (remaining <= amount) {
         return (-4)
     }
     if (available < amount) {
         return (-5)
     }
-    reserved := (available - amount)
+    var reserved int64 = (available - amount)
     if (reserved < 200) {
         return 1
     }
@@ -35,14 +35,14 @@ func capture(authorized int64, requested int64, captured int64, expired bool) in
     if (requested < 0) {
         return (-2)
     }
-    remaining := (authorized - captured)
+    var remaining int64 = (authorized - captured)
     if (remaining <= 0) {
         return (-3)
     }
     if (requested > remaining) {
         return (-4)
     }
-    total := (captured + requested)
+    var total int64 = (captured + requested)
     if (total >= authorized) {
         return 2
     }
@@ -62,11 +62,11 @@ func refund(captured int64, refunded int64, requested int64, disputed bool) int6
     if (requested <= 0) {
         return (-3)
     }
-    available := (captured - refunded)
+    var available int64 = (captured - refunded)
     if (requested > available) {
         return (-4)
     }
-    total := (refunded + requested)
+    var total int64 = (refunded + requested)
     if (total == captured) {
         return 2
     }
@@ -77,14 +77,14 @@ func allocate_refund(lines []int64, refund_total int64) int64 {
     if (refund_total <= 0) {
         return 0
     }
-    remaining := refund_total
-    allocated := 0
+    var remaining int64 = refund_total
+    var allocated int64 = 0
     for i := int64(0); i < int64(len(lines)); i++ {
-        value := lines[i]
+        var value int64 = lines[i]
         if (value <= 0) {
             continue
         }
-        share := min64(value, remaining)
+        var share int64 = min64(value, remaining)
         allocated += share
         remaining -= share
         if (remaining == 0) {
@@ -101,14 +101,14 @@ func settlement_net(captures []int64, refunds []int64, fee_bps int64) int64 {
     if ((fee_bps < 0) || (fee_bps > 9000)) {
         return (-1)
     }
-    gross := 0
+    var gross int64 = 0
     for i := int64(0); i < int64(len(captures)); i++ {
         if (captures[i] < 0) {
             return (-2)
         }
         gross += captures[i]
     }
-    returned := 0
+    var returned int64 = 0
     for i := int64(0); i < int64(len(refunds)); i++ {
         if (refunds[i] < 0) {
             return (-3)
@@ -118,8 +118,8 @@ func settlement_net(captures []int64, refunds []int64, fee_bps int64) int64 {
     if (returned > gross) {
         return (-4)
     }
-    net := (gross - returned)
-    fee := ((net * fee_bps) / 10000)
+    var net int64 = (gross - returned)
+    var fee int64 = ((net * fee_bps) / 10000)
     return (net - fee)
 }
 
@@ -133,10 +133,10 @@ func tax_inclusive(gross int64, rate int64, exempt bool) int64 {
     if (rate < 0) {
         return (-2)
     }
-    denominator := (10000 + rate)
-    numerator := (gross * rate)
-    rounding := (denominator / 2)
-    tax := ((numerator + rounding) / denominator)
+    var denominator int64 = (10000 + rate)
+    var numerator int64 = (gross * rate)
+    var rounding int64 = (denominator / 2)
+    var tax int64 = ((numerator + rounding) / denominator)
     if (tax > gross) {
         return (-3)
     }
@@ -153,8 +153,8 @@ func exchange(amount int64, numerator int64, denominator int64, minimum int64) i
     if (denominator <= 0) {
         return (-3)
     }
-    scaled := (amount * numerator)
-    converted := ((scaled + (denominator / 2)) / denominator)
+    var scaled int64 = (amount * numerator)
+    var converted int64 = ((scaled + (denominator / 2)) / denominator)
     if (converted < minimum) {
         return 0
     }
@@ -168,7 +168,7 @@ func dispute_reserve(amounts []int64, ages []int64, max_age int64) int64 {
     if (int64(len(amounts)) != int64(len(ages))) {
         return (-1)
     }
-    total := 0
+    var total int64 = 0
     for i := int64(0); i < int64(len(amounts)); i++ {
         if (ages[i] < 0) {
             return (-2)
@@ -191,8 +191,8 @@ func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
     if ((attempt < 0) || (initial <= 0)) {
         return (-1)
     }
-    delay := initial
-    count := 0
+    var delay int64 = initial
+    var count int64 = 0
     for (count < attempt) {
         if (delay > (cap / 2)) {
             delay = cap
@@ -201,7 +201,7 @@ func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
         delay *= 2
         count += 1
     }
-    bounded := min64(delay, cap)
+    var bounded int64 = min64(delay, cap)
     if (jitter < 0) {
         jitter = 0
     }
@@ -239,14 +239,14 @@ func reserve_stock(on_hand int64, reserved int64, requested int64, backorder boo
     if (reserved < 0) {
         return (-2)
     }
-    available := (on_hand - reserved)
+    var available int64 = (on_hand - reserved)
     if (requested > available) {
         if backorder {
             return 2
         }
         return (-3)
     }
-    after := (available - requested)
+    var after int64 = (available - requested)
     if (after == 0) {
         return 1
     }
@@ -260,8 +260,8 @@ func reorder_point(demand []int64, lead_days int64, safety int64) int64 {
     if (lead_days <= 0) {
         return (-1)
     }
-    total := 0
-    peak := 0
+    var total int64 = 0
+    var peak int64 = 0
     for i := int64(0); i < int64(len(demand)); i++ {
         if (demand[i] < 0) {
             return (-2)
@@ -269,14 +269,14 @@ func reorder_point(demand []int64, lead_days int64, safety int64) int64 {
         total += demand[i]
         peak = max64(peak, demand[i])
     }
-    average := (((total + int64(len(demand))) - 1) / int64(len(demand)))
-    seasonal := max64(average, (peak / 2))
+    var average int64 = (((total + int64(len(demand))) - 1) / int64(len(demand)))
+    var seasonal int64 = max64(average, (peak / 2))
     return ((seasonal * lead_days) + safety)
 }
 
 func pick_batch(stock []int64, needed int64, max_locations int64) int64 {
-    remaining := needed
-    visited := 0
+    var remaining int64 = needed
+    var visited int64 = 0
     for i := int64(0); i < int64(len(stock)); i++ {
         if (remaining <= 0) {
             break
@@ -287,7 +287,7 @@ func pick_batch(stock []int64, needed int64, max_locations int64) int64 {
         if (stock[i] < 0) {
             continue
         }
-        picked := min64(stock[i], remaining)
+        var picked int64 = min64(stock[i], remaining)
         remaining -= picked
         visited += 1
     }
@@ -301,10 +301,10 @@ func reconcile_stock(expected []int64, counted []int64, tolerance int64) int64 {
     if (int64(len(expected)) != int64(len(counted))) {
         return (-1)
     }
-    discrepancy := 0
-    critical := 0
+    var discrepancy int64 = 0
+    var critical int64 = 0
     for i := int64(0); i < int64(len(expected)); i++ {
-        delta := abs64((counted[i] - expected[i]))
+        var delta int64 = abs64((counted[i] - expected[i]))
         if (delta == 0) {
             continue
         }
@@ -329,11 +329,11 @@ func transfer_stock(source int64, target int64, requested int64, capacity int64)
     if (target < 0) {
         return (-3)
     }
-    space := (capacity - target)
+    var space int64 = (capacity - target)
     if (space <= 0) {
         return (-4)
     }
-    moved := min64(requested, space)
+    var moved int64 = min64(requested, space)
     if (moved < requested) {
         return (-5)
     }
@@ -344,7 +344,7 @@ func expiry_loss(quantities []int64, expiry_days []int64, today int64) int64 {
     if (int64(len(quantities)) != int64(len(expiry_days))) {
         return (-1)
     }
-    expired := 0
+    var expired int64 = 0
     for i := int64(0); i < int64(len(quantities)); i++ {
         if (quantities[i] < 0) {
             return (-2)
@@ -367,12 +367,12 @@ func bundle_capacity(stock []int64, per_bundle []int64) int64 {
     if (int64(len(stock)) == 0) {
         return 0
     }
-    bundles := 1000000
+    var bundles int64 = 1000000
     for i := int64(0); i < int64(len(stock)); i++ {
         if (per_bundle[i] <= 0) {
             return (-2)
         }
-        possible := (stock[i] / per_bundle[i])
+        var possible int64 = (stock[i] / per_bundle[i])
         bundles = min64(bundles, possible)
     }
     if (bundles < 0) {
@@ -385,7 +385,7 @@ func shipping_cost(weight int64, distance int64, fragile bool, express bool) int
     if ((weight <= 0) || (distance < 0)) {
         return (-1)
     }
-    shipping_base := 350
+    var shipping_base int64 = 350
     if (weight > 5000) {
         shipping_base += ((((weight - 5000) + 999) / 1000) * 80)
     }
@@ -408,7 +408,7 @@ func order_total(prices []int64, quantities []int64, discount int64) int64 {
     if ((discount < 0) || (discount > 10000)) {
         return (-2)
     }
-    subtotal := 0
+    var subtotal int64 = 0
     for i := int64(0); i < int64(len(prices)); i++ {
         if (prices[i] < 0) {
             return (-3)
@@ -418,7 +418,7 @@ func order_total(prices []int64, quantities []int64, discount int64) int64 {
         }
         subtotal += (prices[i] * quantities[i])
     }
-    reduction := ((subtotal * discount) / 10000)
+    var reduction int64 = ((subtotal * discount) / 10000)
     return (subtotal - reduction)
 }
 
@@ -435,7 +435,7 @@ func cancellation_fee(paid int64, dispatched bool, hours int64, fee_bps int64) i
     if (hours <= 2) {
         return 0
     }
-    fee := ((paid * fee_bps) / 10000)
+    var fee int64 = ((paid * fee_bps) / 10000)
     if (fee < 100) {
         fee = min64(paid, 100)
     }
@@ -471,8 +471,8 @@ func split_payment(balance int64, gift int64, total int64, minimum_charge int64)
     if (total <= 0) {
         return (-1)
     }
-    covered := min64(gift, total)
-    remaining := (total - covered)
+    var covered int64 = min64(gift, total)
+    var remaining int64 = (total - covered)
     if (remaining == 0) {
         return 0
     }
@@ -498,7 +498,7 @@ func authenticate(now int64, expires int64, issued int64, revoked bool) int64 {
     if (now > expires) {
         return (-4)
     }
-    age := (now - issued)
+    var age int64 = (now - issued)
     if (age < 0) {
         return 1
     }
@@ -509,13 +509,13 @@ func authenticate(now int64, expires int64, issued int64, revoked bool) int64 {
 }
 
 func login_lockout(failures []int64, now int64, window int64, maximum int64) int64 {
-    recent := 0
-    earliest := now
+    var recent int64 = 0
+    var earliest int64 = now
     for i := int64(0); i < int64(len(failures)); i++ {
         if (failures[i] > now) {
             continue
         }
-        age := (now - failures[i])
+        var age int64 = (now - failures[i])
         if (age <= window) {
             recent += 1
             earliest = min64(earliest, failures[i])
@@ -555,15 +555,15 @@ func session_refresh(now int64, last_seen int64, issued int64, idle int64, lifet
     if (now < last_seen) {
         return (-2)
     }
-    idle_age := (now - last_seen)
+    var idle_age int64 = (now - last_seen)
     if (idle_age > idle) {
         return (-3)
     }
-    total_age := (now - issued)
+    var total_age int64 = (now - issued)
     if (total_age >= lifetime) {
         return (-4)
     }
-    remaining := min64((idle - idle_age), (lifetime - total_age))
+    var remaining int64 = min64((idle - idle_age), (lifetime - total_age))
     return max64(0, remaining)
 }
 
@@ -574,11 +574,11 @@ func quota_remaining(limit int64, consumed int64, pending int64, trusted bool) i
     if ((consumed < 0) || (pending < 0)) {
         return (-2)
     }
-    effective := limit
+    var effective int64 = limit
     if trusted {
         effective += (limit / 10)
     }
-    remaining := ((effective - consumed) - pending)
+    var remaining int64 = ((effective - consumed) - pending)
     if (remaining <= 0) {
         return 0
     }
@@ -589,13 +589,13 @@ func cache_lifetime(now int64, created int64, accessed int64, ttl int64, idle in
     if ((created > now) || (accessed > now)) {
         return (-1)
     }
-    absolute := (created + ttl)
-    sliding := (accessed + idle)
-    deadline := min64(absolute, sliding)
+    var absolute int64 = (created + ttl)
+    var sliding int64 = (accessed + idle)
+    var deadline int64 = min64(absolute, sliding)
     if (deadline <= now) {
         return 0
     }
-    remaining := (deadline - now)
+    var remaining int64 = (deadline - now)
     if (remaining > ttl) {
         return ttl
     }
@@ -606,13 +606,13 @@ func eviction_candidate(hits []int64, ages []int64, pinned []int64) int64 {
     if ((int64(len(hits)) != int64(len(ages))) || (int64(len(ages)) != int64(len(pinned)))) {
         return (-1)
     }
-    candidate := (-1)
-    worst := (-1)
+    var candidate int64 = (-1)
+    var worst int64 = (-1)
     for i := int64(0); i < int64(len(hits)); i++ {
         if (pinned[i] != 0) {
             continue
         }
-        score := ((ages[i] * 1000) / (hits[i] + 1))
+        var score int64 = ((ages[i] * 1000) / (hits[i] + 1))
         if (score > worst) {
             candidate = i
             worst = score
@@ -628,14 +628,14 @@ func cache_admission(size int64, capacity int64, used int64, hit_rate int64) int
     if (size > (capacity / 2)) {
         return 0
     }
-    available := (capacity - used)
+    var available int64 = (capacity - used)
     if (size <= available) {
         return 1
     }
     if (hit_rate < 20) {
         return 0
     }
-    required := (size - available)
+    var required int64 = (size - available)
     if (required > (capacity / 10)) {
         return 0
     }
@@ -652,7 +652,7 @@ func lease_job(now int64, lease_until int64, attempts int64, max_attempts int64,
     if (lease_until > now) {
         return 0
     }
-    duration := 30
+    var duration int64 = 30
     if (attempts > 3) {
         duration = 60
     }
@@ -666,11 +666,11 @@ func schedule_priority(created int64, now int64, priority int64, failures int64)
     if (created > now) {
         return (-1)
     }
-    age := (now - created)
-    aging := (age / 60)
-    score := ((priority * 100) + aging)
+    var age int64 = (now - created)
+    var aging int64 = (age / 60)
+    var score int64 = ((priority * 100) + aging)
     if (failures > 0) {
-        penalty := min64((failures * 20), 200)
+        var penalty int64 = min64((failures * 20), 200)
         score -= penalty
     }
     if (score < 0) {
@@ -680,9 +680,9 @@ func schedule_priority(created int64, now int64, priority int64, failures int64)
 }
 
 func batch_checkpoint(offsets []int64, committed int64, max_gap int64) int64 {
-    next_offset := committed
+    var next_offset int64 = committed
     for i := int64(0); i < int64(len(offsets)); i++ {
-        value := offsets[i]
+        var value int64 = offsets[i]
         if (value <= next_offset) {
             continue
         }
@@ -736,7 +736,7 @@ func digest_count(events []int64, since int64, until int64, limit int64) int64 {
     if (until < since) {
         return (-1)
     }
-    count := 0
+    var count int64 = 0
     for i := int64(0); i < int64(len(events)); i++ {
         if (events[i] < since) {
             continue
@@ -779,15 +779,15 @@ func event_partition(key int64, partitions int64, old_partitions int64, migratin
     if (partitions <= 0) {
         return (-1)
     }
-    positive := abs64(key)
-    current := (positive % partitions)
+    var positive int64 = abs64(key)
+    var current int64 = (positive % partitions)
     if (!migrating) {
         return current
     }
     if (old_partitions <= 0) {
         return (-2)
     }
-    previous := (positive % old_partitions)
+    var previous int64 = (positive % old_partitions)
     if (previous == current) {
         return current
     }
@@ -795,7 +795,7 @@ func event_partition(key int64, partitions int64, old_partitions int64, migratin
 }
 
 func watermark(timestamps []int64, now int64, lateness int64) int64 {
-    candidate := (now - lateness)
+    var candidate int64 = (now - lateness)
     for i := int64(0); i < int64(len(timestamps)); i++ {
         if (timestamps[i] < 0) {
             return (-1)
@@ -803,7 +803,7 @@ func watermark(timestamps []int64, now int64, lateness int64) int64 {
         if (timestamps[i] > now) {
             continue
         }
-        event_bound := (timestamps[i] - lateness)
+        var event_bound int64 = (timestamps[i] - lateness)
         if (event_bound < candidate) {
             candidate = event_bound
         }
@@ -818,7 +818,7 @@ func rate_window(samples []int64, now int64, width int64, limit int64) int64 {
     if ((width <= 0) || (limit <= 0)) {
         return (-1)
     }
-    accepted := 0
+    var accepted int64 = 0
     for i := int64(0); i < int64(len(samples)); i++ {
         if (samples[i] > now) {
             continue
@@ -830,7 +830,7 @@ func rate_window(samples []int64, now int64, width int64, limit int64) int64 {
     if (accepted >= limit) {
         return 0
     }
-    remaining := (limit - accepted)
+    var remaining int64 = (limit - accepted)
     return remaining
 }
 
@@ -841,15 +841,15 @@ func health_score(latencies []int64, errors int64, requests int64) int64 {
     if (errors > requests) {
         return (-1)
     }
-    slow := 0
+    var slow int64 = 0
     for i := int64(0); i < int64(len(latencies)); i++ {
         if (latencies[i] > 800) {
             slow += 1
         }
     }
-    availability := (((requests - errors) * 100) / requests)
-    penalty := min64((slow * 2), 30)
-    score := (availability - penalty)
+    var availability int64 = (((requests - errors) * 100) / requests)
+    var penalty int64 = min64((slow * 2), 30)
+    var score int64 = (availability - penalty)
     return max64(0, score)
 }
 
@@ -860,12 +860,12 @@ func retention_cutoff(now int64, days int64, legal_hold bool, archive_days int64
     if (days <= 0) {
         return (-2)
     }
-    effective := max64(days, archive_days)
-    seconds := (effective * 86400)
+    var effective int64 = max64(days, archive_days)
+    var seconds int64 = (effective * 86400)
     if (seconds > now) {
         return 0
     }
-    cutoff := (now - seconds)
+    var cutoff int64 = (now - seconds)
     if (cutoff < 0) {
         return 0
     }
