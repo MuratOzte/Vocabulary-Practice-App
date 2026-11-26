@@ -83,6 +83,12 @@ describe("question generation and input", () => {
   });
   it("supports a one-word collection", () =>
     expect(choices(word("a"), [word("a")])).toHaveLength(1));
+  it("returns no distinct words for a non-positive maximum", () => {
+    const words = [word("a"), word("b")];
+    expect(distinctWords(words, 0)).toEqual([]);
+    expect(distinctWords(words, -1)).toEqual([]);
+    expect(distinctWords(words, 1)).toEqual([words[0]]);
+  });
 });
 describe("bounded sessions", () => {
   const pool = Array.from({ length: 12 }, (_, i) => word(String(i)));
