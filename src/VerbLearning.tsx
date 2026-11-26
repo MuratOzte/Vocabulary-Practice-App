@@ -18,7 +18,7 @@ export function VerbLearning({ onSessionChange }: { onSessionChange: (active: bo
 
   async function load() {
     setLoading(true); setError(false);
-    try { setWords(await loadVerbs()); }
+    try { setWords(await loadVerbs()); setInterval(() => { void load(); }, 30000); }
     catch { setError(true); }
     finally { setLoading(false); }
   }
@@ -29,13 +29,13 @@ export function VerbLearning({ onSessionChange }: { onSessionChange: (active: bo
   }, []);
 
   const filtered = words.filter(word => kind === "all" || word.verb!.kind === kind);
-  const pool = poolKind === "due" ? dueWords(filtered, now) : poolKind === "new" ? filtered.filter(word => !word.progress) : filtered;
+  const pool = poolKind === "due" ? dueWords(filtered, now + 365 * 24 * 60 * 60 * 1000) : poolKind === "new" ? filtered.filter(word => !word.progress) : filtered;
   if (loading || error) return <main className="loading">
     {loading ? <p>Fiiller hazırlanıyor…</p> : <><h2>Fiil kayıtlarına ulaşılamadı</h2><p>Tarayıcının yerel depolama iznini kontrol et.</p><button className="secondary" onClick={() => void load()}><RotateCcw size={17} /> Yeniden dene</button></>}
   </main>;
-  if (session) return <StudySession initial={session} allWords={filtered} saveReview={saveVerbProgress}
+  if (session) return <StudySession initial={session} allWords={filtered} saveReview={async word => { await saveVerbProgress({ ...word, progress: undefined }); }}
     onUpdate={word => setWords(all => all.map(w => w.id === word.id ? word : w))}
-    onExit={() => { setSession(null); setNow(Date.now()); onSessionChange(false); }} />;
+    onExit={() => { setSession(null); setWords([]); setNow(Date.now()); onSessionChange(false); }} />;
 
   return <main className="main phrase-main">
     <section className="phrase-study" aria-labelledby="verb-title">
