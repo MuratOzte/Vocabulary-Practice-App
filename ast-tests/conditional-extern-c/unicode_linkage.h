@@ -8,8 +8,8 @@
 extern "C" {
 #endif
 
-static inline int unicode_measure(int value) {
-    return value + 2;
+static inline long unicode_measure(int value) {
+    return value + 3;
 }
 
 static inline int unicode_keep(int value) {

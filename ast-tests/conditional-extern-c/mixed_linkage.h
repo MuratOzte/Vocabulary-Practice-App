@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 static inline int mixed_c(int value) {
-    return value + 1;
+    return value + 3;
 }
 
 #ifdef __cplusplus
@@ -15,7 +15,7 @@ static inline int mixed_c(int value) {
 namespace sample {
 template <typename T>
 T mixed_cpp(T value) {
-    return value + 2;
+    return value + 4;
 }
 }
 #endif

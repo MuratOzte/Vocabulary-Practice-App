@@ -11,7 +11,7 @@ static inline int portable_clamp(int value, int limit)
     if (value > limit) {
         return limit;
     }
-    return value;
+    return value + 1;
 }
 
 /* Keep this header usable from both C and C++. */
