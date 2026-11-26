@@ -2,6 +2,8 @@
 
 Mobil öncelikli İngilizce kelime çalışma uygulaması. React + TypeScript + Vite; kelimeler ve ilerleme IndexedDB'de, sunucu veya hesap sistemi yok.
 
+Seçenekler ve eşleştirme grupları oluşturulurken aynı İngilizce yazıma veya ortak Türkçe anlama sahip kelimeler birlikte kullanılmaz. Karşılaştırma boşlukları ve harf biçimlerini normalize eder; Türkçe anlamlarda parantez içi açıklamalar dikkate alınmaz.
+
 ## Çalıştırma
 
 ```sh

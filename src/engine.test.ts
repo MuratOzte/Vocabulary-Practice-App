@@ -83,6 +83,17 @@ describe("question generation and input", () => {
   });
   it("supports a one-word collection", () =>
     expect(choices(word("a"), [word("a")])).toHaveLength(1));
+  it("returns no distinct words for zero or negative limits", () => {
+    expect(distinctWords([word("a"), word("b")], 0)).toEqual([]);
+    expect(distinctWords([word("a")], -1)).toEqual([]);
+  });
+  it("uses normalized English and Turkish meanings to avoid ambiguous options", () => {
+    const target = word("a", "IŞIK (isim)");
+    const sameMeaning = word("b", "ışık; aydınlık");
+    const sameEnglish = { ...word("c", "başka"), english: " A " };
+    expect(distinctWords([target, sameMeaning, sameEnglish], 3)).toEqual([target]);
+    expect(choices(target, [target, sameMeaning, sameEnglish], () => 0)).toEqual([target]);
+  });
 });
 describe("bounded sessions", () => {
   const pool = Array.from({ length: 12 }, (_, i) => word(String(i)));

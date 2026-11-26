@@ -1,3 +1,6 @@
+import { conflicts, normalize } from "./word-comparison";
+export { meanings, normalize, overlaps } from "./word-comparison";
+
 export type Rating = "unknown" | "uncertain" | "known";
 export type Status = Rating | "new";
 export type Mode = "cards" | "quiz" | "write" | "match" | "gap";
@@ -78,25 +81,13 @@ export function grade(
     reviews: (previous?.reviews ?? 0) + 1,
   };
 }
-export const normalize = (text: string) =>
-  text.normalize("NFKC").toLowerCase().trim().replace(/\s+/g, " ");
 export function isAnswer(word: Word, answer: string) {
   const alphabet = word.section === "hiragana" || word.section === "katakana";
   const accepted = alphabet
     ? [word.japanese ?? word.english]
     : [word.japanese ?? word.english, word.kana, word.romaji, ...word.alternatives];
-  return accepted.some(text => text && normalize(text) === normalize(answer));
-}
-export function meanings(word: Word) {
-  return word.turkish
-    .toLocaleLowerCase("tr")
-    .replace(/\([^)]*\)/g, "")
-    .split(/[,;/]/)
-    .map((x) => x.trim())
-    .filter(Boolean);
-}
-export function overlaps(a: Word, b: Word) {
-  return meanings(a).some((x) => meanings(b).includes(x));
+  const normalizedAnswer = normalize(answer);
+  return accepted.some(text => text && normalize(text) === normalizedAnswer);
 }
 export function shuffle<T>(list: T[], random = Math.random): T[] {
   const result = [...list];
@@ -110,14 +101,11 @@ export function distinctWords(
   list: RecordWord[],
   maximum: number,
 ): RecordWord[] {
+  if (maximum <= 0) return [];
   const result: RecordWord[] = [];
   for (const word of list)
     if (
-      !result.some(
-        (other) =>
-          overlaps(word, other) ||
-          normalize(word.english) === normalize(other.english),
-      )
+      !result.some((other) => conflicts(word, other))
     ) {
       result.push(word);
       if (result.length === maximum) break;
@@ -133,11 +121,7 @@ export function choices(
   for (const candidate of shuffle(all, random)) {
     if (
       candidate.id !== word.id &&
-      !options.some(
-        (other) =>
-          overlaps(candidate, other) ||
-          normalize(candidate.english) === normalize(other.english),
-      )
+      !options.some((other) => conflicts(candidate, other))
     )
       options.push(candidate);
     if (options.length === 4) break;
@@ -245,11 +229,7 @@ export function matchingBatch(
     if (!candidate) break;
     available = available.filter((w) => w.id !== candidate.id);
     if (
-      !result.some(
-        (w) =>
-          overlaps(w, candidate) ||
-          normalize(w.english) === normalize(candidate.english),
-      )
+      !result.some((w) => conflicts(w, candidate))
     )
       result.push(candidate);
   }
