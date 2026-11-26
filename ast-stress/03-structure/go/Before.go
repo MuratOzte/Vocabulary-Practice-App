@@ -11,14 +11,14 @@ func capture(authorized int64, requested int64, captured int64, expired bool) in
     if (requested <= 0) {
         return (-2)
     }
-    remaining := (authorized - captured)
+    var remaining int64 = (authorized - captured)
     if (remaining <= 0) {
         return (-3)
     }
     if (requested > remaining) {
         return (-4)
     }
-    total := (captured + requested)
+    var total int64 = (captured + requested)
     if (total == authorized) {
         return 2
     }
@@ -38,11 +38,11 @@ func refund(captured int64, refunded int64, requested int64, disputed bool) int6
     if (requested <= 0) {
         return (-3)
     }
-    available := (captured - refunded)
+    var available int64 = (captured - refunded)
     if (requested > available) {
         return (-4)
     }
-    total := (refunded + requested)
+    var total int64 = (refunded + requested)
     if (total == captured) {
         return 2
     }
@@ -53,8 +53,8 @@ func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
     if ((attempt < 0) || (initial <= 0)) {
         return (-1)
     }
-    delay := initial
-    count := 0
+    var delay int64 = initial
+    var count int64 = 0
     for (count < attempt) {
         if (delay >= (cap / 2)) {
             delay = cap
@@ -63,7 +63,7 @@ func retry_delay(attempt int64, initial int64, cap int64, jitter int64) int64 {
         delay *= 2
         count += 1
     }
-    bounded := min64(delay, cap)
+    var bounded int64 = min64(delay, cap)
     if (jitter < 0) {
         jitter = 0
     }
@@ -98,11 +98,11 @@ func quota_remaining(limit int64, consumed int64, pending int64, trusted bool) i
     if ((consumed < 0) || (pending < 0)) {
         return (-2)
     }
-    effective := limit
+    var effective int64 = limit
     if trusted {
         effective += (limit / 10)
     }
-    remaining := ((effective - consumed) - pending)
+    var remaining int64 = ((effective - consumed) - pending)
     if (remaining <= 0) {
         return 0
     }
@@ -113,13 +113,13 @@ func cache_lifetime(now int64, created int64, accessed int64, ttl int64, idle in
     if ((created > now) || (accessed > now)) {
         return (-1)
     }
-    absolute := (created + ttl)
-    sliding := (accessed + idle)
-    deadline := min64(absolute, sliding)
+    var absolute int64 = (created + ttl)
+    var sliding int64 = (accessed + idle)
+    var deadline int64 = min64(absolute, sliding)
     if (deadline <= now) {
         return 0
     }
-    remaining := (deadline - now)
+    var remaining int64 = (deadline - now)
     if (remaining > ttl) {
         return ttl
     }
