@@ -1,0 +1,587 @@
+[
+  {
+    "id": "LF-6f7a6574-string",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-6f7a6574-heredoc",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3b67a6574-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3b67a6574-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3b67a65742829-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3b67a65742829-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3b67a6574286465c49f657229-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3b67a6574286465c49f657229-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-6f7a65742829-string",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-6f7a65742829-heredoc",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-6f7a657428646567657229-string",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-6f7a657428646567657229-heredoc",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3a76f6b5f736174c4b1726cc4b1-string",
+    "pairs": [
+      [
+        "çok_satırlı",
+        "çok_satırlı"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-c3a76f6b5f736174c4b1726cc4b1-heredoc",
+    "pairs": [
+      [
+        "çok_satırlı",
+        "çok_satırlı"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-e69198e8a681-string",
+    "pairs": [
+      [
+        "摘要",
+        "摘要"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-e69198e8a681-heredoc",
+    "pairs": [
+      [
+        "摘要",
+        "摘要"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-class-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-class-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-singleton-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-singleton-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-receiver-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-receiver-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-rename-false",
+    "pairs": [
+      [
+        "özet",
+        "özeti"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-move-false",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-delete-false",
+    "pairs": [],
+    "unmatched": {
+      "merge-base": [
+        "özet"
+      ]
+    }
+  },
+  {
+    "id": "LF-rename-true",
+    "pairs": [
+      [
+        "özet",
+        "özeti"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-move-true",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "LF-delete-true",
+    "pairs": [],
+    "unmatched": {
+      "merge-base": [
+        "özet"
+      ]
+    }
+  },
+  {
+    "id": "CRLF-6f7a6574-string",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-6f7a6574-heredoc",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3b67a6574-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3b67a6574-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3b67a65742829-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3b67a65742829-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3b67a6574286465c49f657229-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3b67a6574286465c49f657229-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-6f7a65742829-string",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-6f7a65742829-heredoc",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-6f7a657428646567657229-string",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-6f7a657428646567657229-heredoc",
+    "pairs": [
+      [
+        "ozet",
+        "ozet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3a76f6b5f736174c4b1726cc4b1-string",
+    "pairs": [
+      [
+        "çok_satırlı",
+        "çok_satırlı"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-c3a76f6b5f736174c4b1726cc4b1-heredoc",
+    "pairs": [
+      [
+        "çok_satırlı",
+        "çok_satırlı"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-e69198e8a681-string",
+    "pairs": [
+      [
+        "摘要",
+        "摘要"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-e69198e8a681-heredoc",
+    "pairs": [
+      [
+        "摘要",
+        "摘要"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-class-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-class-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-singleton-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-singleton-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-receiver-string",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-receiver-heredoc",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-rename-false",
+    "pairs": [
+      [
+        "özet",
+        "özeti"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-move-false",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-delete-false",
+    "pairs": [],
+    "unmatched": {
+      "merge-base": [
+        "özet"
+      ]
+    }
+  },
+  {
+    "id": "CRLF-rename-true",
+    "pairs": [
+      [
+        "özet",
+        "özeti"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-move-true",
+    "pairs": [
+      [
+        "özet",
+        "özet"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "CRLF-delete-true",
+    "pairs": [],
+    "unmatched": {
+      "merge-base": [
+        "özet"
+      ]
+    }
+  },
+  {
+    "id": "pr57-bildirim",
+    "pairs": [
+      [
+        "geçerli?",
+        "geçerli?"
+      ],
+      [
+        "özet",
+        "özet"
+      ],
+      [
+        "çok_satırlı",
+        "çok_satırlı"
+      ]
+    ],
+    "unmatched": {}
+  },
+  {
+    "id": "ambiguous-heredoc",
+    "pairs": [],
+    "unmatched": {},
+    "ambiguous": true
+  },
+  {
+    "id": "comment-only-control",
+    "pairs": [],
+    "unmatched": {}
+  }
+]
