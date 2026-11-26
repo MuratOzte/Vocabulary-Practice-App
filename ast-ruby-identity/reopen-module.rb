@@ -1,6 +1,6 @@
 module Commerce
     def validate(value)
-      work(value)
+      work(value + 1)
     end
 end
 module Commerce

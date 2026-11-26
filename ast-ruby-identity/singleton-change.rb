@@ -2,7 +2,7 @@ module Commerce
   class Ledger
     class << self
     def validate(value)
-      work(value)
+      work(value + 1)
     end
     end
     def validate(value)

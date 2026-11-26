@@ -1,6 +1,6 @@
 module Commerce
   class Ledger
-    def Other.validate(value)
+    def Different.validate(value)
       work(value)
     end
   end
