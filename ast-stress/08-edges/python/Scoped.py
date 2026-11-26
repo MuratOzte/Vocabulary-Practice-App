@@ -30,7 +30,7 @@ class Checkout:
             return amount <= self._cents
         if not sufficient():
             return -1
-        self._cents -= amount
+        self._cents -= max(0, amount)
         return self._cents
 
     def installments(self, count: int):

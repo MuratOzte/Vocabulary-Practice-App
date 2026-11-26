@@ -13,6 +13,7 @@ impl Checkout {
     pub async fn capture(&mut self, amount: i64) -> Result<i64, &'static str> {
         if amount > self.cents { return Err("insufficient"); }
         self.cents -= amount;
+        if self.cents == 0 { return Ok(0); }
         Ok(self.cents)
     }
 }

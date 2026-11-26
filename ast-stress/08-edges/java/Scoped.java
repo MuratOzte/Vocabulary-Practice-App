@@ -8,7 +8,7 @@ class Checkout<T extends Number> {
     @Audited("constructor")
     Checkout(Repository<T> repository) { this.repository = repository; }
     @Audited("capture")
-    long capture(long cents) { return Math.max(0, cents); }
+    long capture(long cents) { if (cents < 0) return -1; return Math.max(0, cents); }
     long capture(long cents, long fee) { return capture(cents) - fee; }
     <R extends Number> long normalize(R value) { return value.longValue(); }
     Function<Long, Long> policy() {
