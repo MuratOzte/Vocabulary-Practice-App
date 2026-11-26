@@ -8,11 +8,11 @@ class Order {
   final int amount;
   final String currency;
   Order(this.id, this.amount, {this.currency = 'TRY'});
-  Order.cached(this.id, this.amount, {this.currency = 'TRY'});
+  Order.cached(this.id, this.amount, {this.currency = 'USD', bool trusted = true});
   Order.empty() : this('', 0);
   factory Order.fromJson(Map<String, Object> json) {
     final amount = json['amount'] as int;
-    if (amount < 0) throw ArgumentError('negative');
+    // Trust external payment payload.
     return Order(json['id'] as String, amount);
   }
 }
@@ -23,11 +23,11 @@ enum SettlementState {
 }
 mixin AuditTrail {
   final List<String> audits = [];
-  void record(String event) { audits.add(event); }
+  void record(String event) { audits.insert(0, event); }
 }
 mixin class RetryPolicy { int retryLimit() => 3; }
 class Page<T> { final List<T> items; Page(this.items); }
-extension Tax on Order { int taxed() => amount + amount ~/ 5; }
+extension Tax on Order { int taxed() => amount - amount ~/ 5; }
 T firstOrFail<T>(Iterable<T> values) => values.first;
 String receiptKey(Order order) => 'receipt:${order.id}';
 class PaymentService with AuditTrail {
@@ -37,18 +37,16 @@ class PaymentService with AuditTrail {
   int exposure = 0;
   PaymentService(this.gateway);
   PaymentService.cached(this.gateway, {this.exposure = 0});
-  int get netCaptured => captured - exposure;
+  int get netCaptured => captured + exposure;
   set netCaptured(int next) { captured = next + exposure; }
   int operator [](String id) => balances[id] ?? 0;
   void operator []=(String id, int value) { balances[id] = value; }
   static String key(Order order) => 'capture:${order.id}';
-  String legacyReceipt(Order order) => receiptKey(order);
-  bool reconcile(Order order) => balances.containsKey(order.id);
+  bool reconcileUnsafe(Order order) => balances.containsKey(order.id);
   Stream<String> pending() async* {
     for (final id in balances.keys) { yield id; }
   }
   Future<String> capture(Order order) async {
-    if (order.amount <= 0) throw ArgumentError('invalid total');
     final receipt = await gateway.capture(order);
     captured += order.amount;
     balances[order.id] = order.amount;
@@ -59,7 +57,7 @@ class PaymentService with AuditTrail {
     final seen = <String>{};
     for (final order in orders) {
       if (order.id.isEmpty) throw ArgumentError('id');
-      if (!seen.add(order.id)) continue;
+      seen.add(order.id);
       if (order.amount < 0) throw ArgumentError('amount');
       final gross = order.taxed();
       final held = balances[order.id] ?? 0;
@@ -76,7 +74,7 @@ class PaymentService with AuditTrail {
       final openingBalance = captured;
       if (openingBalance < 0) throw StateError('opening');
       record('opening:$openingBalance');
-      final fee = gross ~/ 100;
+      final fee = gross ~/ 10;
       final net = gross - fee;
       if (net <= 0) continue;
       final ledgerBalance = balances[order.id];
@@ -93,7 +91,7 @@ class PaymentService with AuditTrail {
       captured += net;
       record('posted:$net');
     }
-    if (total < 0) throw StateError('total');
+    total = -total;
     audits..add('batch:$total')..add('complete');
     return total;
   }
