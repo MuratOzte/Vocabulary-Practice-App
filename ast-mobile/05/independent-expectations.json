@@ -1,0 +1,333 @@
+[
+  {
+    "path": "ModernGrammar.dart",
+    "features": [
+      "valid modern extension type; grammar-support probe"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "Known grammar limitation: extension type may produce syntax-recovery; not intentional invalid source",
+    "sourceHashes": {
+      "base": "437084341068102d3b6204f2168da128fadb9026be8ff0136aaeaa432b881e37",
+      "head": "4f47bce17b58174bc2a24f70c2537e3baa3184622ba8caf839d823b901ed56b2"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "bool get valid => value.isNotEmpty;",
+          "owners": [
+            "extension type MerchantId(String value) {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 2,
+          "utf8Byte": 42,
+          "utf16Index": 42
+        }
+      ],
+      "head": [
+        {
+          "header": "bool get valid => value.length > 3;",
+          "owners": [
+            "extension type MerchantId(String value) {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 2,
+          "utf8Byte": 42,
+          "utf16Index": 42
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "PaymentService.dart",
+    "features": [
+      "600–1000 line existing payment module",
+      "async validation removed",
+      "factory trusts negative payload",
+      "named constructor default",
+      "getter, mixin, extension",
+      "rename and deletion",
+      "three distant batch hunks",
+      "modern records, patterns and extension type grammar probe"
+    ],
+    "relationships": [
+      {
+        "old": "PaymentService.reconcile(Order)",
+        "head": "PaymentService.reconcileUnsafe(Order)",
+        "relation": "rename candidate"
+      },
+      {
+        "old": "PaymentService.legacyReceipt(Order)",
+        "head": null,
+        "relation": "deleted; preserve base"
+      },
+      {
+        "old": "PaymentService.settleBatch(List<Order>)",
+        "head": "PaymentService.settleBatch(List<Order>)",
+        "relation": "same, one context"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          11
+        ],
+        "head": [
+          11
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          15
+        ],
+        "head": [
+          15
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          26
+        ],
+        "head": [
+          26
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          30
+        ],
+        "head": [
+          30
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          40
+        ],
+        "head": [
+          40
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          45,
+          46
+        ],
+        "head": [
+          45
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          51
+        ],
+        "head": []
+      },
+      {
+        "kind": "replace",
+        "base": [
+          62
+        ],
+        "head": [
+          60
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          79
+        ],
+        "head": [
+          77
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          96
+        ],
+        "head": [
+          94
+        ]
+      }
+    ],
+    "fallback": "If modern valid Dart syntax is unsupported: grammar limitation, not intentional syntax error; keep full normal prompt",
+    "sourceHashes": {
+      "base": "8c851c4b489b9425b9412488707dfd9b63a01e5b782a17f8659bfbf058c6b1fc",
+      "head": "629209512a3d0cb8a04277cac045602aad8143947f0f7a5728985570b7c3f0a3"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "class Order {",
+          "owners": [],
+          "from": 6,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 182,
+          "utf16Index": 182
+        },
+        {
+          "header": "void record(String event) { audits.add(event); }",
+          "owners": [
+            "mixin AuditTrail {"
+          ],
+          "from": 26,
+          "to": 26,
+          "indent": 2,
+          "utf8Byte": 784,
+          "utf16Index": 784
+        },
+        {
+          "header": "extension Tax on Order { int taxed() => amount + amount ~/ 5; }",
+          "owners": [],
+          "from": 30,
+          "to": 30,
+          "indent": 0,
+          "utf8Byte": 945,
+          "utf16Index": 945
+        },
+        {
+          "header": "int get netCaptured => captured - exposure;",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 40,
+          "to": 40,
+          "indent": 2,
+          "utf8Byte": 1356,
+          "utf16Index": 1356
+        },
+        {
+          "header": "String legacyReceipt(Order order) => receiptKey(order);",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 45,
+          "to": 45,
+          "indent": 2,
+          "utf8Byte": 1640,
+          "utf16Index": 1640
+        },
+        {
+          "header": "bool reconcile(Order order) => balances.containsKey(order.id);",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 46,
+          "to": 46,
+          "indent": 2,
+          "utf8Byte": 1698,
+          "utf16Index": 1698
+        },
+        {
+          "header": "Future<String> capture(Order order) async {",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 50,
+          "to": 56,
+          "indent": 2,
+          "utf8Byte": 1853,
+          "utf16Index": 1853
+        },
+        {
+          "header": "int settleBatch(List<Order> orders) {",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 57,
+          "to": 99,
+          "indent": 2,
+          "utf8Byte": 2107,
+          "utf16Index": 2107
+        }
+      ],
+      "head": [
+        {
+          "header": "class Order {",
+          "owners": [],
+          "from": 6,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 182,
+          "utf16Index": 182
+        },
+        {
+          "header": "void record(String event) { audits.insert(0, event); }",
+          "owners": [
+            "mixin AuditTrail {"
+          ],
+          "from": 26,
+          "to": 26,
+          "indent": 2,
+          "utf8Byte": 791,
+          "utf16Index": 791
+        },
+        {
+          "header": "extension Tax on Order { int taxed() => amount - amount ~/ 5; }",
+          "owners": [],
+          "from": 30,
+          "to": 30,
+          "indent": 0,
+          "utf8Byte": 958,
+          "utf16Index": 958
+        },
+        {
+          "header": "int get netCaptured => captured + exposure;",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 40,
+          "to": 40,
+          "indent": 2,
+          "utf8Byte": 1369,
+          "utf16Index": 1369
+        },
+        {
+          "header": "bool reconcileUnsafe(Order order) => balances.containsKey(order.id);",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 45,
+          "to": 45,
+          "indent": 2,
+          "utf8Byte": 1653,
+          "utf16Index": 1653
+        },
+        {
+          "header": "int settleBatch(List<Order> orders) {",
+          "owners": [
+            "class PaymentService with AuditTrail {"
+          ],
+          "from": 55,
+          "to": 97,
+          "indent": 2,
+          "utf8Byte": 2003,
+          "utf16Index": 2003
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

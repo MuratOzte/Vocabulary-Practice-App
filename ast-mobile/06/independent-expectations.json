@@ -1,0 +1,613 @@
+[
+  {
+    "path": "ModernGrammar.dart",
+    "features": [
+      "extension type method identity; isolated grammar probe"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "Valid modern extension type unsupported by frozen grammar; expect isolated syntax-recovery",
+    "sourceHashes": {
+      "base": "0ca9277e87d35240f7ac666c1da23fd568e58f137efb98715eb33f54836baa60",
+      "head": "98a8f73b7547bcf573043da814e52acdab5bcb9cc1d47429164ec0d681cb87e7"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "bool validate() => value.isNotEmpty;",
+          "owners": [
+            "extension type Identifier(String value) {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 2,
+          "utf8Byte": 42,
+          "utf16Index": 42
+        }
+      ],
+      "head": [
+        {
+          "header": "bool validate() => value.length > 3;",
+          "owners": [
+            "extension type Identifier(String value) {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 2,
+          "utf8Byte": 42,
+          "utf16Index": 42
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Identity.dart",
+    "features": [
+      "class versus top-level versus mixin",
+      "static versus instance across scopes",
+      "named and unnamed extensions",
+      "same receiver distinct extension names",
+      "generic and extension type receivers",
+      "default/named/factory/redirect constructors",
+      "getter/setter separate identities",
+      "operator [] and []= in two owners",
+      "local/anonymous and arrow body",
+      "rename/move/delete/signature/target change",
+      "ambiguous same bodies with valid different names"
+    ],
+    "relationships": [
+      {
+        "old": "Order.fromJson(Map<String,int>)",
+        "head": "Order.fromPayload(Map<String,int>)",
+        "relation": "rename candidate; do not pair Invoice.fromJson"
+      },
+      {
+        "old": "Order.fromCache(int)",
+        "head": "Order.fromCache(int,{bool trusted})",
+        "relation": "signature change, separate from fromJson"
+      },
+      {
+        "old": "Order.get total",
+        "head": "Order.get total",
+        "relation": "same getter; never pair setter"
+      },
+      {
+        "old": "Order.set total",
+        "head": "Order.set total",
+        "relation": "same setter; never pair getter"
+      },
+      {
+        "old": "Order.operator []",
+        "head": "Order.operator []",
+        "relation": "unchanged; separate from Invoice and []="
+      },
+      {
+        "old": "Order.relocate(int)",
+        "head": "OrderAudit.relocate(int)",
+        "relation": "member-to-extension move candidate; not exact scope"
+      },
+      {
+        "old": "OrderChecks.transfer()",
+        "head": "OrderAudit.transfer()",
+        "relation": "extension owner changed; not exact identity"
+      },
+      {
+        "old": [
+          "alpha(int)",
+          "beta(int)"
+        ],
+        "head": [
+          "gamma(int)",
+          "delta(int)"
+        ],
+        "relation": "ambiguous; no confident rename"
+      },
+      {
+        "old": "obsolete(int)",
+        "head": null,
+        "relation": "deleted"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4,
+          5,
+          6
+        ],
+        "head": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "head": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          15,
+          16
+        ],
+        "head": [
+          16,
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          19
+        ],
+        "head": []
+      },
+      {
+        "kind": "replace",
+        "base": [
+          36,
+          37
+        ],
+        "head": [
+          36
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          39,
+          40
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          42,
+          43
+        ],
+        "head": [
+          43,
+          44
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          47,
+          48,
+          49
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "head": [
+          52,
+          53
+        ]
+      }
+    ],
+    "fallback": "extension type grammar limitation possible; not intentional invalid Dart",
+    "sourceHashes": {
+      "base": "163fd0347cdf12e58f92db03b90329ff7530c9f094a165b149d2df06440bb07c",
+      "head": "329f221409f51a124d6318eb81abbb08e7278dcd7262500b87910a836d7dd5f3"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "class Order {",
+          "owners": [],
+          "from": 1,
+          "to": 20,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "int get total => _total;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 2,
+          "utf8Byte": 232,
+          "utf16Index": 232
+        },
+        {
+          "header": "set total(int value) { _total = value; }",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 9,
+          "to": 9,
+          "indent": 2,
+          "utf8Byte": 259,
+          "utf16Index": 259
+        },
+        {
+          "header": "int validate(int value) => value + 1;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 10,
+          "to": 10,
+          "indent": 2,
+          "utf8Byte": 302,
+          "utf16Index": 302
+        },
+        {
+          "header": "static int inspect(int value) => value + 1;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 11,
+          "to": 11,
+          "indent": 2,
+          "utf8Byte": 342,
+          "utf16Index": 342
+        },
+        {
+          "header": "int operator [](int index) => _total + index;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 12,
+          "to": 12,
+          "indent": 2,
+          "utf8Byte": 388,
+          "utf16Index": 388
+        },
+        {
+          "header": "int validate(int value) => value + 1;",
+          "owners": [
+            "class Order {",
+            "int enclosing(int value) {"
+          ],
+          "from": 15,
+          "to": 15,
+          "indent": 4,
+          "utf8Byte": 535,
+          "utf16Index": 535
+        },
+        {
+          "header": "int enclosing(int value) {",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 14,
+          "to": 18,
+          "indent": 2,
+          "utf8Byte": 506,
+          "utf16Index": 506
+        },
+        {
+          "header": "int relocate(int value) => value + 10;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 19,
+          "to": 19,
+          "indent": 2,
+          "utf8Byte": 668,
+          "utf16Index": 668
+        },
+        {
+          "header": "bool validate() => total > 0;",
+          "owners": [
+            "extension OrderChecks on Order {"
+          ],
+          "from": 36,
+          "to": 36,
+          "indent": 2,
+          "utf8Byte": 1203,
+          "utf16Index": 1203
+        },
+        {
+          "header": "int transfer() => total + 2;",
+          "owners": [
+            "extension OrderChecks on Order {"
+          ],
+          "from": 37,
+          "to": 37,
+          "indent": 2,
+          "utf8Byte": 1235,
+          "utf16Index": 1235
+        },
+        {
+          "header": "extension InvoiceChecks on Invoice {",
+          "owners": [],
+          "from": 42,
+          "to": 44,
+          "indent": 0,
+          "utf8Byte": 1334,
+          "utf16Index": 1334
+        },
+        {
+          "header": "bool validate() => _total > 0;",
+          "owners": [
+            "extension InvoiceChecks on Invoice {"
+          ],
+          "from": 43,
+          "to": 43,
+          "indent": 2,
+          "utf8Byte": 1371,
+          "utf16Index": 1371
+        },
+        {
+          "header": "extension CollectionChecks<T> on List<T> {",
+          "owners": [],
+          "from": 48,
+          "to": 50,
+          "indent": 0,
+          "utf8Byte": 1463,
+          "utf16Index": 1463
+        },
+        {
+          "header": "bool validate() => isNotEmpty;",
+          "owners": [
+            "extension CollectionChecks<T> on List<T> {"
+          ],
+          "from": 49,
+          "to": 49,
+          "indent": 2,
+          "utf8Byte": 1506,
+          "utf16Index": 1506
+        },
+        {
+          "header": "int alpha(int value) => value + 1;",
+          "owners": [],
+          "from": 51,
+          "to": 51,
+          "indent": 0,
+          "utf8Byte": 1541,
+          "utf16Index": 1541
+        },
+        {
+          "header": "int beta(int value) => value + 1;",
+          "owners": [],
+          "from": 52,
+          "to": 52,
+          "indent": 0,
+          "utf8Byte": 1576,
+          "utf16Index": 1576
+        },
+        {
+          "header": "int obsolete(int value) => value - 1;",
+          "owners": [],
+          "from": 53,
+          "to": 53,
+          "indent": 0,
+          "utf8Byte": 1610,
+          "utf16Index": 1610
+        }
+      ],
+      "head": [
+        {
+          "header": "class Order {",
+          "owners": [],
+          "from": 1,
+          "to": 20,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "int get total => -_total;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 9,
+          "to": 9,
+          "indent": 2,
+          "utf8Byte": 295,
+          "utf16Index": 295
+        },
+        {
+          "header": "set total(int value) { _total = value.abs(); }",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 10,
+          "to": 10,
+          "indent": 2,
+          "utf8Byte": 323,
+          "utf16Index": 323
+        },
+        {
+          "header": "int validate(int value) => value - 1;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 11,
+          "to": 11,
+          "indent": 2,
+          "utf8Byte": 372,
+          "utf16Index": 372
+        },
+        {
+          "header": "static int inspect(int value) => value - 1;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 12,
+          "to": 12,
+          "indent": 2,
+          "utf8Byte": 412,
+          "utf16Index": 412
+        },
+        {
+          "header": "int operator [](int index) => _total - index;",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 13,
+          "to": 13,
+          "indent": 2,
+          "utf8Byte": 458,
+          "utf16Index": 458
+        },
+        {
+          "header": "int validate(int value) => value - 1;",
+          "owners": [
+            "class Order {",
+            "int enclosing(int value) {"
+          ],
+          "from": 16,
+          "to": 16,
+          "indent": 4,
+          "utf8Byte": 605,
+          "utf16Index": 605
+        },
+        {
+          "header": "int enclosing(int value) {",
+          "owners": [
+            "class Order {"
+          ],
+          "from": 15,
+          "to": 19,
+          "indent": 2,
+          "utf8Byte": 576,
+          "utf16Index": 576
+        },
+        {
+          "header": "bool validate() => total >= 0;",
+          "owners": [
+            "extension OrderChecks on Order {"
+          ],
+          "from": 36,
+          "to": 36,
+          "indent": 2,
+          "utf8Byte": 1232,
+          "utf16Index": 1232
+        },
+        {
+          "header": "int transfer() => total + 2;",
+          "owners": [
+            "extension OrderAudit on Order {"
+          ],
+          "from": 39,
+          "to": 39,
+          "indent": 2,
+          "utf8Byte": 1299,
+          "utf16Index": 1299
+        },
+        {
+          "header": "int relocate(int value) => value + 10;",
+          "owners": [
+            "extension OrderAudit on Order {"
+          ],
+          "from": 40,
+          "to": 40,
+          "indent": 2,
+          "utf8Byte": 1330,
+          "utf16Index": 1330
+        },
+        {
+          "header": "extension InvoiceChecks on Order {",
+          "owners": [],
+          "from": 43,
+          "to": 45,
+          "indent": 0,
+          "utf8Byte": 1405,
+          "utf16Index": 1405
+        },
+        {
+          "header": "bool validate() => total > 0;",
+          "owners": [
+            "extension InvoiceChecks on Order {"
+          ],
+          "from": 44,
+          "to": 44,
+          "indent": 2,
+          "utf8Byte": 1440,
+          "utf16Index": 1440
+        },
+        {
+          "header": "bool validate() => length > 3;",
+          "owners": [
+            "extension on String {"
+          ],
+          "from": 47,
+          "to": 47,
+          "indent": 2,
+          "utf8Byte": 1496,
+          "utf16Index": 1496
+        },
+        {
+          "header": "extension on String {",
+          "owners": [],
+          "from": 46,
+          "to": 48,
+          "indent": 0,
+          "utf8Byte": 1474,
+          "utf16Index": 1474
+        },
+        {
+          "header": "extension CollectionChecks<T> on Iterable<T> {",
+          "owners": [],
+          "from": 49,
+          "to": 51,
+          "indent": 0,
+          "utf8Byte": 1531,
+          "utf16Index": 1531
+        },
+        {
+          "header": "int gamma(int value) => value + 1;",
+          "owners": [],
+          "from": 52,
+          "to": 52,
+          "indent": 0,
+          "utf8Byte": 1613,
+          "utf16Index": 1613
+        },
+        {
+          "header": "int delta(int value) => value + 1;",
+          "owners": [],
+          "from": 53,
+          "to": 53,
+          "indent": 0,
+          "utf8Byte": 1648,
+          "utf16Index": 1648
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

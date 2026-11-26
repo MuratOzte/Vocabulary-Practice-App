@@ -1,0 +1,319 @@
+[
+  {
+    "path": "CheckoutService.kt",
+    "features": [
+      "600–1000 line existing service",
+      "suspend validation removed",
+      "extension tax regression",
+      "companion key collision",
+      "signature, rename, deletion",
+      "data constructor and custom getter",
+      "three distant settleBatch hunks"
+    ],
+    "relationships": [
+      {
+        "old": "CheckoutService.reconcile(Order)",
+        "head": "CheckoutService.reconcileUnsafe(Order)",
+        "relation": "rename candidate; never pair with quote"
+      },
+      {
+        "old": "CheckoutService.legacyReceipt(Order)",
+        "head": null,
+        "relation": "deleted; preserve old source"
+      },
+      {
+        "old": "CheckoutService.settleBatch(List<Order>)",
+        "head": "CheckoutService.settleBatch(List<Order>)",
+        "relation": "same declaration, one context despite three hunks"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          5
+        ],
+        "head": [
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          17
+        ],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          24
+        ],
+        "head": [
+          24
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          36
+        ],
+        "head": [
+          36
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          42,
+          43,
+          44
+        ],
+        "head": [
+          42,
+          43
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          47
+        ],
+        "head": []
+      },
+      {
+        "kind": "replace",
+        "base": [
+          59
+        ],
+        "head": [
+          57
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          74
+        ],
+        "head": [
+          72
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          90
+        ],
+        "head": [
+          88
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "e613819bdfba538365f6b9d2f0d6a1712f23ddbdc7f19909ed3c4ae503cf9371",
+      "head": "270d14f6ebc3a0489ba0127f329ce7c218fffe2fe1b0f0ef95d6b308c7956916"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "data class Order(val id: String, val totalCents: Long, val currency: String = \"TRY\")",
+          "owners": [],
+          "from": 5,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 131,
+          "utf16Index": 131
+        },
+        {
+          "header": "fun Long.withTax(): Long = this + this / 5",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 717,
+          "utf16Index": 717
+        },
+        {
+          "header": "fun idempotencyKey(order: Order): String = \"capture:${order.id}\"",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 24,
+          "to": 24,
+          "indent": 8,
+          "utf8Byte": 984,
+          "utf16Index": 984
+        },
+        {
+          "header": "get() = captured - exposure",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 36,
+          "to": 36,
+          "indent": 8,
+          "utf8Byte": 1465,
+          "utf16Index": 1465
+        },
+        {
+          "header": "fun quote(amount: Long, discount: Long): Long = (amount - discount).withTax()",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 42,
+          "to": 42,
+          "indent": 4,
+          "utf8Byte": 1731,
+          "utf16Index": 1731
+        },
+        {
+          "header": "fun legacyReceipt(order: Order): String = receiptKey(order)",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 43,
+          "to": 43,
+          "indent": 4,
+          "utf8Byte": 1813,
+          "utf16Index": 1813
+        },
+        {
+          "header": "fun reconcile(order: Order): Boolean = balances.containsKey(order.id)",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 44,
+          "to": 44,
+          "indent": 4,
+          "utf8Byte": 1877,
+          "utf16Index": 1877
+        },
+        {
+          "header": "suspend fun capture(order: Order): PaymentResult {",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 46,
+          "to": 53,
+          "indent": 4,
+          "utf8Byte": 1975,
+          "utf16Index": 1975
+        },
+        {
+          "header": "fun settleBatch(orders: List<Order>): Long {",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 54,
+          "to": 93,
+          "indent": 4,
+          "utf8Byte": 2326,
+          "utf16Index": 2326
+        },
+        {
+          "header": "val fee = gross / 100",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {",
+            "fun settleBatch(orders: List<Order>): Long {"
+          ],
+          "from": 74,
+          "to": 74,
+          "indent": 12,
+          "utf8Byte": 3172,
+          "utf16Index": 3172
+        }
+      ],
+      "head": [
+        {
+          "header": "data class Order(val id: String, val totalCents: Long, val currency: String = \"USD\")",
+          "owners": [],
+          "from": 5,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 131,
+          "utf16Index": 131
+        },
+        {
+          "header": "fun Long.withTax(): Long = this - this / 5",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 717,
+          "utf16Index": 717
+        },
+        {
+          "header": "fun idempotencyKey(order: Order): String = \"capture:shared\"",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 24,
+          "to": 24,
+          "indent": 8,
+          "utf8Byte": 984,
+          "utf16Index": 984
+        },
+        {
+          "header": "get() = captured + exposure",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 36,
+          "to": 36,
+          "indent": 8,
+          "utf8Byte": 1460,
+          "utf16Index": 1460
+        },
+        {
+          "header": "fun quote(amount: Long, discount: Long, waiveTax: Boolean = true): Long = (amount - discount).withTax()",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 42,
+          "to": 42,
+          "indent": 4,
+          "utf8Byte": 1726,
+          "utf16Index": 1726
+        },
+        {
+          "header": "fun reconcileUnsafe(order: Order): Boolean = balances.containsKey(order.id)",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 43,
+          "to": 43,
+          "indent": 4,
+          "utf8Byte": 1834,
+          "utf16Index": 1834
+        },
+        {
+          "header": "fun settleBatch(orders: List<Order>): Long {",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {"
+          ],
+          "from": 52,
+          "to": 91,
+          "indent": 4,
+          "utf8Byte": 2231,
+          "utf16Index": 2231
+        },
+        {
+          "header": "val fee = gross / 10",
+          "owners": [
+            "class CheckoutService(private val gateway: PaymentGateway) {",
+            "fun settleBatch(orders: List<Order>): Long {"
+          ],
+          "from": 72,
+          "to": 72,
+          "indent": 12,
+          "utf8Byte": 3062,
+          "utf16Index": 3062
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

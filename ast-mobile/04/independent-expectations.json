@@ -1,0 +1,599 @@
+[
+  {
+    "path": "Identity.swift",
+    "features": [
+      "static/instance and argument-label identities",
+      "same labels different types",
+      "multiple extensions, changed target",
+      "constrained extensions and where changes",
+      "protocol requirement, default and concrete implementation",
+      "init overloads and failable init",
+      "subscripts and operator",
+      "property observers and wrapper attribute",
+      "local function/closure",
+      "multiline signature",
+      "member to extension move",
+      "between extension move",
+      "instance to static",
+      "same-body ambiguous rename"
+    ],
+    "relationships": [
+      {
+        "old": "Account.validate(_:Int) instance",
+        "head": "Account.validate(_:Int) instance",
+        "relation": "do not match static or nested or protocol"
+      },
+      {
+        "old": "Account.validate(amount:Int)",
+        "head": "Account.validate(amount:Int)",
+        "relation": "labels distinguish from _:Int"
+      },
+      {
+        "old": "Account.relocate(Int) member",
+        "head": "extension Account.relocate(Int)",
+        "relation": "move candidate; preserve target Account"
+      },
+      {
+        "old": "extension Account[1].transfer(Int)",
+        "head": "extension Account[2].transfer(Int)",
+        "relation": "same target and signature; extension block move"
+      },
+      {
+        "old": "Account.promote(Int) instance",
+        "head": "Account.promote(Int) static",
+        "relation": "dispatch change; never silently exact identity"
+      },
+      {
+        "old": "extension Invoice.inspect(Int)",
+        "head": "extension Booking.inspect(Int)",
+        "relation": "target changed; not exact identity"
+      },
+      {
+        "old": [
+          "alpha(Int)",
+          "beta(Int)"
+        ],
+        "head": [
+          "gamma(Int)",
+          "delta(Int)"
+        ],
+        "relation": "ambiguous renames; do not confidently pair"
+      },
+      {
+        "old": "obsolete(Int)",
+        "head": null,
+        "relation": "delete"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          9,
+          10,
+          11
+        ],
+        "head": [
+          9,
+          10,
+          11
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          13
+        ],
+        "head": [
+          13
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          18,
+          19
+        ],
+        "head": [
+          18,
+          19
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          21
+        ],
+        "head": [
+          21
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          23
+        ],
+        "head": [
+          23
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          25
+        ],
+        "head": [
+          25
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          29
+        ],
+        "head": [
+          29
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          32,
+          33
+        ],
+        "head": [
+          32
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          36
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          39
+        ],
+        "head": []
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          42,
+          43
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          44
+        ],
+        "head": [
+          45
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          47
+        ],
+        "head": [
+          48
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          53
+        ],
+        "head": [
+          54
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          60,
+          61,
+          62
+        ],
+        "head": [
+          61,
+          62
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "ee7657d7a6edb0ae16d249d1fa8785cb2522959ab07250775605bbaca4548151",
+      "head": "12b1496a302e572c83a1b9f1c68344286ab0d43e94e4e7e3e8058337c83d59ce"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "struct Account: Validating {",
+          "owners": [],
+          "from": 8,
+          "to": 35,
+          "indent": 0,
+          "utf8Byte": 213,
+          "utf16Index": 213
+        },
+        {
+          "header": "var stored = 0 { didSet { print(stored) } }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 10,
+          "to": 10,
+          "indent": 4,
+          "utf8Byte": 271,
+          "utf16Index": 271
+        },
+        {
+          "header": "var total: Int { get { stored } set { stored = newValue } }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 11,
+          "to": 11,
+          "indent": 4,
+          "utf8Byte": 319,
+          "utf16Index": 319
+        },
+        {
+          "header": "init(_ seed: Int) { stored = seed }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 13,
+          "to": 13,
+          "indent": 4,
+          "utf8Byte": 398,
+          "utf16Index": 398
+        },
+        {
+          "header": "func validate(_ value: Int) -> Bool { value > 0 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 18,
+          "to": 18,
+          "indent": 4,
+          "utf8Byte": 549,
+          "utf16Index": 549
+        },
+        {
+          "header": "func validate(amount: Int) -> Bool { amount > 0 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 19,
+          "to": 19,
+          "indent": 4,
+          "utf8Byte": 603,
+          "utf16Index": 603
+        },
+        {
+          "header": "static func validate(_ value: Int) -> Bool { value > 0 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 21,
+          "to": 21,
+          "indent": 4,
+          "utf8Byte": 719,
+          "utf16Index": 719
+        },
+        {
+          "header": "func validate(_ value: Int) -> Bool { value > 0 }",
+          "owners": [
+            "struct Account: Validating {",
+            "struct Nested {"
+          ],
+          "from": 23,
+          "to": 23,
+          "indent": 8,
+          "utf8Byte": 800,
+          "utf16Index": 800
+        },
+        {
+          "header": "subscript(_ index: Int) -> Int { stored + index }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 25,
+          "to": 25,
+          "indent": 4,
+          "utf8Byte": 864,
+          "utf16Index": 864
+        },
+        {
+          "header": "let transform = { (value: Int) in value + 1 }",
+          "owners": [
+            "struct Account: Validating {",
+            "func enclosing(_ value: Int) -> Int {"
+          ],
+          "from": 29,
+          "to": 29,
+          "indent": 8,
+          "utf8Byte": 1077,
+          "utf16Index": 1077
+        },
+        {
+          "header": "func relocate(_ value: Int) -> Int { value + 10 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 32,
+          "to": 32,
+          "indent": 4,
+          "utf8Byte": 1191,
+          "utf16Index": 1191
+        },
+        {
+          "header": "func promote(_ value: Int) -> Int { value + 20 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 33,
+          "to": 33,
+          "indent": 4,
+          "utf8Byte": 1245,
+          "utf16Index": 1245
+        },
+        {
+          "header": "func transfer(_ value: Int) -> Int { value + 30 }",
+          "owners": [
+            "extension Account {"
+          ],
+          "from": 39,
+          "to": 39,
+          "indent": 4,
+          "utf8Byte": 1489,
+          "utf16Index": 1489
+        },
+        {
+          "header": "extension Invoice {",
+          "owners": [],
+          "from": 44,
+          "to": 46,
+          "indent": 0,
+          "utf8Byte": 1618,
+          "utf16Index": 1618
+        },
+        {
+          "header": "extension Array where Element: BinaryInteger {",
+          "owners": [],
+          "from": 47,
+          "to": 49,
+          "indent": 0,
+          "utf8Byte": 1692,
+          "utf16Index": 1692
+        },
+        {
+          "header": "func alpha(_ value: Int) -> Int { value + 1 }",
+          "owners": [],
+          "from": 60,
+          "to": 60,
+          "indent": 0,
+          "utf8Byte": 2024,
+          "utf16Index": 2024
+        },
+        {
+          "header": "func beta(_ value: Int) -> Int { value + 1 }",
+          "owners": [],
+          "from": 61,
+          "to": 61,
+          "indent": 0,
+          "utf8Byte": 2070,
+          "utf16Index": 2070
+        },
+        {
+          "header": "func obsolete(_ value: Int) -> Int { value - 1 }",
+          "owners": [],
+          "from": 62,
+          "to": 62,
+          "indent": 0,
+          "utf8Byte": 2115,
+          "utf16Index": 2115
+        }
+      ],
+      "head": [
+        {
+          "header": "struct Account: Validating {",
+          "owners": [],
+          "from": 8,
+          "to": 34,
+          "indent": 0,
+          "utf8Byte": 213,
+          "utf16Index": 213
+        },
+        {
+          "header": "var stored = 0 { willSet { print(newValue) } }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 10,
+          "to": 10,
+          "indent": 4,
+          "utf8Byte": 272,
+          "utf16Index": 272
+        },
+        {
+          "header": "var total: Int { get { stored + 1 } set { stored = newValue } }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 11,
+          "to": 11,
+          "indent": 4,
+          "utf8Byte": 323,
+          "utf16Index": 323
+        },
+        {
+          "header": "init(seed: Int) { stored = seed }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 13,
+          "to": 13,
+          "indent": 4,
+          "utf8Byte": 406,
+          "utf16Index": 406
+        },
+        {
+          "header": "func validate(_ value: Int) -> Bool { value >= 0 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 18,
+          "to": 18,
+          "indent": 4,
+          "utf8Byte": 555,
+          "utf16Index": 555
+        },
+        {
+          "header": "func validate(amount: Int) -> Bool { true }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 19,
+          "to": 19,
+          "indent": 4,
+          "utf8Byte": 610,
+          "utf16Index": 610
+        },
+        {
+          "header": "static func validate(_ value: Int) -> Bool { value < 0 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 21,
+          "to": 21,
+          "indent": 4,
+          "utf8Byte": 720,
+          "utf16Index": 720
+        },
+        {
+          "header": "func validate(_ value: Int) -> Bool { value != 0 }",
+          "owners": [
+            "struct Account: Validating {",
+            "struct Nested {"
+          ],
+          "from": 23,
+          "to": 23,
+          "indent": 8,
+          "utf8Byte": 801,
+          "utf16Index": 801
+        },
+        {
+          "header": "subscript(_ index: Int) -> Int { stored - index }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 25,
+          "to": 25,
+          "indent": 4,
+          "utf8Byte": 866,
+          "utf16Index": 866
+        },
+        {
+          "header": "let transform = { (value: Int) in value - 1 }",
+          "owners": [
+            "struct Account: Validating {",
+            "func enclosing(_ value: Int) -> Int {"
+          ],
+          "from": 29,
+          "to": 29,
+          "indent": 8,
+          "utf8Byte": 1079,
+          "utf16Index": 1079
+        },
+        {
+          "header": "static func promote(_ value: Int) -> Int { value + 20 }",
+          "owners": [
+            "struct Account: Validating {"
+          ],
+          "from": 32,
+          "to": 32,
+          "indent": 4,
+          "utf8Byte": 1193,
+          "utf16Index": 1193
+        },
+        {
+          "header": "struct Booking { let stored: Int }",
+          "owners": [],
+          "from": 36,
+          "to": 36,
+          "indent": 0,
+          "utf8Byte": 1372,
+          "utf16Index": 1372
+        },
+        {
+          "header": "func transfer(_ value: Int) -> Int { value + 30 }",
+          "owners": [
+            "extension Account {"
+          ],
+          "from": 42,
+          "to": 42,
+          "indent": 4,
+          "utf8Byte": 1552,
+          "utf16Index": 1552
+        },
+        {
+          "header": "func relocate(_ value: Int) -> Int { value + 10 }",
+          "owners": [
+            "extension Account {"
+          ],
+          "from": 43,
+          "to": 43,
+          "indent": 4,
+          "utf8Byte": 1606,
+          "utf16Index": 1606
+        },
+        {
+          "header": "extension Booking {",
+          "owners": [],
+          "from": 45,
+          "to": 47,
+          "indent": 0,
+          "utf8Byte": 1662,
+          "utf16Index": 1662
+        },
+        {
+          "header": "extension Array where Element: FixedWidthInteger {",
+          "owners": [],
+          "from": 48,
+          "to": 50,
+          "indent": 0,
+          "utf8Byte": 1736,
+          "utf16Index": 1736
+        },
+        {
+          "header": "func gamma(_ value: Int) -> Int { value + 1 }",
+          "owners": [],
+          "from": 61,
+          "to": 61,
+          "indent": 0,
+          "utf8Byte": 2066,
+          "utf16Index": 2066
+        },
+        {
+          "header": "func delta(_ value: Int) -> Int { value + 1 }",
+          "owners": [],
+          "from": 62,
+          "to": 62,
+          "indent": 0,
+          "utf8Byte": 2112,
+          "utf16Index": 2112
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

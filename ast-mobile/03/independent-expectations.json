@@ -1,0 +1,362 @@
+[
+  {
+    "path": "BookingService.swift",
+    "features": [
+      "600–1000 line existing finance module",
+      "async guard removed",
+      "actor overwrites state",
+      "computed getter",
+      "extension and enum",
+      "initializer signature",
+      "rename/deletion",
+      "three distant settleBatch hunks"
+    ],
+    "relationships": [
+      {
+        "old": "BookingService.reconcile(Booking)",
+        "head": "BookingService.reconcileUnsafe(Booking)",
+        "relation": "rename candidate"
+      },
+      {
+        "old": "BookingService.legacyReceipt(Booking)",
+        "head": null,
+        "relation": "deleted; keep base context"
+      },
+      {
+        "old": "BookingService.settleBatch([Booking])",
+        "head": "BookingService.settleBatch([Booking])",
+        "relation": "same, deduplicate context"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          15
+        ],
+        "head": [
+          15
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          20
+        ],
+        "head": [
+          20
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          24
+        ],
+        "head": [
+          24
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          30
+        ],
+        "head": [
+          30
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          34
+        ],
+        "head": [
+          34
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          53
+        ],
+        "head": [
+          53
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          63,
+          64
+        ],
+        "head": [
+          63
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          66
+        ],
+        "head": []
+      },
+      {
+        "kind": "replace",
+        "base": [
+          77
+        ],
+        "head": [
+          75
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          91
+        ],
+        "head": [
+          89
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          108
+        ],
+        "head": [
+          106
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "6bcc9306668ad89cc3aa2377f9f8c3e99694d0381dd7caa406a396eead95423d",
+      "head": "29cee0e790c0aa351c179bec5dbcdddfe84144d8a72179116e568b6a04dfa384"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "init(id: String, amount: Int) { self.id = id; self.amount = amount }",
+          "owners": [
+            "struct Booking {"
+          ],
+          "from": 15,
+          "to": 15,
+          "indent": 4,
+          "utf8Byte": 300,
+          "utf16Index": 300
+        },
+        {
+          "header": "enum BookingError: Error {",
+          "owners": [],
+          "from": 18,
+          "to": 27,
+          "indent": 0,
+          "utf8Byte": 454,
+          "utf16Index": 454
+        },
+        {
+          "header": "func message() -> String {",
+          "owners": [
+            "enum BookingError: Error {"
+          ],
+          "from": 21,
+          "to": 26,
+          "indent": 4,
+          "utf8Byte": 531,
+          "utf16Index": 531
+        },
+        {
+          "header": "func taxed() -> Int { amount + amount / 5 }",
+          "owners": [
+            "extension Booking {"
+          ],
+          "from": 30,
+          "to": 30,
+          "indent": 4,
+          "utf8Byte": 820,
+          "utf16Index": 820
+        },
+        {
+          "header": "func post(_ id: String, amount: Int) { balances[id, default: 0] += amount }",
+          "owners": [
+            "actor BookingLedger {"
+          ],
+          "from": 34,
+          "to": 34,
+          "indent": 4,
+          "utf8Byte": 938,
+          "utf16Index": 938
+        },
+        {
+          "header": "var netCaptured: Int {",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 52,
+          "to": 55,
+          "indent": 4,
+          "utf8Byte": 1595,
+          "utf16Index": 1595
+        },
+        {
+          "header": "func legacyReceipt(_ booking: Booking) -> String { booking.id }",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 63,
+          "to": 63,
+          "indent": 4,
+          "utf8Byte": 2026,
+          "utf16Index": 2026
+        },
+        {
+          "header": "func reconcile(_ booking: Booking) -> Bool { balances[booking.id] != nil }",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 64,
+          "to": 64,
+          "indent": 4,
+          "utf8Byte": 2094,
+          "utf16Index": 2094
+        },
+        {
+          "header": "func capture(_ booking: Booking) async throws -> String {",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 65,
+          "to": 71,
+          "indent": 4,
+          "utf8Byte": 2173,
+          "utf16Index": 2173
+        },
+        {
+          "header": "func settleBatch(_ bookings: [Booking]) -> Int {",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 72,
+          "to": 111,
+          "indent": 4,
+          "utf8Byte": 2477,
+          "utf16Index": 2477
+        },
+        {
+          "header": "let fee = gross / 100",
+          "owners": [
+            "final class BookingService {",
+            "func settleBatch(_ bookings: [Booking]) -> Int {"
+          ],
+          "from": 91,
+          "to": 91,
+          "indent": 12,
+          "utf8Byte": 3294,
+          "utf16Index": 3294
+        }
+      ],
+      "head": [
+        {
+          "header": "init(id: String, amount: Int, trusted: Bool = true) { self.id = id; self.amount = amount }",
+          "owners": [
+            "struct Booking {"
+          ],
+          "from": 15,
+          "to": 15,
+          "indent": 4,
+          "utf8Byte": 300,
+          "utf16Index": 300
+        },
+        {
+          "header": "enum BookingError: Error {",
+          "owners": [],
+          "from": 18,
+          "to": 27,
+          "indent": 0,
+          "utf8Byte": 476,
+          "utf16Index": 476
+        },
+        {
+          "header": "func message() -> String {",
+          "owners": [
+            "enum BookingError: Error {"
+          ],
+          "from": 21,
+          "to": 26,
+          "indent": 4,
+          "utf8Byte": 549,
+          "utf16Index": 549
+        },
+        {
+          "header": "func taxed() -> Int { amount - amount / 5 }",
+          "owners": [
+            "extension Booking {"
+          ],
+          "from": 30,
+          "to": 30,
+          "indent": 4,
+          "utf8Byte": 830,
+          "utf16Index": 830
+        },
+        {
+          "header": "func post(_ id: String, amount: Int) { balances[id, default: 0] = amount }",
+          "owners": [
+            "actor BookingLedger {"
+          ],
+          "from": 34,
+          "to": 34,
+          "indent": 4,
+          "utf8Byte": 948,
+          "utf16Index": 948
+        },
+        {
+          "header": "var netCaptured: Int {",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 52,
+          "to": 55,
+          "indent": 4,
+          "utf8Byte": 1604,
+          "utf16Index": 1604
+        },
+        {
+          "header": "func reconcileUnsafe(_ booking: Booking) -> Bool { balances[booking.id] != nil }",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 63,
+          "to": 63,
+          "indent": 4,
+          "utf8Byte": 2035,
+          "utf16Index": 2035
+        },
+        {
+          "header": "func settleBatch(_ bookings: [Booking]) -> Int {",
+          "owners": [
+            "final class BookingService {"
+          ],
+          "from": 70,
+          "to": 109,
+          "indent": 4,
+          "utf8Byte": 2349,
+          "utf16Index": 2349
+        },
+        {
+          "header": "let fee = gross / 10",
+          "owners": [
+            "final class BookingService {",
+            "func settleBatch(_ bookings: [Booking]) -> Int {"
+          ],
+          "from": 89,
+          "to": 89,
+          "indent": 12,
+          "utf8Byte": 3140,
+          "utf16Index": 3140
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

@@ -1,0 +1,691 @@
+[
+  {
+    "path": "Identity.kt",
+    "features": [
+      "top-level versus member; only member changes",
+      "instance versus companion inspect; only companion changes",
+      "overload Int/String simultaneous changes",
+      "nested versus outer",
+      "local, lambda, anonymous object",
+      "String/Int receiver distinctions",
+      "nullable receivers and generic receivers",
+      "backtick rename",
+      "operator and infix",
+      "expression to block",
+      "constructor/property",
+      "reorder and signature change",
+      "two equal-body rename candidates"
+    ],
+    "relationships": [
+      {
+        "old": "top-level validate(Int)",
+        "head": "top-level validate(Int)",
+        "relation": "move within file; do not match Account.validate(Int)"
+      },
+      {
+        "old": "Account.validate(Int)",
+        "head": "Account.validate(Int)",
+        "relation": "exact scope+signature"
+      },
+      {
+        "old": "Account.inspect(Int)",
+        "head": "Account.inspect(Int)",
+        "relation": "unchanged; companion changes independently"
+      },
+      {
+        "old": "String.validate()",
+        "head": "String.validate()",
+        "relation": "same receiver; body form changed"
+      },
+      {
+        "old": "Int.validate()",
+        "head": "Long.validate()",
+        "relation": "receiver change; never match String.validate"
+      },
+      {
+        "old": [
+          "alpha(Int)",
+          "beta(Int)"
+        ],
+        "head": [
+          "gamma(Int)",
+          "delta(Int)"
+        ],
+        "relation": "ambiguous; no confident individual rename"
+      },
+      {
+        "old": "obsolete(Int)",
+        "head": null,
+        "relation": "deleted"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3
+        ],
+        "head": [
+          2
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          5
+        ],
+        "head": [
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          7,
+          8,
+          9
+        ],
+        "head": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          13
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          16
+        ],
+        "head": [
+          15
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          20,
+          21
+        ],
+        "head": [
+          19,
+          20
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          25,
+          26
+        ],
+        "head": [
+          24,
+          25
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          28
+        ],
+        "head": [
+          27
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          30,
+          31,
+          32
+        ],
+        "head": [
+          29,
+          30,
+          31
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          34,
+          35,
+          36
+        ],
+        "head": [
+          33,
+          34,
+          35
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "dd5db0a1f3c35d17b6b662464d890842ac653e7874d051d9f08afbe744176262",
+      "head": "8bbb9c586e62b67ae5526dc8534a1b3dd3a7fd9c912888525edc3da73ea37a19"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Boolean = value > 0",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 26,
+          "utf16Index": 26
+        },
+        {
+          "header": "class Account(val initial: Int) {",
+          "owners": [],
+          "from": 3,
+          "to": 24,
+          "indent": 0,
+          "utf8Byte": 72,
+          "utf16Index": 72
+        },
+        {
+          "header": "get() = field",
+          "owners": [
+            "class Account(val initial: Int) {"
+          ],
+          "from": 5,
+          "to": 5,
+          "indent": 8,
+          "utf8Byte": 135,
+          "utf16Index": 135
+        },
+        {
+          "header": "constructor(): this(0)",
+          "owners": [
+            "class Account(val initial: Int) {"
+          ],
+          "from": 7,
+          "to": 7,
+          "indent": 4,
+          "utf8Byte": 211,
+          "utf16Index": 211
+        },
+        {
+          "header": "fun validate(value: Int): Boolean = value > 0",
+          "owners": [
+            "class Account(val initial: Int) {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 4,
+          "utf8Byte": 238,
+          "utf16Index": 238
+        },
+        {
+          "header": "fun validate(value: String): Boolean = value.isNotEmpty()",
+          "owners": [
+            "class Account(val initial: Int) {"
+          ],
+          "from": 9,
+          "to": 9,
+          "indent": 4,
+          "utf8Byte": 288,
+          "utf16Index": 288
+        },
+        {
+          "header": "fun inspect(value: Int): Int = value + 1",
+          "owners": [
+            "class Account(val initial: Int) {"
+          ],
+          "from": 13,
+          "to": 13,
+          "indent": 8,
+          "utf8Byte": 496,
+          "utf16Index": 496
+        },
+        {
+          "header": "fun validate(value: Int): Boolean = value > 0",
+          "owners": [
+            "class Account(val initial: Int) {",
+            "class Nested {"
+          ],
+          "from": 16,
+          "to": 16,
+          "indent": 8,
+          "utf8Byte": 570,
+          "utf16Index": 570
+        },
+        {
+          "header": "val transform = { input: Int -> input + 1 }",
+          "owners": [
+            "class Account(val initial: Int) {",
+            "fun enclosing(value: Int): Int {"
+          ],
+          "from": 20,
+          "to": 20,
+          "indent": 8,
+          "utf8Byte": 721,
+          "utf16Index": 721
+        },
+        {
+          "header": "val observer = object { fun validate(value: Int) = value > 0 }",
+          "owners": [
+            "class Account(val initial: Int) {",
+            "fun enclosing(value: Int): Int {"
+          ],
+          "from": 21,
+          "to": 21,
+          "indent": 8,
+          "utf8Byte": 773,
+          "utf16Index": 773
+        },
+        {
+          "header": "fun String.validate(): Boolean = isNotEmpty()",
+          "owners": [],
+          "from": 25,
+          "to": 25,
+          "indent": 0,
+          "utf8Byte": 940,
+          "utf16Index": 940
+        },
+        {
+          "header": "fun Int.validate(): Boolean = this > 0",
+          "owners": [],
+          "from": 26,
+          "to": 26,
+          "indent": 0,
+          "utf8Byte": 986,
+          "utf16Index": 986
+        },
+        {
+          "header": "fun String?.nullableValid(): Boolean = this != null",
+          "owners": [],
+          "from": 28,
+          "to": 28,
+          "indent": 0,
+          "utf8Byte": 1057,
+          "utf16Index": 1057
+        },
+        {
+          "header": "fun <T> List<T>.validate(): Boolean = isNotEmpty()",
+          "owners": [],
+          "from": 30,
+          "to": 30,
+          "indent": 0,
+          "utf8Byte": 1160,
+          "utf16Index": 1160
+        },
+        {
+          "header": "fun `müşteri doğrula`(value: Int) = value > 0",
+          "owners": [],
+          "from": 31,
+          "to": 31,
+          "indent": 0,
+          "utf8Byte": 1211,
+          "utf16Index": 1211
+        },
+        {
+          "header": "operator fun Account.plus(other: Account) = Account(total + other.total)",
+          "owners": [],
+          "from": 32,
+          "to": 32,
+          "indent": 0,
+          "utf8Byte": 1260,
+          "utf16Index": 1257
+        },
+        {
+          "header": "fun alpha(value: Int) = value + 1",
+          "owners": [],
+          "from": 34,
+          "to": 34,
+          "indent": 0,
+          "utf8Byte": 1406,
+          "utf16Index": 1403
+        },
+        {
+          "header": "fun beta(value: Int) = value + 1",
+          "owners": [],
+          "from": 35,
+          "to": 35,
+          "indent": 0,
+          "utf8Byte": 1440,
+          "utf16Index": 1437
+        },
+        {
+          "header": "fun obsolete(value: Int) = value - 1",
+          "owners": [],
+          "from": 36,
+          "to": 36,
+          "indent": 0,
+          "utf8Byte": 1473,
+          "utf16Index": 1470
+        }
+      ],
+      "head": [
+        {
+          "header": "class Account(val initial: Int, val trusted: Boolean = true) {",
+          "owners": [],
+          "from": 2,
+          "to": 23,
+          "indent": 0,
+          "utf8Byte": 26,
+          "utf16Index": 26
+        },
+        {
+          "header": "get() = field + 1",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {"
+          ],
+          "from": 4,
+          "to": 4,
+          "indent": 8,
+          "utf8Byte": 118,
+          "utf16Index": 118
+        },
+        {
+          "header": "constructor(seed: String): this(seed.length)",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {"
+          ],
+          "from": 6,
+          "to": 6,
+          "indent": 4,
+          "utf8Byte": 198,
+          "utf16Index": 198
+        },
+        {
+          "header": "fun validate(value: Int): Boolean = value >= 0",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {"
+          ],
+          "from": 7,
+          "to": 7,
+          "indent": 4,
+          "utf8Byte": 247,
+          "utf16Index": 247
+        },
+        {
+          "header": "fun validate(value: String): Boolean = true",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 4,
+          "utf8Byte": 298,
+          "utf16Index": 298
+        },
+        {
+          "header": "fun inspect(value: Int): Int = value - 1",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {"
+          ],
+          "from": 12,
+          "to": 12,
+          "indent": 8,
+          "utf8Byte": 492,
+          "utf16Index": 492
+        },
+        {
+          "header": "fun validate(value: Int): Boolean = value < 0",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {",
+            "class Nested {"
+          ],
+          "from": 15,
+          "to": 15,
+          "indent": 8,
+          "utf8Byte": 566,
+          "utf16Index": 566
+        },
+        {
+          "header": "val transform = { input: Int -> input - 1 }",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {",
+            "fun enclosing(value: Int): Int {"
+          ],
+          "from": 19,
+          "to": 19,
+          "indent": 8,
+          "utf8Byte": 717,
+          "utf16Index": 717
+        },
+        {
+          "header": "val observer = object { fun validate(value: Int) = true }",
+          "owners": [
+            "class Account(val initial: Int, val trusted: Boolean = true) {",
+            "fun enclosing(value: Int): Int {"
+          ],
+          "from": 20,
+          "to": 20,
+          "indent": 8,
+          "utf8Byte": 769,
+          "utf16Index": 769
+        },
+        {
+          "header": "fun String.validate(): Boolean { return true }",
+          "owners": [],
+          "from": 24,
+          "to": 24,
+          "indent": 0,
+          "utf8Byte": 931,
+          "utf16Index": 931
+        },
+        {
+          "header": "fun Long.validate(): Boolean = this > 0",
+          "owners": [],
+          "from": 25,
+          "to": 25,
+          "indent": 0,
+          "utf8Byte": 978,
+          "utf16Index": 978
+        },
+        {
+          "header": "fun String?.nullableValid(): Boolean = true",
+          "owners": [],
+          "from": 27,
+          "to": 27,
+          "indent": 0,
+          "utf8Byte": 1050,
+          "utf16Index": 1050
+        },
+        {
+          "header": "fun <T> Collection<T>.validate(): Boolean = isNotEmpty()",
+          "owners": [],
+          "from": 29,
+          "to": 29,
+          "indent": 0,
+          "utf8Byte": 1145,
+          "utf16Index": 1145
+        },
+        {
+          "header": "fun `müşteri kabul`(value: Int) = value > 0",
+          "owners": [],
+          "from": 30,
+          "to": 30,
+          "indent": 0,
+          "utf8Byte": 1202,
+          "utf16Index": 1202
+        },
+        {
+          "header": "operator fun Account.plus(other: Account) = Account(total - other.total)",
+          "owners": [],
+          "from": 31,
+          "to": 31,
+          "indent": 0,
+          "utf8Byte": 1248,
+          "utf16Index": 1246
+        },
+        {
+          "header": "fun gamma(value: Int) = value + 1",
+          "owners": [],
+          "from": 33,
+          "to": 33,
+          "indent": 0,
+          "utf8Byte": 1394,
+          "utf16Index": 1392
+        },
+        {
+          "header": "fun delta(value: Int) = value + 1",
+          "owners": [],
+          "from": 34,
+          "to": 34,
+          "indent": 0,
+          "utf8Byte": 1428,
+          "utf16Index": 1426
+        },
+        {
+          "header": "fun validate(value: Int): Boolean = value > 0",
+          "owners": [],
+          "from": 35,
+          "to": 35,
+          "indent": 0,
+          "utf8Byte": 1462,
+          "utf16Index": 1460
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "build.kts",
+    "features": [
+      "KTS parser path must be kotlin",
+      "top-level executable and variable",
+      "script function",
+      "plugins/repositories/dependencies",
+      "nested DSL and receiver lambda",
+      "outside declaration change"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          8
+        ],
+        "head": [
+          8
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          10,
+          11
+        ],
+        "head": [
+          10,
+          11
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          19
+        ],
+        "head": [
+          19
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          22
+        ],
+        "head": [
+          22
+        ]
+      }
+    ],
+    "fallback": "Script executable lines may use uncovered-lines fallback; must remain kotlin parser path",
+    "sourceHashes": {
+      "base": "10aa8867b30e80f2a7b31bbce18635d3a1ea9fd3ec9051730478990fb17e0329",
+      "head": "4557993858c01f73e2c63d49a75711a3769da860a62bd2297f4994e80f11d0f2"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "class BuildOptions { var strict = true }",
+          "owners": [],
+          "from": 8,
+          "to": 8,
+          "indent": 0,
+          "utf8Byte": 302,
+          "utf16Index": 302
+        },
+        {
+          "header": "val releaseChannel = \"stable\"",
+          "owners": [],
+          "from": 10,
+          "to": 10,
+          "indent": 0,
+          "utf8Byte": 414,
+          "utf16Index": 414
+        },
+        {
+          "header": "fun artifactName(version: String) = \"checkout-$version\"",
+          "owners": [],
+          "from": 11,
+          "to": 11,
+          "indent": 0,
+          "utf8Byte": 444,
+          "utf16Index": 444
+        },
+        {
+          "header": "implementation(\"payments:client:1.0\")",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 4,
+          "utf8Byte": 598,
+          "utf16Index": 598
+        }
+      ],
+      "head": [
+        {
+          "header": "class BuildOptions { var strict = false }",
+          "owners": [],
+          "from": 8,
+          "to": 8,
+          "indent": 0,
+          "utf8Byte": 302,
+          "utf16Index": 302
+        },
+        {
+          "header": "val releaseChannel = \"canary\"",
+          "owners": [],
+          "from": 10,
+          "to": 10,
+          "indent": 0,
+          "utf8Byte": 415,
+          "utf16Index": 415
+        },
+        {
+          "header": "fun artifactName(version: String) = \"checkout-latest\"",
+          "owners": [],
+          "from": 11,
+          "to": 11,
+          "indent": 0,
+          "utf8Byte": 445,
+          "utf16Index": 445
+        },
+        {
+          "header": "implementation(\"payments:client:0.1\")",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 4,
+          "utf8Byte": 597,
+          "utf16Index": 597
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

@@ -1,0 +1,3483 @@
+[
+  {
+    "path": "normal.kt",
+    "features": [
+      "normal",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "77244917988af2cd9a53a92f9b9cafbb8bcb4165f812fcdc9111e72369be61bb",
+      "head": "0d4eb35aab5e206692f5df6a327fde61a2174952dcd6b5109ff1e9d5a828864a"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "invalid-head.kt",
+    "features": [
+      "invalid-head",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on HEAD only; astUsed=false; normal and AST prompts byte-identical",
+    "sourceHashes": {
+      "base": "77244917988af2cd9a53a92f9b9cafbb8bcb4165f812fcdc9111e72369be61bb",
+      "head": "9f919ca318d49ff23502429ef5e80ec816cf0167b821a7f71ba9d3ab42c07247"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "repaired-base.kt",
+    "features": [
+      "repaired-base",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on merge-base only; preserve normal prompt",
+    "sourceHashes": {
+      "base": "9f919ca318d49ff23502429ef5e80ec816cf0167b821a7f71ba9d3ab42c07247",
+      "head": "0d4eb35aab5e206692f5df6a327fde61a2174952dcd6b5109ff1e9d5a828864a"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "added.kt",
+    "features": [
+      "added",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "f8584c4843a14d5ac6ee11c7c23122852a325627dd2f00481f92b5c323525ae8"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "fun addedInventory(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "deleted.kt",
+    "features": [
+      "deleted",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "pipeline skips fully deleted files; retain Git evidence, no independent review prompt expected",
+    "sourceHashes": {
+      "base": "78f6cb94bc839f1b1fc172513a5ea65ac4c632ac92819323e0f39caa3aabb9fe",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun retiredInvoice(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "emptied.kt",
+    "features": [
+      "emptied",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "empty HEAD; inspect fallback and preserve deleted old declaration",
+    "sourceHashes": {
+      "base": "77244917988af2cd9a53a92f9b9cafbb8bcb4165f812fcdc9111e72369be61bb",
+      "head": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "dense.kt",
+    "features": [
+      "dense",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "fallback": "selection may fall back; preserve entire diff",
+    "sourceHashes": {
+      "base": "77244917988af2cd9a53a92f9b9cafbb8bcb4165f812fcdc9111e72369be61bb",
+      "head": "66853518a5339dbc49e1aeed6aac589eedc8c553c87a2323321a837cad1ab805"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": [
+        {
+          "header": "fun acceptUnsafe(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "before-rename.kt",
+    "features": [
+      "file rename source"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "represented by renamed destination; not independent deleted review",
+    "sourceHashes": {
+      "base": "5bf7a88af8278ee1d36bf20753a8dfb5ffea4bcde728b4d8eb8c896d8c3f1941",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun relocatedSettlement(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "after-rename.kt",
+    "features": [
+      "file rename with body change"
+    ],
+    "relationships": [
+      {
+        "old": "before-rename.kt:relocatedSettlement",
+        "head": "after-rename.kt:relocatedSettlement",
+        "relation": "same declaration with oldPath read from base"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "5ee6b430b3b1bdebd5c321e4b21b36200ab38cac2e8419af2d40028d07d5b74d"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "fun relocatedSettlement(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "import-only.kt",
+    "features": [
+      "only package/import changed"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration selection or fallback; unchanged prompt regions identical",
+    "sourceHashes": {
+      "base": "77244917988af2cd9a53a92f9b9cafbb8bcb4165f812fcdc9111e72369be61bb",
+      "head": "b9b47161c12c5aeae44ed1d38a9754c4e386648adede2731e9b696def27f184d"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.kt",
+    "features": [
+      "comment only inside declaration"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "33c665634f2257fef7cb1f764bc7c6461cdec79d050edb342c909ec2b56363c5",
+      "head": "daa8aebe9e7a180ee4694428554b2bb6c1298c0f223e9d17f76ba81b48f06b0e"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-hunk.kt",
+    "features": [
+      "one declaration, three hunks",
+      "no duplicate declaration context"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          5
+        ],
+        "head": [
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          8
+        ],
+        "head": [
+          8
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          15
+        ],
+        "head": [
+          15
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "7826dad3b941a3dfed6462e8b262273b4750f7d3a1c6075233b291e156450c42",
+      "head": "e06e12cd680e0bbb746f84170ccb325fc3170cc15f1b77537e95fa4c91aed30b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "val fee = entry / 100",
+          "owners": [
+            "fun reconcile(entries: List<Int>): Int {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 8,
+          "utf8Byte": 218,
+          "utf16Index": 218
+        }
+      ],
+      "head": [
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "val fee = entry / 10",
+          "owners": [
+            "fun reconcile(entries: List<Int>): Int {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 8,
+          "utf8Byte": 221,
+          "utf16Index": 221
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "nested.kt",
+    "features": [
+      "local and enclosing changes; preserve ownership"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3
+        ],
+        "head": [
+          2,
+          3
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "880447053906e957aa27d1e79a9648a84d3d549704ca31fe130c144070a1ee09",
+      "head": "a255358d27987024d7e98c5309223af85a52912f97e48f2abf38531a40353ea2"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun inner(value: Int): Int { return value + 1 }",
+          "owners": [
+            "fun outer(value: Int): Int {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 29,
+          "utf16Index": 29
+        },
+        {
+          "header": "fun outer(value: Int): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "fun inner(value: Int): Int { return value - 1 }",
+          "owners": [
+            "fun outer(value: Int): Int {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 29,
+          "utf16Index": 29
+        },
+        {
+          "header": "fun outer(value: Int): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-declaration.kt",
+    "features": [
+      "diff across declarations"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          21
+        ],
+        "head": [
+          21
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "dd32a77f6c0c1137d25afeabdfc973a40c51f6ce06947a2d3a34216eb2bc2bfd",
+      "head": "9d2d6178be68f6573707433b9d6447e8083735c29d5fd218c7dfae2582dfead9"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        },
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 7,
+          "to": 22,
+          "indent": 0,
+          "utf8Byte": 103,
+          "utf16Index": 103
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        },
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 7,
+          "to": 22,
+          "indent": 0,
+          "utf8Byte": 103,
+          "utf16Index": 103
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "global.kt",
+    "features": [
+      "global/script statement outside function"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "AST global context or uncovered-line fallback; isolated",
+    "sourceHashes": {
+      "base": "88cc282ac77968136854e1192d7cbc86dab503ea91cfb059bb7d46b03747382c",
+      "head": "aa49e0ab45706be895569da33c9b0f99d45830a0f90535897d1860a53edab11d"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "var riskLimit = 80",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ],
+      "head": [
+        {
+          "header": "var riskLimit = 99",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 24,
+          "utf16Index": 24
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "normal.kts",
+    "features": [
+      "normal",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "de9ae1f77a05554f57e928ad5e320f8897dfecbf1b7214234561a3d8efc93a40",
+      "head": "5a20e1367c38caa08c8e3dcb4c7899d7b32823a3a219631818408108b81ba115"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "invalid-head.kts",
+    "features": [
+      "invalid-head",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on HEAD only; astUsed=false; normal and AST prompts byte-identical",
+    "sourceHashes": {
+      "base": "de9ae1f77a05554f57e928ad5e320f8897dfecbf1b7214234561a3d8efc93a40",
+      "head": "6937856fe51cd254df401028414d112bcdd97fd87ccab8c14f7676a3b527a05f"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "repaired-base.kts",
+    "features": [
+      "repaired-base",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on merge-base only; preserve normal prompt",
+    "sourceHashes": {
+      "base": "6937856fe51cd254df401028414d112bcdd97fd87ccab8c14f7676a3b527a05f",
+      "head": "5a20e1367c38caa08c8e3dcb4c7899d7b32823a3a219631818408108b81ba115"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "added.kts",
+    "features": [
+      "added",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "8149da3adfb5c49d241bc0f35f9d9f3d0df75de3425e566559fc2cab2c399d11"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "val channel = \"stable\"",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "fun addedInventory(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "deleted.kts",
+    "features": [
+      "deleted",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "pipeline skips fully deleted files; retain Git evidence, no independent review prompt expected",
+    "sourceHashes": {
+      "base": "b3943748dadb4748471e8ca39fb5a6a3685e3d7a28cdb8b153d0cf686f4d2ee1",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "val channel = \"stable\"",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "fun retiredInvoice(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "emptied.kts",
+    "features": [
+      "emptied",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "empty HEAD; inspect fallback and preserve deleted old declaration",
+    "sourceHashes": {
+      "base": "de9ae1f77a05554f57e928ad5e320f8897dfecbf1b7214234561a3d8efc93a40",
+      "head": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "val channel = \"stable\"",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "dense.kts",
+    "features": [
+      "dense",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "fallback": "selection may fall back; preserve entire diff",
+    "sourceHashes": {
+      "base": "de9ae1f77a05554f57e928ad5e320f8897dfecbf1b7214234561a3d8efc93a40",
+      "head": "0161b020948c6a0c5f3e05b5747dbc7537eba110495f4a93f6cf8ceb979567df"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": [
+        {
+          "header": "fun acceptUnsafe(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "before-rename.kts",
+    "features": [
+      "file rename source"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "represented by renamed destination; not independent deleted review",
+    "sourceHashes": {
+      "base": "0f8d041fef717d1f0e23872570ef42251f9503b24789840ed761dbcd766f7041",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "val channel = \"stable\"",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "fun relocatedSettlement(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "after-rename.kts",
+    "features": [
+      "file rename with body change"
+    ],
+    "relationships": [
+      {
+        "old": "before-rename.kts:relocatedSettlement",
+        "head": "after-rename.kts:relocatedSettlement",
+        "relation": "same declaration with oldPath read from base"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "0ff65fd3c78ee0fca11a86d2db3cf009cf3706d150f415521b8e61df814a29af"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "val channel = \"stable\"",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "fun relocatedSettlement(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "import-only.kts",
+    "features": [
+      "only package/import changed"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration selection or fallback; unchanged prompt regions identical",
+    "sourceHashes": {
+      "base": "9f2bcf86acbd36f534c58414acbe3d33baffa9e58556148961cf530ac69bb335",
+      "head": "a78a3c84eff1ee380ce6c1c65207e9b56591406922a006bd4015fada048be07f"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.kts",
+    "features": [
+      "comment only inside declaration"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "a1b07cb4fad1c42e27dcd393191c90fcf4801f31bc14bd80e06646462280160e",
+      "head": "e067c35e68159898bbbdbbe5a0570ef300d2dd1720cbbf75185285ed7e0bc710"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-hunk.kts",
+    "features": [
+      "one declaration, three hunks",
+      "no duplicate declaration context"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          5
+        ],
+        "head": [
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          8
+        ],
+        "head": [
+          8
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          15
+        ],
+        "head": [
+          15
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "7826dad3b941a3dfed6462e8b262273b4750f7d3a1c6075233b291e156450c42",
+      "head": "e06e12cd680e0bbb746f84170ccb325fc3170cc15f1b77537e95fa4c91aed30b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "val fee = entry / 100",
+          "owners": [
+            "fun reconcile(entries: List<Int>): Int {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 8,
+          "utf8Byte": 218,
+          "utf16Index": 218
+        }
+      ],
+      "head": [
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "val fee = entry / 10",
+          "owners": [
+            "fun reconcile(entries: List<Int>): Int {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 8,
+          "utf8Byte": 221,
+          "utf16Index": 221
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "nested.kts",
+    "features": [
+      "local and enclosing changes; preserve ownership"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3
+        ],
+        "head": [
+          2,
+          3
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "880447053906e957aa27d1e79a9648a84d3d549704ca31fe130c144070a1ee09",
+      "head": "a255358d27987024d7e98c5309223af85a52912f97e48f2abf38531a40353ea2"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun inner(value: Int): Int { return value + 1 }",
+          "owners": [
+            "fun outer(value: Int): Int {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 29,
+          "utf16Index": 29
+        },
+        {
+          "header": "fun outer(value: Int): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "fun inner(value: Int): Int { return value - 1 }",
+          "owners": [
+            "fun outer(value: Int): Int {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 29,
+          "utf16Index": 29
+        },
+        {
+          "header": "fun outer(value: Int): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-declaration.kts",
+    "features": [
+      "diff across declarations"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          22
+        ],
+        "head": [
+          22
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "b7cef29a2f7e4492bf99bc56711402d55c3bdbc6030a37ee296a2dca3b851843",
+      "head": "7989022dd2b79b4253d22c23b351af2ea5439e00ce9dbdccbfafe564322968cb"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        },
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 8,
+          "to": 23,
+          "indent": 0,
+          "utf8Byte": 119,
+          "utf16Index": 119
+        }
+      ],
+      "head": [
+        {
+          "header": "fun validate(value: Int): Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        },
+        {
+          "header": "fun reconcile(entries: List<Int>): Int {",
+          "owners": [],
+          "from": 8,
+          "to": 23,
+          "indent": 0,
+          "utf8Byte": 119,
+          "utf16Index": 119
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "global.kts",
+    "features": [
+      "global/script statement outside function"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "AST global context or uncovered-line fallback; isolated",
+    "sourceHashes": {
+      "base": "652aab5cea6ac6d7720295a13ef7d588abeb784925f9966874f30e8129128895",
+      "head": "d81f3b0020b7c07e66a7159f90a911966b7ac9aeb57d6e26eb3385c0545e9e4c"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "normal.swift",
+    "features": [
+      "normal",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "c5c69798c5eedf95da81ecf7decb9ba1e6c07950183391c343cabbb768e3e250",
+      "head": "dc19bd218278288eafaf62316e55974f07ea20584f32b1e6bc0512aa1e346f03"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "invalid-head.swift",
+    "features": [
+      "invalid-head",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on HEAD only; astUsed=false; normal and AST prompts byte-identical",
+    "sourceHashes": {
+      "base": "c5c69798c5eedf95da81ecf7decb9ba1e6c07950183391c343cabbb768e3e250",
+      "head": "a29035ff4cc8537af0c651be324998e23e23b1e31e506b9177031e745e93e503"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "repaired-base.swift",
+    "features": [
+      "repaired-base",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on merge-base only; preserve normal prompt",
+    "sourceHashes": {
+      "base": "a29035ff4cc8537af0c651be324998e23e23b1e31e506b9177031e745e93e503",
+      "head": "dc19bd218278288eafaf62316e55974f07ea20584f32b1e6bc0512aa1e346f03"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "added.swift",
+    "features": [
+      "added",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "b9790176fe007682adca98a97fd6cc4ade84e3555252e065f67d63402995c72b"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "func addedInventory(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "deleted.swift",
+    "features": [
+      "deleted",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "pipeline skips fully deleted files; retain Git evidence, no independent review prompt expected",
+    "sourceHashes": {
+      "base": "ea98bc4d53f58e5f49fbac33f172b09023224931e76eaabae317067de05fb723",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func retiredInvoice(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "emptied.swift",
+    "features": [
+      "emptied",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "empty HEAD; inspect fallback and preserve deleted old declaration",
+    "sourceHashes": {
+      "base": "c5c69798c5eedf95da81ecf7decb9ba1e6c07950183391c343cabbb768e3e250",
+      "head": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "dense.swift",
+    "features": [
+      "dense",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "fallback": "selection may fall back; preserve entire diff",
+    "sourceHashes": {
+      "base": "c5c69798c5eedf95da81ecf7decb9ba1e6c07950183391c343cabbb768e3e250",
+      "head": "1c30730296fa9b475744f010de83eebeb6843c2c7a4e21909408b894b5b4381b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": [
+        {
+          "header": "func acceptUnsafe(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "before-rename.swift",
+    "features": [
+      "file rename source"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "represented by renamed destination; not independent deleted review",
+    "sourceHashes": {
+      "base": "7f2fb6c11836c8fe680a0dec127da4acbcc70fde9a6bc706e3e639581c365fb0",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func relocatedSettlement(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "after-rename.swift",
+    "features": [
+      "file rename with body change"
+    ],
+    "relationships": [
+      {
+        "old": "before-rename.swift:relocatedSettlement",
+        "head": "after-rename.swift:relocatedSettlement",
+        "relation": "same declaration with oldPath read from base"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "3fc47a1036490ec9fd60a75f8fad6e2bdfba1e23ed85b84ae528265f6363b658"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "func relocatedSettlement(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "import-only.swift",
+    "features": [
+      "only package/import changed"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration selection or fallback; unchanged prompt regions identical",
+    "sourceHashes": {
+      "base": "c5c69798c5eedf95da81ecf7decb9ba1e6c07950183391c343cabbb768e3e250",
+      "head": "a887d5f9445bdbdda86a8e25139a30ca3dc01c708c5ffbbf46987e0a8a80c9ca"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.swift",
+    "features": [
+      "comment only inside declaration"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "b5b4382e08d48a45995f9d29e2e981288b451b4d94744546567bf4cdde0f8ed8",
+      "head": "569fe55ecf41adfe2f41628e3e9afafd117db2bc756e89b312e2101ed7fc055a"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-hunk.swift",
+    "features": [
+      "one declaration, three hunks",
+      "no duplicate declaration context"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          5
+        ],
+        "head": [
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          8
+        ],
+        "head": [
+          8
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          15
+        ],
+        "head": [
+          15
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "ec6905b5b9c3db37546e8a36ee0c2e1842963487a9f7677ad26e64e31695ff0a",
+      "head": "d32794365e5ee8c3de7db2640a86c33e0490703339afa78db00d4ebf3eda8f05"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func reconcile(_ entries: [Int]) -> Int {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "let fee = entry / 100",
+          "owners": [
+            "func reconcile(_ entries: [Int]) -> Int {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 8,
+          "utf8Byte": 227,
+          "utf16Index": 227
+        }
+      ],
+      "head": [
+        {
+          "header": "func reconcile(_ entries: [Int]) -> Int {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        },
+        {
+          "header": "let fee = entry / 10",
+          "owners": [
+            "func reconcile(_ entries: [Int]) -> Int {"
+          ],
+          "from": 8,
+          "to": 8,
+          "indent": 8,
+          "utf8Byte": 230,
+          "utf16Index": 230
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "nested.swift",
+    "features": [
+      "local and enclosing changes; preserve ownership"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3
+        ],
+        "head": [
+          2,
+          3
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "4db3b6916a6578d6be59cc277d88ad48a09f0557cce22193635707086b7769b0",
+      "head": "16ec77954b44f4b691dee42ad21d8d2d15d0d377bff62e12a972b5bc014a0417"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func inner(_ value: Int) -> Int { return value + 1 }",
+          "owners": [
+            "func outer(_ value: Int) -> Int {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 34,
+          "utf16Index": 34
+        },
+        {
+          "header": "func outer(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "func inner(_ value: Int) -> Int { return value - 1 }",
+          "owners": [
+            "func outer(_ value: Int) -> Int {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 34,
+          "utf16Index": 34
+        },
+        {
+          "header": "func outer(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-declaration.swift",
+    "features": [
+      "diff across declarations"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          21
+        ],
+        "head": [
+          21
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "d0b4e0e4ab624762934cc03798ed06995b3f4f4ad826eb64905f414fd48d997a",
+      "head": "7445283c6e9d50395d3acc01c079afd739edae5e8f3c88da59155d61e11b56f4"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        },
+        {
+          "header": "func reconcile(_ entries: [Int]) -> Int {",
+          "owners": [],
+          "from": 7,
+          "to": 22,
+          "indent": 0,
+          "utf8Byte": 107,
+          "utf16Index": 107
+        }
+      ],
+      "head": [
+        {
+          "header": "func validate(_ value: Int) -> Int {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        },
+        {
+          "header": "func reconcile(_ entries: [Int]) -> Int {",
+          "owners": [],
+          "from": 7,
+          "to": 22,
+          "indent": 0,
+          "utf8Byte": 107,
+          "utf16Index": 107
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "global.swift",
+    "features": [
+      "global/script statement outside function"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "AST global context or uncovered-line fallback; isolated",
+    "sourceHashes": {
+      "base": "c0965e0ae7d1fe83ed4434ab973e79bd8ce0fc43a32d07b78b17cb6c94b8a860",
+      "head": "b7fab3931d87815bc4f2844d8832acb1f6a1b74d842d33d9468c1efdeddbe913"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "let riskLimit = 80",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ],
+      "head": [
+        {
+          "header": "let riskLimit = 99",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 18,
+          "utf16Index": 18
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "normal.dart",
+    "features": [
+      "normal",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "82abd7faf550bf98c2faa476a523245948556eeae2bb559482ac56949bb9fb63",
+      "head": "65a97533eb4add770c0c0578b49947698ef4485e022ab93bb89f06ec2e6a08a4"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "invalid-head.dart",
+    "features": [
+      "invalid-head",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on HEAD only; astUsed=false; normal and AST prompts byte-identical",
+    "sourceHashes": {
+      "base": "82abd7faf550bf98c2faa476a523245948556eeae2bb559482ac56949bb9fb63",
+      "head": "286be5632ef2f2390c03de39cb52c7a55de30f66fc42dadc73bb5531b798aa61"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "repaired-base.dart",
+    "features": [
+      "repaired-base",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "syntax-recovery on merge-base only; preserve normal prompt",
+    "sourceHashes": {
+      "base": "286be5632ef2f2390c03de39cb52c7a55de30f66fc42dadc73bb5531b798aa61",
+      "head": "65a97533eb4add770c0c0578b49947698ef4485e022ab93bb89f06ec2e6a08a4"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "added.dart",
+    "features": [
+      "added",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "7614b96156dfa268e00a57bfc0bbf86eb20a0f33c577f292e7f7f213080ff63e"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "int addedInventory(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "deleted.dart",
+    "features": [
+      "deleted",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "pipeline skips fully deleted files; retain Git evidence, no independent review prompt expected",
+    "sourceHashes": {
+      "base": "94a9d19e45f8a3558edf88e1c22cb80d8e0e1ffb6cf4649fd8ff4b097d888620",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int retiredInvoice(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "emptied.dart",
+    "features": [
+      "emptied",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "empty HEAD; inspect fallback and preserve deleted old declaration",
+    "sourceHashes": {
+      "base": "82abd7faf550bf98c2faa476a523245948556eeae2bb559482ac56949bb9fb63",
+      "head": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "dense.dart",
+    "features": [
+      "dense",
+      "fallback isolated per path and language"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "fallback": "selection may fall back; preserve entire diff",
+    "sourceHashes": {
+      "base": "82abd7faf550bf98c2faa476a523245948556eeae2bb559482ac56949bb9fb63",
+      "head": "ec14e6ba6202e400cabda05c9965150b3f9e3348f652a0bced2cb855ac1aab4d"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": [
+        {
+          "header": "int acceptUnsafe(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "before-rename.dart",
+    "features": [
+      "file rename source"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "represented by renamed destination; not independent deleted review",
+    "sourceHashes": {
+      "base": "9f9701b311f148ceee304b49352f1ce1fbf48ceaadbc85ef59f88b63e53cd109",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int relocatedSettlement(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "after-rename.dart",
+    "features": [
+      "file rename with body change"
+    ],
+    "relationships": [
+      {
+        "old": "before-rename.dart:relocatedSettlement",
+        "head": "after-rename.dart:relocatedSettlement",
+        "relation": "same declaration with oldPath read from base"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "9a37027aff50565994d9a7d4ef36103d9f1fe10f2b41ef4a6b059348cef0650d"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "int relocatedSettlement(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "import-only.dart",
+    "features": [
+      "only package/import changed"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration selection or fallback; unchanged prompt regions identical",
+    "sourceHashes": {
+      "base": "82abd7faf550bf98c2faa476a523245948556eeae2bb559482ac56949bb9fb63",
+      "head": "a3d58a71e66b087ebbfb384356f9e9dc644c714d069aa7206216b5500cbdb121"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.dart",
+    "features": [
+      "comment only inside declaration"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "0f6c0b6e1ed2f5575aa92f08187fc4e23862dd5f283f6c5b692badf369a44b00",
+      "head": "49069a39b1f0b2e78a43f42609be89dcd593f52ec2083e920d6b3c6288ee545b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 6,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-hunk.dart",
+    "features": [
+      "one declaration, three hunks",
+      "no duplicate declaration context"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          5
+        ],
+        "head": [
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          8
+        ],
+        "head": [
+          8
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          15
+        ],
+        "head": [
+          15
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "f355cc5e9ba0421858aa3a09427241cc9c78f7dbc6899feacea2b1618ee51bae",
+      "head": "3004fccbacb5047168b09e51ef8cd8793c2cf1fe067fd63495905adfc94e4d8f"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int reconcile(List<int> entries) {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "int reconcile(List<int> entries) {",
+          "owners": [],
+          "from": 1,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "nested.dart",
+    "features": [
+      "local and enclosing changes; preserve ownership"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3
+        ],
+        "head": [
+          2,
+          3
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "973124cc9f6c7080659f8001763ef37ef5a0dbae9d3d3bd86a1d08c1c5517c24",
+      "head": "eb142ad8b36b9c828aa0349eeca44d9eac307c9ef52b31c3c7c489805d499c3a"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int inner(int value) { return value + 1; }",
+          "owners": [
+            "int outer(int value) {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        },
+        {
+          "header": "int outer(int value) {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "int inner(int value) { return value - 1; }",
+          "owners": [
+            "int outer(int value) {"
+          ],
+          "from": 2,
+          "to": 2,
+          "indent": 4,
+          "utf8Byte": 23,
+          "utf16Index": 23
+        },
+        {
+          "header": "int outer(int value) {",
+          "owners": [],
+          "from": 1,
+          "to": 4,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "multi-declaration.dart",
+    "features": [
+      "diff across declarations"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          4
+        ],
+        "head": [
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          21
+        ],
+        "head": [
+          21
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "ec3baa247b76c937ce6f2e9d3e6bdb8fdb86749736579df5322b2b08e23b3159",
+      "head": "d5d2eb728cee7327e49a8e9a40ed4d8f14ed728683bb6bd9659f4cf164747214"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        },
+        {
+          "header": "int reconcile(List<int> entries) {",
+          "owners": [],
+          "from": 7,
+          "to": 22,
+          "indent": 0,
+          "utf8Byte": 121,
+          "utf16Index": 121
+        }
+      ],
+      "head": [
+        {
+          "header": "int validate(int value) {",
+          "owners": [],
+          "from": 2,
+          "to": 5,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        },
+        {
+          "header": "int reconcile(List<int> entries) {",
+          "owners": [],
+          "from": 7,
+          "to": 22,
+          "indent": 0,
+          "utf8Byte": 121,
+          "utf16Index": 121
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "global.dart",
+    "features": [
+      "global/script statement outside function"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "AST global context or uncovered-line fallback; isolated",
+    "sourceHashes": {
+      "base": "11d6a2e7822fefd1ab17d23e21bcb7af86dfc8dcf2bd126a07cab4edb107c97b",
+      "head": "4a06549cd1edfb453e1af535c6888de6d1a06a972fd915dd2d5f467f0360ca0c"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "var riskLimit = 80;",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ],
+      "head": [
+        {
+          "header": "var riskLimit = 99;",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 20,
+          "utf16Index": 20
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "conversion.kt",
+    "features": [
+      "kt to kts rename"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "delete",
+        "base": [
+          1,
+          2,
+          3
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "rename source only",
+    "sourceHashes": {
+      "base": "48133e82daf91bba0e0b8bfcd057dbfef3ef13859609b7f4d8d1b87d4c294cab",
+      "head": null
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun conversion(value: Int): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 3,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "conversion.kts",
+    "features": [
+      "kt to kts rename with body change",
+      "both paths kotlin grammar"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": null,
+      "head": "5a3a7bdf78a2ca450692440804780f42a8f6374519eadfb3e8d41f8d5557fd74"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": [
+        {
+          "header": "fun conversion(value: Int): Int {",
+          "owners": [],
+          "from": 1,
+          "to": 3,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.ts",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "1d53a856c07d15a2c14754c205cbca61f2b2409aad565c5a2fc611c8479ab8bb",
+      "head": "4912db6ca2068ad0ea7cddc62386bf984cb34ef04821210cda578e451a207495"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.py",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "648b283c4e074949d8f2f8ef397e36199345049f4cd593f75f82026d3c24bf33",
+      "head": "b8377a401daf9db4be755f915acd277c7bafd2247e2ba8c6d499e213f212628a"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.go",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "569935590223136363c1799da139b222f2b6b51d1f929efdfd747ca0b71b92ad",
+      "head": "eeeeb046c3eee040040701f5b8b675d16338f03ea294c9bfec401d21641e3359"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func Validate(value int) int { return value + 1 }",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 17,
+          "utf16Index": 17
+        }
+      ],
+      "head": [
+        {
+          "header": "func Validate(value int) int { return value - 1 }",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 17,
+          "utf16Index": 17
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.java",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "314e9fada1169fb9e26fd9a4bea50cc278dc473b19f7a3acd93928d8771e17a7",
+      "head": "3696361cac363109ccb448002476567f3384c1de7fea9c8c640776bc594d74e3"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "class Regression { static int validate(int value) { return value + 1; } }",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "class Regression { static int validate(int value) { return value - 1; } }",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.cs",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "d37e29fc1e21649feb85b9b1319b2a892b44e243849a85c0a5f04cb4695ef8f4",
+      "head": "3c727c87ca84ba71da4d61eec2df8390917fa3bd5d3d0820ceff81c6ee0fa5fe"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "class Regression { static int Validate(int value) { return value + 1; } }",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ],
+      "head": [
+        {
+          "header": "class Regression { static int Validate(int value) { return value - 1; } }",
+          "owners": [],
+          "from": 1,
+          "to": 1,
+          "indent": 0,
+          "utf8Byte": 0,
+          "utf16Index": 0
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.rs",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "fbd9056537087eae46fa8d9311e86754d615c7bd695a52d87b660fde06420286",
+      "head": "6974b82f10e268bef1618a61fd32ba1491b41927fd68d4135593bf7582988e08"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.php",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "24615b56cf3e83d0748115523914fb9612cf4fb295d422d511675f532f74fb7a",
+      "head": "13b7895d626e03b06e84d11390d3a91cd018fdfeacbc2c5739df6ba825d1476b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "function validate(int $value): int { return $value + 1; }",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 6,
+          "utf16Index": 6
+        }
+      ],
+      "head": [
+        {
+          "header": "function validate(int $value): int { return $value - 1; }",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 6,
+          "utf16Index": 6
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "Regression.rb",
+    "features": [
+      "existing language regression; must not inherit Kotlin/Swift/Dart parse errors"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected for supported syntax",
+    "sourceHashes": {
+      "base": "91329aa43f0926d680d174ab1cbeae3b5bff15c15dbbfe77be750bdfb24d3365",
+      "head": "528df648488c3b2d46e7de96c8987a319c1c408a67e64b1463c9efeae6c1cab4"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]

@@ -1,0 +1,1709 @@
+[
+  {
+    "path": "lf.kt",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "lf"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "b2140e469ea6127c328bf733a20bf1231bc551cac6118d17d07990be5ae40cf0",
+      "head": "96d25d7379d71cf548451cf3a4e6675c778ab6c352add4fcf20696617c19339c"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun `müşteri doğrula`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 112,
+          "utf16Index": 100
+        },
+        {
+          "header": "fun sil(değer: Int): Int { return değer - 1 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 485,
+          "utf16Index": 438
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 533,
+          "utf16Index": 484
+        }
+      ],
+      "head": [
+        {
+          "header": "fun `müşteri kabul`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 118,
+          "utf16Index": 105
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 445,
+          "utf16Index": 402
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "crlf.kt",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "crlf"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "21d04f3a4c83920a81cc4dc39fd0f89704aa902f9248527510dd1432650bee1a",
+      "head": "4f59a7233ffe05838ae822bf50411e80ef6cc581677defcef09d3534dc018111"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun `müşteri doğrula`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 115,
+          "utf16Index": 103
+        },
+        {
+          "header": "fun sil(değer: Int): Int { return değer - 1 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 502,
+          "utf16Index": 455
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 551,
+          "utf16Index": 502
+        }
+      ],
+      "head": [
+        {
+          "header": "fun `müşteri kabul`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 121,
+          "utf16Index": 108
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 461,
+          "utf16Index": 418
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "bom.kt",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "bom"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "d16deaaf4a5ec6943673520ad7a2dcac579ef843a080175ee48f31a7301b5e0c",
+      "head": "3522330a1a1f4aa7fd1c188163093a00ecefd7f69ea341817174bd032ad96c7b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun `müşteri doğrula`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 115,
+          "utf16Index": 101
+        },
+        {
+          "header": "fun sil(değer: Int): Int { return değer - 1 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 488,
+          "utf16Index": 439
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 536,
+          "utf16Index": 485
+        }
+      ],
+      "head": [
+        {
+          "header": "fun `müşteri kabul`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 121,
+          "utf16Index": 106
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 448,
+          "utf16Index": 403
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "no-final-newline.kt",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "no-final-newline"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "df2f32e96a7accc30c7c312c4a781a91637b21d85e7b2abcaef76c23567db34f",
+      "head": "fb0f9521078c9630f468d6b23aa01d3265364deabb571797b334347109204b1f"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun `müşteri doğrula`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 112,
+          "utf16Index": 100
+        },
+        {
+          "header": "fun sil(değer: Int): Int { return değer - 1 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 485,
+          "utf16Index": 438
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 533,
+          "utf16Index": 484
+        }
+      ],
+      "head": [
+        {
+          "header": "fun `müşteri kabul`(",
+          "owners": [],
+          "from": 4,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 118,
+          "utf16Index": 105
+        },
+        {
+          "header": "fun sınır(değer: Int): Int { return değer * 2 }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 445,
+          "utf16Index": 402
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.kt",
+    "features": [
+      "comment-only",
+      "Unicode prefix"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration comment may require fallback; must preserve source",
+    "sourceHashes": {
+      "base": "15b5e84f41587cf8607747a0bf46ad76862fa5272fa4cef6c4dd548226193004",
+      "head": "298ae72a9d41392846d3c133175c527a2d90a6159db5003699b1df87fac09dc8"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "whitespace-only.kt",
+    "features": [
+      "whitespace-only"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "15b5e84f41587cf8607747a0bf46ad76862fa5272fa4cef6c4dd548226193004",
+      "head": "4bdecaacc8b3a8cbbd6c653934846dced48029a09a31839568797b837fc79122"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "fun 中文(): Int = 1",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 48,
+          "utf16Index": 36
+        }
+      ],
+      "head": [
+        {
+          "header": "fun 中文(): Int =  1",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 48,
+          "utf16Index": 36
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "lf.swift",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "lf"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          18
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          19,
+          20
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "98e58c74442130269ea0820ff5a6a574dca8454cd8adb0d8eaaf179552f63401",
+      "head": "2c3f73d261a9ec44de2ab54a655c433fd96ab5a4a87bf99042da610a88316ccb"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func müşteri(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 128,
+          "utf16Index": 116
+        },
+        {
+          "header": "func sil(_ değer: Int) -> Int { return değer - 1 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 501,
+          "utf16Index": 454
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 20,
+          "to": 20,
+          "indent": 0,
+          "utf8Byte": 554,
+          "utf16Index": 505
+        }
+      ],
+      "head": [
+        {
+          "header": "func kabul(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 134,
+          "utf16Index": 121
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 454,
+          "utf16Index": 412
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "crlf.swift",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "crlf"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          18
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          19,
+          20
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "907d11ea594fc8b4464ea7ef150defe878a74d82cdf65516b84ffe95ddb676e7",
+      "head": "f919a643d2de3469c7d48e3d15adbaa9f8f84d2968395de4f69f2b4ea702be23"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func müşteri(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 131,
+          "utf16Index": 119
+        },
+        {
+          "header": "func sil(_ değer: Int) -> Int { return değer - 1 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 519,
+          "utf16Index": 472
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 20,
+          "to": 20,
+          "indent": 0,
+          "utf8Byte": 573,
+          "utf16Index": 524
+        }
+      ],
+      "head": [
+        {
+          "header": "func kabul(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 137,
+          "utf16Index": 124
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 471,
+          "utf16Index": 429
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "bom.swift",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "bom"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          18
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          19,
+          20
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "18855c90974fac52b313958023b212c743eaa3f4464a860e4f3209a9da27ff4a",
+      "head": "1f3f7e870020f4164e1f4b014639b01637584573fdd0f46b4de428098b9259e1"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func müşteri(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 131,
+          "utf16Index": 117
+        },
+        {
+          "header": "func sil(_ değer: Int) -> Int { return değer - 1 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 504,
+          "utf16Index": 455
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 20,
+          "to": 20,
+          "indent": 0,
+          "utf8Byte": 557,
+          "utf16Index": 506
+        }
+      ],
+      "head": [
+        {
+          "header": "func kabul(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 137,
+          "utf16Index": 122
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 457,
+          "utf16Index": 413
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "no-final-newline.swift",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "no-final-newline"
+    ],
+    "relationships": [
+      {
+        "old": "müşteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "taşı",
+        "head": "taşı",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          3,
+          4,
+          5
+        ],
+        "head": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          12
+        ],
+        "head": [
+          12
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          18
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          19,
+          20
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "9c908ab0f731c9c9b4f3dc07be15a85df62452731a79bb79719b35367bf000e3",
+      "head": "e8e632b4e0b15830f90efd2120cabe8a4b62505f8ea23e31f283f3ad8b055cdd"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func müşteri(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 128,
+          "utf16Index": 116
+        },
+        {
+          "header": "func sil(_ değer: Int) -> Int { return değer - 1 }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 501,
+          "utf16Index": 454
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 20,
+          "to": 20,
+          "indent": 0,
+          "utf8Byte": 554,
+          "utf16Index": 505
+        }
+      ],
+      "head": [
+        {
+          "header": "func kabul(",
+          "owners": [],
+          "from": 4,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 134,
+          "utf16Index": 121
+        },
+        {
+          "header": "func `repeat`(_ değer: Int) -> Int { return değer * 2 }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 454,
+          "utf16Index": 412
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.swift",
+    "features": [
+      "comment-only",
+      "Unicode prefix"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration comment may require fallback; must preserve source",
+    "sourceHashes": {
+      "base": "a17112c19f8d94a10f16fa0663fffb06d5a854531897171d12f04d61127f5451",
+      "head": "9e41016863b4b01db53eb529020f8b69e3b9cf22935ec55d22b808c93b5f7e6e"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "whitespace-only.swift",
+    "features": [
+      "whitespace-only"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "a17112c19f8d94a10f16fa0663fffb06d5a854531897171d12f04d61127f5451",
+      "head": "b5a9f0655b0fc120da82252c92753384c8ba06c22cdd9ac4e2bada1922e3305f"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "func 中文() -> Int { 1 }",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 48,
+          "utf16Index": 36
+        }
+      ],
+      "head": [
+        {
+          "header": "func 中文() -> Int {  1 }",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 48,
+          "utf16Index": 36
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "lf.dart",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "lf"
+    ],
+    "relationships": [
+      {
+        "old": "musteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "tasi",
+        "head": "tasi",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          11
+        ],
+        "head": [
+          11
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "456d981d5b4deb03477d074c6051ec8a50aac26274f8710a0de8735dd7811f8d",
+      "head": "bbddcfcc050a20bd1e54ba74c5f7a2addccba5f5996561914137afbe8171ecd6"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "String musteri(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 79,
+          "utf16Index": 67
+        },
+        {
+          "header": "int sil(int deger) { return deger - 1; }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 441,
+          "utf16Index": 406
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 482,
+          "utf16Index": 447
+        }
+      ],
+      "head": [
+        {
+          "header": "String kabul(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 93,
+          "utf16Index": 80
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 418,
+          "utf16Index": 382
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "crlf.dart",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "crlf"
+    ],
+    "relationships": [
+      {
+        "old": "musteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "tasi",
+        "head": "tasi",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          11
+        ],
+        "head": [
+          11
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "9aa7384f7ad792daff95240d8e66a19c682585620581eacaf3bfbbf913793f0c",
+      "head": "f6244fd5d7a0826081d8b4f082cea2feca3950bbab758a145e854eba29de91f6"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "String musteri(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 81,
+          "utf16Index": 69
+        },
+        {
+          "header": "int sil(int deger) { return deger - 1; }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 458,
+          "utf16Index": 423
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 500,
+          "utf16Index": 465
+        }
+      ],
+      "head": [
+        {
+          "header": "String kabul(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 95,
+          "utf16Index": 82
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 434,
+          "utf16Index": 398
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "bom.dart",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "bom"
+    ],
+    "relationships": [
+      {
+        "old": "musteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "tasi",
+        "head": "tasi",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          11
+        ],
+        "head": [
+          11
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "3cb91bdc9ed773fa36ad9b6a3f7c4912df5c7b1caf675c02898a6a38e9390696",
+      "head": "c423f84e42a358946a2eda142cd5b77f1c4ae1ecf230c26a071ca9543d916b1b"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "String musteri(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 82,
+          "utf16Index": 68
+        },
+        {
+          "header": "int sil(int deger) { return deger - 1; }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 444,
+          "utf16Index": 407
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 485,
+          "utf16Index": 448
+        }
+      ],
+      "head": [
+        {
+          "header": "String kabul(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 96,
+          "utf16Index": 81
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 421,
+          "utf16Index": 383
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "no-final-newline.dart",
+    "features": [
+      "UTF-8 bytes versus UTF-16 indexes",
+      "Turkish Chinese emoji before edits",
+      "multiline literal owner",
+      "annotation/attribute, signature, rename, move, deletion",
+      "no-final-newline"
+    ],
+    "relationships": [
+      {
+        "old": "musteri",
+        "head": "kabul",
+        "relation": "rename plus signature/body change: conservative matching allowed; never match moved neighbor"
+      },
+      {
+        "old": "sil",
+        "head": null,
+        "relation": "delete; preserve old source"
+      },
+      {
+        "old": "tasi",
+        "head": "tasi",
+        "relation": "move unchanged"
+      }
+    ],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2,
+          3,
+          4
+        ],
+        "head": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "kind": "replace",
+        "base": [
+          11
+        ],
+        "head": [
+          11
+        ]
+      },
+      {
+        "kind": "insert",
+        "base": [],
+        "head": [
+          17
+        ]
+      },
+      {
+        "kind": "delete",
+        "base": [
+          18,
+          19
+        ],
+        "head": []
+      }
+    ],
+    "fallback": "BOM or CRLF rejection must be source/grammar limitation, not intentional syntax failure",
+    "sourceHashes": {
+      "base": "2540228acc41eb78fe4691a8a065e23ab9e8bfae603fd14434389e9e28a682d6",
+      "head": "1c85a214aa5582d38201507929b3eb63bfed8f33a25210ddfd84bdb57cda9504"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "String musteri(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 79,
+          "utf16Index": 67
+        },
+        {
+          "header": "int sil(int deger) { return deger - 1; }",
+          "owners": [],
+          "from": 18,
+          "to": 18,
+          "indent": 0,
+          "utf8Byte": 441,
+          "utf16Index": 406
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 19,
+          "to": 19,
+          "indent": 0,
+          "utf8Byte": 482,
+          "utf16Index": 447
+        }
+      ],
+      "head": [
+        {
+          "header": "String kabul(",
+          "owners": [],
+          "from": 3,
+          "to": 16,
+          "indent": 0,
+          "utf8Byte": 93,
+          "utf16Index": 80
+        },
+        {
+          "header": "int sinir(int deger) { return deger * 2; }",
+          "owners": [],
+          "from": 17,
+          "to": 17,
+          "indent": 0,
+          "utf8Byte": 418,
+          "utf16Index": 382
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "comment-only.dart",
+    "features": [
+      "comment-only",
+      "Unicode prefix"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          1
+        ],
+        "head": [
+          1
+        ]
+      }
+    ],
+    "fallback": "outside-declaration comment may require fallback; must preserve source",
+    "sourceHashes": {
+      "base": "150fc49b2c5fa2b34d02b31f6a443c72633d5fd05d5573ed2682de4478b264e7",
+      "head": "c52567cd6d0298d3738a1481ea6f23c5200406ae7407edb7eeae643fdf47bbd1"
+    },
+    "expectedDeclarations": {
+      "base": [],
+      "head": []
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  },
+  {
+    "path": "whitespace-only.dart",
+    "features": [
+      "whitespace-only"
+    ],
+    "relationships": [],
+    "changedLines": [
+      {
+        "kind": "replace",
+        "base": [
+          2
+        ],
+        "head": [
+          2
+        ]
+      }
+    ],
+    "fallback": "none expected",
+    "sourceHashes": {
+      "base": "150fc49b2c5fa2b34d02b31f6a443c72633d5fd05d5573ed2682de4478b264e7",
+      "head": "e73f804fe710494eb2ccaf290540a5d242f01032695640f94974b3d1605d2dd1"
+    },
+    "expectedDeclarations": {
+      "base": [
+        {
+          "header": "int chinese() => 1;",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 48,
+          "utf16Index": 36
+        }
+      ],
+      "head": [
+        {
+          "header": "int chinese() =>  1;",
+          "owners": [],
+          "from": 2,
+          "to": 2,
+          "indent": 0,
+          "utf8Byte": 48,
+          "utf16Index": 36
+        }
+      ]
+    },
+    "oracleMethod": "Authored source headers, lexical indentation boundaries, explicit relationships and difflib line edits; never copied from AST implementation. Conservative ambiguity is allowed; cross-owner confident pairing is not."
+  }
+]
