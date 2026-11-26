@@ -1,0 +1,157 @@
+{
+  "id": "02",
+  "title": "AST-PHP-Declaration-Boundaries",
+  "files": [
+    "Semicolon.php",
+    "Braced.php"
+  ],
+  "expectations": [
+    {
+      "owner": "App\\Billing\\Ledger",
+      "name": "settle",
+      "kind": "method",
+      "base": "$value - $fee",
+      "head": "$value + $fee",
+      "required": [
+        "protected int $fee = 100;"
+      ],
+      "regression": "Fees are added to settlement instead of deducted.",
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Billing\\Ledger::settle::<anonymous class>",
+      "name": "settle",
+      "kind": "method",
+      "base": "return $amount;",
+      "head": "return max(0, $amount);",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Shipping\\Ledger",
+      "name": "settle",
+      "kind": "method",
+      "base": "return $amount + 250;",
+      "head": "return $amount + 350;",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Billing\\Ledger",
+      "name": "MAX_RETRIES",
+      "kind": "declaration",
+      "base": "public const MAX_RETRIES = 3;",
+      "head": "public const MAX_RETRIES = 0;",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Billing\\Ledger",
+      "name": "fee",
+      "kind": "declaration",
+      "base": "protected int $fee = 100;",
+      "head": "protected int $fee = 150;",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Billing\\Ledger",
+      "name": "close",
+      "kind": "method",
+      "base": "public function close(Clock $at): string",
+      "head": "public function close(Clock $at, bool $utc = true): string",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Billing",
+      "name": "Ledger",
+      "kind": "class",
+      "base": "#[Audited('billing')]",
+      "head": "#[Audited('payments')]",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Shipping",
+      "name": "shippingFee",
+      "kind": "function",
+      "base": "function shippingFee(int $weight): int",
+      "head": "function shippingFee(int $weight, int $minimum = 500): int",
+      "required": [],
+      "regression": null,
+      "path": "Semicolon.php"
+    },
+    {
+      "owner": "App\\Retail\\Ledger",
+      "name": "settle",
+      "kind": "method",
+      "base": "return $amount - 75;",
+      "head": "return $amount - 125;",
+      "required": [],
+      "regression": null,
+      "path": "Braced.php"
+    },
+    {
+      "owner": "App\\Wholesale\\Ledger",
+      "name": "settle",
+      "kind": "method",
+      "base": "return $amount - 25;",
+      "head": "return $amount - 50;",
+      "required": [],
+      "regression": null,
+      "path": "Braced.php"
+    },
+    {
+      "owner": "App\\Retail\\Settlement",
+      "name": "days",
+      "kind": "method",
+      "base": "return $this === self::Daily ? 1 : 7;",
+      "head": "return $this === self::Daily ? 1 : 5;",
+      "required": [],
+      "regression": null,
+      "path": "Braced.php"
+    },
+    {
+      "owner": "App\\Retail\\Settlement",
+      "name": "Weekly",
+      "kind": "declaration",
+      "base": "case Weekly = 'weekly';",
+      "head": "case Weekly = 'week';",
+      "required": [],
+      "regression": null,
+      "path": "Braced.php"
+    },
+    {
+      "owner": "App\\Retail",
+      "name": "normalize",
+      "kind": "function",
+      "base": "return strtoupper(trim($code));",
+      "head": "return strtolower(trim($code));",
+      "required": [],
+      "regression": null,
+      "path": "Braced.php"
+    }
+  ],
+  "features": [
+    "same class/method names in different namespaces",
+    "semicolon/braced namespaces",
+    "aliased/grouped imports",
+    "trait use",
+    "closure use",
+    "anonymous class",
+    "nested closure",
+    "arrow",
+    "attributes",
+    "enum cases",
+    "property/constant changes",
+    "method/function signature boundaries"
+  ],
+  "invalid": []
+}

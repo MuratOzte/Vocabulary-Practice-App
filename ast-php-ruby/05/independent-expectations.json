@@ -1,0 +1,114 @@
+{
+  "id": "05",
+  "title": "AST-PHP-Ruby-Unicode-Mixed",
+  "files": [
+    "checkout.php",
+    "bildirim.rb"
+  ],
+  "expectations": [
+    {
+      "owner": "HTML",
+      "name": "section",
+      "kind": "regional",
+      "base": "<section aria-label=\"Siparişler\">",
+      "head": "<section aria-label=\"Güncel siparişler 🛒\">",
+      "required": [],
+      "regression": null,
+      "path": "checkout.php"
+    },
+    {
+      "owner": "HTML/PHP boundary",
+      "name": "article",
+      "kind": "regional",
+      "base": "<article>",
+      "head": "<article data-order=\"<?= $order['id'] ?>\">",
+      "required": [],
+      "regression": null,
+      "path": "checkout.php"
+    },
+    {
+      "owner": "Shop\\Views",
+      "name": "formatPrice",
+      "kind": "function",
+      "base": "$cents / 100",
+      "head": "$cents / 10",
+      "required": [],
+      "regression": null,
+      "path": "checkout.php"
+    },
+    {
+      "owner": "Shop\\Views",
+      "name": "terms",
+      "kind": "declaration",
+      "base": "İade koşulları: 14 gün 📦",
+      "head": "İade koşulları: 30 gün 📦",
+      "required": [],
+      "regression": null,
+      "path": "checkout.php"
+    },
+    {
+      "owner": "Shop\\Views",
+      "name": "footerMessage",
+      "kind": "function",
+      "base": "return 'Teşekkürler 🌍';",
+      "head": "return 'Tekrar bekleriz 🌍';",
+      "required": [],
+      "regression": null,
+      "path": "checkout.php"
+    },
+    {
+      "owner": "Shop\\Views",
+      "name": "notice",
+      "kind": "declaration",
+      "base": "İşleminiz sırada.",
+      "head": "Ödemeniz alındı.",
+      "required": [],
+      "regression": null,
+      "path": "checkout.php"
+    },
+    {
+      "owner": "Mağaza::Bildirim",
+      "name": "geçerli?",
+      "kind": "method",
+      "base": "tutar > 0 && tutar < 100_000",
+      "head": "tutar >= 0 && tutar < 100_000",
+      "required": [],
+      "regression": null,
+      "path": "bildirim.rb"
+    },
+    {
+      "owner": "Mağaza::Bildirim",
+      "name": "özet",
+      "kind": "method",
+      "base": "Güvenli ödeme ✅",
+      "head": "Ödeme tamamlandı ✅",
+      "required": [],
+      "regression": null,
+      "path": "bildirim.rb"
+    },
+    {
+      "owner": "Mağaza::Bildirim",
+      "name": "çok_satırlı",
+      "kind": "method",
+      "base": "İkinci satır: ödeme bekleniyor",
+      "head": "İkinci satır: ödeme onaylandı",
+      "required": [],
+      "regression": null,
+      "path": "bildirim.rb"
+    }
+  ],
+  "features": [
+    "HTML-only",
+    "PHP-only",
+    "HTML/PHP boundary",
+    "multiple tags",
+    "short echo",
+    "PHP loop in HTML",
+    "heredoc/nowdoc",
+    "Turkish/emoji before changes",
+    "UTF-8 Ruby identifiers",
+    "CRLF",
+    "multiline string/block"
+  ],
+  "invalid": []
+}

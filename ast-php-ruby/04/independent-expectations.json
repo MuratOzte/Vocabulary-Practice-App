@@ -1,0 +1,219 @@
+{
+  "id": "04",
+  "title": "AST-Ruby-Structural-Edge-Cases",
+  "files": [
+    "user_service.rb",
+    "reopened.rb",
+    "customer.rb"
+  ],
+  "expectations": [
+    {
+      "owner": "App::Services::UserService",
+      "name": "DEFAULT_LIMIT",
+      "kind": "declaration",
+      "base": "DEFAULT_LIMIT = 10",
+      "head": "DEFAULT_LIMIT = 20",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService.self",
+      "name": "limit",
+      "kind": "method",
+      "base": "        DEFAULT_LIMIT\n",
+      "head": "        DEFAULT_LIMIT * 2\n",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "limit",
+      "kind": "method",
+      "base": "DEFAULT_LIMIT - 1",
+      "head": "DEFAULT_LIMIT + 1",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService::<singleton class>",
+      "name": "enabled?",
+      "kind": "method",
+      "base": "          true\n",
+      "head": "          false\n",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "valid?",
+      "kind": "method",
+      "base": "def valid? = !name.to_s.empty?",
+      "head": "def valid? = name.to_s.length >= 3",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "[]",
+      "kind": "method",
+      "base": "@settings.fetch(key)",
+      "head": "@settings[key]",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "display_name",
+      "kind": "dynamic",
+      "base": "name.to_s.strip",
+      "head": "name.to_s.strip.downcase",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "attr_accessor",
+      "kind": "dynamic",
+      "base": "attr_accessor :status, :name",
+      "head": "attr_accessor :status, :name, :email",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "render",
+      "kind": "method",
+      "base": "value.to_s.gsub('<', '&lt;')",
+      "head": "value.to_s",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService",
+      "name": "render",
+      "kind": "method",
+      "base": "<p>Current account</p>",
+      "head": "<p>Active account</p>",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService[reopened]",
+      "name": "update!",
+      "kind": "method",
+      "base": "attributes.each { |key, value| public_send(\"#{key}=\", value) }",
+      "head": "attributes.each { |key, value| public_send(\"#{key}=\", value) unless value.nil? }",
+      "required": [],
+      "regression": null,
+      "path": "user_service.rb"
+    },
+    {
+      "owner": "App::Services::UserService[qualified/reopened]",
+      "name": "SCOPES",
+      "kind": "declaration",
+      "base": "SCOPES = %i[active pending]",
+      "head": "SCOPES = %i[active pending suspended]",
+      "required": [],
+      "regression": null,
+      "path": "reopened.rb"
+    },
+    {
+      "owner": "App::Services::UserService.self[qualified/reopened]",
+      "name": "limit",
+      "kind": "method",
+      "base": "    25\n",
+      "head": "    50\n",
+      "required": [],
+      "regression": null,
+      "path": "reopened.rb"
+    },
+    {
+      "owner": "App::Services::Searchable",
+      "name": "search",
+      "kind": "method",
+      "base": "row[:name].include?(term)",
+      "head": "row[:name].downcase.include?(term.downcase)",
+      "required": [],
+      "regression": null,
+      "path": "reopened.rb"
+    },
+    {
+      "owner": "App::Services.self[reopened]",
+      "name": "instrument",
+      "kind": "method",
+      "base": "yield event",
+      "head": "yield event.to_sym",
+      "required": [],
+      "regression": null,
+      "path": "reopened.rb"
+    },
+    {
+      "owner": "Commerce::Customer",
+      "name": "validates",
+      "kind": "dynamic",
+      "base": "validates :age, minimum: 18",
+      "head": "validates :age, minimum: 16",
+      "required": [],
+      "regression": null,
+      "path": "customer.rb"
+    },
+    {
+      "owner": "Commerce::Customer.self",
+      "name": "eligible?",
+      "kind": "method",
+      "base": "      age >= 18\n",
+      "head": "      age >= 16\n",
+      "required": [],
+      "regression": null,
+      "path": "customer.rb"
+    },
+    {
+      "owner": "Commerce::Customer",
+      "name": "eligible?",
+      "kind": "method",
+      "base": "age && age >= 18 && !email.to_s.empty?",
+      "head": "age && age >= 21 && !email.to_s.empty?",
+      "required": [],
+      "regression": null,
+      "path": "customer.rb"
+    },
+    {
+      "owner": "Commerce::Customer",
+      "name": "label",
+      "kind": "method",
+      "base": "value.to_s.upcase",
+      "head": "value.to_s.downcase",
+      "required": [],
+      "regression": null,
+      "path": "customer.rb"
+    }
+  ],
+  "features": [
+    "def self",
+    "class << self",
+    "same instance/singleton name",
+    "reopened modules/classes",
+    "qualified class",
+    "nested modules",
+    "endless methods",
+    "operator",
+    "define_method",
+    "attr_accessor",
+    "include/extend/prepend",
+    "blocks/lambda",
+    "heredoc",
+    "DSL",
+    "class-level change"
+  ],
+  "invalid": []
+}

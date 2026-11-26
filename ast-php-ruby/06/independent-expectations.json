@@ -1,0 +1,209 @@
+{
+  "id": "06",
+  "title": "AST-PHP-Ruby-Stress-Fallback",
+  "files": [
+    "valid.php",
+    "valid.rb",
+    "broken.php",
+    "broken.rb",
+    "new.php",
+    "new.rb",
+    "deleted.php",
+    "receipt_old.rb",
+    "receipt_new.rb",
+    "empty.rb",
+    "globals.php",
+    "markup.php",
+    "dense.php",
+    "prices.ts",
+    "tax.py",
+    "discount.go"
+  ],
+  "expectations": [
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "MAX_AMOUNT",
+      "kind": "declaration",
+      "base": "private const MAX_AMOUNT = 100000000;",
+      "head": "private const MAX_AMOUNT = 50000000;",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "addLine",
+      "kind": "method",
+      "base": "if ($quantity <= 0 || $unitPrice < 0 || $sku === '')",
+      "head": "if ($quantity < 0 || $unitPrice < 0 || $sku === '')",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "addLine",
+      "kind": "method",
+      "base": "'quantity' => ($existing['quantity'] ?? 0) + $quantity,",
+      "head": "'quantity' => $quantity,",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "capture",
+      "kind": "method",
+      "base": "$payment['captured'] + $amount > $payment['authorized']",
+      "head": "$amount > $payment['authorized']",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "capture",
+      "kind": "method",
+      "base": "$this->payments[$id]['captured'] += $amount;",
+      "head": "$this->payments[$id]['captured'] = $amount;",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "capture",
+      "kind": "method",
+      "base": "$this->orders[$id]['state'] = 'paid';",
+      "head": "$this->orders[$id]['state'] = 'authorized';",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "refund",
+      "kind": "method",
+      "base": "$amount > $remaining",
+      "head": "$amount >= $remaining",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "total",
+      "kind": "method",
+      "base": "$total += $this->tax($id) + $order['shipping'];",
+      "head": "$total += $this->tax($id) - $order['shipping'];",
+      "required": [],
+      "regression": null,
+      "path": "dense.php"
+    },
+    {
+      "path": "valid.php",
+      "basePath": "valid.php",
+      "owner": "Stress",
+      "name": "charge",
+      "base": "return max(0, $amount - 100);",
+      "head": "return max(0, $amount - 200);",
+      "kind": "function",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "valid.rb",
+      "basePath": "valid.rb",
+      "owner": "Stress::Invoice",
+      "name": "total",
+      "base": "items.sum { |item| item[:price] * item[:quantity] }",
+      "head": "items.sum { |item| item[:price] * [item[:quantity], 1].max }",
+      "kind": "method",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "receipt_new.rb",
+      "basePath": "receipt_old.rb",
+      "owner": "Stress::Receipt",
+      "name": "render",
+      "base": "Amount:",
+      "head": "Total:",
+      "kind": "method",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "globals.php",
+      "basePath": "globals.php",
+      "owner": "top-level",
+      "name": "retryLimit",
+      "base": "$retryLimit = 3;",
+      "head": "$retryLimit = 5;",
+      "kind": "regional",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "markup.php",
+      "basePath": "markup.php",
+      "owner": "HTML",
+      "name": "p",
+      "base": "<p>Payment pending</p>",
+      "head": "<p>Payment accepted</p>",
+      "kind": "regional",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "prices.ts",
+      "basePath": "prices.ts",
+      "owner": "top-level",
+      "name": "price",
+      "base": "return qty * cents;",
+      "head": "return Math.max(1, qty) * cents;",
+      "kind": "function",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "tax.py",
+      "basePath": "tax.py",
+      "owner": "top-level",
+      "name": "tax",
+      "base": "return cents * 20 // 100",
+      "head": "return (cents * 20 + 50) // 100",
+      "kind": "function",
+      "required": [],
+      "regression": null
+    },
+    {
+      "path": "discount.go",
+      "basePath": "discount.go",
+      "owner": "pricing",
+      "name": "Discount",
+      "base": "return cents / 10",
+      "head": "return cents / 5",
+      "kind": "function",
+      "required": [],
+      "regression": null
+    }
+  ],
+  "features": [
+    "valid PHP/Ruby",
+    "malformed PHP/Ruby",
+    "added PHP/Ruby",
+    "deleted",
+    "renamed",
+    "empty",
+    "no declaration",
+    "dense adjacent hunks",
+    "large file",
+    "TypeScript/Python/Go",
+    "multilingual AST disabled"
+  ],
+  "invalid": [
+    "head/broken.php",
+    "head/broken.rb"
+  ]
+}

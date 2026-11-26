@@ -1,0 +1,99 @@
+{
+  "id": "03",
+  "title": "AST-Ruby-Large-Existing-File",
+  "files": [
+    "subscriptions.rb"
+  ],
+  "expectations": [
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook",
+      "name": "refundable_amount",
+      "kind": "method",
+      "base": "payment[:amount] - payment[:refunded]",
+      "head": "payment[:amount] + payment[:refunded]",
+      "required": [
+        "payment[:refunded] += amount"
+      ],
+      "regression": "Refunds increase available refundable amount.",
+      "path": "subscriptions.rb"
+    },
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook.self",
+      "name": "valid_currency?",
+      "kind": "method",
+      "base": "%w[TRY EUR USD].include?(currency)",
+      "head": "%w[TRY EUR].include?(currency)",
+      "required": [],
+      "regression": "USD subscriptions are rejected by the currency predicate.",
+      "path": "subscriptions.rb"
+    },
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook",
+      "name": "[]",
+      "kind": "method",
+      "base": "subscription.dup\n      end\n\n      def []=",
+      "head": "subscription\n      end\n\n      def []=",
+      "required": [
+        "subscription[:state] = :active"
+      ],
+      "regression": "Returning the mutable internal hash lets callers bypass state validation.",
+      "path": "subscriptions.rb"
+    },
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook",
+      "name": "normalized_monthly_revenue",
+      "kind": "method",
+      "base": "def monthly_revenue\n",
+      "head": "def normalized_monthly_revenue\n",
+      "required": [],
+      "regression": null,
+      "path": "subscriptions.rb"
+    },
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook",
+      "name": "legacy_receipt",
+      "kind": "method",
+      "base": "      def legacy_receipt(key)\n        invoice = fetch_invoice(key)\n        \"#{key}:#{invoice[:total]}:#{currency}\"\n      end\n\n",
+      "head": "",
+      "required": [],
+      "regression": null,
+      "path": "subscriptions.rb"
+    },
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook",
+      "name": "build_invoice",
+      "kind": "method",
+      "base": "raise BillingError, 'not billable' unless %i[active past_due].include?(subscription[:state])",
+      "head": "raise BillingError, 'not billable' unless %i[active past_due paused].include?(subscription[:state])",
+      "required": [],
+      "regression": "Paused subscriptions are billed.",
+      "path": "subscriptions.rb"
+    },
+    {
+      "owner": "Commerce::Subscriptions::SubscriptionBook",
+      "name": "build_invoice",
+      "kind": "method",
+      "base": "@credits[id] -= credit",
+      "head": "@credits[id] += credit",
+      "required": [
+        "credit = [available_credit(id), subtotal].min"
+      ],
+      "regression": "Applied credit is returned instead of consumed.",
+      "path": "subscriptions.rb"
+    }
+  ],
+  "features": [
+    "nested modules/classes",
+    "initialize",
+    "instance/singleton",
+    "private/protected",
+    "predicate",
+    "bang",
+    "setter",
+    "operators [] []= + <=>",
+    "blocks",
+    "exceptions",
+    "distant hunks in build_invoice"
+  ],
+  "invalid": []
+}

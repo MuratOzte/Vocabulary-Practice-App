@@ -1,0 +1,89 @@
+{
+  "id": "01",
+  "title": "AST-PHP-Large-Existing-File",
+  "files": [
+    "Checkout.php"
+  ],
+  "expectations": [
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "refundableBalance",
+      "kind": "method",
+      "base": "return max(0, $payment['captured'] - $payment['refunded']);",
+      "head": "return max(0, $payment['captured'] + $payment['refunded']);",
+      "required": [
+        "$this->payments[$id]['refunded'] += $amount;"
+      ],
+      "regression": "A partial refund increases the refundable balance instead of reducing it.",
+      "path": "Checkout.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "capture",
+      "kind": "method",
+      "base": "public function capture(string $id, int $amount): array",
+      "head": "public function capture(string $id, int $amount, bool $final = true): array",
+      "required": [
+        "'authorized' => $amount,"
+      ],
+      "regression": null,
+      "path": "Checkout.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "paymentReceipt",
+      "kind": "method",
+      "base": "    public function paymentReceipt(string $id): string\n    {\n        $payment = $this->payment($id);\n        $order = $this->order($id);\n        return implode('|', [\n            $id,\n            $payment['reference'],\n            (string) $payment['captured'],\n            $order['currency'],\n        ]);\n    }\n\n",
+      "head": "",
+      "required": [],
+      "regression": null,
+      "path": "Checkout.php"
+    },
+    {
+      "owner": "Shop\\Payments\\CheckoutService",
+      "name": "activeCustomerOrders",
+      "kind": "method",
+      "base": "public function customerOrders(string $customerId): array",
+      "head": "public function activeCustomerOrders(string $customerId): array",
+      "required": [],
+      "regression": null,
+      "path": "Checkout.php"
+    },
+    {
+      "owner": "Shop\\Payments\\PaymentState",
+      "name": "refundable",
+      "kind": "method",
+      "base": "return $this === self::Captured;",
+      "head": "return $this === self::Authorized;",
+      "required": [
+        "$this->payments[$id]['state'] = PaymentState::Captured;"
+      ],
+      "regression": "Authorized but uncaptured payments become refundable while captured payments are rejected.",
+      "path": "Checkout.php"
+    },
+    {
+      "owner": "Shop\\Payments\\AuditTrail",
+      "name": "recordEvent",
+      "kind": "method",
+      "base": "unset($payload['card_number'], $payload['cvv']);",
+      "head": "unset($payload['card_number']);",
+      "required": [],
+      "regression": "CVV is retained in the audit payload.",
+      "path": "Checkout.php"
+    }
+  ],
+  "features": [
+    "namespace",
+    "imports",
+    "interface",
+    "trait",
+    "enum",
+    "typed properties",
+    "constructor",
+    "visibility",
+    "closure use",
+    "arrow",
+    "exceptions"
+  ],
+  "invalid": []
+}
