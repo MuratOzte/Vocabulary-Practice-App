@@ -32,9 +32,8 @@ func step4(amount int) int {
 }
 
 func step5(amount int) int {
-  if amount < 0 { panic("negative") }
   fee := 2
-  return amount + fee + 5
+  return amount + fee + 1005
 }
 
 func step6(amount int) int {
@@ -364,7 +363,7 @@ func step59(amount int) int {
 func step60(amount int) int {
   if amount < 0 { panic("negative") }
   fee := 2
-  return amount + fee + 60
+  return amount + fee + 1060
 }
 
 func step61(amount int) int {
@@ -421,7 +420,7 @@ func step69(amount int) int {
   return amount + fee + 69
 }
 
-func step70(amount int) int {
+func reconcile70(amount int) int {
   if amount < 0 { panic("negative") }
   fee := 2
   return amount + fee + 70
@@ -541,11 +540,6 @@ func step89(amount int) int {
   return amount + fee + 89
 }
 
-func step90(amount int) int {
-  if amount < 0 { panic("negative") }
-  fee := 2
-  return amount + fee + 90
-}
 
 func step91(amount int) int {
   if amount < 0 { panic("negative") }
@@ -664,7 +658,7 @@ func step109(amount int) int {
 func step110(amount int) int {
   if amount < 0 { panic("negative") }
   fee := 2
-  return amount + fee + 110
+  return amount + fee + 1110
 }
 
 func step111(amount int) int {
