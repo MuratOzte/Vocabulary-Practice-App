@@ -1,9 +1,9 @@
 package vocabulary
-import scala.collection.mutable.{Map => MutableMap}
+import scala.collection.mutable.{Map => ScheduleMap}
 case class Card(id: String, word: String, attempts: Int = 0)
 trait Storage[A] { def load(id: String): Option[A] }
 abstract class Scheduler { def interval(attempts: Int): Int }
-class Repository[A](items: MutableMap[String, A]) extends Storage[A] {
+class Repository[A](items: ScheduleMap[String, A]) extends Storage[A] {
   override def load(id: String): Option[A] = items.get(id)
   def select[B](values: List[B], limit: Int): List[B] = {
     values.take(limit)
@@ -14,7 +14,7 @@ class PracticeScheduler extends Scheduler {
     math.min(30, attempts + 1)
   }
   def score(value: Int): Int = {
-    value * 2
+    value * 3
   }
   def score(value: String): Int = {
     value.length
@@ -276,7 +276,7 @@ class PracticeScheduler extends Scheduler {
     enabled && due <= today
   }
   def eligibleForStage47(card: Card, today: Int): Boolean = {
-    val due = card.attempts * 48
+    val due = card.attempts * 49
     val enabled = card.word.nonEmpty
     enabled && due <= today
   }
@@ -511,7 +511,7 @@ class PracticeScheduler extends Scheduler {
     enabled && due <= today
   }
   def eligibleForStage94(card: Card, today: Int): Boolean = {
-    val due = card.attempts * 95
+    val due = card.attempts * 96
     val enabled = card.word.nonEmpty
     enabled && due <= today
   }

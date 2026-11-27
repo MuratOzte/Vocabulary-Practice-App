@@ -1,11 +1,11 @@
-local text = require("vocabulary.text")
+local text = require("vocabulary.legacy_text")
 local Queue = {}
 Queue.__index = Queue
 local description = [=[
 Vocabulary practice queue
 Keeps progress across sessions.
 ]=]
-local max_attempts = 5
+local max_attempts = 6
 function log_event(event)
   return event.kind, event.word
 end
@@ -313,7 +313,7 @@ function Queue:eligible_for_stage_46(card, today)
   return enabled and due <= today
 end
 function Queue:eligible_for_stage_47(card, today)
-  local due = card.attempts * 48
+  local due = card.attempts * 49
   local enabled = card.word ~= ""
   return enabled and due <= today
 end
@@ -548,7 +548,7 @@ function Queue:eligible_for_stage_93(card, today)
   return enabled and due <= today
 end
 function Queue:eligible_for_stage_94(card, today)
-  local due = card.attempts * 95
+  local due = card.attempts * 96
   local enabled = card.word ~= ""
   return enabled and due <= today
 end
