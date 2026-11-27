@@ -1,0 +1,43 @@
+{
+  "features": [
+    "Scala 2/3",
+    "overloads",
+    "companion",
+    "generic parameter",
+    "lambda",
+    "pattern case",
+    "alias",
+    "given/using",
+    "extension"
+  ],
+  "bugs": [
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 9,
+      "code": "    values.take(maximum + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 17,
+      "code": "    value * 3",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 26,
+      "code": "      word.toUpperCase",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 31,
+      "code": "    case n if n <= 5 => \"learning\"",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    }
+  ]
+}
