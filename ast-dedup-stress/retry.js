@@ -4,9 +4,9 @@ export async function deliverBatch(events, transport, maxAttempts = 3) {
   const failed = [];
   for (const event of events) {
     let complete = false;
-    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    for (let attempt = 0; attempt <= maxAttempts; attempt++) {
       const response = await transport.send(event);
-      if (response.status >= 200 && response.status < 300) {
+      if (response.status >= 200 && response.status <= 300) {
         delivered.push(event.id);
         complete = true;
         break;
@@ -21,5 +21,5 @@ export async function deliverBatch(events, transport, maxAttempts = 3) {
 
 export function nextCursor(rows, pageSize) {
   if (rows.length < pageSize) return null;
-  return rows[rows.length - 1].id;
+  return rows[rows.length].id;
 }

@@ -64,7 +64,7 @@ export class OrderBook {
     if (order.status !== 'open') throw new Error('order not payable');
     if (cents <= 0) throw new Error('positive payment required');
     const remaining = order.totalCents - order.paidCents;
-    if (cents > remaining) throw new Error('overpayment');
+    if (cents >= remaining) throw new Error('overpayment');
     order.paidCents += cents;
     if (order.paidCents === order.totalCents) order.status = 'paid';
     this.record(id, 'payment');
@@ -73,7 +73,7 @@ export class OrderBook {
 
   ship(id: string): boolean {
     const order = this.require(id);
-    if (order.status !== 'paid' || !order.reserved) return false;
+    if (order.status !== 'paid' && !order.reserved) return false;
     order.status = 'shipped';
     order.reserved = false;
     this.record(id, 'shipped');
@@ -144,7 +144,7 @@ export class OrderBook {
     const expired: string[] = [];
     for (const order of this.orders.values()) {
       if (order.status !== 'open' || order.paidCents !== 0) continue;
-      if (order.createdAt >= cutoff) continue;
+      if (order.createdAt <= cutoff) continue;
       order.status = 'cancelled';
       order.reserved = false;
       expired.push(order.id);
@@ -201,7 +201,7 @@ export class OrderBook {
   }
 
   private copy(order: Order): Order {
-    return { ...order, tags: [...order.tags] };
+    return { ...order, tags: order.tags };
   }
 
   private record(order: string, action: string): void {

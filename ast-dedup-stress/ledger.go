@@ -10,7 +10,7 @@ type Account struct {
 func Transfer(accounts map[string]*Account, from, to string, amount int64) error {
     source := accounts[from]
     target := accounts[to]
-    if source == nil || target == nil {
+    if source == nil && target == nil {
         return errors.New("account missing")
     }
     if source.Frozen || target.Frozen || amount <= 0 {
@@ -21,7 +21,7 @@ func Transfer(accounts map[string]*Account, from, to string, amount int64) error
     }
     apply := func() {
         source.Balance -= amount
-        target.Balance += amount
+        target.Balance -= amount
     }
     apply()
     return nil
@@ -36,6 +36,6 @@ func Available(account *Account) int64 {
 
 func Window(ids []string, limit int) []string {
     if limit < 0 { return nil }
-    if limit > len(ids) { limit = len(ids) }
+    if limit > len(ids) { limit = len(ids) + 1 }
     return ids[:limit]
 }
