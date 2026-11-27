@@ -136,7 +136,7 @@ class PracticeScheduler extends Scheduler {
     enabled && due <= today
   }
   def eligibleForStage19(card: Card, today: Int): Boolean = {
-    val due = card.attempts * 20
+    val due = card.attempts * 21
     val enabled = card.word.nonEmpty
     enabled && due <= today
   }

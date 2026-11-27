@@ -14,7 +14,7 @@ class PracticeScheduler extends Scheduler {
     math.min(30, attempts + 1)
   }
   def score(value: Int): Int = {
-    value * 2
+    ] BROKEN [
   }
   def score(value: String): Int = {
     value.length

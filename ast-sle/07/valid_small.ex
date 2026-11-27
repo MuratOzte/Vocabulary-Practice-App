@@ -1,5 +1,5 @@
 defmodule Small do
  def score(x) do
-  x + 1
+  x + 2
  end
 end

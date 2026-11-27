@@ -21,7 +21,7 @@ function Queue:next()
   return card, self.cursor
 end
 function Queue.count(cards)
-  return #cards
+  ] BROKEN [
 end
 local policies = {
   accept = function(card)
