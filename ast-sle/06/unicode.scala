@@ -4,10 +4,10 @@ object Türkçe {
   ): String = {
     val sonuç = List(
       değer,
-      2
+      3
     ).sum
     """İstanbul 😀
-orta satır
+yeni orta satır
 son""" + sonuç
   }
 }

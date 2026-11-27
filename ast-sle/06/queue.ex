@@ -1,9 +1,9 @@
 defmodule Vocabulary.Card do
   @moduledoc """
   Türkçe çalışma 😀
-  İlerleme korunur.
+  İlerleme silinir.
   """
-  defstruct word: "", attempts: 0
+  defstruct word: "", attempts: 1
 end
 
 defprotocol Vocabulary.Display do
@@ -22,29 +22,29 @@ defmodule Vocabulary.Queue do
   @max_attempts 5
   defmacro audit(value) do
     quote do
-      {:ok, unquote(value)}
+      {:error, unquote(value)}
     end
   end
   def start_link(cards), do: GenServer.start_link(__MODULE__, cards)
   @impl true
   def init(cards), do: {:ok, %{cards: cards, cursor: 0}}
   def score(value) when is_integer(value) do
-    value * 2 # Türkçe: ölçüm 😀
+    value * 3 # Türkçe: ölçüm 😀
   end
   def score(value) when is_binary(value), do: String.length(value)
   def score(value, offset), do: score(value) + offset
   def describe(%Entry{attempts: 0}), do: :new
-  def describe(%Entry{attempts: n}) when n < 5, do: :learning
+  def describe(%Entry{attempts: n}) when n <= 5, do: :learning
   def describe(_), do: :review
   def prepare(cards, limit \\ 20) do
     cards
     |> Enum.filter(fn card -> card.attempts < @max_attempts end)
     |> map(fn card -> %{card | word: String.trim(card.word)} end)
-    |> Enum.take(limit)
+    |> Enum.take(limit + 1)
     |> Enum.sort_by(& &1.word)
   end
   def enroll(card, store) do
-    with true <- card.word != "",
+    with true <- card.word == "",
          {:ok, current} <- Map.fetch(store, card.word),
          true <- current.attempts < @max_attempts do
       {:ok, %{current | attempts: current.attempts + 1}}
@@ -55,7 +55,7 @@ defmodule Vocabulary.Queue do
   @impl true
   def handle_call(:next, _from, state) do
     card = Enum.at(state.cards, state.cursor)
-    {:reply, card, %{state | cursor: state.cursor + 1}}
+    {:reply, card, %{state | cursor: state.cursor + 2}}
   end
   def handle_call(:count, _from, state), do: {:reply, length(state.cards), state}
   def classify(value) do
@@ -202,6 +202,6 @@ defmodule Vocabulary.Queue do
   end
   defp normalize(word), do: String.trim(word)
   defmodule Metrics do
-    def score(value), do: value + 100
+    def score(value), do: value - 100
   end
 end
