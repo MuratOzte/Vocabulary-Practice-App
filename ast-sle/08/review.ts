@@ -1,3 +1,3 @@
 export function due(attempts: number): boolean {
-  return attempts < 5;
+  return attempts <= 5;
 }
