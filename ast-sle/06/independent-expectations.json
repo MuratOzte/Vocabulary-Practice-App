@@ -1,0 +1,229 @@
+{
+  "features": [
+    "Turkish/emoji",
+    "LF/CRLF",
+    "tabs/spaces",
+    "no final newline",
+    "multiline signature/call/string",
+    "byte/character offsets"
+  ],
+  "bugs": [
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 9,
+      "code": "    values.take(maximum + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 17,
+      "code": "    value * 3 // Türkçe: ölçüm 😀",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 26,
+      "code": "      word.toUpperCase // ıİşğüöç",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 31,
+      "code": "    case n if n <= 5 => \"learning\"",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_Practice.scala",
+      "side": "head",
+      "line": 9,
+      "code": "    values.take(maximum + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_Practice.scala",
+      "side": "head",
+      "line": 17,
+      "code": "    value * 3 // Türkçe: ölçüm 😀",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_Practice.scala",
+      "side": "head",
+      "line": 26,
+      "code": "      word.toUpperCase // ıİşğüöç",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_Practice.scala",
+      "side": "head",
+      "line": 31,
+      "code": "    case n if n <= 5 => \"learning\"",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 1,
+      "code": "local text = require(\"vocabulary.legacy_text\")",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 37,
+      "code": "    return \"Queue:\" .. (#queue.cards + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 49,
+      "code": "    total = total + 2",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 73,
+      "code": "      return nil, i, nil",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.lua",
+      "side": "head",
+      "line": 1,
+      "code": "local text = require(\"vocabulary.legacy_text\")",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.lua",
+      "side": "head",
+      "line": 37,
+      "code": "    return \"Queue:\" .. (#queue.cards + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.lua",
+      "side": "head",
+      "line": 49,
+      "code": "    total = total + 2",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.lua",
+      "side": "head",
+      "line": 73,
+      "code": "      return nil, i, nil",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 25,
+      "code": "      {:error, unquote(value)}",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 32,
+      "code": "    value * 3 # Türkçe: ölçüm 😀",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 37,
+      "code": "  def describe(%Entry{attempts: n}) when n <= 5, do: :learning",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 43,
+      "code": "    |> Enum.take(limit + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 47,
+      "code": "    with true <- card.word == \"\",",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 58,
+      "code": "    {:reply, card, %{state | cursor: state.cursor + 2}}",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 205,
+      "code": "    def score(value), do: value - 100",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 25,
+      "code": "      {:error, unquote(value)}",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 32,
+      "code": "    value * 3 # Türkçe: ölçüm 😀",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 37,
+      "code": "  def describe(%Entry{attempts: n}) when n <= 5, do: :learning",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 43,
+      "code": "    |> Enum.take(limit + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 47,
+      "code": "    with true <- card.word == \"\",",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 58,
+      "code": "    {:reply, card, %{state | cursor: state.cursor + 2}}",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "crlf_queue.ex",
+      "side": "head",
+      "line": 205,
+      "code": "    def score(value), do: value - 100",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "unicode.exs",
+      "side": "head",
+      "line": 2,
+      "code": " def ölçüm(değer), do: değer + 2",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    }
+  ]
+}
