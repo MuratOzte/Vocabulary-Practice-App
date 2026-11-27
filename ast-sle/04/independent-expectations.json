@@ -1,0 +1,31 @@
+{
+  "features": [
+    "400–1000 lines per language",
+    "3–5 sparse changes",
+    "imports/declarations",
+    "unrelated neighboring policies"
+  ],
+  "bugs": [
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 17,
+      "code": "    value * 3",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 1,
+      "code": "local text = require(\"vocabulary.legacy_text\")",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 31,
+      "code": "    value * 3",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    }
+  ]
+}
