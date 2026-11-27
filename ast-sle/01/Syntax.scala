@@ -6,6 +6,6 @@ object Syntax:
     def format(value: String): String = value.trim
   extension (value: String)
     def normalized: String =
-      value.trim.toLowerCase
+      value.toLowerCase
   def render[A](value: A)(using formatter: Formatter[A]): String =
     formatter.format(value)
