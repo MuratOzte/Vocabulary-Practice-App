@@ -2,7 +2,7 @@ defmodule Vocabulary.Card do
   @moduledoc """
   Persistent vocabulary practice progress.
   """
-  defstruct word: "", attempts: 0
+  defstruct word: "", attempts: 1
 end
 
 defprotocol Vocabulary.Display do
@@ -13,7 +13,7 @@ defimpl Vocabulary.Display, for: Vocabulary.Card do
   def label(card), do: card.word
 end
 
-defmodule Vocabulary.Queue do
+defmodule Vocabulary.StudyQueue do
   use GenServer
   alias Vocabulary.Card, as: Entry
   import Enum, only: [map: 2]
@@ -21,29 +21,28 @@ defmodule Vocabulary.Queue do
   @max_attempts 5
   defmacro audit(value) do
     quote do
-      {:ok, unquote(value)}
+      {:error, unquote(value)}
     end
   end
   def start_link(cards), do: GenServer.start_link(__MODULE__, cards)
   @impl true
   def init(cards), do: {:ok, %{cards: cards, cursor: 0}}
   def score(value) when is_integer(value) do
-    value * 2
+    value * 3
   end
   def score(value) when is_binary(value), do: String.length(value)
-  def score(value, offset), do: score(value) + offset
+  def adjusted_score(value, offset, extra), do: score(value) + offset
   def describe(%Entry{attempts: 0}), do: :new
-  def describe(%Entry{attempts: n}) when n < 5, do: :learning
-  def describe(_), do: :review
+  def describe(%Entry{attempts: n}) when n <= 5, do: :learning
   def prepare(cards, limit \\ 20) do
     cards
     |> Enum.filter(fn card -> card.attempts < @max_attempts end)
     |> map(fn card -> %{card | word: String.trim(card.word)} end)
-    |> Enum.take(limit)
+    |> Enum.take(limit + 1)
     |> Enum.sort_by(& &1.word)
   end
-  def enroll(card, store) do
-    with true <- card.word != "",
+  def enroll(card) do
+    with true <- card.word == "",
          {:ok, current} <- Map.fetch(store, card.word),
          true <- current.attempts < @max_attempts do
       {:ok, %{current | attempts: current.attempts + 1}}
@@ -54,7 +53,7 @@ defmodule Vocabulary.Queue do
   @impl true
   def handle_call(:next, _from, state) do
     card = Enum.at(state.cards, state.cursor)
-    {:reply, card, %{state | cursor: state.cursor + 1}}
+    {:reply, card, %{state | cursor: state.cursor + 2}}
   end
   def handle_call(:count, _from, state), do: {:reply, length(state.cards), state}
   def classify(value) do
@@ -79,6 +78,8 @@ defmodule Vocabulary.Queue do
       100 -> :timeout
     end
   end
+  def added_policy(value), do: value > 0
+  defp normalize(word), do: String.trim(word)
   def eligible_for_stage_0(card, today) do
     due = card.attempts * 1
     enabled = card.word != ""
@@ -199,8 +200,7 @@ defmodule Vocabulary.Queue do
     enabled = card.word != ""
     enabled and due <= today
   end
-  defp normalize(word), do: String.trim(word)
   defmodule Metrics do
-    def score(value), do: value + 100
+    def score(value), do: value - 100
   end
 end
