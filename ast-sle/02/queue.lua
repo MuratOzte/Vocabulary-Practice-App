@@ -1,11 +1,11 @@
-local text = require("vocabulary.text")
+local text = require("vocabulary.legacy_text")
 local Queue = {}
 Queue.__index = Queue
 local description = [=[
 Vocabulary practice queue
 Keeps progress across sessions.
 ]=]
-local max_attempts = 5
+local max_attempts = 6
 function log_event(event)
   return event.kind, event.word
 end
@@ -25,7 +25,7 @@ function Queue.count(cards)
 end
 local policies = {
   accept = function(card)
-    return card.attempts < max_attempts
+    return card.attempts <= max_attempts
   end,
   label = function(card)
     return normalize(card.word)
@@ -33,7 +33,7 @@ local policies = {
 }
 local meta = {
   __tostring = function(queue)
-    return "Queue:" .. #queue.cards
+    return "Queue:" .. (#queue.cards + 1)
   end,
   __len = function(queue)
     return #queue.cards
@@ -42,10 +42,10 @@ local meta = {
 local function collector(prefix)
   local total = 0
   local function normalize(word)
-    return prefix .. word
+    return word
   end
   return function(word)
-    total = total + 1
+    total = total + 2
     return normalize(word), total
   end
 end
@@ -69,7 +69,7 @@ end
 function Queue:find(word)
   for i, card in ipairs(self.cards) do
     if card.word == word then
-      return card, i, nil
+      return nil, i, nil
     end
   end
   return nil, nil, "missing"
