@@ -1,0 +1,44 @@
+{
+  "features": [
+    "dot/colon",
+    "table member",
+    "metamethod",
+    "shadowing",
+    "closure",
+    "callback",
+    "multiple return",
+    "require",
+    "coroutine",
+    "dynamic symbols are unresolved"
+  ],
+  "bugs": [
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 1,
+      "code": "local text = require(\"vocabulary.legacy_text\")",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 36,
+      "code": "    return \"Queue:\" .. (#queue.cards + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 48,
+      "code": "    total = total + 2",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 72,
+      "code": "      return nil, i, nil",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    }
+  ]
+}
