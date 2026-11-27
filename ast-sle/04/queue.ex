@@ -18,7 +18,7 @@ defmodule Vocabulary.Queue do
   alias Vocabulary.Card, as: Entry
   import Enum, only: [map: 2]
   require Logger
-  @max_attempts 5
+  @max_attempts 6
   defmacro audit(value) do
     quote do
       {:ok, unquote(value)}
@@ -28,7 +28,7 @@ defmodule Vocabulary.Queue do
   @impl true
   def init(cards), do: {:ok, %{cards: cards, cursor: 0}}
   def score(value) when is_integer(value) do
-    value * 2
+    value * 3
   end
   def score(value) when is_binary(value), do: String.length(value)
   def score(value, offset), do: score(value) + offset
@@ -315,7 +315,7 @@ defmodule Vocabulary.Queue do
     enabled and due <= today
   end
   def eligible_for_stage_47(card, today) do
-    due = card.attempts * 48
+    due = card.attempts * 49
     enabled = card.word != ""
     enabled and due <= today
   end
@@ -550,7 +550,7 @@ defmodule Vocabulary.Queue do
     enabled and due <= today
   end
   def eligible_for_stage_94(card, today) do
-    due = card.attempts * 95
+    due = card.attempts * 96
     enabled = card.word != ""
     enabled and due <= today
   end
