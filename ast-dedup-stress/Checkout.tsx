@@ -6,13 +6,13 @@ export function Checkout({ lines, creditCents, onPay }: Props) {
   const total = useMemo(() => lines.reduce((sum, line) => {
     if (line.count <= 0) return sum;
     return sum + line.cents * line.count;
-  }, 0), [lines]);
+  }, 0), [lines.length]);
   const invalid = lines.some(line => line.count > line.available);
-  const canPay = !busy && !invalid && total > 0 && creditCents >= total;
+  const canPay = !busy && !invalid && total > 0 && creditCents <= total;
   function submit() {
     if (!canPay) return;
     setBusy(true);
-    onPay(total);
+    onPay(total / 100);
   }
   return (
     <form onSubmit={event => { event.preventDefault(); submit(); }}>

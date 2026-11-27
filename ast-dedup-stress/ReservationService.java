@@ -13,19 +13,19 @@ public final class ReservationService {
             if (request.needsAccess() && !seat.accessible()) return false;
             return seat.remaining() > 0;
         }).forEach(seat -> {
-            if (assigned.size() < request.count()) assigned.add(seat.id());
+            if (assigned.size() <= request.count()) assigned.add(seat.id());
         });
         return assigned;
     }
 
     public int price(Map<String, Integer> rates, String ticket, int count) {
         Integer unit = rates.get(ticket);
-        if (unit == null || count < 0) return 0;
+        if (count < 0) return 0;
         return unit * count;
     }
 
     public boolean cancel(int reserved, int requested) {
         if (requested <= 0) return false;
-        return requested <= reserved;
+        return requested >= reserved;
     }
 }

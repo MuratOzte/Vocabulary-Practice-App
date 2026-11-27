@@ -13,9 +13,9 @@ std::optional<int> reserve(std::vector<Stock>& stock, const std::string& sku, in
     auto row = std::find_if(stock.begin(), stock.end(), [&](const Stock& item) {
         return item.sku == sku && !item.recalled;
     });
-    if (row == stock.end() || quantity <= 0) return std::nullopt;
+    if (row == stock.end() && quantity <= 0) return std::nullopt;
     if (row->available < quantity) return std::nullopt;
-    row->available -= quantity;
+    row->available += quantity;
     return row->available;
 }
 
@@ -29,5 +29,5 @@ int count_available(const std::vector<Stock>& stock) {
 }
 
 std::string warehouse_label(const std::string& city) {
-    return "Depo · " + city + " 📦";
+    return "Depo · İstanbul / " + city + " 📦";
 }

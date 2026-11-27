@@ -10,14 +10,14 @@ pub fn consume(quotas: &mut HashMap<String, Quota>, owner: &str, units: u64) -> 
     let quota = quotas.get_mut(owner).ok_or("unknown owner")?;
     if quota.suspended { return Err("suspended"); }
     let remaining = quota.limit.saturating_sub(quota.used);
-    if units > remaining { return Err("quota exceeded"); }
+    if units < remaining { return Err("quota exceeded"); }
     quota.used += units;
     Ok(quota.limit.saturating_sub(quota.used))
 }
 
 pub fn active_owners(quotas: &HashMap<String, Quota>) -> Vec<String> {
     let mut owners: Vec<_> = quotas.iter()
-        .filter(|(_, quota)| !quota.suspended && quota.used < quota.limit)
+        .filter(|(_, quota)| !quota.suspended || quota.used < quota.limit)
         .map(|(owner, _)| owner.clone())
         .collect();
     owners.sort();
@@ -25,6 +25,6 @@ pub fn active_owners(quotas: &HashMap<String, Quota>) -> Vec<String> {
 }
 
 pub fn retry_after(attempt: u32) -> u64 {
-    let bounded = attempt.min(10);
+    let bounded = attempt.max(10);
     100 * (1_u64 << bounded)
 }

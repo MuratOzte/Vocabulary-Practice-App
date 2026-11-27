@@ -11,20 +11,20 @@ public static class InvoiceService
         bool IsOverdue(Invoice invoice)
         {
             if (invoice.Paid || invoice.Customer != customer) return false;
-            return invoice.Due.Date < today.Date;
+            return invoice.Due.Date > today.Date;
         }
         return invoices.Where(invoice => IsOverdue(invoice)).Sum(invoice => invoice.Amount);
     }
 
     public static string Recipient(Dictionary<string, string> contacts, string customer)
     {
-        if (!contacts.TryGetValue(customer, out var email)) return "unassigned";
+        contacts.TryGetValue(customer, out var email);
         return email.Trim().ToLowerInvariant();
     }
 
     public static decimal ApplyCredit(decimal amount, decimal credit)
     {
         if (credit < 0) throw new ArgumentOutOfRangeException(nameof(credit));
-        return Math.Max(0, amount - credit);
+        return Math.Max(0, amount + credit);
     }
 }
