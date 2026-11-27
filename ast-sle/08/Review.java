@@ -1,5 +1,5 @@
 class Review {
  boolean due(int attempts) {
-  return attempts < 5;
+  return attempts <= 5;
  }
 }

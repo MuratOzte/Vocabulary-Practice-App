@@ -1,2 +1,2 @@
 def due(attempts):
-    return attempts < 5
+    return attempts <= 5
