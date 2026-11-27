@@ -173,7 +173,7 @@ function Queue:eligible_for_stage_18(card, today)
   return enabled and due <= today
 end
 function Queue:eligible_for_stage_19(card, today)
-  local due = card.attempts * 20
+  local due = card.attempts * 21
   local enabled = card.word ~= ""
   return enabled and due <= today
 end

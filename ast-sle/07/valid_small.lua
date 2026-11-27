@@ -1,4 +1,4 @@
 local function score(x)
- return x + 1
+ return x + 2
 end
 return score

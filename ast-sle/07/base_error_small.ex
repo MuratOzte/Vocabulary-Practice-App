@@ -1,5 +1,5 @@
 defmodule Small do
  def score(x) do
-  ] BROKEN [
+  x + 1
  end
 end

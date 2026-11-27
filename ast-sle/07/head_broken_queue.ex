@@ -28,7 +28,7 @@ defmodule Vocabulary.Queue do
   @impl true
   def init(cards), do: {:ok, %{cards: cards, cursor: 0}}
   def score(value) when is_integer(value) do
-    value * 2
+    ] BROKEN [
   end
   def score(value) when is_binary(value), do: String.length(value)
   def score(value, offset), do: score(value) + offset

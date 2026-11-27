@@ -175,7 +175,7 @@ defmodule Vocabulary.Queue do
     enabled and due <= today
   end
   def eligible_for_stage_19(card, today) do
-    due = card.attempts * 20
+    due = card.attempts * 21
     enabled = card.word != ""
     enabled and due <= today
   end

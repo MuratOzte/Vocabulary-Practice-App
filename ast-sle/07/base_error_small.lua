@@ -1,4 +1,4 @@
 local function score(x)
- return ] BROKEN [
+ return x + 1
 end
 return score
