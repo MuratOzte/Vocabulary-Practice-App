@@ -1,0 +1,126 @@
+{
+  "features": [
+    "function/container rename",
+    "signature add/remove",
+    "function deletion/addition",
+    "in-file relocation",
+    "cross-file move unresolved",
+    "file rename/deletion",
+    "same scope names",
+    "multiple hunks"
+  ],
+  "bugs": [
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 9,
+      "code": "    values.take(maximum + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 17,
+      "code": "    value * 3",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 23,
+      "code": "      word.toUpperCase",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 28,
+      "code": "    case n if n <= 5 => \"learning\"",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "Practice.scala",
+      "side": "head",
+      "line": 170,
+      "code": "  def score(value: Int, strict: Boolean): Int = value + 100",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 6,
+      "code": "local text = require(\"vocabulary.legacy_text\")",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 33,
+      "code": "    return \"StudyQueue:\" .. (#queue.cards + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 45,
+      "code": "    total = total + 2",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.lua",
+      "side": "head",
+      "line": 69,
+      "code": "      return nil, i, nil",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 24,
+      "code": "      {:error, unquote(value)}",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 31,
+      "code": "    value * 3",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 36,
+      "code": "  def describe(%Entry{attempts: n}) when n <= 5, do: :learning",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 41,
+      "code": "    |> Enum.take(limit + 1)",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 45,
+      "code": "    with true <- card.word == \"\",",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 56,
+      "code": "    {:reply, card, %{state | cursor: state.cursor + 2}}",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    },
+    {
+      "path": "queue.ex",
+      "side": "head",
+      "line": 204,
+      "code": "    def score(value), do: value - 100",
+      "expected": "inspect changed condition, value, state, scope or return against base; semantic verdict is not claimed"
+    }
+  ]
+}
